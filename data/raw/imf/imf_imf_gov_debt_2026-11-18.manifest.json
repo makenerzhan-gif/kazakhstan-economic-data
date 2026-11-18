@@ -1,0 +1,9 @@
+{
+  "source_url": "https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/9.0.0/KAZ.GGXWDG_NGDP",
+  "downloaded_at": "2026-11-18T14:52:51.463500",
+  "dataflow": "WEO",
+  "agency_code": "IMF.RES",
+  "version": "9.0.0",
+  "country": "KAZ",
+  "indicator_code": "GGXWDG_NGDP"
+}

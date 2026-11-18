@@ -41,6 +41,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,A,Agriculture,52.150259,level
 2026-04-01,national,A,Agriculture,47.408377,level
 2026-07-01,national,A,Agriculture,54.228723,level
+2026-10-01,national,A,Agriculture,57.5,level
 2016-04-01,national,B,Mining,62.818182,level
 2016-07-01,national,B,Mining,64.411765,level
 2016-10-01,national,B,Mining,62.662722,level
@@ -76,13 +77,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,B,Mining,59.181818,level
 2024-07-01,national,B,Mining,59.659091,level
 2024-10-01,national,B,Mining,60.545455,level
-2025-01-01,national,B,Mining,59.844444,level
-2025-04-01,national,B,Mining,58.173913,level
-2025-07-01,national,B,Mining,58.283898,level
-2025-10-01,national,B,Mining,59.081633,level
-2026-01-01,national,B,Mining,59.012346,level
-2026-04-01,national,B,Mining,57.365145,level
-2026-07-01,national,B,Mining,57.880658,level
+2025-01-01,national,B,Mining,59.843049,level
+2025-04-01,national,B,Mining,58.311404,level
+2025-07-01,national,B,Mining,58.269231,level
+2025-10-01,national,B,Mining,59.074074,level
+2026-01-01,national,B,Mining,58.770833,level
+2026-04-01,national,B,Mining,57.48954,level
+2026-07-01,national,B,Mining,57.871901,level
+2026-10-01,national,B,Mining,57.816327,level
 2016-04-01,national,C,Manufacturing,49.196429,level
 2016-07-01,national,C,Manufacturing,52.265973,level
 2016-10-01,national,C,Manufacturing,53.936012,level
@@ -118,13 +120,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,C,Manufacturing,51.103896,level
 2024-07-01,national,C,Manufacturing,51.980645,level
 2024-10-01,national,C,Manufacturing,52.989822,level
-2025-01-01,national,C,Manufacturing,53.958069,level
-2025-04-01,national,C,Manufacturing,51.43853,level
-2025-07-01,national,C,Manufacturing,51.327827,level
-2025-10-01,national,C,Manufacturing,51.254753,level
-2026-01-01,national,C,Manufacturing,51.802253,level
-2026-04-01,national,C,Manufacturing,49.660377,level
-2026-07-01,national,C,Manufacturing,51.722017,level
+2025-01-01,national,C,Manufacturing,53.965736,level
+2025-04-01,national,C,Manufacturing,51.405063,level
+2025-07-01,national,C,Manufacturing,51.338832,level
+2025-10-01,national,C,Manufacturing,51.265823,level
+2026-01-01,national,C,Manufacturing,51.8125,level
+2026-04-01,national,C,Manufacturing,49.686324,level
+2026-07-01,national,C,Manufacturing,51.754926,level
+2026-10-01,national,C,Manufacturing,52.373924,level
 2016-04-01,national,D,Electricity supply,67.0,level
 2016-07-01,national,D,Electricity supply,60.120482,level
 2016-10-01,national,D,Electricity supply,57.650602,level
@@ -167,6 +170,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,D,Electricity supply,58.207547,level
 2026-04-01,national,D,Electricity supply,60.412844,level
 2026-07-01,national,D,Electricity supply,56.814159,level
+2026-10-01,national,D,Electricity supply,55.309735,level
 2016-04-01,national,E,Water supply,54.848485,level
 2016-07-01,national,E,Water supply,50.735294,level
 2016-10-01,national,E,Water supply,59.090909,level
@@ -209,6 +213,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,E,Water supply,60.3,level
 2026-04-01,national,E,Water supply,55.5,level
 2026-07-01,national,E,Water supply,55.104167,level
+2026-10-01,national,E,Water supply,56.326531,level
 2016-04-01,national,F,Construction,48.130841,level
 2016-07-01,national,F,Construction,53.271605,level
 2016-10-01,national,F,Construction,51.558642,level
@@ -251,6 +256,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,F,Construction,47.666667,level
 2026-04-01,national,F,Construction,42.798742,level
 2026-07-01,national,F,Construction,45.047022,level
+2026-10-01,national,F,Construction,45.460123,level
 2016-04-01,national,G,Trade,55.604167,level
 2016-07-01,national,G,Trade,55.855355,level
 2016-10-01,national,G,Trade,55.11708,level
@@ -292,7 +298,8 @@ date,region,item_code,item_name,value,transformation
 2025-10-01,national,G,Trade,49.56701,level
 2026-01-01,national,G,Trade,49.17887,level
 2026-04-01,national,G,Trade,47.528557,level
-2026-07-01,national,G,Trade,48.268215,level
+2026-07-01,national,G,Trade,48.243671,level
+2026-10-01,national,G,Trade,48.963542,level
 2016-04-01,national,H,Transport and warehousing,54.227468,level
 2016-07-01,national,H,Transport and warehousing,54.723404,level
 2016-10-01,national,H,Transport and warehousing,55.822511,level
@@ -335,6 +342,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,H,Transport and warehousing,53.977273,level
 2026-04-01,national,H,Transport and warehousing,51.092593,level
 2026-07-01,national,H,Transport and warehousing,49.798535,level
+2026-10-01,national,H,Transport and warehousing,51.571429,level
 2016-04-01,national,I,Accommodation and food service,54.411765,level
 2016-07-01,national,I,Accommodation and food service,55.56338,level
 2016-10-01,national,I,Accommodation and food service,54.375,level
@@ -377,6 +385,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,I,Accommodation and food service,53.581081,level
 2026-04-01,national,I,Accommodation and food service,51.164384,level
 2026-07-01,national,I,Accommodation and food service,52.291667,level
+2026-10-01,national,I,Accommodation and food service,54.178082,level
 2016-04-01,national,J,Information and communication,57.87234,level
 2016-07-01,national,J,Information and communication,57.391304,level
 2016-10-01,national,J,Information and communication,59.23913,level
@@ -419,6 +428,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,J,Information and communication,50.797101,level
 2026-04-01,national,J,Information and communication,50.227273,level
 2026-07-01,national,J,Information and communication,52.421875,level
+2026-10-01,national,J,Information and communication,52.867647,level
 2016-04-01,national,L,Real estate activities,62.5,level
 2016-07-01,national,L,Real estate activities,63.547009,level
 2016-10-01,national,L,Real estate activities,63.333333,level
@@ -461,6 +471,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,L,Real estate activities,60.310345,level
 2026-04-01,national,L,Real estate activities,57.097902,level
 2026-07-01,national,L,Real estate activities,56.078431,level
+2026-10-01,national,L,Real estate activities,56.556291,level
 2016-04-01,national,M,"Professional, scientific and technical activities",52.824427,level
 2016-07-01,national,M,"Professional, scientific and technical activities",53.721805,level
 2016-10-01,national,M,"Professional, scientific and technical activities",54.96124,level
@@ -502,7 +513,8 @@ date,region,item_code,item_name,value,transformation
 2025-10-01,national,M,"Professional, scientific and technical activities",50.338346,level
 2026-01-01,national,M,"Professional, scientific and technical activities",49.208633,level
 2026-04-01,national,M,"Professional, scientific and technical activities",47.340426,level
-2026-07-01,national,M,"Professional, scientific and technical activities",48.93617,level
+2026-07-01,national,M,"Professional, scientific and technical activities",48.714286,level
+2026-10-01,national,M,"Professional, scientific and technical activities",48.424658,level
 2016-04-01,national,NRS,N.R.S,62.837838,level
 2016-07-01,national,NRS,N.R.S,61.585366,level
 2016-10-01,national,NRS,N.R.S,57.02381,level
@@ -538,13 +550,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,NRS,N.R.S,51.339286,level
 2024-07-01,national,NRS,N.R.S,52.633929,level
 2024-10-01,national,NRS,N.R.S,52.280702,level
-2025-01-01,national,NRS,N.R.S,48.813559,level
-2025-04-01,national,NRS,N.R.S,49.416667,level
-2025-07-01,national,NRS,N.R.S,48.458333,level
-2025-10-01,national,NRS,N.R.S,51.111111,level
-2026-01-01,national,NRS,N.R.S,52.868217,level
-2026-04-01,national,NRS,N.R.S,47.045455,level
-2026-07-01,national,NRS,N.R.S,47.781955,level
+2025-01-01,national,NRS,Other industries,48.907563,level
+2025-04-01,national,NRS,Other industries,49.504132,level
+2025-07-01,national,NRS,Other industries,48.553719,level
+2025-10-01,national,NRS,Other industries,51.181102,level
+2026-01-01,national,NRS,Other industries,53.192308,level
+2026-04-01,national,NRS,Other industries,46.780303,level
+2026-07-01,national,NRS,Other industries,47.873134,level
+2026-10-01,national,NRS,Other industries,49.330986,level
 2016-04-01,national,TOTAL,All sectors,54.183601,level
 2016-07-01,national,TOTAL,All sectors,55.928293,level
 2016-10-01,national,TOTAL,All sectors,55.996807,level
@@ -584,6 +597,7 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,TOTAL,All sectors,51.098551,level
 2025-07-01,national,TOTAL,All sectors,51.7883,level
 2025-10-01,national,TOTAL,All sectors,51.978148,level
-2026-01-01,national,TOTAL,All sectors,52.020391,level
+2026-01-01,national,TOTAL,All sectors,52.012353,level
 2026-04-01,national,TOTAL,All sectors,49.540378,level
-2026-07-01,national,TOTAL,All sectors,50.757057,level
+2026-07-01,national,TOTAL,All sectors,50.748716,level
+2026-10-01,national,TOTAL,All sectors,51.486486,level

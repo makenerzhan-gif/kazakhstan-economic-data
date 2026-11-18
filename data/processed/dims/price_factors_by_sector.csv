@@ -25,6 +25,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,COMPETITORS.A,Цены конкурентов | Agriculture,46.632124,level
 2026-04-01,national,COMPETITORS.A,Цены конкурентов | Agriculture,46.596859,level
 2026-07-01,national,COMPETITORS.A,Цены конкурентов | Agriculture,42.553191,level
+2026-10-01,national,COMPETITORS.A,Цены конкурентов | Agriculture,48.924731,level
 2020-04-01,national,COMPETITORS.B,Цены конкурентов | Mining,50.26178,level
 2020-07-01,national,COMPETITORS.B,Цены конкурентов | Mining,50.26455,level
 2020-10-01,national,COMPETITORS.B,Цены конкурентов | Mining,53.157895,level
@@ -44,13 +45,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,COMPETITORS.B,Цены конкурентов | Mining,47.727273,level
 2024-07-01,national,COMPETITORS.B,Цены конкурентов | Mining,47.727273,level
 2024-10-01,national,COMPETITORS.B,Цены конкурентов | Mining,49.090909,level
-2025-01-01,national,COMPETITORS.B,Цены конкурентов | Mining,48.888889,level
-2025-04-01,national,COMPETITORS.B,Цены конкурентов | Mining,47.826087,level
-2025-07-01,national,COMPETITORS.B,Цены конкурентов | Mining,47.033898,level
-2025-10-01,national,COMPETITORS.B,Цены конкурентов | Mining,44.489796,level
-2026-01-01,national,COMPETITORS.B,Цены конкурентов | Mining,44.444444,level
-2026-04-01,national,COMPETITORS.B,Цены конкурентов | Mining,43.568465,level
-2026-07-01,national,COMPETITORS.B,Цены конкурентов | Mining,46.090535,level
+2025-01-01,national,COMPETITORS.B,Цены конкурентов | Mining,48.430493,level
+2025-04-01,national,COMPETITORS.B,Цены конкурентов | Mining,48.245614,level
+2025-07-01,national,COMPETITORS.B,Цены конкурентов | Mining,47.008547,level
+2025-10-01,national,COMPETITORS.B,Цены конкурентов | Mining,44.032922,level
+2026-01-01,national,COMPETITORS.B,Цены конкурентов | Mining,44.166667,level
+2026-04-01,national,COMPETITORS.B,Цены конкурентов | Mining,43.514644,level
+2026-07-01,national,COMPETITORS.B,Цены конкурентов | Mining,45.867769,level
+2026-10-01,national,COMPETITORS.B,Цены конкурентов | Mining,46.122449,level
 2020-04-01,national,COMPETITORS.C,Цены конкурентов | Manufacturing,55.507246,level
 2020-07-01,national,COMPETITORS.C,Цены конкурентов | Manufacturing,55.078684,level
 2020-10-01,national,COMPETITORS.C,Цены конкурентов | Manufacturing,60.653409,level
@@ -70,13 +72,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,COMPETITORS.C,Цены конкурентов | Manufacturing,62.077922,level
 2024-07-01,national,COMPETITORS.C,Цены конкурентов | Manufacturing,63.096774,level
 2024-10-01,national,COMPETITORS.C,Цены конкурентов | Manufacturing,62.59542,level
-2025-01-01,national,COMPETITORS.C,Цены конкурентов | Manufacturing,63.405337,level
-2025-04-01,national,COMPETITORS.C,Цены конкурентов | Manufacturing,62.230672,level
-2025-07-01,national,COMPETITORS.C,Цены конкурентов | Manufacturing,59.339263,level
-2025-10-01,national,COMPETITORS.C,Цены конкурентов | Manufacturing,58.555133,level
-2026-01-01,national,COMPETITORS.C,Цены конкурентов | Manufacturing,59.574468,level
-2026-04-01,national,COMPETITORS.C,Цены конкурентов | Manufacturing,60.628931,level
-2026-07-01,national,COMPETITORS.C,Цены конкурентов | Manufacturing,60.147601,level
+2025-01-01,national,COMPETITORS.C,Цены конкурентов | Manufacturing,63.451777,level
+2025-04-01,national,COMPETITORS.C,Цены конкурентов | Manufacturing,62.151899,level
+2025-07-01,national,COMPETITORS.C,Цены конкурентов | Manufacturing,59.263959,level
+2025-10-01,national,COMPETITORS.C,Цены конкурентов | Manufacturing,58.607595,level
+2026-01-01,national,COMPETITORS.C,Цены конкурентов | Manufacturing,59.625,level
+2026-04-01,national,COMPETITORS.C,Цены конкурентов | Manufacturing,60.727729,level
+2026-07-01,national,COMPETITORS.C,Цены конкурентов | Manufacturing,60.098522,level
+2026-10-01,national,COMPETITORS.C,Цены конкурентов | Manufacturing,61.500615,level
 2020-04-01,national,COMPETITORS.D,Цены конкурентов | Electricity supply,32.989691,level
 2020-07-01,national,COMPETITORS.D,Цены конкурентов | Electricity supply,30.208333,level
 2020-10-01,national,COMPETITORS.D,Цены конкурентов | Electricity supply,36.458333,level
@@ -103,6 +106,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,COMPETITORS.D,Цены конкурентов | Electricity supply,16.037736,level
 2026-04-01,national,COMPETITORS.D,Цены конкурентов | Electricity supply,17.431193,level
 2026-07-01,national,COMPETITORS.D,Цены конкурентов | Electricity supply,16.814159,level
+2026-10-01,national,COMPETITORS.D,Цены конкурентов | Electricity supply,15.044248,level
 2020-04-01,national,COMPETITORS.E,Цены конкурентов | Water supply,46.341463,level
 2020-07-01,national,COMPETITORS.E,Цены конкурентов | Water supply,29.268293,level
 2020-10-01,national,COMPETITORS.E,Цены конкурентов | Water supply,41.025641,level
@@ -129,6 +133,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,COMPETITORS.E,Цены конкурентов | Water supply,26.0,level
 2026-04-01,national,COMPETITORS.E,Цены конкурентов | Water supply,26.0,level
 2026-07-01,national,COMPETITORS.E,Цены конкурентов | Water supply,22.916667,level
+2026-10-01,national,COMPETITORS.E,Цены конкурентов | Water supply,18.367347,level
 2020-04-01,national,COMPETITORS.F,Цены конкурентов | Construction,52.556818,level
 2020-07-01,national,COMPETITORS.F,Цены конкурентов | Construction,51.575931,level
 2020-10-01,national,COMPETITORS.F,Цены конкурентов | Construction,56.779661,level
@@ -155,6 +160,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,COMPETITORS.F,Цены конкурентов | Construction,52.698413,level
 2026-04-01,national,COMPETITORS.F,Цены конкурентов | Construction,54.716981,level
 2026-07-01,national,COMPETITORS.F,Цены конкурентов | Construction,51.097179,level
+2026-10-01,national,COMPETITORS.F,Цены конкурентов | Construction,52.760736,level
 2020-04-01,national,COMPETITORS.G,Цены конкурентов | Trade,66.629339,level
 2020-07-01,national,COMPETITORS.G,Цены конкурентов | Trade,65.931643,level
 2020-10-01,national,COMPETITORS.G,Цены конкурентов | Trade,69.314472,level
@@ -180,7 +186,8 @@ date,region,item_code,item_name,value,transformation
 2025-10-01,national,COMPETITORS.G,Цены конкурентов | Trade,68.969072,level
 2026-01-01,national,COMPETITORS.G,Цены конкурентов | Trade,68.723849,level
 2026-04-01,national,COMPETITORS.G,Цены конкурентов | Trade,67.497404,level
-2026-07-01,national,COMPETITORS.G,Цены конкурентов | Trade,68.004224,level
+2026-07-01,national,COMPETITORS.G,Цены конкурентов | Trade,68.037975,level
+2026-10-01,national,COMPETITORS.G,Цены конкурентов | Trade,65.625,level
 2020-04-01,national,COMPETITORS.H,Цены конкурентов | Transport and warehousing,50.806452,level
 2020-07-01,national,COMPETITORS.H,Цены конкурентов | Transport and warehousing,55.952381,level
 2020-10-01,national,COMPETITORS.H,Цены конкурентов | Transport and warehousing,56.048387,level
@@ -207,6 +214,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,COMPETITORS.H,Цены конкурентов | Transport and warehousing,50.378788,level
 2026-04-01,national,COMPETITORS.H,Цены конкурентов | Transport and warehousing,54.444444,level
 2026-07-01,national,COMPETITORS.H,Цены конкурентов | Transport and warehousing,52.014652,level
+2026-10-01,national,COMPETITORS.H,Цены конкурентов | Transport and warehousing,55.0,level
 2020-04-01,national,COMPETITORS.I,Цены конкурентов | Accommodation and food service,56.989247,level
 2020-07-01,national,COMPETITORS.I,Цены конкурентов | Accommodation and food service,52.688172,level
 2020-10-01,national,COMPETITORS.I,Цены конкурентов | Accommodation and food service,68.421053,level
@@ -233,6 +241,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,COMPETITORS.I,Цены конкурентов | Accommodation and food service,64.864865,level
 2026-04-01,national,COMPETITORS.I,Цены конкурентов | Accommodation and food service,71.232877,level
 2026-07-01,national,COMPETITORS.I,Цены конкурентов | Accommodation and food service,56.944444,level
+2026-10-01,national,COMPETITORS.I,Цены конкурентов | Accommodation and food service,60.273973,level
 2020-04-01,national,COMPETITORS.J,Цены конкурентов | Information and communication,61.666667,level
 2020-07-01,national,COMPETITORS.J,Цены конкурентов | Information and communication,50.0,level
 2020-10-01,national,COMPETITORS.J,Цены конкурентов | Information and communication,62.903226,level
@@ -259,6 +268,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,COMPETITORS.J,Цены конкурентов | Information and communication,47.826087,level
 2026-04-01,national,COMPETITORS.J,Цены конкурентов | Information and communication,43.939394,level
 2026-07-01,national,COMPETITORS.J,Цены конкурентов | Information and communication,45.3125,level
+2026-10-01,national,COMPETITORS.J,Цены конкурентов | Information and communication,50.0,level
 2020-04-01,national,COMPETITORS.L,Цены конкурентов | Real estate activities,48.175182,level
 2020-07-01,national,COMPETITORS.L,Цены конкурентов | Real estate activities,56.20438,level
 2020-10-01,national,COMPETITORS.L,Цены конкурентов | Real estate activities,55.395683,level
@@ -285,6 +295,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,COMPETITORS.L,Цены конкурентов | Real estate activities,52.413793,level
 2026-04-01,national,COMPETITORS.L,Цены конкурентов | Real estate activities,53.146853,level
 2026-07-01,national,COMPETITORS.L,Цены конкурентов | Real estate activities,53.594771,level
+2026-10-01,national,COMPETITORS.L,Цены конкурентов | Real estate activities,47.682119,level
 2020-04-01,national,COMPETITORS.M,"Цены конкурентов | Professional, scientific and technical activities",50.993377,level
 2020-07-01,national,COMPETITORS.M,"Цены конкурентов | Professional, scientific and technical activities",55.483871,level
 2020-10-01,national,COMPETITORS.M,"Цены конкурентов | Professional, scientific and technical activities",56.493506,level
@@ -310,7 +321,8 @@ date,region,item_code,item_name,value,transformation
 2025-10-01,national,COMPETITORS.M,"Цены конкурентов | Professional, scientific and technical activities",48.87218,level
 2026-01-01,national,COMPETITORS.M,"Цены конкурентов | Professional, scientific and technical activities",47.482014,level
 2026-04-01,national,COMPETITORS.M,"Цены конкурентов | Professional, scientific and technical activities",49.64539,level
-2026-07-01,national,COMPETITORS.M,"Цены конкурентов | Professional, scientific and technical activities",46.099291,level
+2026-07-01,national,COMPETITORS.M,"Цены конкурентов | Professional, scientific and technical activities",45.714286,level
+2026-10-01,national,COMPETITORS.M,"Цены конкурентов | Professional, scientific and technical activities",47.260274,level
 2020-04-01,national,COMPETITORS.NRS,Цены конкурентов | Other industries,56.944444,level
 2020-07-01,national,COMPETITORS.NRS,Цены конкурентов | Other industries,59.459459,level
 2020-10-01,national,COMPETITORS.NRS,Цены конкурентов | Other industries,52.631579,level
@@ -330,13 +342,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,COMPETITORS.NRS,Цены конкурентов | Other industries,52.678571,level
 2024-07-01,national,COMPETITORS.NRS,Цены конкурентов | Other industries,48.214286,level
 2024-10-01,national,COMPETITORS.NRS,Цены конкурентов | Other industries,49.122807,level
-2025-01-01,national,COMPETITORS.NRS,Цены конкурентов | Other industries,44.915254,level
-2025-04-01,national,COMPETITORS.NRS,Цены конкурентов | Other industries,43.333333,level
-2025-07-01,national,COMPETITORS.NRS,Цены конкурентов | Other industries,43.333333,level
-2025-10-01,national,COMPETITORS.NRS,Цены конкурентов | Other industries,44.444444,level
-2026-01-01,national,COMPETITORS.NRS,Цены конкурентов | Other industries,42.635659,level
-2026-04-01,national,COMPETITORS.NRS,Цены конкурентов | Other industries,40.151515,level
-2026-07-01,national,COMPETITORS.NRS,Цены конкурентов | Other industries,44.360902,level
+2025-01-01,national,COMPETITORS.NRS,Цены конкурентов | Other industries,45.378151,level
+2025-04-01,national,COMPETITORS.NRS,Цены конкурентов | Other industries,42.975207,level
+2025-07-01,national,COMPETITORS.NRS,Цены конкурентов | Other industries,43.801653,level
+2025-10-01,national,COMPETITORS.NRS,Цены конкурентов | Other industries,44.88189,level
+2026-01-01,national,COMPETITORS.NRS,Цены конкурентов | Other industries,43.076923,level
+2026-04-01,national,COMPETITORS.NRS,Цены конкурентов | Other industries,39.393939,level
+2026-07-01,national,COMPETITORS.NRS,Цены конкурентов | Other industries,44.776119,level
+2026-10-01,national,COMPETITORS.NRS,Цены конкурентов | Other industries,41.549296,level
 2020-04-01,national,COMPETITORS.TOTAL,Цены конкурентов | All sectors,56.203474,level
 2020-07-01,national,COMPETITORS.TOTAL,Цены конкурентов | All sectors,56.453596,level
 2020-10-01,national,COMPETITORS.TOTAL,Цены конкурентов | All sectors,60.43956,level
@@ -360,9 +373,10 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,COMPETITORS.TOTAL,Цены конкурентов | All sectors,57.101449,level
 2025-07-01,national,COMPETITORS.TOTAL,Цены конкурентов | All sectors,56.067188,level
 2025-10-01,national,COMPETITORS.TOTAL,Цены конкурентов | All sectors,55.836688,level
-2026-01-01,national,COMPETITORS.TOTAL,Цены конкурентов | All sectors,55.657668,level
+2026-01-01,national,COMPETITORS.TOTAL,Цены конкурентов | All sectors,55.673657,level
 2026-04-01,national,COMPETITORS.TOTAL,Цены конкурентов | All sectors,56.099656,level
-2026-07-01,national,COMPETITORS.TOTAL,Цены конкурентов | All sectors,55.203878,level
+2026-07-01,national,COMPETITORS.TOTAL,Цены конкурентов | All sectors,55.191101,level
+2026-10-01,national,COMPETITORS.TOTAL,Цены конкурентов | All sectors,55.292793,level
 2020-04-01,national,DEMAND.A,Спрос | Agriculture,78.894472,level
 2020-07-01,national,DEMAND.A,Спрос | Agriculture,76.5,level
 2020-10-01,national,DEMAND.A,Спрос | Agriculture,75.5,level
@@ -389,6 +403,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,DEMAND.A,Спрос | Agriculture,76.165803,level
 2026-04-01,national,DEMAND.A,Спрос | Agriculture,75.91623,level
 2026-07-01,national,DEMAND.A,Спрос | Agriculture,75.531915,level
+2026-10-01,national,DEMAND.A,Спрос | Agriculture,74.193548,level
 2020-04-01,national,DEMAND.B,Спрос | Mining,80.104712,level
 2020-07-01,national,DEMAND.B,Спрос | Mining,77.248677,level
 2020-10-01,national,DEMAND.B,Спрос | Mining,80.0,level
@@ -408,13 +423,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,DEMAND.B,Спрос | Mining,77.272727,level
 2024-07-01,national,DEMAND.B,Спрос | Mining,78.181818,level
 2024-10-01,national,DEMAND.B,Спрос | Mining,79.090909,level
-2025-01-01,national,DEMAND.B,Спрос | Mining,73.333333,level
-2025-04-01,national,DEMAND.B,Спрос | Mining,73.043478,level
-2025-07-01,national,DEMAND.B,Спрос | Mining,71.610169,level
-2025-10-01,national,DEMAND.B,Спрос | Mining,70.612245,level
-2026-01-01,national,DEMAND.B,Спрос | Mining,69.958848,level
-2026-04-01,national,DEMAND.B,Спрос | Mining,73.029046,level
-2026-07-01,national,DEMAND.B,Спрос | Mining,76.954733,level
+2025-01-01,national,DEMAND.B,Спрос | Mining,73.09417,level
+2025-04-01,national,DEMAND.B,Спрос | Mining,73.245614,level
+2025-07-01,national,DEMAND.B,Спрос | Mining,71.367521,level
+2025-10-01,national,DEMAND.B,Спрос | Mining,70.37037,level
+2026-01-01,national,DEMAND.B,Спрос | Mining,69.583333,level
+2026-04-01,national,DEMAND.B,Спрос | Mining,72.803347,level
+2026-07-01,national,DEMAND.B,Спрос | Mining,76.859504,level
+2026-10-01,national,DEMAND.B,Спрос | Mining,72.244898,level
 2020-04-01,national,DEMAND.C,Спрос | Manufacturing,83.768116,level
 2020-07-01,national,DEMAND.C,Спрос | Manufacturing,80.114449,level
 2020-10-01,national,DEMAND.C,Спрос | Manufacturing,82.528409,level
@@ -434,13 +450,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,DEMAND.C,Спрос | Manufacturing,82.077922,level
 2024-07-01,national,DEMAND.C,Спрос | Manufacturing,81.290323,level
 2024-10-01,national,DEMAND.C,Спрос | Manufacturing,80.534351,level
-2025-01-01,national,DEMAND.C,Спрос | Manufacturing,81.575604,level
-2025-04-01,national,DEMAND.C,Спрос | Manufacturing,82.382763,level
-2025-07-01,national,DEMAND.C,Спрос | Manufacturing,79.288437,level
-2025-10-01,national,DEMAND.C,Спрос | Manufacturing,79.974651,level
-2026-01-01,national,DEMAND.C,Спрос | Manufacturing,80.97622,level
-2026-04-01,national,DEMAND.C,Спрос | Manufacturing,80.125786,level
-2026-07-01,national,DEMAND.C,Спрос | Manufacturing,80.565806,level
+2025-01-01,national,DEMAND.C,Спрос | Manufacturing,81.598985,level
+2025-04-01,national,DEMAND.C,Спрос | Manufacturing,82.405063,level
+2025-07-01,national,DEMAND.C,Спрос | Manufacturing,79.314721,level
+2025-10-01,national,DEMAND.C,Спрос | Manufacturing,80.0,level
+2026-01-01,national,DEMAND.C,Спрос | Manufacturing,81.0,level
+2026-04-01,national,DEMAND.C,Спрос | Manufacturing,80.175659,level
+2026-07-01,national,DEMAND.C,Спрос | Manufacturing,80.541872,level
+2026-10-01,national,DEMAND.C,Спрос | Manufacturing,80.688807,level
 2020-04-01,national,DEMAND.D,Спрос | Electricity supply,59.793814,level
 2020-07-01,national,DEMAND.D,Спрос | Electricity supply,63.541667,level
 2020-10-01,national,DEMAND.D,Спрос | Electricity supply,61.458333,level
@@ -467,6 +484,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,DEMAND.D,Спрос | Electricity supply,33.962264,level
 2026-04-01,national,DEMAND.D,Спрос | Electricity supply,33.944954,level
 2026-07-01,national,DEMAND.D,Спрос | Electricity supply,30.973451,level
+2026-10-01,national,DEMAND.D,Спрос | Electricity supply,31.858407,level
 2020-04-01,national,DEMAND.E,Спрос | Water supply,65.853659,level
 2020-07-01,national,DEMAND.E,Спрос | Water supply,63.414634,level
 2020-10-01,national,DEMAND.E,Спрос | Water supply,69.230769,level
@@ -493,6 +511,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,DEMAND.E,Спрос | Water supply,54.0,level
 2026-04-01,national,DEMAND.E,Спрос | Water supply,56.0,level
 2026-07-01,national,DEMAND.E,Спрос | Water supply,62.5,level
+2026-10-01,national,DEMAND.E,Спрос | Water supply,63.265306,level
 2020-04-01,national,DEMAND.F,Спрос | Construction,76.988636,level
 2020-07-01,national,DEMAND.F,Спрос | Construction,73.352436,level
 2020-10-01,national,DEMAND.F,Спрос | Construction,77.966102,level
@@ -519,6 +538,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,DEMAND.F,Спрос | Construction,69.84127,level
 2026-04-01,national,DEMAND.F,Спрос | Construction,72.641509,level
 2026-07-01,national,DEMAND.F,Спрос | Construction,73.981191,level
+2026-10-01,national,DEMAND.F,Спрос | Construction,74.233129,level
 2020-04-01,national,DEMAND.G,Спрос | Trade,82.530795,level
 2020-07-01,national,DEMAND.G,Спрос | Trade,82.359427,level
 2020-10-01,national,DEMAND.G,Спрос | Trade,84.439608,level
@@ -544,7 +564,8 @@ date,region,item_code,item_name,value,transformation
 2025-10-01,national,DEMAND.G,Спрос | Trade,82.268041,level
 2026-01-01,national,DEMAND.G,Спрос | Trade,81.171548,level
 2026-04-01,national,DEMAND.G,Спрос | Trade,79.750779,level
-2026-07-01,national,DEMAND.G,Спрос | Trade,80.675818,level
+2026-07-01,national,DEMAND.G,Спрос | Trade,80.696203,level
+2026-10-01,national,DEMAND.G,Спрос | Trade,80.729167,level
 2020-04-01,national,DEMAND.H,Спрос | Transport and warehousing,76.612903,level
 2020-07-01,national,DEMAND.H,Спрос | Transport and warehousing,79.365079,level
 2020-10-01,national,DEMAND.H,Спрос | Transport and warehousing,77.822581,level
@@ -571,6 +592,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,DEMAND.H,Спрос | Transport and warehousing,75.757576,level
 2026-04-01,national,DEMAND.H,Спрос | Transport and warehousing,78.518519,level
 2026-07-01,national,DEMAND.H,Спрос | Transport and warehousing,75.091575,level
+2026-10-01,national,DEMAND.H,Спрос | Transport and warehousing,74.285714,level
 2020-04-01,national,DEMAND.I,Спрос | Accommodation and food service,84.946237,level
 2020-07-01,national,DEMAND.I,Спрос | Accommodation and food service,82.795699,level
 2020-10-01,national,DEMAND.I,Спрос | Accommodation and food service,90.526316,level
@@ -597,6 +619,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,DEMAND.I,Спрос | Accommodation and food service,81.081081,level
 2026-04-01,national,DEMAND.I,Спрос | Accommodation and food service,80.821918,level
 2026-07-01,national,DEMAND.I,Спрос | Accommodation and food service,79.166667,level
+2026-10-01,national,DEMAND.I,Спрос | Accommodation and food service,79.452055,level
 2020-04-01,national,DEMAND.J,Спрос | Information and communication,81.666667,level
 2020-07-01,national,DEMAND.J,Спрос | Information and communication,74.193548,level
 2020-10-01,national,DEMAND.J,Спрос | Information and communication,80.645161,level
@@ -623,6 +646,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,DEMAND.J,Спрос | Information and communication,78.26087,level
 2026-04-01,national,DEMAND.J,Спрос | Information and communication,72.727273,level
 2026-07-01,national,DEMAND.J,Спрос | Information and communication,68.75,level
+2026-10-01,national,DEMAND.J,Спрос | Information and communication,72.058824,level
 2020-04-01,national,DEMAND.L,Спрос | Real estate activities,75.182482,level
 2020-07-01,national,DEMAND.L,Спрос | Real estate activities,72.992701,level
 2020-10-01,national,DEMAND.L,Спрос | Real estate activities,76.978417,level
@@ -649,6 +673,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,DEMAND.L,Спрос | Real estate activities,72.413793,level
 2026-04-01,national,DEMAND.L,Спрос | Real estate activities,72.027972,level
 2026-07-01,national,DEMAND.L,Спрос | Real estate activities,70.588235,level
+2026-10-01,national,DEMAND.L,Спрос | Real estate activities,72.847682,level
 2020-04-01,national,DEMAND.M,"Спрос | Professional, scientific and technical activities",74.172185,level
 2020-07-01,national,DEMAND.M,"Спрос | Professional, scientific and technical activities",76.129032,level
 2020-10-01,national,DEMAND.M,"Спрос | Professional, scientific and technical activities",74.025974,level
@@ -674,7 +699,8 @@ date,region,item_code,item_name,value,transformation
 2025-10-01,national,DEMAND.M,"Спрос | Professional, scientific and technical activities",70.676692,level
 2026-01-01,national,DEMAND.M,"Спрос | Professional, scientific and technical activities",72.661871,level
 2026-04-01,national,DEMAND.M,"Спрос | Professional, scientific and technical activities",68.085106,level
-2026-07-01,national,DEMAND.M,"Спрос | Professional, scientific and technical activities",65.248227,level
+2026-07-01,national,DEMAND.M,"Спрос | Professional, scientific and technical activities",65.0,level
+2026-10-01,national,DEMAND.M,"Спрос | Professional, scientific and technical activities",67.808219,level
 2020-04-01,national,DEMAND.NRS,Спрос | Other industries,83.333333,level
 2020-07-01,national,DEMAND.NRS,Спрос | Other industries,78.378378,level
 2020-10-01,national,DEMAND.NRS,Спрос | Other industries,71.052632,level
@@ -694,13 +720,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,DEMAND.NRS,Спрос | Other industries,70.535714,level
 2024-07-01,national,DEMAND.NRS,Спрос | Other industries,68.75,level
 2024-10-01,national,DEMAND.NRS,Спрос | Other industries,73.684211,level
-2025-01-01,national,DEMAND.NRS,Спрос | Other industries,64.40678,level
-2025-04-01,national,DEMAND.NRS,Спрос | Other industries,65.0,level
-2025-07-01,national,DEMAND.NRS,Спрос | Other industries,63.333333,level
-2025-10-01,national,DEMAND.NRS,Спрос | Other industries,65.873016,level
-2026-01-01,national,DEMAND.NRS,Спрос | Other industries,61.24031,level
+2025-01-01,national,DEMAND.NRS,Спрос | Other industries,64.705882,level
+2025-04-01,national,DEMAND.NRS,Спрос | Other industries,64.46281,level
+2025-07-01,national,DEMAND.NRS,Спрос | Other industries,63.636364,level
+2025-10-01,national,DEMAND.NRS,Спрос | Other industries,66.141732,level
+2026-01-01,national,DEMAND.NRS,Спрос | Other industries,61.538462,level
 2026-04-01,national,DEMAND.NRS,Спрос | Other industries,59.848485,level
-2026-07-01,national,DEMAND.NRS,Спрос | Other industries,61.654135,level
+2026-07-01,national,DEMAND.NRS,Спрос | Other industries,61.940299,level
+2026-10-01,national,DEMAND.NRS,Спрос | Other industries,59.15493,level
 2020-04-01,national,DEMAND.TOTAL,Спрос | All sectors,79.83871,level
 2020-07-01,national,DEMAND.TOTAL,Спрос | All sectors,78.303626,level
 2020-10-01,national,DEMAND.TOTAL,Спрос | All sectors,80.15873,level
@@ -724,9 +751,10 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,DEMAND.TOTAL,Спрос | All sectors,76.985507,level
 2025-07-01,national,DEMAND.TOTAL,Спрос | All sectors,75.296843,level
 2025-10-01,national,DEMAND.TOTAL,Спрос | All sectors,75.589419,level
-2026-01-01,national,DEMAND.TOTAL,Спрос | All sectors,75.301551,level
+2026-01-01,national,DEMAND.TOTAL,Спрос | All sectors,75.294456,level
 2026-04-01,national,DEMAND.TOTAL,Спрос | All sectors,75.0,level
-2026-07-01,national,DEMAND.TOTAL,Спрос | All sectors,75.192472,level
+2026-07-01,national,DEMAND.TOTAL,Спрос | All sectors,75.185396,level
+2026-10-01,national,DEMAND.TOTAL,Спрос | All sectors,74.971847,level
 2020-04-01,national,FUEL.A,Цены на топливо | Agriculture,69.849246,level
 2020-07-01,national,FUEL.A,Цены на топливо | Agriculture,71.0,level
 2020-10-01,national,FUEL.A,Цены на топливо | Agriculture,71.5,level
@@ -753,6 +781,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,FUEL.A,Цены на топливо | Agriculture,67.875648,level
 2026-04-01,national,FUEL.A,Цены на топливо | Agriculture,63.874346,level
 2026-07-01,national,FUEL.A,Цены на топливо | Agriculture,66.489362,level
+2026-10-01,national,FUEL.A,Цены на топливо | Agriculture,59.677419,level
 2020-04-01,national,FUEL.B,Цены на топливо | Mining,69.109948,level
 2020-07-01,national,FUEL.B,Цены на топливо | Mining,74.074074,level
 2020-10-01,national,FUEL.B,Цены на топливо | Mining,77.368421,level
@@ -772,13 +801,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,FUEL.B,Цены на топливо | Mining,75.454545,level
 2024-07-01,national,FUEL.B,Цены на топливо | Mining,74.545455,level
 2024-10-01,national,FUEL.B,Цены на топливо | Mining,75.454545,level
-2025-01-01,national,FUEL.B,Цены на топливо | Mining,72.0,level
-2025-04-01,national,FUEL.B,Цены на топливо | Mining,75.217391,level
-2025-07-01,national,FUEL.B,Цены на топливо | Mining,71.186441,level
-2025-10-01,national,FUEL.B,Цены на топливо | Mining,70.204082,level
-2026-01-01,national,FUEL.B,Цены на топливо | Mining,69.547325,level
-2026-04-01,national,FUEL.B,Цены на топливо | Mining,69.294606,level
-2026-07-01,national,FUEL.B,Цены на топливо | Mining,68.312757,level
+2025-01-01,national,FUEL.B,Цены на топливо | Mining,72.197309,level
+2025-04-01,national,FUEL.B,Цены на топливо | Mining,75.438596,level
+2025-07-01,national,FUEL.B,Цены на топливо | Mining,71.367521,level
+2025-10-01,national,FUEL.B,Цены на топливо | Mining,70.37037,level
+2026-01-01,national,FUEL.B,Цены на топливо | Mining,69.583333,level
+2026-04-01,national,FUEL.B,Цены на топливо | Mining,69.456067,level
+2026-07-01,national,FUEL.B,Цены на топливо | Mining,68.181818,level
+2026-10-01,national,FUEL.B,Цены на топливо | Mining,71.428571,level
 2020-04-01,national,FUEL.C,Цены на топливо | Manufacturing,54.347826,level
 2020-07-01,national,FUEL.C,Цены на топливо | Manufacturing,53.218884,level
 2020-10-01,national,FUEL.C,Цены на топливо | Manufacturing,58.380682,level
@@ -798,13 +828,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,FUEL.C,Цены на топливо | Manufacturing,57.402597,level
 2024-07-01,national,FUEL.C,Цены на топливо | Manufacturing,58.580645,level
 2024-10-01,national,FUEL.C,Цены на топливо | Manufacturing,58.396947,level
-2025-01-01,national,FUEL.C,Цены на топливо | Manufacturing,60.609911,level
-2025-04-01,national,FUEL.C,Цены на топливо | Manufacturing,60.329531,level
-2025-07-01,national,FUEL.C,Цены на топливо | Manufacturing,58.322745,level
-2025-10-01,national,FUEL.C,Цены на топливо | Manufacturing,59.442332,level
-2026-01-01,national,FUEL.C,Цены на топливо | Manufacturing,60.700876,level
-2026-04-01,national,FUEL.C,Цены на топливо | Manufacturing,59.371069,level
-2026-07-01,national,FUEL.C,Цены на топливо | Manufacturing,60.762608,level
+2025-01-01,national,FUEL.C,Цены на топливо | Manufacturing,60.659898,level
+2025-04-01,national,FUEL.C,Цены на топливо | Manufacturing,60.379747,level
+2025-07-01,national,FUEL.C,Цены на топливо | Manufacturing,58.375635,level
+2025-10-01,national,FUEL.C,Цены на топливо | Manufacturing,59.367089,level
+2026-01-01,national,FUEL.C,Цены на топливо | Manufacturing,60.625,level
+2026-04-01,national,FUEL.C,Цены на топливо | Manufacturing,59.473024,level
+2026-07-01,national,FUEL.C,Цены на топливо | Manufacturing,60.837438,level
+2026-10-01,national,FUEL.C,Цены на топливо | Manufacturing,61.377614,level
 2020-04-01,national,FUEL.D,Цены на топливо | Electricity supply,62.886598,level
 2020-07-01,national,FUEL.D,Цены на топливо | Electricity supply,59.375,level
 2020-10-01,national,FUEL.D,Цены на топливо | Electricity supply,62.5,level
@@ -831,6 +862,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,FUEL.D,Цены на топливо | Electricity supply,46.226415,level
 2026-04-01,national,FUEL.D,Цены на топливо | Electricity supply,44.954128,level
 2026-07-01,national,FUEL.D,Цены на топливо | Electricity supply,45.132743,level
+2026-10-01,national,FUEL.D,Цены на топливо | Electricity supply,45.132743,level
 2020-04-01,national,FUEL.E,Цены на топливо | Water supply,80.487805,level
 2020-07-01,national,FUEL.E,Цены на топливо | Water supply,65.853659,level
 2020-10-01,national,FUEL.E,Цены на топливо | Water supply,76.923077,level
@@ -857,6 +889,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,FUEL.E,Цены на топливо | Water supply,66.0,level
 2026-04-01,national,FUEL.E,Цены на топливо | Water supply,60.0,level
 2026-07-01,national,FUEL.E,Цены на топливо | Water supply,60.416667,level
+2026-10-01,national,FUEL.E,Цены на топливо | Water supply,61.22449,level
 2020-04-01,national,FUEL.F,Цены на топливо | Construction,67.613636,level
 2020-07-01,national,FUEL.F,Цены на топливо | Construction,65.329513,level
 2020-10-01,national,FUEL.F,Цены на топливо | Construction,67.79661,level
@@ -883,6 +916,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,FUEL.F,Цены на топливо | Construction,63.174603,level
 2026-04-01,national,FUEL.F,Цены на топливо | Construction,64.779874,level
 2026-07-01,national,FUEL.F,Цены на топливо | Construction,63.949843,level
+2026-10-01,national,FUEL.F,Цены на топливо | Construction,60.736196,level
 2020-04-01,national,FUEL.G,Цены на топливо | Trade,53.079507,level
 2020-07-01,national,FUEL.G,Цены на топливо | Trade,50.16538,level
 2020-10-01,national,FUEL.G,Цены на топливо | Trade,51.360174,level
@@ -902,13 +936,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,FUEL.G,Цены на топливо | Trade,56.021505,level
 2024-07-01,national,FUEL.G,Цены на топливо | Trade,55.448718,level
 2024-10-01,national,FUEL.G,Цены на топливо | Trade,53.93617,level
-2025-01-01,national,FUEL.G,Цены на топливо | Trade,53.650794,level
-2025-04-01,national,FUEL.G,Цены на топливо | Trade,53.789474,level
-2025-07-01,national,FUEL.G,Цены на топливо | Trade,53.410283,level
+2025-01-01,national,FUEL.G,Цены на топливо | Trade,53.544974,level
+2025-04-01,national,FUEL.G,Цены на топливо | Trade,53.684211,level
+2025-07-01,national,FUEL.G,Цены на топливо | Trade,53.305352,level
 2025-10-01,national,FUEL.G,Цены на топливо | Trade,54.43299,level
 2026-01-01,national,FUEL.G,Цены на топливо | Trade,53.76569,level
-2026-04-01,national,FUEL.G,Цены на топливо | Trade,53.478712,level
-2026-07-01,national,FUEL.G,Цены на топливо | Trade,53.854277,level
+2026-04-01,national,FUEL.G,Цены на топливо | Trade,53.37487,level
+2026-07-01,national,FUEL.G,Цены на топливо | Trade,53.797468,level
+2026-10-01,national,FUEL.G,Цены на топливо | Trade,51.145833,level
 2020-04-01,national,FUEL.H,Цены на топливо | Transport and warehousing,72.177419,level
 2020-07-01,national,FUEL.H,Цены на топливо | Transport and warehousing,72.619048,level
 2020-10-01,national,FUEL.H,Цены на топливо | Transport and warehousing,72.177419,level
@@ -935,6 +970,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,FUEL.H,Цены на топливо | Transport and warehousing,71.969697,level
 2026-04-01,national,FUEL.H,Цены на топливо | Transport and warehousing,69.259259,level
 2026-07-01,national,FUEL.H,Цены на топливо | Transport and warehousing,68.498168,level
+2026-10-01,national,FUEL.H,Цены на топливо | Transport and warehousing,70.714286,level
 2020-04-01,national,FUEL.I,Цены на топливо | Accommodation and food service,39.784946,level
 2020-07-01,national,FUEL.I,Цены на топливо | Accommodation and food service,30.107527,level
 2020-10-01,national,FUEL.I,Цены на топливо | Accommodation and food service,41.052632,level
@@ -961,6 +997,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,FUEL.I,Цены на топливо | Accommodation and food service,52.702703,level
 2026-04-01,national,FUEL.I,Цены на топливо | Accommodation and food service,56.164384,level
 2026-07-01,national,FUEL.I,Цены на топливо | Accommodation and food service,45.833333,level
+2026-10-01,national,FUEL.I,Цены на топливо | Accommodation and food service,45.205479,level
 2020-04-01,national,FUEL.J,Цены на топливо | Information and communication,36.666667,level
 2020-07-01,national,FUEL.J,Цены на топливо | Information and communication,40.322581,level
 2020-10-01,national,FUEL.J,Цены на топливо | Information and communication,40.322581,level
@@ -987,6 +1024,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,FUEL.J,Цены на топливо | Information and communication,28.985507,level
 2026-04-01,national,FUEL.J,Цены на топливо | Information and communication,31.818182,level
 2026-07-01,national,FUEL.J,Цены на топливо | Information and communication,32.8125,level
+2026-10-01,national,FUEL.J,Цены на топливо | Information and communication,29.411765,level
 2020-04-01,national,FUEL.L,Цены на топливо | Real estate activities,40.875912,level
 2020-07-01,national,FUEL.L,Цены на топливо | Real estate activities,38.686131,level
 2020-10-01,national,FUEL.L,Цены на топливо | Real estate activities,41.726619,level
@@ -1013,6 +1051,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,FUEL.L,Цены на топливо | Real estate activities,32.413793,level
 2026-04-01,national,FUEL.L,Цены на топливо | Real estate activities,32.167832,level
 2026-07-01,national,FUEL.L,Цены на топливо | Real estate activities,35.294118,level
+2026-10-01,national,FUEL.L,Цены на топливо | Real estate activities,33.774834,level
 2020-04-01,national,FUEL.M,"Цены на топливо | Professional, scientific and technical activities",50.331126,level
 2020-07-01,national,FUEL.M,"Цены на топливо | Professional, scientific and technical activities",49.032258,level
 2020-10-01,national,FUEL.M,"Цены на топливо | Professional, scientific and technical activities",45.454545,level
@@ -1038,7 +1077,8 @@ date,region,item_code,item_name,value,transformation
 2025-10-01,national,FUEL.M,"Цены на топливо | Professional, scientific and technical activities",41.353383,level
 2026-01-01,national,FUEL.M,"Цены на топливо | Professional, scientific and technical activities",38.129496,level
 2026-04-01,national,FUEL.M,"Цены на топливо | Professional, scientific and technical activities",38.297872,level
-2026-07-01,national,FUEL.M,"Цены на топливо | Professional, scientific and technical activities",38.297872,level
+2026-07-01,national,FUEL.M,"Цены на топливо | Professional, scientific and technical activities",38.571429,level
+2026-10-01,national,FUEL.M,"Цены на топливо | Professional, scientific and technical activities",39.041096,level
 2020-04-01,national,FUEL.NRS,Цены на топливо | Other industries,51.388889,level
 2020-07-01,national,FUEL.NRS,Цены на топливо | Other industries,48.648649,level
 2020-10-01,national,FUEL.NRS,Цены на топливо | Other industries,46.052632,level
@@ -1058,13 +1098,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,FUEL.NRS,Цены на топливо | Other industries,40.178571,level
 2024-07-01,national,FUEL.NRS,Цены на топливо | Other industries,35.714286,level
 2024-10-01,national,FUEL.NRS,Цены на топливо | Other industries,37.719298,level
-2025-01-01,national,FUEL.NRS,Цены на топливо | Other industries,37.288136,level
-2025-04-01,national,FUEL.NRS,Цены на топливо | Other industries,35.833333,level
-2025-07-01,national,FUEL.NRS,Цены на топливо | Other industries,36.666667,level
-2025-10-01,national,FUEL.NRS,Цены на топливо | Other industries,34.126984,level
-2026-01-01,national,FUEL.NRS,Цены на топливо | Other industries,37.209302,level
+2025-01-01,national,FUEL.NRS,Цены на топливо | Other industries,37.815126,level
+2025-04-01,national,FUEL.NRS,Цены на топливо | Other industries,36.363636,level
+2025-07-01,national,FUEL.NRS,Цены на топливо | Other industries,37.190083,level
+2025-10-01,national,FUEL.NRS,Цены на топливо | Other industries,34.645669,level
+2026-01-01,national,FUEL.NRS,Цены на топливо | Other industries,37.692308,level
 2026-04-01,national,FUEL.NRS,Цены на топливо | Other industries,34.090909,level
-2026-07-01,national,FUEL.NRS,Цены на топливо | Other industries,39.097744,level
+2026-07-01,national,FUEL.NRS,Цены на топливо | Other industries,39.552239,level
+2026-10-01,national,FUEL.NRS,Цены на топливо | Other industries,36.619718,level
 2020-04-01,national,FUEL.TOTAL,Цены на топливо | All sectors,57.66129,level
 2020-07-01,national,FUEL.TOTAL,Цены на топливо | All sectors,55.992624,level
 2020-10-01,national,FUEL.TOTAL,Цены на топливо | All sectors,58.272283,level
@@ -1088,9 +1129,10 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,FUEL.TOTAL,Цены на топливо | All sectors,56.898551,level
 2025-07-01,national,FUEL.TOTAL,Цены на топливо | All sectors,55.285259,level
 2025-10-01,national,FUEL.TOTAL,Цены на топливо | All sectors,56.756757,level
-2026-01-01,national,FUEL.TOTAL,Цены на топливо | All sectors,56.777714,level
+2026-01-01,national,FUEL.TOTAL,Цены на топливо | All sectors,56.765297,level
 2026-04-01,national,FUEL.TOTAL,Цены на топливо | All sectors,55.985109,level
-2026-07-01,national,FUEL.TOTAL,Цены на топливо | All sectors,56.458512,level
+2026-07-01,national,FUEL.TOTAL,Цены на топливо | All sectors,56.474615,level
+2026-10-01,national,FUEL.TOTAL,Цены на топливо | All sectors,55.349099,level
 2020-04-01,national,FX.A,Обменный курс | Agriculture,44.221106,level
 2020-07-01,national,FX.A,Обменный курс | Agriculture,46.5,level
 2020-10-01,national,FX.A,Обменный курс | Agriculture,54.5,level
@@ -1117,6 +1159,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,FX.A,Обменный курс | Agriculture,46.632124,level
 2026-04-01,national,FX.A,Обменный курс | Agriculture,38.743455,level
 2026-07-01,national,FX.A,Обменный курс | Agriculture,40.425532,level
+2026-10-01,national,FX.A,Обменный курс | Agriculture,39.247312,level
 2020-04-01,national,FX.B,Обменный курс | Mining,57.068063,level
 2020-07-01,national,FX.B,Обменный курс | Mining,59.259259,level
 2020-10-01,national,FX.B,Обменный курс | Mining,61.052632,level
@@ -1136,13 +1179,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,FX.B,Обменный курс | Mining,62.727273,level
 2024-07-01,national,FX.B,Обменный курс | Mining,66.818182,level
 2024-10-01,national,FX.B,Обменный курс | Mining,64.090909,level
-2025-01-01,national,FX.B,Обменный курс | Mining,65.777778,level
-2025-04-01,national,FX.B,Обменный курс | Mining,65.217391,level
-2025-07-01,national,FX.B,Обменный курс | Mining,63.135593,level
-2025-10-01,national,FX.B,Обменный курс | Mining,64.489796,level
-2026-01-01,national,FX.B,Обменный курс | Mining,65.432099,level
-2026-04-01,national,FX.B,Обменный курс | Mining,64.73029,level
-2026-07-01,national,FX.B,Обменный курс | Mining,62.139918,level
+2025-01-01,national,FX.B,Обменный курс | Mining,65.919283,level
+2025-04-01,national,FX.B,Обменный курс | Mining,65.350877,level
+2025-07-01,national,FX.B,Обменный курс | Mining,63.675214,level
+2025-10-01,national,FX.B,Обменный курс | Mining,64.609053,level
+2026-01-01,national,FX.B,Обменный курс | Mining,65.416667,level
+2026-04-01,national,FX.B,Обменный курс | Mining,64.853556,level
+2026-07-01,national,FX.B,Обменный курс | Mining,62.396694,level
+2026-10-01,national,FX.B,Обменный курс | Mining,63.673469,level
 2020-04-01,national,FX.C,Обменный курс | Manufacturing,62.318841,level
 2020-07-01,national,FX.C,Обменный курс | Manufacturing,58.51216,level
 2020-10-01,national,FX.C,Обменный курс | Manufacturing,61.789773,level
@@ -1162,13 +1206,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,FX.C,Обменный курс | Manufacturing,61.298701,level
 2024-07-01,national,FX.C,Обменный курс | Manufacturing,64.774194,level
 2024-10-01,national,FX.C,Обменный курс | Manufacturing,61.577608,level
-2025-01-01,national,FX.C,Обменный курс | Manufacturing,64.930114,level
-2025-04-01,national,FX.C,Обменный курс | Manufacturing,64.765526,level
-2025-07-01,national,FX.C,Обменный курс | Manufacturing,64.167726,level
-2025-10-01,national,FX.C,Обменный курс | Manufacturing,63.371356,level
-2026-01-01,national,FX.C,Обменный курс | Manufacturing,63.454318,level
-2026-04-01,national,FX.C,Обменный курс | Manufacturing,61.132075,level
-2026-07-01,national,FX.C,Обменный курс | Manufacturing,61.869619,level
+2025-01-01,national,FX.C,Обменный курс | Manufacturing,65.101523,level
+2025-04-01,national,FX.C,Обменный курс | Manufacturing,64.936709,level
+2025-07-01,national,FX.C,Обменный курс | Manufacturing,64.213198,level
+2025-10-01,national,FX.C,Обменный курс | Manufacturing,63.417722,level
+2026-01-01,national,FX.C,Обменный курс | Manufacturing,63.5,level
+2026-04-01,national,FX.C,Обменный курс | Manufacturing,61.104141,level
+2026-07-01,national,FX.C,Обменный курс | Manufacturing,61.82266,level
+2026-10-01,national,FX.C,Обменный курс | Manufacturing,61.746617,level
 2020-04-01,national,FX.D,Обменный курс | Electricity supply,31.958763,level
 2020-07-01,national,FX.D,Обменный курс | Electricity supply,37.5,level
 2020-10-01,national,FX.D,Обменный курс | Electricity supply,40.625,level
@@ -1195,6 +1240,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,FX.D,Обменный курс | Electricity supply,23.584906,level
 2026-04-01,national,FX.D,Обменный курс | Electricity supply,23.853211,level
 2026-07-01,national,FX.D,Обменный курс | Electricity supply,26.548673,level
+2026-10-01,national,FX.D,Обменный курс | Electricity supply,25.663717,level
 2020-04-01,national,FX.E,Обменный курс | Water supply,56.097561,level
 2020-07-01,national,FX.E,Обменный курс | Water supply,36.585366,level
 2020-10-01,national,FX.E,Обменный курс | Water supply,48.717949,level
@@ -1221,6 +1267,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,FX.E,Обменный курс | Water supply,14.0,level
 2026-04-01,national,FX.E,Обменный курс | Water supply,16.0,level
 2026-07-01,national,FX.E,Обменный курс | Water supply,14.583333,level
+2026-10-01,national,FX.E,Обменный курс | Water supply,14.285714,level
 2020-04-01,national,FX.F,Обменный курс | Construction,50.852273,level
 2020-07-01,national,FX.F,Обменный курс | Construction,49.283668,level
 2020-10-01,national,FX.F,Обменный курс | Construction,52.824859,level
@@ -1247,6 +1294,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,FX.F,Обменный курс | Construction,55.238095,level
 2026-04-01,national,FX.F,Обменный курс | Construction,53.459119,level
 2026-07-01,national,FX.F,Обменный курс | Construction,50.15674,level
+2026-10-01,national,FX.F,Обменный курс | Construction,47.546012,level
 2020-04-01,national,FX.G,Обменный курс | Trade,72.116461,level
 2020-07-01,national,FX.G,Обменный курс | Trade,68.357222,level
 2020-10-01,national,FX.G,Обменный курс | Trade,72.796518,level
@@ -1266,13 +1314,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,FX.G,Обменный курс | Trade,70.537634,level
 2024-07-01,national,FX.G,Обменный курс | Trade,70.940171,level
 2024-10-01,national,FX.G,Обменный курс | Trade,72.87234,level
-2025-01-01,national,FX.G,Обменный курс | Trade,73.756614,level
-2025-04-01,national,FX.G,Обменный курс | Trade,72.947368,level
-2025-07-01,national,FX.G,Обменный курс | Trade,73.976915,level
+2025-01-01,national,FX.G,Обменный курс | Trade,73.650794,level
+2025-04-01,national,FX.G,Обменный курс | Trade,72.842105,level
+2025-07-01,national,FX.G,Обменный курс | Trade,73.871983,level
 2025-10-01,national,FX.G,Обменный курс | Trade,73.092784,level
 2026-01-01,national,FX.G,Обменный курс | Trade,72.07113,level
 2026-04-01,national,FX.G,Обменный курс | Trade,70.301142,level
-2026-07-01,national,FX.G,Обменный курс | Trade,68.42661,level
+2026-07-01,national,FX.G,Обменный курс | Trade,68.459916,level
+2026-10-01,national,FX.G,Обменный курс | Trade,66.458333,level
 2020-04-01,national,FX.H,Обменный курс | Transport and warehousing,48.387097,level
 2020-07-01,national,FX.H,Обменный курс | Transport and warehousing,48.015873,level
 2020-10-01,national,FX.H,Обменный курс | Transport and warehousing,53.629032,level
@@ -1299,6 +1348,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,FX.H,Обменный курс | Transport and warehousing,55.30303,level
 2026-04-01,national,FX.H,Обменный курс | Transport and warehousing,55.555556,level
 2026-07-01,national,FX.H,Обменный курс | Transport and warehousing,50.915751,level
+2026-10-01,national,FX.H,Обменный курс | Transport and warehousing,50.714286,level
 2020-04-01,national,FX.I,Обменный курс | Accommodation and food service,33.333333,level
 2020-07-01,national,FX.I,Обменный курс | Accommodation and food service,33.333333,level
 2020-10-01,national,FX.I,Обменный курс | Accommodation and food service,47.368421,level
@@ -1325,6 +1375,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,FX.I,Обменный курс | Accommodation and food service,44.594595,level
 2026-04-01,national,FX.I,Обменный курс | Accommodation and food service,45.205479,level
 2026-07-01,national,FX.I,Обменный курс | Accommodation and food service,34.722222,level
+2026-10-01,national,FX.I,Обменный курс | Accommodation and food service,32.876712,level
 2020-04-01,national,FX.J,Обменный курс | Information and communication,51.666667,level
 2020-07-01,national,FX.J,Обменный курс | Information and communication,48.387097,level
 2020-10-01,national,FX.J,Обменный курс | Information and communication,53.225806,level
@@ -1351,6 +1402,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,FX.J,Обменный курс | Information and communication,43.478261,level
 2026-04-01,national,FX.J,Обменный курс | Information and communication,48.484848,level
 2026-07-01,national,FX.J,Обменный курс | Information and communication,48.4375,level
+2026-10-01,national,FX.J,Обменный курс | Information and communication,44.117647,level
 2020-04-01,national,FX.L,Обменный курс | Real estate activities,35.766423,level
 2020-07-01,national,FX.L,Обменный курс | Real estate activities,34.306569,level
 2020-10-01,national,FX.L,Обменный курс | Real estate activities,35.971223,level
@@ -1377,6 +1429,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,FX.L,Обменный курс | Real estate activities,28.275862,level
 2026-04-01,national,FX.L,Обменный курс | Real estate activities,29.370629,level
 2026-07-01,national,FX.L,Обменный курс | Real estate activities,31.372549,level
+2026-10-01,national,FX.L,Обменный курс | Real estate activities,27.152318,level
 2020-04-01,national,FX.M,"Обменный курс | Professional, scientific and technical activities",45.033113,level
 2020-07-01,national,FX.M,"Обменный курс | Professional, scientific and technical activities",45.806452,level
 2020-10-01,national,FX.M,"Обменный курс | Professional, scientific and technical activities",49.350649,level
@@ -1402,7 +1455,8 @@ date,region,item_code,item_name,value,transformation
 2025-10-01,national,FX.M,"Обменный курс | Professional, scientific and technical activities",49.62406,level
 2026-01-01,national,FX.M,"Обменный курс | Professional, scientific and technical activities",45.323741,level
 2026-04-01,national,FX.M,"Обменный курс | Professional, scientific and technical activities",43.262411,level
-2026-07-01,national,FX.M,"Обменный курс | Professional, scientific and technical activities",41.843972,level
+2026-07-01,national,FX.M,"Обменный курс | Professional, scientific and technical activities",42.142857,level
+2026-10-01,national,FX.M,"Обменный курс | Professional, scientific and technical activities",42.465753,level
 2020-04-01,national,FX.NRS,Обменный курс | Other industries,58.333333,level
 2020-07-01,national,FX.NRS,Обменный курс | Other industries,55.405405,level
 2020-10-01,national,FX.NRS,Обменный курс | Other industries,53.947368,level
@@ -1422,13 +1476,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,FX.NRS,Обменный курс | Other industries,44.642857,level
 2024-07-01,national,FX.NRS,Обменный курс | Other industries,43.75,level
 2024-10-01,national,FX.NRS,Обменный курс | Other industries,47.368421,level
-2025-01-01,national,FX.NRS,Обменный курс | Other industries,46.610169,level
-2025-04-01,national,FX.NRS,Обменный курс | Other industries,45.833333,level
-2025-07-01,national,FX.NRS,Обменный курс | Other industries,45.0,level
-2025-10-01,national,FX.NRS,Обменный курс | Other industries,43.650794,level
-2026-01-01,national,FX.NRS,Обменный курс | Other industries,42.635659,level
+2025-01-01,national,FX.NRS,Обменный курс | Other industries,46.218487,level
+2025-04-01,national,FX.NRS,Обменный курс | Other industries,45.454545,level
+2025-07-01,national,FX.NRS,Обменный курс | Other industries,44.628099,level
+2025-10-01,national,FX.NRS,Обменный курс | Other industries,43.307087,level
+2026-01-01,national,FX.NRS,Обменный курс | Other industries,42.307692,level
 2026-04-01,national,FX.NRS,Обменный курс | Other industries,40.909091,level
-2026-07-01,national,FX.NRS,Обменный курс | Other industries,43.609023,level
+2026-07-01,national,FX.NRS,Обменный курс | Other industries,43.283582,level
+2026-10-01,national,FX.NRS,Обменный курс | Other industries,45.070423,level
 2020-04-01,national,FX.TOTAL,Обменный курс | All sectors,57.227047,level
 2020-07-01,national,FX.TOTAL,Обменный курс | All sectors,55.255071,level
 2020-10-01,national,FX.TOTAL,Обменный курс | All sectors,59.58486,level
@@ -1452,9 +1507,10 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,FX.TOTAL,Обменный курс | All sectors,58.347826,level
 2025-07-01,national,FX.TOTAL,Обменный курс | All sectors,57.891688,level
 2025-10-01,national,FX.TOTAL,Обменный курс | All sectors,58.366878,level
-2026-01-01,national,FX.TOTAL,Обменный курс | All sectors,57.983917,level
+2026-01-01,national,FX.TOTAL,Обменный курс | All sectors,57.971847,level
 2026-04-01,national,FX.TOTAL,Обменный курс | All sectors,56.386025,level
-2026-07-01,national,FX.TOTAL,Обменный курс | All sectors,55.175364,level
+2026-07-01,national,FX.TOTAL,Обменный курс | All sectors,55.191101,level
+2026-10-01,national,FX.TOTAL,Обменный курс | All sectors,54.138514,level
 2020-04-01,national,OTHER.A,Прочие факторы | Agriculture,7.035176,level
 2020-07-01,national,OTHER.A,Прочие факторы | Agriculture,26.0,level
 2020-10-01,national,OTHER.A,Прочие факторы | Agriculture,32.5,level
@@ -1481,6 +1537,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,OTHER.A,Прочие факторы | Agriculture,14.507772,level
 2026-04-01,national,OTHER.A,Прочие факторы | Agriculture,6.282723,level
 2026-07-01,national,OTHER.A,Прочие факторы | Agriculture,11.702128,level
+2026-10-01,national,OTHER.A,Прочие факторы | Agriculture,5.376344,level
 2020-04-01,national,OTHER.B,Прочие факторы | Mining,10.471204,level
 2020-07-01,national,OTHER.B,Прочие факторы | Mining,14.814815,level
 2020-10-01,national,OTHER.B,Прочие факторы | Mining,20.0,level
@@ -1500,13 +1557,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,OTHER.B,Прочие факторы | Mining,15.454545,level
 2024-07-01,national,OTHER.B,Прочие факторы | Mining,15.909091,level
 2024-10-01,national,OTHER.B,Прочие факторы | Mining,15.0,level
-2025-01-01,national,OTHER.B,Прочие факторы | Mining,15.555556,level
-2025-04-01,national,OTHER.B,Прочие факторы | Mining,16.086957,level
-2025-07-01,national,OTHER.B,Прочие факторы | Mining,14.830508,level
-2025-10-01,national,OTHER.B,Прочие факторы | Mining,15.918367,level
-2026-01-01,national,OTHER.B,Прочие факторы | Mining,15.63786,level
-2026-04-01,national,OTHER.B,Прочие факторы | Mining,16.182573,level
-2026-07-01,national,OTHER.B,Прочие факторы | Mining,14.403292,level
+2025-01-01,national,OTHER.B,Прочие факторы | Mining,15.695067,level
+2025-04-01,national,OTHER.B,Прочие факторы | Mining,16.22807,level
+2025-07-01,national,OTHER.B,Прочие факторы | Mining,14.957265,level
+2025-10-01,national,OTHER.B,Прочие факторы | Mining,16.049383,level
+2026-01-01,national,OTHER.B,Прочие факторы | Mining,15.833333,level
+2026-04-01,national,OTHER.B,Прочие факторы | Mining,16.317992,level
+2026-07-01,national,OTHER.B,Прочие факторы | Mining,14.46281,level
+2026-10-01,national,OTHER.B,Прочие факторы | Mining,17.959184,level
 2020-04-01,national,OTHER.C,Прочие факторы | Manufacturing,7.826087,level
 2020-07-01,national,OTHER.C,Прочие факторы | Manufacturing,22.889843,level
 2020-10-01,national,OTHER.C,Прочие факторы | Manufacturing,25.284091,level
@@ -1526,13 +1584,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,OTHER.C,Прочие факторы | Manufacturing,8.961039,level
 2024-07-01,national,OTHER.C,Прочие факторы | Manufacturing,12.129032,level
 2024-10-01,national,OTHER.C,Прочие факторы | Manufacturing,9.796438,level
-2025-01-01,national,OTHER.C,Прочие факторы | Manufacturing,12.198221,level
-2025-04-01,national,OTHER.C,Прочие факторы | Manufacturing,11.153359,level
-2025-07-01,national,OTHER.C,Прочие факторы | Manufacturing,10.673443,level
-2025-10-01,national,OTHER.C,Прочие факторы | Manufacturing,10.139417,level
-2026-01-01,national,OTHER.C,Прочие факторы | Manufacturing,11.889862,level
-2026-04-01,national,OTHER.C,Прочие факторы | Manufacturing,10.691824,level
-2026-07-01,national,OTHER.C,Прочие факторы | Manufacturing,11.070111,level
+2025-01-01,national,OTHER.C,Прочие факторы | Manufacturing,12.182741,level
+2025-04-01,national,OTHER.C,Прочие факторы | Manufacturing,11.139241,level
+2025-07-01,national,OTHER.C,Прочие факторы | Manufacturing,10.659898,level
+2025-10-01,national,OTHER.C,Прочие факторы | Manufacturing,10.126582,level
+2026-01-01,national,OTHER.C,Прочие факторы | Manufacturing,11.875,level
+2026-04-01,national,OTHER.C,Прочие факторы | Manufacturing,10.790464,level
+2026-07-01,national,OTHER.C,Прочие факторы | Manufacturing,11.083744,level
+2026-10-01,national,OTHER.C,Прочие факторы | Manufacturing,10.332103,level
 2020-04-01,national,OTHER.D,Прочие факторы | Electricity supply,8.247423,level
 2020-07-01,national,OTHER.D,Прочие факторы | Electricity supply,23.958333,level
 2020-10-01,national,OTHER.D,Прочие факторы | Electricity supply,21.875,level
@@ -1559,6 +1618,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,OTHER.D,Прочие факторы | Electricity supply,4.716981,level
 2026-04-01,national,OTHER.D,Прочие факторы | Electricity supply,5.504587,level
 2026-07-01,national,OTHER.D,Прочие факторы | Electricity supply,7.079646,level
+2026-10-01,national,OTHER.D,Прочие факторы | Electricity supply,7.964602,level
 2020-04-01,national,OTHER.E,Прочие факторы | Water supply,9.756098,level
 2020-07-01,national,OTHER.E,Прочие факторы | Water supply,26.829268,level
 2020-10-01,national,OTHER.E,Прочие факторы | Water supply,35.897436,level
@@ -1585,6 +1645,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,OTHER.E,Прочие факторы | Water supply,14.0,level
 2026-04-01,national,OTHER.E,Прочие факторы | Water supply,12.0,level
 2026-07-01,national,OTHER.E,Прочие факторы | Water supply,8.333333,level
+2026-10-01,national,OTHER.E,Прочие факторы | Water supply,10.204082,level
 2020-04-01,national,OTHER.F,Прочие факторы | Construction,7.954545,level
 2020-07-01,national,OTHER.F,Прочие факторы | Construction,26.074499,level
 2020-10-01,national,OTHER.F,Прочие факторы | Construction,26.836158,level
@@ -1611,6 +1672,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,OTHER.F,Прочие факторы | Construction,13.333333,level
 2026-04-01,national,OTHER.F,Прочие факторы | Construction,11.949686,level
 2026-07-01,national,OTHER.F,Прочие факторы | Construction,13.166144,level
+2026-10-01,national,OTHER.F,Прочие факторы | Construction,9.815951,level
 2020-04-01,national,OTHER.G,Прочие факторы | Trade,6.830907,level
 2020-07-01,national,OTHER.G,Прочие факторы | Trade,20.507166,level
 2020-10-01,national,OTHER.G,Прочие факторы | Trade,24.047878,level
@@ -1636,7 +1698,8 @@ date,region,item_code,item_name,value,transformation
 2025-10-01,national,OTHER.G,Прочие факторы | Trade,10.103093,level
 2026-01-01,national,OTHER.G,Прочие факторы | Trade,10.251046,level
 2026-04-01,national,OTHER.G,Прочие факторы | Trade,10.176532,level
-2026-07-01,national,OTHER.G,Прочие факторы | Trade,9.609293,level
+2026-07-01,national,OTHER.G,Прочие факторы | Trade,9.599156,level
+2026-10-01,national,OTHER.G,Прочие факторы | Trade,8.958333,level
 2020-04-01,national,OTHER.H,Прочие факторы | Transport and warehousing,8.467742,level
 2020-07-01,national,OTHER.H,Прочие факторы | Transport and warehousing,22.222222,level
 2020-10-01,national,OTHER.H,Прочие факторы | Transport and warehousing,27.419355,level
@@ -1663,6 +1726,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,OTHER.H,Прочие факторы | Transport and warehousing,10.606061,level
 2026-04-01,national,OTHER.H,Прочие факторы | Transport and warehousing,13.703704,level
 2026-07-01,national,OTHER.H,Прочие факторы | Transport and warehousing,13.186813,level
+2026-10-01,national,OTHER.H,Прочие факторы | Transport and warehousing,13.928571,level
 2020-04-01,national,OTHER.I,Прочие факторы | Accommodation and food service,6.451613,level
 2020-07-01,national,OTHER.I,Прочие факторы | Accommodation and food service,11.827957,level
 2020-10-01,national,OTHER.I,Прочие факторы | Accommodation and food service,21.052632,level
@@ -1689,6 +1753,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,OTHER.I,Прочие факторы | Accommodation and food service,12.162162,level
 2026-04-01,national,OTHER.I,Прочие факторы | Accommodation and food service,13.69863,level
 2026-07-01,national,OTHER.I,Прочие факторы | Accommodation and food service,12.5,level
+2026-10-01,national,OTHER.I,Прочие факторы | Accommodation and food service,10.958904,level
 2020-04-01,national,OTHER.J,Прочие факторы | Information and communication,15.0,level
 2020-07-01,national,OTHER.J,Прочие факторы | Information and communication,27.419355,level
 2020-10-01,national,OTHER.J,Прочие факторы | Information and communication,38.709677,level
@@ -1715,6 +1780,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,OTHER.J,Прочие факторы | Information and communication,10.144928,level
 2026-04-01,national,OTHER.J,Прочие факторы | Information and communication,13.636364,level
 2026-07-01,national,OTHER.J,Прочие факторы | Information and communication,10.9375,level
+2026-10-01,national,OTHER.J,Прочие факторы | Information and communication,13.235294,level
 2020-04-01,national,OTHER.L,Прочие факторы | Real estate activities,5.839416,level
 2020-07-01,national,OTHER.L,Прочие факторы | Real estate activities,25.547445,level
 2020-10-01,national,OTHER.L,Прочие факторы | Real estate activities,20.143885,level
@@ -1741,6 +1807,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,OTHER.L,Прочие факторы | Real estate activities,5.517241,level
 2026-04-01,national,OTHER.L,Прочие факторы | Real estate activities,5.594406,level
 2026-07-01,national,OTHER.L,Прочие факторы | Real estate activities,7.843137,level
+2026-10-01,national,OTHER.L,Прочие факторы | Real estate activities,7.284768,level
 2020-04-01,national,OTHER.M,"Прочие факторы | Professional, scientific and technical activities",5.960265,level
 2020-07-01,national,OTHER.M,"Прочие факторы | Professional, scientific and technical activities",12.903226,level
 2020-10-01,national,OTHER.M,"Прочие факторы | Professional, scientific and technical activities",16.883117,level
@@ -1766,7 +1833,8 @@ date,region,item_code,item_name,value,transformation
 2025-10-01,national,OTHER.M,"Прочие факторы | Professional, scientific and technical activities",7.518797,level
 2026-01-01,national,OTHER.M,"Прочие факторы | Professional, scientific and technical activities",5.755396,level
 2026-04-01,national,OTHER.M,"Прочие факторы | Professional, scientific and technical activities",8.510638,level
-2026-07-01,national,OTHER.M,"Прочие факторы | Professional, scientific and technical activities",6.382979,level
+2026-07-01,national,OTHER.M,"Прочие факторы | Professional, scientific and technical activities",6.428571,level
+2026-10-01,national,OTHER.M,"Прочие факторы | Professional, scientific and technical activities",6.849315,level
 2020-04-01,national,OTHER.NRS,Прочие факторы | Other industries,6.944444,level
 2020-07-01,national,OTHER.NRS,Прочие факторы | Other industries,13.513514,level
 2020-10-01,national,OTHER.NRS,Прочие факторы | Other industries,15.789474,level
@@ -1786,13 +1854,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,OTHER.NRS,Прочие факторы | Other industries,13.392857,level
 2024-07-01,national,OTHER.NRS,Прочие факторы | Other industries,8.035714,level
 2024-10-01,national,OTHER.NRS,Прочие факторы | Other industries,8.77193,level
-2025-01-01,national,OTHER.NRS,Прочие факторы | Other industries,7.627119,level
-2025-04-01,national,OTHER.NRS,Прочие факторы | Other industries,7.5,level
-2025-07-01,national,OTHER.NRS,Прочие факторы | Other industries,10.833333,level
-2025-10-01,national,OTHER.NRS,Прочие факторы | Other industries,11.111111,level
-2026-01-01,national,OTHER.NRS,Прочие факторы | Other industries,8.527132,level
-2026-04-01,national,OTHER.NRS,Прочие факторы | Other industries,7.575758,level
-2026-07-01,national,OTHER.NRS,Прочие факторы | Other industries,11.278195,level
+2025-01-01,national,OTHER.NRS,Прочие факторы | Other industries,7.563025,level
+2025-04-01,national,OTHER.NRS,Прочие факторы | Other industries,7.438017,level
+2025-07-01,national,OTHER.NRS,Прочие факторы | Other industries,10.743802,level
+2025-10-01,national,OTHER.NRS,Прочие факторы | Other industries,11.023622,level
+2026-01-01,national,OTHER.NRS,Прочие факторы | Other industries,8.461538,level
+2026-04-01,national,OTHER.NRS,Прочие факторы | Other industries,6.818182,level
+2026-07-01,national,OTHER.NRS,Прочие факторы | Other industries,11.19403,level
+2026-10-01,national,OTHER.NRS,Прочие факторы | Other industries,11.971831,level
 2020-04-01,national,OTHER.TOTAL,Прочие факторы | All sectors,7.66129,level
 2020-07-01,national,OTHER.TOTAL,Прочие факторы | All sectors,21.511985,level
 2020-10-01,national,OTHER.TOTAL,Прочие факторы | All sectors,24.725275,level
@@ -1816,9 +1885,10 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,OTHER.TOTAL,Прочие факторы | All sectors,11.362319,level
 2025-07-01,national,OTHER.TOTAL,Прочие факторы | All sectors,11.120765,level
 2025-10-01,national,OTHER.TOTAL,Прочие факторы | All sectors,11.213341,level
-2026-01-01,national,OTHER.TOTAL,Прочие факторы | All sectors,11.028145,level
+2026-01-01,national,OTHER.TOTAL,Прочие факторы | All sectors,11.031313,level
 2026-04-01,national,OTHER.TOTAL,Прочие факторы | All sectors,10.595647,level
-2026-07-01,national,OTHER.TOTAL,Прочие факторы | All sectors,10.835472,level
+2026-07-01,national,OTHER.TOTAL,Прочие факторы | All sectors,10.838562,level
+2026-10-01,national,OTHER.TOTAL,Прочие факторы | All sectors,10.247748,level
 2020-04-01,national,PRODUCTIVITY.A,Производительность | Agriculture,67.839196,level
 2020-07-01,national,PRODUCTIVITY.A,Производительность | Agriculture,64.0,level
 2020-10-01,national,PRODUCTIVITY.A,Производительность | Agriculture,67.0,level
@@ -1845,6 +1915,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,PRODUCTIVITY.A,Производительность | Agriculture,54.92228,level
 2026-04-01,national,PRODUCTIVITY.A,Производительность | Agriculture,52.879581,level
 2026-07-01,national,PRODUCTIVITY.A,Производительность | Agriculture,56.914894,level
+2026-10-01,national,PRODUCTIVITY.A,Производительность | Agriculture,58.602151,level
 2020-04-01,national,PRODUCTIVITY.B,Производительность | Mining,74.34555,level
 2020-07-01,national,PRODUCTIVITY.B,Производительность | Mining,71.428571,level
 2020-10-01,national,PRODUCTIVITY.B,Производительность | Mining,74.736842,level
@@ -1864,13 +1935,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,PRODUCTIVITY.B,Производительность | Mining,72.727273,level
 2024-07-01,national,PRODUCTIVITY.B,Производительность | Mining,71.363636,level
 2024-10-01,national,PRODUCTIVITY.B,Производительность | Mining,73.181818,level
-2025-01-01,national,PRODUCTIVITY.B,Производительность | Mining,71.555556,level
-2025-04-01,national,PRODUCTIVITY.B,Производительность | Mining,70.434783,level
-2025-07-01,national,PRODUCTIVITY.B,Производительность | Mining,66.525424,level
-2025-10-01,national,PRODUCTIVITY.B,Производительность | Mining,66.122449,level
-2026-01-01,national,PRODUCTIVITY.B,Производительность | Mining,67.901235,level
-2026-04-01,national,PRODUCTIVITY.B,Производительность | Mining,64.73029,level
-2026-07-01,national,PRODUCTIVITY.B,Производительность | Mining,65.020576,level
+2025-01-01,national,PRODUCTIVITY.B,Производительность | Mining,71.748879,level
+2025-04-01,national,PRODUCTIVITY.B,Производительность | Mining,70.614035,level
+2025-07-01,national,PRODUCTIVITY.B,Производительность | Mining,66.239316,level
+2025-10-01,national,PRODUCTIVITY.B,Производительность | Mining,65.843621,level
+2026-01-01,national,PRODUCTIVITY.B,Производительность | Mining,67.5,level
+2026-04-01,national,PRODUCTIVITY.B,Производительность | Mining,64.435146,level
+2026-07-01,national,PRODUCTIVITY.B,Производительность | Mining,64.876033,level
+2026-10-01,national,PRODUCTIVITY.B,Производительность | Mining,64.081633,level
 2020-04-01,national,PRODUCTIVITY.C,Производительность | Manufacturing,71.73913,level
 2020-07-01,national,PRODUCTIVITY.C,Производительность | Manufacturing,68.812589,level
 2020-10-01,national,PRODUCTIVITY.C,Производительность | Manufacturing,69.744318,level
@@ -1890,13 +1962,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,PRODUCTIVITY.C,Производительность | Manufacturing,68.181818,level
 2024-07-01,national,PRODUCTIVITY.C,Производительность | Manufacturing,68.645161,level
 2024-10-01,national,PRODUCTIVITY.C,Производительность | Manufacturing,67.302799,level
-2025-01-01,national,PRODUCTIVITY.C,Производительность | Manufacturing,67.090216,level
-2025-04-01,national,PRODUCTIVITY.C,Производительность | Manufacturing,67.046895,level
-2025-07-01,national,PRODUCTIVITY.C,Производительность | Manufacturing,64.80305,level
-2025-10-01,national,PRODUCTIVITY.C,Производительность | Manufacturing,63.498099,level
-2026-01-01,national,PRODUCTIVITY.C,Производительность | Manufacturing,63.204005,level
-2026-04-01,national,PRODUCTIVITY.C,Производительность | Manufacturing,63.647799,level
-2026-07-01,national,PRODUCTIVITY.C,Производительность | Manufacturing,64.821648,level
+2025-01-01,national,PRODUCTIVITY.C,Производительность | Manufacturing,67.13198,level
+2025-04-01,national,PRODUCTIVITY.C,Производительность | Manufacturing,67.088608,level
+2025-07-01,national,PRODUCTIVITY.C,Производительность | Manufacturing,64.974619,level
+2025-10-01,national,PRODUCTIVITY.C,Производительность | Manufacturing,63.670886,level
+2026-01-01,national,PRODUCTIVITY.C,Производительность | Manufacturing,63.375,level
+2026-04-01,national,PRODUCTIVITY.C,Производительность | Manufacturing,63.864492,level
+2026-07-01,national,PRODUCTIVITY.C,Производительность | Manufacturing,64.901478,level
+2026-10-01,national,PRODUCTIVITY.C,Производительность | Manufacturing,64.575646,level
 2020-04-01,national,PRODUCTIVITY.D,Производительность | Electricity supply,62.886598,level
 2020-07-01,national,PRODUCTIVITY.D,Производительность | Electricity supply,58.333333,level
 2020-10-01,national,PRODUCTIVITY.D,Производительность | Electricity supply,63.541667,level
@@ -1923,6 +1996,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,PRODUCTIVITY.D,Производительность | Electricity supply,42.45283,level
 2026-04-01,national,PRODUCTIVITY.D,Производительность | Electricity supply,39.449541,level
 2026-07-01,national,PRODUCTIVITY.D,Производительность | Electricity supply,42.477876,level
+2026-10-01,national,PRODUCTIVITY.D,Производительность | Electricity supply,38.053097,level
 2020-04-01,national,PRODUCTIVITY.E,Производительность | Water supply,75.609756,level
 2020-07-01,national,PRODUCTIVITY.E,Производительность | Water supply,60.97561,level
 2020-10-01,national,PRODUCTIVITY.E,Производительность | Water supply,64.102564,level
@@ -1949,6 +2023,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,PRODUCTIVITY.E,Производительность | Water supply,58.0,level
 2026-04-01,national,PRODUCTIVITY.E,Производительность | Water supply,58.0,level
 2026-07-01,national,PRODUCTIVITY.E,Производительность | Water supply,60.416667,level
+2026-10-01,national,PRODUCTIVITY.E,Производительность | Water supply,59.183673,level
 2020-04-01,national,PRODUCTIVITY.F,Производительность | Construction,67.045455,level
 2020-07-01,national,PRODUCTIVITY.F,Производительность | Construction,63.037249,level
 2020-10-01,national,PRODUCTIVITY.F,Производительность | Construction,67.231638,level
@@ -1975,6 +2050,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,PRODUCTIVITY.F,Производительность | Construction,58.412698,level
 2026-04-01,national,PRODUCTIVITY.F,Производительность | Construction,63.836478,level
 2026-07-01,national,PRODUCTIVITY.F,Производительность | Construction,59.247649,level
+2026-10-01,national,PRODUCTIVITY.F,Производительность | Construction,57.055215,level
 2020-04-01,national,PRODUCTIVITY.G,Производительность | Trade,51.959686,level
 2020-07-01,national,PRODUCTIVITY.G,Производительность | Trade,50.937155,level
 2020-10-01,national,PRODUCTIVITY.G,Производительность | Trade,52.774755,level
@@ -1994,13 +2070,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,PRODUCTIVITY.G,Производительность | Trade,49.892473,level
 2024-07-01,national,PRODUCTIVITY.G,Производительность | Trade,47.75641,level
 2024-10-01,national,PRODUCTIVITY.G,Производительность | Trade,47.340426,level
-2025-01-01,national,PRODUCTIVITY.G,Производительность | Trade,44.761905,level
-2025-04-01,national,PRODUCTIVITY.G,Производительность | Trade,45.368421,level
-2025-07-01,national,PRODUCTIVITY.G,Производительность | Trade,43.756558,level
-2025-10-01,national,PRODUCTIVITY.G,Производительность | Trade,43.298969,level
-2026-01-01,national,PRODUCTIVITY.G,Производительность | Trade,43.933054,level
-2026-04-01,national,PRODUCTIVITY.G,Производительность | Trade,43.821391,level
-2026-07-01,national,PRODUCTIVITY.G,Производительность | Trade,43.189018,level
+2025-01-01,national,PRODUCTIVITY.G,Производительность | Trade,44.656085,level
+2025-04-01,national,PRODUCTIVITY.G,Производительность | Trade,45.263158,level
+2025-07-01,national,PRODUCTIVITY.G,Производительность | Trade,43.651626,level
+2025-10-01,national,PRODUCTIVITY.G,Производительность | Trade,43.195876,level
+2026-01-01,national,PRODUCTIVITY.G,Производительность | Trade,43.828452,level
+2026-04-01,national,PRODUCTIVITY.G,Производительность | Trade,43.717549,level
+2026-07-01,national,PRODUCTIVITY.G,Производительность | Trade,43.14346,level
+2026-10-01,national,PRODUCTIVITY.G,Производительность | Trade,40.416667,level
 2020-04-01,national,PRODUCTIVITY.H,Производительность | Transport and warehousing,59.274194,level
 2020-07-01,national,PRODUCTIVITY.H,Производительность | Transport and warehousing,59.126984,level
 2020-10-01,national,PRODUCTIVITY.H,Производительность | Transport and warehousing,56.854839,level
@@ -2027,6 +2104,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,PRODUCTIVITY.H,Производительность | Transport and warehousing,48.863636,level
 2026-04-01,national,PRODUCTIVITY.H,Производительность | Transport and warehousing,49.62963,level
 2026-07-01,national,PRODUCTIVITY.H,Производительность | Transport and warehousing,45.421245,level
+2026-10-01,national,PRODUCTIVITY.H,Производительность | Transport and warehousing,48.214286,level
 2020-04-01,national,PRODUCTIVITY.I,Производительность | Accommodation and food service,49.462366,level
 2020-07-01,national,PRODUCTIVITY.I,Производительность | Accommodation and food service,40.860215,level
 2020-10-01,national,PRODUCTIVITY.I,Производительность | Accommodation and food service,52.631579,level
@@ -2053,6 +2131,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,PRODUCTIVITY.I,Производительность | Accommodation and food service,56.756757,level
 2026-04-01,national,PRODUCTIVITY.I,Производительность | Accommodation and food service,57.534247,level
 2026-07-01,national,PRODUCTIVITY.I,Производительность | Accommodation and food service,55.555556,level
+2026-10-01,national,PRODUCTIVITY.I,Производительность | Accommodation and food service,53.424658,level
 2020-04-01,national,PRODUCTIVITY.J,Производительность | Information and communication,60.0,level
 2020-07-01,national,PRODUCTIVITY.J,Производительность | Information and communication,54.83871,level
 2020-10-01,national,PRODUCTIVITY.J,Производительность | Information and communication,59.677419,level
@@ -2079,6 +2158,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,PRODUCTIVITY.J,Производительность | Information and communication,34.782609,level
 2026-04-01,national,PRODUCTIVITY.J,Производительность | Information and communication,37.878788,level
 2026-07-01,national,PRODUCTIVITY.J,Производительность | Information and communication,40.625,level
+2026-10-01,national,PRODUCTIVITY.J,Производительность | Information and communication,42.647059,level
 2020-04-01,national,PRODUCTIVITY.L,Производительность | Real estate activities,42.335766,level
 2020-07-01,national,PRODUCTIVITY.L,Производительность | Real estate activities,43.065693,level
 2020-10-01,national,PRODUCTIVITY.L,Производительность | Real estate activities,43.884892,level
@@ -2105,6 +2185,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,PRODUCTIVITY.L,Производительность | Real estate activities,26.896552,level
 2026-04-01,national,PRODUCTIVITY.L,Производительность | Real estate activities,26.573427,level
 2026-07-01,national,PRODUCTIVITY.L,Производительность | Real estate activities,32.679739,level
+2026-10-01,national,PRODUCTIVITY.L,Производительность | Real estate activities,28.476821,level
 2020-04-01,national,PRODUCTIVITY.M,"Производительность | Professional, scientific and technical activities",55.629139,level
 2020-07-01,national,PRODUCTIVITY.M,"Производительность | Professional, scientific and technical activities",55.483871,level
 2020-10-01,national,PRODUCTIVITY.M,"Производительность | Professional, scientific and technical activities",55.844156,level
@@ -2130,7 +2211,8 @@ date,region,item_code,item_name,value,transformation
 2025-10-01,national,PRODUCTIVITY.M,"Производительность | Professional, scientific and technical activities",45.864662,level
 2026-01-01,national,PRODUCTIVITY.M,"Производительность | Professional, scientific and technical activities",42.446043,level
 2026-04-01,national,PRODUCTIVITY.M,"Производительность | Professional, scientific and technical activities",47.51773,level
-2026-07-01,national,PRODUCTIVITY.M,"Производительность | Professional, scientific and technical activities",41.843972,level
+2026-07-01,national,PRODUCTIVITY.M,"Производительность | Professional, scientific and technical activities",42.142857,level
+2026-10-01,national,PRODUCTIVITY.M,"Производительность | Professional, scientific and technical activities",41.09589,level
 2020-04-01,national,PRODUCTIVITY.NRS,Производительность | Other industries,52.777778,level
 2020-07-01,national,PRODUCTIVITY.NRS,Производительность | Other industries,62.162162,level
 2020-10-01,national,PRODUCTIVITY.NRS,Производительность | Other industries,50.0,level
@@ -2150,13 +2232,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,PRODUCTIVITY.NRS,Производительность | Other industries,44.642857,level
 2024-07-01,national,PRODUCTIVITY.NRS,Производительность | Other industries,42.857143,level
 2024-10-01,national,PRODUCTIVITY.NRS,Производительность | Other industries,39.473684,level
-2025-01-01,national,PRODUCTIVITY.NRS,Производительность | Other industries,39.830508,level
-2025-04-01,national,PRODUCTIVITY.NRS,Производительность | Other industries,40.0,level
-2025-07-01,national,PRODUCTIVITY.NRS,Производительность | Other industries,40.0,level
-2025-10-01,national,PRODUCTIVITY.NRS,Производительность | Other industries,36.507937,level
-2026-01-01,national,PRODUCTIVITY.NRS,Производительность | Other industries,40.310078,level
+2025-01-01,national,PRODUCTIVITY.NRS,Производительность | Other industries,40.336134,level
+2025-04-01,national,PRODUCTIVITY.NRS,Производительность | Other industries,40.495868,level
+2025-07-01,national,PRODUCTIVITY.NRS,Производительность | Other industries,40.495868,level
+2025-10-01,national,PRODUCTIVITY.NRS,Производительность | Other industries,37.007874,level
+2026-01-01,national,PRODUCTIVITY.NRS,Производительность | Other industries,40.769231,level
 2026-04-01,national,PRODUCTIVITY.NRS,Производительность | Other industries,34.090909,level
-2026-07-01,national,PRODUCTIVITY.NRS,Производительность | Other industries,36.090226,level
+2026-07-01,national,PRODUCTIVITY.NRS,Производительность | Other industries,36.567164,level
+2026-10-01,national,PRODUCTIVITY.NRS,Производительность | Other industries,33.802817,level
 2020-04-01,national,PRODUCTIVITY.TOTAL,Производительность | All sectors,61.19727,level
 2020-07-01,national,PRODUCTIVITY.TOTAL,Производительность | All sectors,58.973571,level
 2020-10-01,national,PRODUCTIVITY.TOTAL,Производительность | All sectors,60.714286,level
@@ -2180,9 +2263,10 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,PRODUCTIVITY.TOTAL,Производительность | All sectors,53.594203,level
 2025-07-01,national,PRODUCTIVITY.TOTAL,Производительность | All sectors,51.81002,level
 2025-10-01,national,PRODUCTIVITY.TOTAL,Производительность | All sectors,51.552616,level
-2026-01-01,national,PRODUCTIVITY.TOTAL,Производительность | All sectors,51.665709,level
+2026-01-01,national,PRODUCTIVITY.TOTAL,Производительность | All sectors,51.651824,level
 2026-04-01,national,PRODUCTIVITY.TOTAL,Производительность | All sectors,51.861397,level
-2026-07-01,national,PRODUCTIVITY.TOTAL,Производительность | All sectors,51.725121,level
+2026-07-01,national,PRODUCTIVITY.TOTAL,Производительность | All sectors,51.739875,level
+2026-10-01,national,PRODUCTIVITY.TOTAL,Производительность | All sectors,50.422297,level
 2020-04-01,national,RAW_MATERIALS.A,Цены на сырьё и материалы | Agriculture,88.442211,level
 2020-07-01,national,RAW_MATERIALS.A,Цены на сырьё и материалы | Agriculture,82.5,level
 2020-10-01,national,RAW_MATERIALS.A,Цены на сырьё и материалы | Agriculture,82.0,level
@@ -2209,6 +2293,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,RAW_MATERIALS.A,Цены на сырьё и материалы | Agriculture,81.34715,level
 2026-04-01,national,RAW_MATERIALS.A,Цены на сырьё и материалы | Agriculture,80.104712,level
 2026-07-01,national,RAW_MATERIALS.A,Цены на сырьё и материалы | Agriculture,82.446809,level
+2026-10-01,national,RAW_MATERIALS.A,Цены на сырьё и материалы | Agriculture,81.182796,level
 2020-04-01,national,RAW_MATERIALS.B,Цены на сырьё и материалы | Mining,80.628272,level
 2020-07-01,national,RAW_MATERIALS.B,Цены на сырьё и материалы | Mining,82.010582,level
 2020-10-01,national,RAW_MATERIALS.B,Цены на сырьё и материалы | Mining,83.684211,level
@@ -2228,13 +2313,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,RAW_MATERIALS.B,Цены на сырьё и материалы | Mining,84.090909,level
 2024-07-01,national,RAW_MATERIALS.B,Цены на сырьё и материалы | Mining,83.636364,level
 2024-10-01,national,RAW_MATERIALS.B,Цены на сырьё и материалы | Mining,84.090909,level
-2025-01-01,national,RAW_MATERIALS.B,Цены на сырьё и материалы | Mining,81.333333,level
-2025-04-01,national,RAW_MATERIALS.B,Цены на сырьё и материалы | Mining,83.478261,level
-2025-07-01,national,RAW_MATERIALS.B,Цены на сырьё и материалы | Mining,81.355932,level
-2025-10-01,national,RAW_MATERIALS.B,Цены на сырьё и материалы | Mining,80.408163,level
-2026-01-01,national,RAW_MATERIALS.B,Цены на сырьё и материалы | Mining,78.600823,level
-2026-04-01,national,RAW_MATERIALS.B,Цены на сырьё и материалы | Mining,80.912863,level
-2026-07-01,national,RAW_MATERIALS.B,Цены на сырьё и материалы | Mining,78.600823,level
+2025-01-01,national,RAW_MATERIALS.B,Цены на сырьё и материалы | Mining,81.165919,level
+2025-04-01,national,RAW_MATERIALS.B,Цены на сырьё и материалы | Mining,83.333333,level
+2025-07-01,national,RAW_MATERIALS.B,Цены на сырьё и материалы | Mining,81.196581,level
+2025-10-01,national,RAW_MATERIALS.B,Цены на сырьё и материалы | Mining,80.246914,level
+2026-01-01,national,RAW_MATERIALS.B,Цены на сырьё и материалы | Mining,78.75,level
+2026-04-01,national,RAW_MATERIALS.B,Цены на сырьё и материалы | Mining,80.753138,level
+2026-07-01,national,RAW_MATERIALS.B,Цены на сырьё и материалы | Mining,78.512397,level
+2026-10-01,national,RAW_MATERIALS.B,Цены на сырьё и материалы | Mining,78.77551,level
 2020-04-01,national,RAW_MATERIALS.C,Цены на сырьё и материалы | Manufacturing,90.724638,level
 2020-07-01,national,RAW_MATERIALS.C,Цены на сырьё и материалы | Manufacturing,88.984263,level
 2020-10-01,national,RAW_MATERIALS.C,Цены на сырьё и материалы | Manufacturing,92.613636,level
@@ -2254,13 +2340,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,RAW_MATERIALS.C,Цены на сырьё и материалы | Manufacturing,91.298701,level
 2024-07-01,national,RAW_MATERIALS.C,Цены на сырьё и материалы | Manufacturing,91.612903,level
 2024-10-01,national,RAW_MATERIALS.C,Цены на сырьё и материалы | Manufacturing,90.585242,level
-2025-01-01,national,RAW_MATERIALS.C,Цены на сырьё и материалы | Manufacturing,91.740788,level
-2025-04-01,national,RAW_MATERIALS.C,Цены на сырьё и материалы | Manufacturing,91.12801,level
-2025-07-01,national,RAW_MATERIALS.C,Цены на сырьё и материалы | Manufacturing,90.47014,level
-2025-10-01,national,RAW_MATERIALS.C,Цены на сырьё и материалы | Manufacturing,88.973384,level
-2026-01-01,national,RAW_MATERIALS.C,Цены на сырьё и материалы | Manufacturing,88.73592,level
-2026-04-01,national,RAW_MATERIALS.C,Цены на сырьё и материалы | Manufacturing,88.930818,level
-2026-07-01,national,RAW_MATERIALS.C,Цены на сырьё и материалы | Manufacturing,89.052891,level
+2025-01-01,national,RAW_MATERIALS.C,Цены на сырьё и материалы | Manufacturing,91.751269,level
+2025-04-01,national,RAW_MATERIALS.C,Цены на сырьё и материалы | Manufacturing,91.139241,level
+2025-07-01,national,RAW_MATERIALS.C,Цены на сырьё и материалы | Manufacturing,90.482234,level
+2025-10-01,national,RAW_MATERIALS.C,Цены на сырьё и материалы | Manufacturing,88.987342,level
+2026-01-01,national,RAW_MATERIALS.C,Цены на сырьё и материалы | Manufacturing,88.75,level
+2026-04-01,national,RAW_MATERIALS.C,Цены на сырьё и материалы | Manufacturing,88.958595,level
+2026-07-01,national,RAW_MATERIALS.C,Цены на сырьё и материалы | Manufacturing,89.039409,level
+2026-10-01,national,RAW_MATERIALS.C,Цены на сырьё и материалы | Manufacturing,88.929889,level
 2020-04-01,national,RAW_MATERIALS.D,Цены на сырьё и материалы | Electricity supply,84.536082,level
 2020-07-01,national,RAW_MATERIALS.D,Цены на сырьё и материалы | Electricity supply,82.291667,level
 2020-10-01,national,RAW_MATERIALS.D,Цены на сырьё и материалы | Electricity supply,85.416667,level
@@ -2287,6 +2374,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,RAW_MATERIALS.D,Цены на сырьё и материалы | Electricity supply,58.490566,level
 2026-04-01,national,RAW_MATERIALS.D,Цены на сырьё и материалы | Electricity supply,55.963303,level
 2026-07-01,national,RAW_MATERIALS.D,Цены на сырьё и материалы | Electricity supply,57.522124,level
+2026-10-01,national,RAW_MATERIALS.D,Цены на сырьё и материалы | Electricity supply,60.176991,level
 2020-04-01,national,RAW_MATERIALS.E,Цены на сырьё и материалы | Water supply,87.804878,level
 2020-07-01,national,RAW_MATERIALS.E,Цены на сырьё и материалы | Water supply,78.04878,level
 2020-10-01,national,RAW_MATERIALS.E,Цены на сырьё и материалы | Water supply,87.179487,level
@@ -2313,6 +2401,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,RAW_MATERIALS.E,Цены на сырьё и материалы | Water supply,82.0,level
 2026-04-01,national,RAW_MATERIALS.E,Цены на сырьё и материалы | Water supply,86.0,level
 2026-07-01,national,RAW_MATERIALS.E,Цены на сырьё и материалы | Water supply,81.25,level
+2026-10-01,national,RAW_MATERIALS.E,Цены на сырьё и материалы | Water supply,81.632653,level
 2020-04-01,national,RAW_MATERIALS.F,Цены на сырьё и материалы | Construction,83.806818,level
 2020-07-01,national,RAW_MATERIALS.F,Цены на сырьё и материалы | Construction,77.363897,level
 2020-10-01,national,RAW_MATERIALS.F,Цены на сырьё и материалы | Construction,86.158192,level
@@ -2339,6 +2428,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,RAW_MATERIALS.F,Цены на сырьё и материалы | Construction,84.126984,level
 2026-04-01,national,RAW_MATERIALS.F,Цены на сырьё и материалы | Construction,82.075472,level
 2026-07-01,national,RAW_MATERIALS.F,Цены на сырьё и материалы | Construction,83.69906,level
+2026-10-01,national,RAW_MATERIALS.F,Цены на сырьё и материалы | Construction,80.674847,level
 2020-04-01,national,RAW_MATERIALS.G,Цены на сырьё и материалы | Trade,81.970885,level
 2020-07-01,national,RAW_MATERIALS.G,Цены на сырьё и материалы | Trade,82.579934,level
 2020-10-01,national,RAW_MATERIALS.G,Цены на сырьё и материалы | Trade,82.698585,level
@@ -2364,7 +2454,8 @@ date,region,item_code,item_name,value,transformation
 2025-10-01,national,RAW_MATERIALS.G,Цены на сырьё и материалы | Trade,81.752577,level
 2026-01-01,national,RAW_MATERIALS.G,Цены на сырьё и материалы | Trade,81.276151,level
 2026-04-01,national,RAW_MATERIALS.G,Цены на сырьё и материалы | Trade,80.893043,level
-2026-07-01,national,RAW_MATERIALS.G,Цены на сырьё и материалы | Trade,80.253432,level
+2026-07-01,national,RAW_MATERIALS.G,Цены на сырьё и материалы | Trade,80.274262,level
+2026-10-01,national,RAW_MATERIALS.G,Цены на сырьё и материалы | Trade,79.375,level
 2020-04-01,national,RAW_MATERIALS.H,Цены на сырьё и материалы | Transport and warehousing,73.387097,level
 2020-07-01,national,RAW_MATERIALS.H,Цены на сырьё и материалы | Transport and warehousing,70.238095,level
 2020-10-01,national,RAW_MATERIALS.H,Цены на сырьё и материалы | Transport and warehousing,69.758065,level
@@ -2391,6 +2482,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,RAW_MATERIALS.H,Цены на сырьё и материалы | Transport and warehousing,65.530303,level
 2026-04-01,national,RAW_MATERIALS.H,Цены на сырьё и материалы | Transport and warehousing,69.62963,level
 2026-07-01,national,RAW_MATERIALS.H,Цены на сырьё и материалы | Transport and warehousing,69.230769,level
+2026-10-01,national,RAW_MATERIALS.H,Цены на сырьё и материалы | Transport and warehousing,69.642857,level
 2020-04-01,national,RAW_MATERIALS.I,Цены на сырьё и материалы | Accommodation and food service,62.365591,level
 2020-07-01,national,RAW_MATERIALS.I,Цены на сырьё и материалы | Accommodation and food service,55.913978,level
 2020-10-01,national,RAW_MATERIALS.I,Цены на сырьё и материалы | Accommodation and food service,71.578947,level
@@ -2417,6 +2509,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,RAW_MATERIALS.I,Цены на сырьё и материалы | Accommodation and food service,81.081081,level
 2026-04-01,national,RAW_MATERIALS.I,Цены на сырьё и материалы | Accommodation and food service,80.821918,level
 2026-07-01,national,RAW_MATERIALS.I,Цены на сырьё и материалы | Accommodation and food service,80.555556,level
+2026-10-01,national,RAW_MATERIALS.I,Цены на сырьё и материалы | Accommodation and food service,76.712329,level
 2020-04-01,national,RAW_MATERIALS.J,Цены на сырьё и материалы | Information and communication,81.666667,level
 2020-07-01,national,RAW_MATERIALS.J,Цены на сырьё и материалы | Information and communication,72.580645,level
 2020-10-01,national,RAW_MATERIALS.J,Цены на сырьё и материалы | Information and communication,75.806452,level
@@ -2443,6 +2536,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,RAW_MATERIALS.J,Цены на сырьё и материалы | Information and communication,57.971014,level
 2026-04-01,national,RAW_MATERIALS.J,Цены на сырьё и материалы | Information and communication,56.060606,level
 2026-07-01,national,RAW_MATERIALS.J,Цены на сырьё и материалы | Information and communication,62.5,level
+2026-10-01,national,RAW_MATERIALS.J,Цены на сырьё и материалы | Information and communication,52.941176,level
 2020-04-01,national,RAW_MATERIALS.L,Цены на сырьё и материалы | Real estate activities,57.664234,level
 2020-07-01,national,RAW_MATERIALS.L,Цены на сырьё и материалы | Real estate activities,62.043796,level
 2020-10-01,national,RAW_MATERIALS.L,Цены на сырьё и материалы | Real estate activities,61.151079,level
@@ -2469,6 +2563,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,RAW_MATERIALS.L,Цены на сырьё и материалы | Real estate activities,45.517241,level
 2026-04-01,national,RAW_MATERIALS.L,Цены на сырьё и материалы | Real estate activities,47.552448,level
 2026-07-01,national,RAW_MATERIALS.L,Цены на сырьё и материалы | Real estate activities,54.248366,level
+2026-10-01,national,RAW_MATERIALS.L,Цены на сырьё и материалы | Real estate activities,49.006623,level
 2020-04-01,national,RAW_MATERIALS.M,"Цены на сырьё и материалы | Professional, scientific and technical activities",62.913907,level
 2020-07-01,national,RAW_MATERIALS.M,"Цены на сырьё и материалы | Professional, scientific and technical activities",63.225806,level
 2020-10-01,national,RAW_MATERIALS.M,"Цены на сырьё и материалы | Professional, scientific and technical activities",63.636364,level
@@ -2494,7 +2589,8 @@ date,region,item_code,item_name,value,transformation
 2025-10-01,national,RAW_MATERIALS.M,"Цены на сырьё и материалы | Professional, scientific and technical activities",60.150376,level
 2026-01-01,national,RAW_MATERIALS.M,"Цены на сырьё и материалы | Professional, scientific and technical activities",54.676259,level
 2026-04-01,national,RAW_MATERIALS.M,"Цены на сырьё и материалы | Professional, scientific and technical activities",55.319149,level
-2026-07-01,national,RAW_MATERIALS.M,"Цены на сырьё и материалы | Professional, scientific and technical activities",53.900709,level
+2026-07-01,national,RAW_MATERIALS.M,"Цены на сырьё и материалы | Professional, scientific and technical activities",54.285714,level
+2026-10-01,national,RAW_MATERIALS.M,"Цены на сырьё и материалы | Professional, scientific and technical activities",56.164384,level
 2020-04-01,national,RAW_MATERIALS.NRS,Цены на сырьё и материалы | Other industries,65.277778,level
 2020-07-01,national,RAW_MATERIALS.NRS,Цены на сырьё и материалы | Other industries,63.513514,level
 2020-10-01,national,RAW_MATERIALS.NRS,Цены на сырьё и материалы | Other industries,63.157895,level
@@ -2514,13 +2610,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,RAW_MATERIALS.NRS,Цены на сырьё и материалы | Other industries,58.928571,level
 2024-07-01,national,RAW_MATERIALS.NRS,Цены на сырьё и материалы | Other industries,59.821429,level
 2024-10-01,national,RAW_MATERIALS.NRS,Цены на сырьё и материалы | Other industries,57.894737,level
-2025-01-01,national,RAW_MATERIALS.NRS,Цены на сырьё и материалы | Other industries,55.932203,level
-2025-04-01,national,RAW_MATERIALS.NRS,Цены на сырьё и материалы | Other industries,54.166667,level
-2025-07-01,national,RAW_MATERIALS.NRS,Цены на сырьё и материалы | Other industries,55.833333,level
-2025-10-01,national,RAW_MATERIALS.NRS,Цены на сырьё и материалы | Other industries,58.730159,level
-2026-01-01,national,RAW_MATERIALS.NRS,Цены на сырьё и материалы | Other industries,58.914729,level
+2025-01-01,national,RAW_MATERIALS.NRS,Цены на сырьё и материалы | Other industries,56.302521,level
+2025-04-01,national,RAW_MATERIALS.NRS,Цены на сырьё и материалы | Other industries,54.545455,level
+2025-07-01,national,RAW_MATERIALS.NRS,Цены на сырьё и материалы | Other industries,56.198347,level
+2025-10-01,national,RAW_MATERIALS.NRS,Цены на сырьё и материалы | Other industries,59.055118,level
+2026-01-01,national,RAW_MATERIALS.NRS,Цены на сырьё и материалы | Other industries,58.461538,level
 2026-04-01,national,RAW_MATERIALS.NRS,Цены на сырьё и материалы | Other industries,53.787879,level
-2026-07-01,national,RAW_MATERIALS.NRS,Цены на сырьё и материалы | Other industries,53.383459,level
+2026-07-01,national,RAW_MATERIALS.NRS,Цены на сырьё и материалы | Other industries,53.731343,level
+2026-10-01,national,RAW_MATERIALS.NRS,Цены на сырьё и материалы | Other industries,51.408451,level
 2020-04-01,national,RAW_MATERIALS.TOTAL,Цены на сырьё и материалы | All sectors,80.986352,level
 2020-07-01,national,RAW_MATERIALS.TOTAL,Цены на сырьё и материалы | All sectors,79.164106,level
 2020-10-01,national,RAW_MATERIALS.TOTAL,Цены на сырьё и материалы | All sectors,81.654457,level
@@ -2544,9 +2641,10 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,RAW_MATERIALS.TOTAL,Цены на сырьё и материалы | All sectors,78.898551,level
 2025-07-01,national,RAW_MATERIALS.TOTAL,Цены на сырьё и материалы | All sectors,78.134955,level
 2025-10-01,national,RAW_MATERIALS.TOTAL,Цены на сырьё и материалы | All sectors,78.234618,level
-2026-01-01,national,RAW_MATERIALS.TOTAL,Цены на сырьё и материалы | All sectors,77.340609,level
+2026-01-01,national,RAW_MATERIALS.TOTAL,Цены на сырьё и материалы | All sectors,77.334099,level
 2026-04-01,national,RAW_MATERIALS.TOTAL,Цены на сырьё и материалы | All sectors,77.319588,level
-2026-07-01,national,RAW_MATERIALS.TOTAL,Цены на сырьё и материалы | All sectors,77.502139,level
+2026-07-01,national,RAW_MATERIALS.TOTAL,Цены на сырьё и материалы | All sectors,77.524244,level
+2026-10-01,national,RAW_MATERIALS.TOTAL,Цены на сырьё и материалы | All sectors,76.463964,level
 2020-04-01,national,TAXES.A,Налоги и сборы | Agriculture,65.829146,level
 2020-07-01,national,TAXES.A,Налоги и сборы | Agriculture,61.0,level
 2020-10-01,national,TAXES.A,Налоги и сборы | Agriculture,67.0,level
@@ -2573,6 +2671,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,TAXES.A,Налоги и сборы | Agriculture,60.103627,level
 2026-04-01,national,TAXES.A,Налоги и сборы | Agriculture,63.350785,level
 2026-07-01,national,TAXES.A,Налоги и сборы | Agriculture,64.361702,level
+2026-10-01,national,TAXES.A,Налоги и сборы | Agriculture,59.139785,level
 2020-04-01,national,TAXES.B,Налоги и сборы | Mining,73.298429,level
 2020-07-01,national,TAXES.B,Налоги и сборы | Mining,74.074074,level
 2020-10-01,national,TAXES.B,Налоги и сборы | Mining,76.315789,level
@@ -2592,13 +2691,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,TAXES.B,Налоги и сборы | Mining,78.636364,level
 2024-07-01,national,TAXES.B,Налоги и сборы | Mining,75.454545,level
 2024-10-01,national,TAXES.B,Налоги и сборы | Mining,77.272727,level
-2025-01-01,national,TAXES.B,Налоги и сборы | Mining,72.888889,level
-2025-04-01,national,TAXES.B,Налоги и сборы | Mining,73.913043,level
-2025-07-01,national,TAXES.B,Налоги и сборы | Mining,68.220339,level
-2025-10-01,national,TAXES.B,Налоги и сборы | Mining,69.795918,level
-2026-01-01,national,TAXES.B,Налоги и сборы | Mining,70.37037,level
-2026-04-01,national,TAXES.B,Налоги и сборы | Mining,73.029046,level
-2026-07-01,national,TAXES.B,Налоги и сборы | Mining,73.251029,level
+2025-01-01,national,TAXES.B,Налоги и сборы | Mining,72.64574,level
+2025-04-01,national,TAXES.B,Налоги и сборы | Mining,73.684211,level
+2025-07-01,national,TAXES.B,Налоги и сборы | Mining,68.376068,level
+2025-10-01,national,TAXES.B,Налоги и сборы | Mining,69.958848,level
+2026-01-01,national,TAXES.B,Налоги и сборы | Mining,70.833333,level
+2026-04-01,national,TAXES.B,Налоги и сборы | Mining,73.221757,level
+2026-07-01,national,TAXES.B,Налоги и сборы | Mining,73.140496,level
+2026-10-01,national,TAXES.B,Налоги и сборы | Mining,72.653061,level
 2020-04-01,national,TAXES.C,Налоги и сборы | Manufacturing,66.521739,level
 2020-07-01,national,TAXES.C,Налоги и сборы | Manufacturing,65.951359,level
 2020-10-01,national,TAXES.C,Налоги и сборы | Manufacturing,69.602273,level
@@ -2618,13 +2718,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,TAXES.C,Налоги и сборы | Manufacturing,67.402597,level
 2024-07-01,national,TAXES.C,Налоги и сборы | Manufacturing,68.645161,level
 2024-10-01,national,TAXES.C,Налоги и сборы | Manufacturing,67.430025,level
-2025-01-01,national,TAXES.C,Налоги и сборы | Manufacturing,68.869123,level
-2025-04-01,national,TAXES.C,Налоги и сборы | Manufacturing,68.314322,level
-2025-07-01,national,TAXES.C,Налоги и сборы | Manufacturing,68.996188,level
-2025-10-01,national,TAXES.C,Налоги и сборы | Manufacturing,68.187579,level
-2026-01-01,national,TAXES.C,Налоги и сборы | Manufacturing,70.588235,level
-2026-04-01,national,TAXES.C,Налоги и сборы | Manufacturing,68.176101,level
-2026-07-01,national,TAXES.C,Налоги и сборы | Manufacturing,69.495695,level
+2025-01-01,national,TAXES.C,Налоги и сборы | Manufacturing,68.908629,level
+2025-04-01,national,TAXES.C,Налоги и сборы | Manufacturing,68.35443,level
+2025-07-01,national,TAXES.C,Налоги и сборы | Manufacturing,68.908629,level
+2025-10-01,national,TAXES.C,Налоги и сборы | Manufacturing,68.101266,level
+2026-01-01,national,TAXES.C,Налоги и сборы | Manufacturing,70.5,level
+2026-04-01,national,TAXES.C,Налоги и сборы | Manufacturing,68.130489,level
+2026-07-01,national,TAXES.C,Налоги и сборы | Manufacturing,69.458128,level
+2026-10-01,national,TAXES.C,Налоги и сборы | Manufacturing,67.527675,level
 2020-04-01,national,TAXES.D,Налоги и сборы | Electricity supply,70.103093,level
 2020-07-01,national,TAXES.D,Налоги и сборы | Electricity supply,63.541667,level
 2020-10-01,national,TAXES.D,Налоги и сборы | Electricity supply,68.75,level
@@ -2651,6 +2752,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,TAXES.D,Налоги и сборы | Electricity supply,48.113208,level
 2026-04-01,national,TAXES.D,Налоги и сборы | Electricity supply,53.211009,level
 2026-07-01,national,TAXES.D,Налоги и сборы | Electricity supply,49.557522,level
+2026-10-01,national,TAXES.D,Налоги и сборы | Electricity supply,53.097345,level
 2020-04-01,national,TAXES.E,Налоги и сборы | Water supply,75.609756,level
 2020-07-01,national,TAXES.E,Налоги и сборы | Water supply,68.292683,level
 2020-10-01,national,TAXES.E,Налоги и сборы | Water supply,79.487179,level
@@ -2677,6 +2779,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,TAXES.E,Налоги и сборы | Water supply,60.0,level
 2026-04-01,national,TAXES.E,Налоги и сборы | Water supply,62.0,level
 2026-07-01,national,TAXES.E,Налоги и сборы | Water supply,60.416667,level
+2026-10-01,national,TAXES.E,Налоги и сборы | Water supply,63.265306,level
 2020-04-01,national,TAXES.F,Налоги и сборы | Construction,69.602273,level
 2020-07-01,national,TAXES.F,Налоги и сборы | Construction,72.77937,level
 2020-10-01,national,TAXES.F,Налоги и сборы | Construction,72.881356,level
@@ -2703,6 +2806,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,TAXES.F,Налоги и сборы | Construction,73.015873,level
 2026-04-01,national,TAXES.F,Налоги и сборы | Construction,73.899371,level
 2026-07-01,national,TAXES.F,Налоги и сборы | Construction,71.159875,level
+2026-10-01,national,TAXES.F,Налоги и сборы | Construction,69.325153,level
 2020-04-01,national,TAXES.G,Налоги и сборы | Trade,68.197088,level
 2020-07-01,national,TAXES.G,Налоги и сборы | Trade,67.364939,level
 2020-10-01,national,TAXES.G,Налоги и сборы | Trade,68.879217,level
@@ -2728,7 +2832,8 @@ date,region,item_code,item_name,value,transformation
 2025-10-01,national,TAXES.G,Налоги и сборы | Trade,70.515464,level
 2026-01-01,national,TAXES.G,Налоги и сборы | Trade,73.32636,level
 2026-04-01,national,TAXES.G,Налоги и сборы | Trade,71.858775,level
-2026-07-01,national,TAXES.G,Налоги и сборы | Trade,70.960929,level
+2026-07-01,national,TAXES.G,Налоги и сборы | Trade,70.991561,level
+2026-10-01,national,TAXES.G,Налоги и сборы | Trade,68.645833,level
 2020-04-01,national,TAXES.H,Налоги и сборы | Transport and warehousing,65.322581,level
 2020-07-01,national,TAXES.H,Налоги и сборы | Transport and warehousing,67.460317,level
 2020-10-01,national,TAXES.H,Налоги и сборы | Transport and warehousing,68.145161,level
@@ -2755,6 +2860,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,TAXES.H,Налоги и сборы | Transport and warehousing,68.181818,level
 2026-04-01,national,TAXES.H,Налоги и сборы | Transport and warehousing,69.259259,level
 2026-07-01,national,TAXES.H,Налоги и сборы | Transport and warehousing,66.300366,level
+2026-10-01,national,TAXES.H,Налоги и сборы | Transport and warehousing,67.5,level
 2020-04-01,national,TAXES.I,Налоги и сборы | Accommodation and food service,70.967742,level
 2020-07-01,national,TAXES.I,Налоги и сборы | Accommodation and food service,58.064516,level
 2020-10-01,national,TAXES.I,Налоги и сборы | Accommodation and food service,75.789474,level
@@ -2781,6 +2887,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,TAXES.I,Налоги и сборы | Accommodation and food service,82.432432,level
 2026-04-01,national,TAXES.I,Налоги и сборы | Accommodation and food service,78.082192,level
 2026-07-01,national,TAXES.I,Налоги и сборы | Accommodation and food service,72.222222,level
+2026-10-01,national,TAXES.I,Налоги и сборы | Accommodation and food service,76.712329,level
 2020-04-01,national,TAXES.J,Налоги и сборы | Information and communication,71.666667,level
 2020-07-01,national,TAXES.J,Налоги и сборы | Information and communication,61.290323,level
 2020-10-01,national,TAXES.J,Налоги и сборы | Information and communication,70.967742,level
@@ -2807,6 +2914,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,TAXES.J,Налоги и сборы | Information and communication,55.072464,level
 2026-04-01,national,TAXES.J,Налоги и сборы | Information and communication,63.636364,level
 2026-07-01,national,TAXES.J,Налоги и сборы | Information and communication,68.75,level
+2026-10-01,national,TAXES.J,Налоги и сборы | Information and communication,63.235294,level
 2020-04-01,national,TAXES.L,Налоги и сборы | Real estate activities,70.80292,level
 2020-07-01,national,TAXES.L,Налоги и сборы | Real estate activities,68.613139,level
 2020-10-01,national,TAXES.L,Налоги и сборы | Real estate activities,65.467626,level
@@ -2833,6 +2941,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,TAXES.L,Налоги и сборы | Real estate activities,61.37931,level
 2026-04-01,national,TAXES.L,Налоги и сборы | Real estate activities,57.342657,level
 2026-07-01,national,TAXES.L,Налоги и сборы | Real estate activities,59.477124,level
+2026-10-01,national,TAXES.L,Налоги и сборы | Real estate activities,59.602649,level
 2020-04-01,national,TAXES.M,"Налоги и сборы | Professional, scientific and technical activities",66.225166,level
 2020-07-01,national,TAXES.M,"Налоги и сборы | Professional, scientific and technical activities",63.225806,level
 2020-10-01,national,TAXES.M,"Налоги и сборы | Professional, scientific and technical activities",66.233766,level
@@ -2858,7 +2967,8 @@ date,region,item_code,item_name,value,transformation
 2025-10-01,national,TAXES.M,"Налоги и сборы | Professional, scientific and technical activities",62.406015,level
 2026-01-01,national,TAXES.M,"Налоги и сборы | Professional, scientific and technical activities",66.18705,level
 2026-04-01,national,TAXES.M,"Налоги и сборы | Professional, scientific and technical activities",63.120567,level
-2026-07-01,national,TAXES.M,"Налоги и сборы | Professional, scientific and technical activities",63.829787,level
+2026-07-01,national,TAXES.M,"Налоги и сборы | Professional, scientific and technical activities",63.571429,level
+2026-10-01,national,TAXES.M,"Налоги и сборы | Professional, scientific and technical activities",66.438356,level
 2020-04-01,national,TAXES.NRS,Налоги и сборы | Other industries,69.444444,level
 2020-07-01,national,TAXES.NRS,Налоги и сборы | Other industries,74.324324,level
 2020-10-01,national,TAXES.NRS,Налоги и сборы | Other industries,63.157895,level
@@ -2878,13 +2988,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,TAXES.NRS,Налоги и сборы | Other industries,57.142857,level
 2024-07-01,national,TAXES.NRS,Налоги и сборы | Other industries,53.571429,level
 2024-10-01,national,TAXES.NRS,Налоги и сборы | Other industries,57.017544,level
-2025-01-01,national,TAXES.NRS,Налоги и сборы | Other industries,55.932203,level
-2025-04-01,national,TAXES.NRS,Налоги и сборы | Other industries,54.166667,level
-2025-07-01,national,TAXES.NRS,Налоги и сборы | Other industries,53.333333,level
-2025-10-01,national,TAXES.NRS,Налоги и сборы | Other industries,55.555556,level
-2026-01-01,national,TAXES.NRS,Налоги и сборы | Other industries,62.790698,level
+2025-01-01,national,TAXES.NRS,Налоги и сборы | Other industries,56.302521,level
+2025-04-01,national,TAXES.NRS,Налоги и сборы | Other industries,54.545455,level
+2025-07-01,national,TAXES.NRS,Налоги и сборы | Other industries,53.719008,level
+2025-10-01,national,TAXES.NRS,Налоги и сборы | Other industries,55.905512,level
+2026-01-01,national,TAXES.NRS,Налоги и сборы | Other industries,63.076923,level
 2026-04-01,national,TAXES.NRS,Налоги и сборы | Other industries,57.575758,level
-2026-07-01,national,TAXES.NRS,Налоги и сборы | Other industries,55.639098,level
+2026-07-01,national,TAXES.NRS,Налоги и сборы | Other industries,55.970149,level
+2026-10-01,national,TAXES.NRS,Налоги и сборы | Other industries,53.521127,level
 2020-04-01,national,TAXES.TOTAL,Налоги и сборы | All sectors,68.269231,level
 2020-07-01,national,TAXES.TOTAL,Налоги и сборы | All sectors,67.178857,level
 2020-10-01,national,TAXES.TOTAL,Налоги и сборы | All sectors,69.688645,level
@@ -2908,9 +3019,10 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,TAXES.TOTAL,Налоги и сборы | All sectors,67.275362,level
 2025-07-01,national,TAXES.TOTAL,Налоги и сборы | All sectors,66.232262,level
 2025-10-01,national,TAXES.TOTAL,Налоги и сборы | All sectors,66.820012,level
-2026-01-01,national,TAXES.TOTAL,Налоги и сборы | All sectors,69.040781,level
+2026-01-01,national,TAXES.TOTAL,Налоги и сборы | All sectors,69.060615,level
 2026-04-01,national,TAXES.TOTAL,Налоги и сборы | All sectors,68.38488,level
-2026-07-01,national,TAXES.TOTAL,Налоги и сборы | All sectors,67.864271,level
+2026-07-01,national,TAXES.TOTAL,Налоги и сборы | All sectors,67.855106,level
+2026-10-01,national,TAXES.TOTAL,Налоги и сборы | All sectors,66.554054,level
 2020-04-01,national,WAGES.A,Расходы на оплату труда | Agriculture,70.351759,level
 2020-07-01,national,WAGES.A,Расходы на оплату труда | Agriculture,71.0,level
 2020-10-01,national,WAGES.A,Расходы на оплату труда | Agriculture,68.5,level
@@ -2937,6 +3049,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,WAGES.A,Расходы на оплату труда | Agriculture,64.248705,level
 2026-04-01,national,WAGES.A,Расходы на оплату труда | Agriculture,63.350785,level
 2026-07-01,national,WAGES.A,Расходы на оплату труда | Agriculture,64.893617,level
+2026-10-01,national,WAGES.A,Расходы на оплату труда | Agriculture,64.516129,level
 2020-04-01,national,WAGES.B,Расходы на оплату труда | Mining,69.109948,level
 2020-07-01,national,WAGES.B,Расходы на оплату труда | Mining,74.603175,level
 2020-10-01,national,WAGES.B,Расходы на оплату труда | Mining,73.157895,level
@@ -2956,13 +3069,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,WAGES.B,Расходы на оплату труда | Mining,70.0,level
 2024-07-01,national,WAGES.B,Расходы на оплату труда | Mining,71.363636,level
 2024-10-01,national,WAGES.B,Расходы на оплату труда | Mining,71.363636,level
-2025-01-01,national,WAGES.B,Расходы на оплату труда | Mining,67.555556,level
-2025-04-01,national,WAGES.B,Расходы на оплату труда | Mining,71.304348,level
-2025-07-01,national,WAGES.B,Расходы на оплату труда | Mining,64.40678,level
-2025-10-01,national,WAGES.B,Расходы на оплату труда | Mining,64.897959,level
-2026-01-01,national,WAGES.B,Расходы на оплату труда | Mining,67.901235,level
-2026-04-01,national,WAGES.B,Расходы на оплату труда | Mining,65.560166,level
-2026-07-01,national,WAGES.B,Расходы на оплату труда | Mining,67.078189,level
+2025-01-01,national,WAGES.B,Расходы на оплату труда | Mining,67.713004,level
+2025-04-01,national,WAGES.B,Расходы на оплату труда | Mining,71.052632,level
+2025-07-01,national,WAGES.B,Расходы на оплату труда | Mining,64.529915,level
+2025-10-01,national,WAGES.B,Расходы на оплату труда | Mining,64.609053,level
+2026-01-01,national,WAGES.B,Расходы на оплату труда | Mining,67.5,level
+2026-04-01,national,WAGES.B,Расходы на оплату труда | Mining,65.271967,level
+2026-07-01,national,WAGES.B,Расходы на оплату труда | Mining,66.942149,level
+2026-10-01,national,WAGES.B,Расходы на оплату труда | Mining,71.020408,level
 2020-04-01,national,WAGES.C,Расходы на оплату труда | Manufacturing,70.434783,level
 2020-07-01,national,WAGES.C,Расходы на оплату труда | Manufacturing,71.244635,level
 2020-10-01,national,WAGES.C,Расходы на оплату труда | Manufacturing,71.590909,level
@@ -2982,13 +3096,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,WAGES.C,Расходы на оплату труда | Manufacturing,71.948052,level
 2024-07-01,national,WAGES.C,Расходы на оплату труда | Manufacturing,72.903226,level
 2024-10-01,national,WAGES.C,Расходы на оплату труда | Manufacturing,72.010178,level
-2025-01-01,national,WAGES.C,Расходы на оплату труда | Manufacturing,73.697586,level
-2025-04-01,national,WAGES.C,Расходы на оплату труда | Manufacturing,75.918885,level
-2025-07-01,national,WAGES.C,Расходы на оплату труда | Manufacturing,73.189327,level
-2025-10-01,national,WAGES.C,Расходы на оплату труда | Manufacturing,72.750317,level
-2026-01-01,national,WAGES.C,Расходы на оплату труда | Manufacturing,73.59199,level
-2026-04-01,national,WAGES.C,Расходы на оплату труда | Manufacturing,72.075472,level
-2026-07-01,national,WAGES.C,Расходы на оплату труда | Manufacturing,72.447724,level
+2025-01-01,national,WAGES.C,Расходы на оплату труда | Manufacturing,73.730964,level
+2025-04-01,national,WAGES.C,Расходы на оплату труда | Manufacturing,76.075949,level
+2025-07-01,national,WAGES.C,Расходы на оплату труда | Manufacturing,73.22335,level
+2025-10-01,national,WAGES.C,Расходы на оплату труда | Manufacturing,72.78481,level
+2026-01-01,national,WAGES.C,Расходы на оплату труда | Manufacturing,73.625,level
+2026-04-01,national,WAGES.C,Расходы на оплату труда | Manufacturing,72.271016,level
+2026-07-01,national,WAGES.C,Расходы на оплату труда | Manufacturing,72.536946,level
+2026-10-01,national,WAGES.C,Расходы на оплату труда | Manufacturing,71.340713,level
 2020-04-01,national,WAGES.D,Расходы на оплату труда | Electricity supply,75.257732,level
 2020-07-01,national,WAGES.D,Расходы на оплату труда | Electricity supply,71.875,level
 2020-10-01,national,WAGES.D,Расходы на оплату труда | Electricity supply,68.75,level
@@ -3015,6 +3130,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,WAGES.D,Расходы на оплату труда | Electricity supply,51.886792,level
 2026-04-01,national,WAGES.D,Расходы на оплату труда | Electricity supply,50.458716,level
 2026-07-01,national,WAGES.D,Расходы на оплату труда | Electricity supply,48.672566,level
+2026-10-01,national,WAGES.D,Расходы на оплату труда | Electricity supply,48.672566,level
 2020-04-01,national,WAGES.E,Расходы на оплату труда | Water supply,78.04878,level
 2020-07-01,national,WAGES.E,Расходы на оплату труда | Water supply,70.731707,level
 2020-10-01,national,WAGES.E,Расходы на оплату труда | Water supply,82.051282,level
@@ -3041,6 +3157,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,WAGES.E,Расходы на оплату труда | Water supply,66.0,level
 2026-04-01,national,WAGES.E,Расходы на оплату труда | Water supply,74.0,level
 2026-07-01,national,WAGES.E,Расходы на оплату труда | Water supply,70.833333,level
+2026-10-01,national,WAGES.E,Расходы на оплату труда | Water supply,67.346939,level
 2020-04-01,national,WAGES.F,Расходы на оплату труда | Construction,73.295455,level
 2020-07-01,national,WAGES.F,Расходы на оплату труда | Construction,71.919771,level
 2020-10-01,national,WAGES.F,Расходы на оплату труда | Construction,79.378531,level
@@ -3067,6 +3184,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,WAGES.F,Расходы на оплату труда | Construction,77.142857,level
 2026-04-01,national,WAGES.F,Расходы на оплату труда | Construction,77.358491,level
 2026-07-01,national,WAGES.F,Расходы на оплату труда | Construction,75.862069,level
+2026-10-01,national,WAGES.F,Расходы на оплату труда | Construction,76.07362,level
 2020-04-01,national,WAGES.G,Расходы на оплату труда | Trade,59.68645,level
 2020-07-01,national,WAGES.G,Расходы на оплату труда | Trade,58.875413,level
 2020-10-01,national,WAGES.G,Расходы на оплату труда | Trade,60.39173,level
@@ -3086,13 +3204,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,WAGES.G,Расходы на оплату труда | Trade,59.569892,level
 2024-07-01,national,WAGES.G,Расходы на оплату труда | Trade,59.401709,level
 2024-10-01,national,WAGES.G,Расходы на оплату труда | Trade,60.851064,level
-2025-01-01,national,WAGES.G,Расходы на оплату труда | Trade,58.941799,level
-2025-04-01,national,WAGES.G,Расходы на оплату труда | Trade,61.368421,level
-2025-07-01,national,WAGES.G,Расходы на оплату труда | Trade,59.916055,level
+2025-01-01,national,WAGES.G,Расходы на оплату труда | Trade,58.835979,level
+2025-04-01,national,WAGES.G,Расходы на оплату труда | Trade,61.263158,level
+2025-07-01,national,WAGES.G,Расходы на оплату труда | Trade,59.811123,level
 2025-10-01,national,WAGES.G,Расходы на оплату труда | Trade,59.484536,level
 2026-01-01,national,WAGES.G,Расходы на оплату труда | Trade,59.623431,level
-2026-04-01,national,WAGES.G,Расходы на оплату труда | Trade,58.566978,level
-2026-07-01,national,WAGES.G,Расходы на оплату труда | Trade,59.662091,level
+2026-04-01,national,WAGES.G,Расходы на оплату труда | Trade,58.463136,level
+2026-07-01,national,WAGES.G,Расходы на оплату труда | Trade,59.599156,level
+2026-10-01,national,WAGES.G,Расходы на оплату труда | Trade,58.020833,level
 2020-04-01,national,WAGES.H,Расходы на оплату труда | Transport and warehousing,66.532258,level
 2020-07-01,national,WAGES.H,Расходы на оплату труда | Transport and warehousing,67.063492,level
 2020-10-01,national,WAGES.H,Расходы на оплату труда | Transport and warehousing,64.112903,level
@@ -3119,6 +3238,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,WAGES.H,Расходы на оплату труда | Transport and warehousing,65.151515,level
 2026-04-01,national,WAGES.H,Расходы на оплату труда | Transport and warehousing,64.074074,level
 2026-07-01,national,WAGES.H,Расходы на оплату труда | Transport and warehousing,64.835165,level
+2026-10-01,national,WAGES.H,Расходы на оплату труда | Transport and warehousing,64.285714,level
 2020-04-01,national,WAGES.I,Расходы на оплату труда | Accommodation and food service,68.817204,level
 2020-07-01,national,WAGES.I,Расходы на оплату труда | Accommodation and food service,56.989247,level
 2020-10-01,national,WAGES.I,Расходы на оплату труда | Accommodation and food service,68.421053,level
@@ -3145,6 +3265,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,WAGES.I,Расходы на оплату труда | Accommodation and food service,77.027027,level
 2026-04-01,national,WAGES.I,Расходы на оплату труда | Accommodation and food service,78.082192,level
 2026-07-01,national,WAGES.I,Расходы на оплату труда | Accommodation and food service,77.777778,level
+2026-10-01,national,WAGES.I,Расходы на оплату труда | Accommodation and food service,75.342466,level
 2020-04-01,national,WAGES.J,Расходы на оплату труда | Information and communication,76.666667,level
 2020-07-01,national,WAGES.J,Расходы на оплату труда | Information and communication,67.741935,level
 2020-10-01,national,WAGES.J,Расходы на оплату труда | Information and communication,64.516129,level
@@ -3171,6 +3292,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,WAGES.J,Расходы на оплату труда | Information and communication,62.318841,level
 2026-04-01,national,WAGES.J,Расходы на оплату труда | Information and communication,66.666667,level
 2026-07-01,national,WAGES.J,Расходы на оплату труда | Information and communication,68.75,level
+2026-10-01,national,WAGES.J,Расходы на оплату труда | Information and communication,66.176471,level
 2020-04-01,national,WAGES.L,Расходы на оплату труда | Real estate activities,56.20438,level
 2020-07-01,national,WAGES.L,Расходы на оплату труда | Real estate activities,59.124088,level
 2020-10-01,national,WAGES.L,Расходы на оплату труда | Real estate activities,61.151079,level
@@ -3197,6 +3319,7 @@ date,region,item_code,item_name,value,transformation
 2026-01-01,national,WAGES.L,Расходы на оплату труда | Real estate activities,51.034483,level
 2026-04-01,national,WAGES.L,Расходы на оплату труда | Real estate activities,50.34965,level
 2026-07-01,national,WAGES.L,Расходы на оплату труда | Real estate activities,56.862745,level
+2026-10-01,national,WAGES.L,Расходы на оплату труда | Real estate activities,49.668874,level
 2020-04-01,national,WAGES.M,"Расходы на оплату труда | Professional, scientific and technical activities",67.549669,level
 2020-07-01,national,WAGES.M,"Расходы на оплату труда | Professional, scientific and technical activities",65.806452,level
 2020-10-01,national,WAGES.M,"Расходы на оплату труда | Professional, scientific and technical activities",69.480519,level
@@ -3222,7 +3345,8 @@ date,region,item_code,item_name,value,transformation
 2025-10-01,national,WAGES.M,"Расходы на оплату труда | Professional, scientific and technical activities",72.180451,level
 2026-01-01,national,WAGES.M,"Расходы на оплату труда | Professional, scientific and technical activities",69.784173,level
 2026-04-01,national,WAGES.M,"Расходы на оплату труда | Professional, scientific and technical activities",68.085106,level
-2026-07-01,national,WAGES.M,"Расходы на оплату труда | Professional, scientific and technical activities",62.411348,level
+2026-07-01,national,WAGES.M,"Расходы на оплату труда | Professional, scientific and technical activities",62.142857,level
+2026-10-01,national,WAGES.M,"Расходы на оплату труда | Professional, scientific and technical activities",67.123288,level
 2020-04-01,national,WAGES.NRS,Расходы на оплату труда | Other industries,73.611111,level
 2020-07-01,national,WAGES.NRS,Расходы на оплату труда | Other industries,74.324324,level
 2020-10-01,national,WAGES.NRS,Расходы на оплату труда | Other industries,68.421053,level
@@ -3242,13 +3366,14 @@ date,region,item_code,item_name,value,transformation
 2024-04-01,national,WAGES.NRS,Расходы на оплату труда | Other industries,63.392857,level
 2024-07-01,national,WAGES.NRS,Расходы на оплату труда | Other industries,61.607143,level
 2024-10-01,national,WAGES.NRS,Расходы на оплату труда | Other industries,61.403509,level
-2025-01-01,national,WAGES.NRS,Расходы на оплату труда | Other industries,57.627119,level
-2025-04-01,national,WAGES.NRS,Расходы на оплату труда | Other industries,54.166667,level
-2025-07-01,national,WAGES.NRS,Расходы на оплату труда | Other industries,57.5,level
-2025-10-01,national,WAGES.NRS,Расходы на оплату труда | Other industries,57.936508,level
-2026-01-01,national,WAGES.NRS,Расходы на оплату труда | Other industries,59.689922,level
+2025-01-01,national,WAGES.NRS,Расходы на оплату труда | Other industries,57.983193,level
+2025-04-01,national,WAGES.NRS,Расходы на оплату труда | Other industries,54.545455,level
+2025-07-01,national,WAGES.NRS,Расходы на оплату труда | Other industries,57.85124,level
+2025-10-01,national,WAGES.NRS,Расходы на оплату труда | Other industries,58.267717,level
+2026-01-01,national,WAGES.NRS,Расходы на оплату труда | Other industries,60.0,level
 2026-04-01,national,WAGES.NRS,Расходы на оплату труда | Other industries,54.545455,level
-2026-07-01,national,WAGES.NRS,Расходы на оплату труда | Other industries,55.639098,level
+2026-07-01,national,WAGES.NRS,Расходы на оплату труда | Other industries,55.970149,level
+2026-10-01,national,WAGES.NRS,Расходы на оплату труда | Other industries,53.521127,level
 2020-04-01,national,WAGES.TOTAL,Расходы на оплату труда | All sectors,67.028536,level
 2020-07-01,national,WAGES.TOTAL,Расходы на оплату труда | All sectors,66.564229,level
 2020-10-01,national,WAGES.TOTAL,Расходы на оплату труда | All sectors,67.826618,level
@@ -3272,6 +3397,7 @@ date,region,item_code,item_name,value,transformation
 2025-04-01,national,WAGES.TOTAL,Расходы на оплату труда | All sectors,67.304348,level
 2025-07-01,national,WAGES.TOTAL,Расходы на оплату труда | All sectors,65.653055,level
 2025-10-01,national,WAGES.TOTAL,Расходы на оплату труда | All sectors,65.554917,level
-2026-01-01,national,WAGES.TOTAL,Расходы на оплату труда | All sectors,65.996554,level
+2026-01-01,national,WAGES.TOTAL,Расходы на оплату труда | All sectors,65.986785,level
 2026-04-01,national,WAGES.TOTAL,Расходы на оплату труда | All sectors,64.948454,level
-2026-07-01,national,WAGES.TOTAL,Расходы на оплату труда | All sectors,65.469062,level
+2026-07-01,national,WAGES.TOTAL,Расходы на оплату труда | All sectors,65.459213,level
+2026-10-01,national,WAGES.TOTAL,Расходы на оплату труда | All sectors,64.63964,level

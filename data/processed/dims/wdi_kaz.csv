@@ -6748,7 +6748,7 @@ date,region,item_code,item_name,value,transformation
 2013-12-31,national,SI.POV.MPWB,Multidimensional poverty headcount ratio (World Bank) (% of population),0.1,level
 2012-12-31,national,SI.POV.MPWB,Multidimensional poverty headcount ratio (World Bank) (% of population),0.2,level
 2011-12-31,national,SI.POV.MPWB,Multidimensional poverty headcount ratio (World Bank) (% of population),0.2,level
-2015-12-31,national,SI.POV.MPUN,Multidimensional poverty headcount ratio (UNDP & OPHI) (% of population),0.5,level
+2024-12-31,national,SI.POV.MPUN,Multidimensional poverty headcount ratio (UNDP & OPHI) (% of population),0.2,level
 2021-12-31,national,SI.DST.50MD,Proportion of people living below 50 percent of median income (%),3.1,level
 2020-12-31,national,SI.DST.50MD,Proportion of people living below 50 percent of median income (%),3.2,level
 2019-12-31,national,SI.DST.50MD,Proportion of people living below 50 percent of median income (%),3.7,level
@@ -18182,38 +18182,41 @@ date,region,item_code,item_name,value,transformation
 1992-12-31,national,EG.GDP.PUSE.KO.PP.KD,GDP per unit of energy use (constant 2021 PPP $ per kg of oil equivalent),3.08743220430839,level
 1991-12-31,national,EG.GDP.PUSE.KO.PP.KD,GDP per unit of energy use (constant 2021 PPP $ per kg of oil equivalent),3.42982128258218,level
 1990-12-31,national,EG.GDP.PUSE.KO.PP.KD,GDP per unit of energy use (constant 2021 PPP $ per kg of oil equivalent),3.93229934418973,level
-2024-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),0.0,level
-2023-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),0.0,level
-2022-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),0.0,level
-2021-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),0.0,level
-2020-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),0.0,level
-2019-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),0.0,level
-2018-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),0.0,level
-2017-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),0.0,level
-2016-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),0.0,level
-2013-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),99.1666233534308,level
-2012-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.8312057212115,level
-2011-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.9243048305772,level
-2010-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.7761559804642,level
-2009-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),99.0458470498182,level
-2008-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.9378663133704,level
-2007-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.8799171686119,level
-2005-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.6645672316665,level
-2004-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.9554413142773,level
-2003-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.5065583093762,level
-2002-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),97.9288948433888,level
-2001-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),97.4814924167463,level
-2000-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),97.2469800807272,level
-1999-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),97.6057346737994,level
-1998-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),97.6331782783063,level
-1997-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),97.366210421804,level
-1996-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),97.1904312502189,level
-1995-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),97.2556403719786,level
-1994-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),96.57949224684,level
-1993-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.0896381135309,level
-1992-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),97.5548964919284,level
-1991-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),97.2400040298532,level
-1990-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),96.9478567144071,level
+2024-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),97.61,level
+2023-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.02,level
+2022-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.12,level
+2021-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.47,level
+2020-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.43,level
+2019-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.59,level
+2018-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),99.0,level
+2017-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.92,level
+2016-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.45,level
+2015-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.45,level
+2014-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),99.01,level
+2013-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),99.19,level
+2012-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.88,level
+2011-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.93,level
+2010-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.79,level
+2009-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),99.05,level
+2008-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.95,level
+2007-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.89,level
+2006-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.83,level
+2005-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.67,level
+2004-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.96,level
+2003-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.51,level
+2002-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),97.93,level
+2001-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),97.49,level
+2000-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),97.25,level
+1999-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),97.61,level
+1998-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),97.64,level
+1997-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),97.37,level
+1996-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),97.2,level
+1995-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),97.26,level
+1994-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),96.58,level
+1993-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),98.09,level
+1992-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),97.56,level
+1991-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),97.24,level
+1990-12-31,national,EG.USE.COMM.FO.ZS,Fossil fuel energy consumption (% of total),96.95,level
 2024-12-31,national,EG.USE.COMM.GD.PP.KD,"Energy use (kg of oil equivalent) per $1,000 GDP (constant 2021 PPP)",100.598073862133,level
 2023-12-31,national,EG.USE.COMM.GD.PP.KD,"Energy use (kg of oil equivalent) per $1,000 GDP (constant 2021 PPP)",105.227350948253,level
 2022-12-31,national,EG.USE.COMM.GD.PP.KD,"Energy use (kg of oil equivalent) per $1,000 GDP (constant 2021 PPP)",104.657674774745,level
@@ -31603,17 +31606,18 @@ date,region,item_code,item_name,value,transformation
 1992-12-31,national,NV.MNF.TECH.ZS.UN,Medium and high-tech manufacturing value added (% manufacturing value added),11.2414790542668,level
 1991-12-31,national,NV.MNF.TECH.ZS.UN,Medium and high-tech manufacturing value added (% manufacturing value added),11.2414790542668,level
 1990-12-31,national,NV.MNF.TECH.ZS.UN,Medium and high-tech manufacturing value added (% manufacturing value added),11.2414790542668,level
-2024-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",-777934000.0,level
-2023-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",-3627439000.0,level
-2022-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",-5297866000.0,level
-2021-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",-244267000.0,level
-2020-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",-876705000.0,level
-2019-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",603121000.0,level
-2018-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",946632000.0,level
-2017-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",-891089000.0,level
-2016-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",-327105000.0,level
-2015-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",3726410000.0,level
-2014-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",2500000000.0,level
+2025-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",9397226000.0,level
+2024-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",633128000.0,level
+2023-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",-3338204000.0,level
+2022-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",-4021392000.0,level
+2021-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",2225357000.0,level
+2020-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",753071000.0,level
+2019-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",2063487000.0,level
+2018-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",2162725000.0,level
+2017-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",126046000.0,level
+2016-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",523621000.0,level
+2015-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",4437955000.0,level
+2014-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",2866303000.0,level
 2013-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",4625000000.0,level
 2012-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",2600000000.0,level
 2010-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",-841000.0,level
@@ -31635,12 +31639,13 @@ date,region,item_code,item_name,value,transformation
 1994-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",131268000.0,level
 1993-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",170802000.0,level
 1992-12-31,national,DT.NFL.PRVT.CD,"PPG, private creditors (NFL, US$)",16451000.0,level
-2024-12-31,national,DT.NFL.PROP.CD,"PPG, other private creditors (NFL, current US$)",-25240000.0,level
+2025-12-31,national,DT.NFL.PROP.CD,"PPG, other private creditors (NFL, current US$)",256889000.0,level
+2024-12-31,national,DT.NFL.PROP.CD,"PPG, other private creditors (NFL, current US$)",143558000.0,level
 2023-12-31,national,DT.NFL.PROP.CD,"PPG, other private creditors (NFL, current US$)",-124637000.0,level
 2022-12-31,national,DT.NFL.PROP.CD,"PPG, other private creditors (NFL, current US$)",-209466000.0,level
 2021-12-31,national,DT.NFL.PROP.CD,"PPG, other private creditors (NFL, current US$)",-117262000.0,level
-2020-12-31,national,DT.NFL.PROP.CD,"PPG, other private creditors (NFL, current US$)",-119198000.0,level
-2019-12-31,national,DT.NFL.PROP.CD,"PPG, other private creditors (NFL, current US$)",-125401000.0,level
+2020-12-31,national,DT.NFL.PROP.CD,"PPG, other private creditors (NFL, current US$)",-34854000.0,level
+2019-12-31,national,DT.NFL.PROP.CD,"PPG, other private creditors (NFL, current US$)",-119004000.0,level
 2004-12-31,national,DT.NFL.PROP.CD,"PPG, other private creditors (NFL, current US$)",-10017000.0,level
 2003-12-31,national,DT.NFL.PROP.CD,"PPG, other private creditors (NFL, current US$)",-13777000.0,level
 2002-12-31,national,DT.NFL.PROP.CD,"PPG, other private creditors (NFL, current US$)",-26381000.0,level
@@ -31654,9 +31659,10 @@ date,region,item_code,item_name,value,transformation
 1994-12-31,national,DT.NFL.PROP.CD,"PPG, other private creditors (NFL, current US$)",131268000.0,level
 1993-12-31,national,DT.NFL.PROP.CD,"PPG, other private creditors (NFL, current US$)",170802000.0,level
 1992-12-31,national,DT.NFL.PROP.CD,"PPG, other private creditors (NFL, current US$)",16451000.0,level
-2024-12-31,national,DT.NFL.OFFT.CD,"PPG, official creditors (NFL, US$)",632030922.8,level
-2023-12-31,national,DT.NFL.OFFT.CD,"PPG, official creditors (NFL, US$)",-469540011.9,level
-2022-12-31,national,DT.NFL.OFFT.CD,"PPG, official creditors (NFL, US$)",-76444424.3,level
+2025-12-31,national,DT.NFL.OFFT.CD,"PPG, official creditors (NFL, US$)",-94751871.2,level
+2024-12-31,national,DT.NFL.OFFT.CD,"PPG, official creditors (NFL, US$)",1493537922.8,level
+2023-12-31,national,DT.NFL.OFFT.CD,"PPG, official creditors (NFL, US$)",124738988.1,level
+2022-12-31,national,DT.NFL.OFFT.CD,"PPG, official creditors (NFL, US$)",46339575.7,level
 2021-12-31,national,DT.NFL.OFFT.CD,"PPG, official creditors (NFL, US$)",889544822.4,level
 2020-12-31,national,DT.NFL.OFFT.CD,"PPG, official creditors (NFL, US$)",249179020.6,level
 2019-12-31,national,DT.NFL.OFFT.CD,"PPG, official creditors (NFL, US$)",-745958782.5,level
@@ -31687,16 +31693,18 @@ date,region,item_code,item_name,value,transformation
 1994-12-31,national,DT.NFL.OFFT.CD,"PPG, official creditors (NFL, US$)",441803370.4,level
 1993-12-31,national,DT.NFL.OFFT.CD,"PPG, official creditors (NFL, US$)",170256261.3,level
 1992-12-31,national,DT.NFL.OFFT.CD,"PPG, official creditors (NFL, US$)",10226941.3,level
-2024-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",-290065000.0,level
-2023-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",-965495000.0,level
-2022-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",-731570000.0,level
-2021-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",-670131000.0,level
-2020-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",-650516000.0,level
-2019-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",-559053000.0,level
-2018-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",-467589000.0,level
-2017-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",-391089000.0,level
-2016-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",-327105000.0,level
-2015-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",-273590000.0,level
+2025-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",5301733000.0,level
+2024-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",579027000.0,level
+2023-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",60592000.0,level
+2022-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",-191948000.0,level
+2021-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",191915000.0,level
+2020-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",894916000.0,level
+2019-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",894916000.0,level
+2018-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",748504000.0,level
+2017-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",626046000.0,level
+2016-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",523621000.0,level
+2015-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",437955000.0,level
+2014-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",366303000.0,level
 2010-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",-841000.0,level
 2009-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",-1681000.0,level
 2008-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",-10812000.0,level
@@ -31712,10 +31720,11 @@ date,region,item_code,item_name,value,transformation
 1998-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",23579000.0,level
 1997-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",86294000.0,level
 1995-12-31,national,DT.NFL.PCBK.CD,"PPG, commercial banks (NFL, current US$)",17362000.0,level
-2024-12-31,national,DT.NFL.PBND.CD,"PPG, bonds (NFL, current US$)",-462629000.0,level
-2023-12-31,national,DT.NFL.PBND.CD,"PPG, bonds (NFL, current US$)",-2537307000.0,level
-2022-12-31,national,DT.NFL.PBND.CD,"PPG, bonds (NFL, current US$)",-4356830000.0,level
-2021-12-31,national,DT.NFL.PBND.CD,"PPG, bonds (NFL, current US$)",543126000.0,level
+2025-12-31,national,DT.NFL.PBND.CD,"PPG, bonds (NFL, current US$)",3838604000.0,level
+2024-12-31,national,DT.NFL.PBND.CD,"PPG, bonds (NFL, current US$)",-89457000.0,level
+2023-12-31,national,DT.NFL.PBND.CD,"PPG, bonds (NFL, current US$)",-3274159000.0,level
+2022-12-31,national,DT.NFL.PBND.CD,"PPG, bonds (NFL, current US$)",-3619978000.0,level
+2021-12-31,national,DT.NFL.PBND.CD,"PPG, bonds (NFL, current US$)",2150704000.0,level
 2020-12-31,national,DT.NFL.PBND.CD,"PPG, bonds (NFL, current US$)",-106991000.0,level
 2019-12-31,national,DT.NFL.PBND.CD,"PPG, bonds (NFL, current US$)",1287575000.0,level
 2018-12-31,national,DT.NFL.PBND.CD,"PPG, bonds (NFL, current US$)",1414221000.0,level
@@ -31733,10 +31742,11 @@ date,region,item_code,item_name,value,transformation
 1999-12-31,national,DT.NFL.PBND.CD,"PPG, bonds (NFL, current US$)",100000000.0,level
 1997-12-31,national,DT.NFL.PBND.CD,"PPG, bonds (NFL, current US$)",350000000.0,level
 1996-12-31,national,DT.NFL.PBND.CD,"PPG, bonds (NFL, current US$)",200000000.0,level
-2024-12-31,national,DT.NFL.BOND.CD,"Portfolio investment, bonds (PPG + PNG) (NFL, current US$)",-462629000.0,level
-2023-12-31,national,DT.NFL.BOND.CD,"Portfolio investment, bonds (PPG + PNG) (NFL, current US$)",-2537307000.0,level
-2022-12-31,national,DT.NFL.BOND.CD,"Portfolio investment, bonds (PPG + PNG) (NFL, current US$)",-6780027000.0,level
-2021-12-31,national,DT.NFL.BOND.CD,"Portfolio investment, bonds (PPG + PNG) (NFL, current US$)",100154000.0,level
+2025-12-31,national,DT.NFL.BOND.CD,"Portfolio investment, bonds (PPG + PNG) (NFL, current US$)",5558144000.0,level
+2024-12-31,national,DT.NFL.BOND.CD,"Portfolio investment, bonds (PPG + PNG) (NFL, current US$)",-89457000.0,level
+2023-12-31,national,DT.NFL.BOND.CD,"Portfolio investment, bonds (PPG + PNG) (NFL, current US$)",-3274159000.0,level
+2022-12-31,national,DT.NFL.BOND.CD,"Portfolio investment, bonds (PPG + PNG) (NFL, current US$)",-6043175000.0,level
+2021-12-31,national,DT.NFL.BOND.CD,"Portfolio investment, bonds (PPG + PNG) (NFL, current US$)",1707732000.0,level
 2020-12-31,national,DT.NFL.BOND.CD,"Portfolio investment, bonds (PPG + PNG) (NFL, current US$)",983355000.0,level
 2019-12-31,national,DT.NFL.BOND.CD,"Portfolio investment, bonds (PPG + PNG) (NFL, current US$)",-101159000.0,level
 2018-12-31,national,DT.NFL.BOND.CD,"Portfolio investment, bonds (PPG + PNG) (NFL, current US$)",1296567000.0,level
@@ -31754,6 +31764,7 @@ date,region,item_code,item_name,value,transformation
 1999-12-31,national,DT.NFL.BOND.CD,"Portfolio investment, bonds (PPG + PNG) (NFL, current US$)",100000000.0,level
 1997-12-31,national,DT.NFL.BOND.CD,"Portfolio investment, bonds (PPG + PNG) (NFL, current US$)",350000000.0,level
 1996-12-31,national,DT.NFL.BOND.CD,"Portfolio investment, bonds (PPG + PNG) (NFL, current US$)",200000000.0,level
+2025-12-31,national,DT.NFL.PNGC.CD,"PNG, commercial banks and other creditors (NFL, current US$)",12842075000.0,level
 2024-12-31,national,DT.NFL.PNGC.CD,"PNG, commercial banks and other creditors (NFL, current US$)",-5319600000.0,level
 2023-12-31,national,DT.NFL.PNGC.CD,"PNG, commercial banks and other creditors (NFL, current US$)",1506315000.0,level
 2022-12-31,national,DT.NFL.PNGC.CD,"PNG, commercial banks and other creditors (NFL, current US$)",-667068000.0,level
@@ -31785,6 +31796,7 @@ date,region,item_code,item_name,value,transformation
 1996-12-31,national,DT.NFL.PNGC.CD,"PNG, commercial banks and other creditors (NFL, current US$)",107237000.0,level
 1995-12-31,national,DT.NFL.PNGC.CD,"PNG, commercial banks and other creditors (NFL, current US$)",58473000.0,level
 1994-12-31,national,DT.NFL.PNGC.CD,"PNG, commercial banks and other creditors (NFL, current US$)",15000000.0,level
+2025-12-31,national,DT.NFL.PNGB.CD,"PNG, bonds (NFL, current US$)",1719540000.0,level
 2024-12-31,national,DT.NFL.PNGB.CD,"PNG, bonds (NFL, current US$)",0.0,level
 2023-12-31,national,DT.NFL.PNGB.CD,"PNG, bonds (NFL, current US$)",0.0,level
 2022-12-31,national,DT.NFL.PNGB.CD,"PNG, bonds (NFL, current US$)",-2423197000.0,level
@@ -31810,6 +31822,7 @@ date,region,item_code,item_name,value,transformation
 2002-12-31,national,DT.NFL.PNGB.CD,"PNG, bonds (NFL, current US$)",300000000.0,level
 2001-12-31,national,DT.NFL.PNGB.CD,"PNG, bonds (NFL, current US$)",0.0,level
 1998-12-31,national,DT.NFL.PNGB.CD,"PNG, bonds (NFL, current US$)",100000000.0,level
+2025-12-31,national,DT.NFL.DPNG.CD,"Net flows on external debt, private nonguaranteed (PNG) (NFL, current US$)",14561615000.0,level
 2024-12-31,national,DT.NFL.DPNG.CD,"Net flows on external debt, private nonguaranteed (PNG) (NFL, current US$)",-5319600000.0,level
 2023-12-31,national,DT.NFL.DPNG.CD,"Net flows on external debt, private nonguaranteed (PNG) (NFL, current US$)",1506315000.0,level
 2022-12-31,national,DT.NFL.DPNG.CD,"Net flows on external debt, private nonguaranteed (PNG) (NFL, current US$)",-3090265000.0,level
@@ -31841,9 +31854,10 @@ date,region,item_code,item_name,value,transformation
 1996-12-31,national,DT.NFL.DPNG.CD,"Net flows on external debt, private nonguaranteed (PNG) (NFL, current US$)",107237000.0,level
 1995-12-31,national,DT.NFL.DPNG.CD,"Net flows on external debt, private nonguaranteed (PNG) (NFL, current US$)",58473000.0,level
 1994-12-31,national,DT.NFL.DPNG.CD,"Net flows on external debt, private nonguaranteed (PNG) (NFL, current US$)",15000000.0,level
-2024-12-31,national,DT.NFL.RDBN.CD,"Net financial flows, RDB nonconcessional (NFL, current US$)",-205140438.2,level
-2023-12-31,national,DT.NFL.RDBN.CD,"Net financial flows, RDB nonconcessional (NFL, current US$)",-239235964.1,level
-2022-12-31,national,DT.NFL.RDBN.CD,"Net financial flows, RDB nonconcessional (NFL, current US$)",-167441048.4,level
+2025-12-31,national,DT.NFL.RDBN.CD,"Net financial flows, RDB nonconcessional (NFL, current US$)",214497155.3,level
+2024-12-31,national,DT.NFL.RDBN.CD,"Net financial flows, RDB nonconcessional (NFL, current US$)",656366561.8,level
+2023-12-31,national,DT.NFL.RDBN.CD,"Net financial flows, RDB nonconcessional (NFL, current US$)",355043035.9,level
+2022-12-31,national,DT.NFL.RDBN.CD,"Net financial flows, RDB nonconcessional (NFL, current US$)",-44657048.4,level
 2021-12-31,national,DT.NFL.RDBN.CD,"Net financial flows, RDB nonconcessional (NFL, current US$)",22865470.4,level
 2020-12-31,national,DT.NFL.RDBN.CD,"Net financial flows, RDB nonconcessional (NFL, current US$)",259837301.2,level
 2019-12-31,national,DT.NFL.RDBN.CD,"Net financial flows, RDB nonconcessional (NFL, current US$)",-443229409.8,level
@@ -31900,6 +31914,7 @@ date,region,item_code,item_name,value,transformation
 1998-12-31,national,DT.NFL.RDBC.CD,"Net financial flows, RDB concessional (NFL, current US$)",12387000.0,level
 1997-12-31,national,DT.NFL.RDBC.CD,"Net financial flows, RDB concessional (NFL, current US$)",16948000.0,level
 1996-12-31,national,DT.NFL.RDBC.CD,"Net financial flows, RDB concessional (NFL, current US$)",5996000.0,level
+2025-12-31,national,DT.NFL.MOTH.CD,"Net financial flows, others (NFL, current US$)",21271545.5,level
 2024-12-31,national,DT.NFL.MOTH.CD,"Net financial flows, others (NFL, current US$)",14564923.6,level
 2023-12-31,national,DT.NFL.MOTH.CD,"Net financial flows, others (NFL, current US$)",434863.8,level
 2022-12-31,national,DT.NFL.MOTH.CD,"Net financial flows, others (NFL, current US$)",-277153.4,level
@@ -31931,9 +31946,10 @@ date,region,item_code,item_name,value,transformation
 1996-12-31,national,DT.NFL.MOTH.CD,"Net financial flows, others (NFL, current US$)",-31613028.0,level
 1994-12-31,national,DT.NFL.MOTH.CD,"Net financial flows, others (NFL, current US$)",2296293.1,level
 1993-12-31,national,DT.NFL.MOTH.CD,"Net financial flows, others (NFL, current US$)",26962152.5,level
-2024-12-31,national,DT.NFL.MLAT.CD,"Net financial flows, multilateral (NFL, current US$)",525562000.0,level
-2023-12-31,national,DT.NFL.MLAT.CD,"Net financial flows, multilateral (NFL, current US$)",-497224000.0,level
-2022-12-31,national,DT.NFL.MLAT.CD,"Net financial flows, multilateral (NFL, current US$)",-59075000.0,level
+2025-12-31,national,DT.NFL.MLAT.CD,"Net financial flows, multilateral (NFL, current US$)",-110854000.0,level
+2024-12-31,national,DT.NFL.MLAT.CD,"Net financial flows, multilateral (NFL, current US$)",1387069000.0,level
+2023-12-31,national,DT.NFL.MLAT.CD,"Net financial flows, multilateral (NFL, current US$)",97055000.0,level
+2022-12-31,national,DT.NFL.MLAT.CD,"Net financial flows, multilateral (NFL, current US$)",63709000.0,level
 2021-12-31,national,DT.NFL.MLAT.CD,"Net financial flows, multilateral (NFL, current US$)",648033000.0,level
 2020-12-31,national,DT.NFL.MLAT.CD,"Net financial flows, multilateral (NFL, current US$)",63717000.0,level
 2019-12-31,national,DT.NFL.MLAT.CD,"Net financial flows, multilateral (NFL, current US$)",-629147000.0,level
@@ -31972,6 +31988,7 @@ date,region,item_code,item_name,value,transformation
 1995-12-31,national,DT.NFL.IMFN.CD,"Net financial flows, IMF nonconcessional (NFL, current US$)",140829983.3,level
 1994-12-31,national,DT.NFL.IMFN.CD,"Net financial flows, IMF nonconcessional (NFL, current US$)",194939512.8,level
 1993-12-31,national,DT.NFL.IMFN.CD,"Net financial flows, IMF nonconcessional (NFL, current US$)",86401785.6,level
+2025-12-31,national,DT.NFL.MIBR.CD,"Net financial flows, IBRD (NFL, current US$)",-239888000.0,level
 2024-12-31,national,DT.NFL.MIBR.CD,"Net financial flows, IBRD (NFL, current US$)",469994000.0,level
 2023-12-31,national,DT.NFL.MIBR.CD,"Net financial flows, IBRD (NFL, current US$)",-206784000.0,level
 2022-12-31,national,DT.NFL.MIBR.CD,"Net financial flows, IBRD (NFL, current US$)",109182000.0,level
@@ -32003,6 +32020,7 @@ date,region,item_code,item_name,value,transformation
 1996-12-31,national,DT.NFL.MIBR.CD,"Net financial flows, IBRD (NFL, current US$)",225076000.0,level
 1995-12-31,national,DT.NFL.MIBR.CD,"Net financial flows, IBRD (NFL, current US$)",107448000.0,level
 1994-12-31,national,DT.NFL.MIBR.CD,"Net financial flows, IBRD (NFL, current US$)",181834000.0,level
+2025-12-31,national,DT.NFL.BLAT.CD,"Net financial flows, bilateral (NFL, current US$)",16102510.2,level
 2024-12-31,national,DT.NFL.BLAT.CD,"Net financial flows, bilateral (NFL, current US$)",106468819.7,level
 2023-12-31,national,DT.NFL.BLAT.CD,"Net financial flows, bilateral (NFL, current US$)",27684074.2,level
 2022-12-31,national,DT.NFL.BLAT.CD,"Net financial flows, bilateral (NFL, current US$)",-17369222.5,level
@@ -32069,16 +32087,18 @@ date,region,item_code,item_name,value,transformation
 1994-12-31,national,DT.NFL.NIFC.CD,"IFC, private nonguaranteed (NFL, US$)",0.0,level
 1993-12-31,national,DT.NFL.NIFC.CD,"IFC, private nonguaranteed (NFL, US$)",0.0,level
 1992-12-31,national,DT.NFL.NIFC.CD,"IFC, private nonguaranteed (NFL, US$)",0.0,level
-2024-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",-5634905000.0,level
-2023-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",416183000.0,level
-2022-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",-1608104000.0,level
-2021-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",-6713207000.0,level
-2020-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",4716031000.0,level
-2019-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",2629655000.0,level
-2018-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",831835000.0,level
-2017-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",4754764000.0,level
-2016-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",11950766000.0,level
-2015-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",5003523000.0,level
+2025-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",18400697000.0,level
+2024-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",-4597015000.0,level
+2023-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",1442270000.0,level
+2022-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",-1068482000.0,level
+2021-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",-5851161000.0,level
+2020-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",6345807000.0,level
+2019-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",4090021000.0,level
+2018-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",2047928000.0,level
+2017-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",5771899000.0,level
+2016-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",12801492000.0,level
+2015-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",5715068000.0,level
+2014-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",5145991000.0,level
 2010-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",10223653000.0,level
 2009-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",11958329000.0,level
 2008-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",12075167000.0,level
@@ -32094,6 +32114,7 @@ date,region,item_code,item_name,value,transformation
 1998-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",744508000.0,level
 1997-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",426702000.0,level
 1995-12-31,national,DT.NFL.PCBO.CD,"Commercial banks and other lending (PPG + PNG) (NFL, current US$)",240220000.0,level
+2025-12-31,national,DT.TDS.MLAT.CD,"Multilateral debt service (TDS, current US$)",4490291886.0,level
 2024-12-31,national,DT.TDS.MLAT.CD,"Multilateral debt service (TDS, current US$)",1693455380.3,level
 2023-12-31,national,DT.TDS.MLAT.CD,"Multilateral debt service (TDS, current US$)",1292695007.8,level
 2022-12-31,national,DT.TDS.MLAT.CD,"Multilateral debt service (TDS, current US$)",895169517.2,level
@@ -32125,6 +32146,7 @@ date,region,item_code,item_name,value,transformation
 1996-12-31,national,DT.TDS.MLAT.CD,"Multilateral debt service (TDS, current US$)",62264149.3,level
 1995-12-31,national,DT.TDS.MLAT.CD,"Multilateral debt service (TDS, current US$)",15291000.0,level
 1994-12-31,national,DT.TDS.MLAT.CD,"Multilateral debt service (TDS, current US$)",6742000.0,level
+2025-12-31,national,DT.TDS.DIMF.CD,"IMF repurchases and charges (TDS, current US$)",57962663.3,level
 2024-12-31,national,DT.TDS.DIMF.CD,"IMF repurchases and charges (TDS, current US$)",74289315.1,level
 2023-12-31,national,DT.TDS.DIMF.CD,"IMF repurchases and charges (TDS, current US$)",74167791.8,level
 2022-12-31,national,DT.TDS.DIMF.CD,"IMF repurchases and charges (TDS, current US$)",25612825.3,level
@@ -32157,9 +32179,10 @@ date,region,item_code,item_name,value,transformation
 1995-12-31,national,DT.TDS.DIMF.CD,"IMF repurchases and charges (TDS, current US$)",17451265.5,level
 1994-12-31,national,DT.TDS.DIMF.CD,"IMF repurchases and charges (TDS, current US$)",8692619.6,level
 1993-12-31,national,DT.TDS.DIMF.CD,"IMF repurchases and charges (TDS, current US$)",1219050.6,level
-2024-12-31,national,DT.TDS.DECT.CD,"Debt service on external debt, total (TDS, current US$)",46332862901.6,level
-2023-12-31,national,DT.TDS.DECT.CD,"Debt service on external debt, total (TDS, current US$)",47647816623.1,level
-2022-12-31,national,DT.TDS.DECT.CD,"Debt service on external debt, total (TDS, current US$)",49783100037.7,level
+2025-12-31,national,DT.TDS.DECT.CD,"Debt service on external debt, total (TDS, current US$)",61044813763.3,level
+2024-12-31,national,DT.TDS.DECT.CD,"Debt service on external debt, total (TDS, current US$)",48079763843.4,level
+2023-12-31,national,DT.TDS.DECT.CD,"Debt service on external debt, total (TDS, current US$)",49708120623.1,level
+2022-12-31,national,DT.TDS.DECT.CD,"Debt service on external debt, total (TDS, current US$)",49046248037.7,level
 2021-12-31,national,DT.TDS.DECT.CD,"Debt service on external debt, total (TDS, current US$)",32723047156.2,level
 2020-12-31,national,DT.TDS.DECT.CD,"Debt service on external debt, total (TDS, current US$)",32895561521.0,level
 2019-12-31,national,DT.TDS.DECT.CD,"Debt service on external debt, total (TDS, current US$)",34119948447.4,level
@@ -32190,9 +32213,10 @@ date,region,item_code,item_name,value,transformation
 1994-12-31,national,DT.TDS.DECT.CD,"Debt service on external debt, total (TDS, current US$)",68295713.2,level
 1993-12-31,national,DT.TDS.DECT.CD,"Debt service on external debt, total (TDS, current US$)",9626570.9,level
 1992-12-31,national,DT.TDS.DECT.CD,"Debt service on external debt, total (TDS, current US$)",21826.4,level
-2024-12-31,national,DT.TDS.DPPG.CD,"Debt service on external debt, public and publicly guaranteed (PPG) (TDS, current US$)",5552006344.8,level
-2023-12-31,national,DT.TDS.DPPG.CD,"Debt service on external debt, public and publicly guaranteed (PPG) (TDS, current US$)",6254425945.1,level
-2022-12-31,national,DT.TDS.DPPG.CD,"Debt service on external debt, public and publicly guaranteed (PPG) (TDS, current US$)",7623304580.1,level
+2025-12-31,national,DT.TDS.DPPG.CD,"Debt service on external debt, public and publicly guaranteed (PPG) (TDS, current US$)",12486143853.3,level
+2024-12-31,national,DT.TDS.DPPG.CD,"Debt service on external debt, public and publicly guaranteed (PPG) (TDS, current US$)",7197735228.1,level
+2023-12-31,national,DT.TDS.DPPG.CD,"Debt service on external debt, public and publicly guaranteed (PPG) (TDS, current US$)",8397925945.1,level
+2022-12-31,national,DT.TDS.DPPG.CD,"Debt service on external debt, public and publicly guaranteed (PPG) (TDS, current US$)",6886452580.1,level
 2021-12-31,national,DT.TDS.DPPG.CD,"Debt service on external debt, public and publicly guaranteed (PPG) (TDS, current US$)",3016872678.5,level
 2020-12-31,national,DT.TDS.DPPG.CD,"Debt service on external debt, public and publicly guaranteed (PPG) (TDS, current US$)",4403515187.7,level
 2019-12-31,national,DT.TDS.DPPG.CD,"Debt service on external debt, public and publicly guaranteed (PPG) (TDS, current US$)",3860467380.7,level
@@ -32255,31 +32279,32 @@ date,region,item_code,item_name,value,transformation
 1995-12-31,national,DT.TDS.DECT.GN.ZS,Total debt service (% of GNI),1.15964616641997,level
 1994-12-31,national,DT.TDS.DECT.GN.ZS,Total debt service (% of GNI),0.32284716738667,level
 1993-12-31,national,DT.TDS.DECT.GN.ZS,Total debt service (% of GNI),0.0412024738333285,level
-2024-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",48.4343756201676,level
-2023-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",50.2633943567233,level
-2022-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",51.1629261851802,level
-2021-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",44.249543629459,level
-2020-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",64.0774877263295,level
-2019-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",48.8739232570914,level
-2018-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",49.7842789313445,level
-2017-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",48.7861705508129,level
-2016-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",45.6795104482137,level
-2015-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",70.3930594217248,level
-2014-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",39.4342474266966,level
-2013-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",32.2228277367805,level
-2012-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",24.5837959573588,level
-2011-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",33.9311845536376,level
-2010-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",56.7946106717344,level
-2009-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",46.5715160574077,level
-2008-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",44.5081391542222,level
-2007-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",45.8795647346193,level
-2006-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",32.5709510723932,level
-2005-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",40.1484984903081,level
-2004-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",37.9839831173846,level
-2003-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",34.7803349003359,level
-2002-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",34.886813537048,level
-2001-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",32.3381870625935,level
-2000-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",32.3698117994259,level
+2025-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",64.219857760156,level
+2024-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",50.3913439599843,level
+2023-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",52.4125034422454,level
+2022-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",50.405651038667,level
+2021-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",44.2495436280815,level
+2020-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",64.0774877291661,level
+2019-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",48.8739232555446,level
+2018-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",49.7842789286778,level
+2017-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",48.7861705507492,level
+2016-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",45.6795104459526,level
+2015-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",70.3930594173765,level
+2014-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",39.4342474273593,level
+2013-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",32.2228277378573,level
+2012-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",24.5837959586958,level
+2011-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",33.9311845519948,level
+2010-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",56.7946106679391,level
+2009-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",46.5715160603683,level
+2008-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",44.5081391528327,level
+2007-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",45.8795647357947,level
+2006-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",32.5709510719091,level
+2005-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",40.1484984963354,level
+2004-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",37.983983119975,level
+2003-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",34.7803348960784,level
+2002-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",34.8868135307485,level
+2001-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",32.3381870623172,level
+2000-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",32.3698117962123,level
 1999-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",19.6441675097442,level
 1998-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",14.4312046257078,level
 1997-12-31,national,DT.TDS.DECT.EX.ZS,"Total debt service (% of exports of goods, services and primary income)",6.18087914011516,level
@@ -32317,9 +32342,10 @@ date,region,item_code,item_name,value,transformation
 1995-12-31,national,DT.DOD.DSTC.IR.ZS,Short-term debt (% of total reserves),22.9779252471367,level
 1994-12-31,national,DT.DOD.DSTC.IR.ZS,Short-term debt (% of total reserves),19.1046757061,level
 1993-12-31,national,DT.DOD.DSTC.IR.ZS,Short-term debt (% of total reserves),3.04065918992924,level
-2024-12-31,national,DT.DOD.DSTC.ZS,Short-term debt (% of total external debt),11.6956,level
-2023-12-31,national,DT.DOD.DSTC.ZS,Short-term debt (% of total external debt),11.2986,level
-2022-12-31,national,DT.DOD.DSTC.ZS,Short-term debt (% of total external debt),9.6622,level
+2025-12-31,national,DT.DOD.DSTC.ZS,Short-term debt (% of total external debt),11.8494,level
+2024-12-31,national,DT.DOD.DSTC.ZS,Short-term debt (% of total external debt),11.7384,level
+2023-12-31,national,DT.DOD.DSTC.ZS,Short-term debt (% of total external debt),11.3137,level
+2022-12-31,national,DT.DOD.DSTC.ZS,Short-term debt (% of total external debt),9.6204,level
 2021-12-31,national,DT.DOD.DSTC.ZS,Short-term debt (% of total external debt),6.9541,level
 2020-12-31,national,DT.DOD.DSTC.ZS,Short-term debt (% of total external debt),5.504,level
 2019-12-31,national,DT.DOD.DSTC.ZS,Short-term debt (% of total external debt),5.2854,level
@@ -32442,11 +32468,12 @@ date,region,item_code,item_name,value,transformation
 1997-12-31,national,DT.TDS.DPPG.XP.ZS,"Public and publicly guaranteed debt service (% of exports of goods, services and primary income)",4.03706013819578,level
 1996-12-31,national,DT.TDS.DPPG.XP.ZS,"Public and publicly guaranteed debt service (% of exports of goods, services and primary income)",3.49645056317371,level
 1995-12-31,national,DT.TDS.DPPG.XP.ZS,"Public and publicly guaranteed debt service (% of exports of goods, services and primary income)",3.23622927056166,level
-2024-12-31,national,DT.DOD.PVLX.GN.ZS,Present value of external debt (% of GNI),11.8317666275167,level
-2024-12-31,national,DT.DOD.PVLX.EX.ZS,"Present value of external debt (% of exports of goods, services and primary income)",33.0998164696065,level
-2024-12-31,national,DT.TDS.MLAT.PG.ZS,Multilateral debt service (% of public and publicly guaranteed debt service),30.5016830877019,level
-2023-12-31,national,DT.TDS.MLAT.PG.ZS,Multilateral debt service (% of public and publicly guaranteed debt service),20.6684837129258,level
-2022-12-31,national,DT.TDS.MLAT.PG.ZS,Multilateral debt service (% of public and publicly guaranteed debt service),11.7425390497549,level
+2025-12-31,national,DT.DOD.PVLX.GN.ZS,Present value of external debt (% of GNI),14.8015448083419,level
+2025-12-31,national,DT.DOD.PVLX.EX.ZS,"Present value of external debt (% of exports of goods, services and primary income)",44.2391101243053,level
+2025-12-31,national,DT.TDS.MLAT.PG.ZS,Multilateral debt service (% of public and publicly guaranteed debt service),35.962198888276,level
+2024-12-31,national,DT.TDS.MLAT.PG.ZS,Multilateral debt service (% of public and publicly guaranteed debt service),23.5276142652308,level
+2023-12-31,national,DT.TDS.MLAT.PG.ZS,Multilateral debt service (% of public and publicly guaranteed debt service),15.3930269956031,level
+2022-12-31,national,DT.TDS.MLAT.PG.ZS,Multilateral debt service (% of public and publicly guaranteed debt service),12.9989934118881,level
 2021-12-31,national,DT.TDS.MLAT.PG.ZS,Multilateral debt service (% of public and publicly guaranteed debt service),16.5888605099779,level
 2020-12-31,national,DT.TDS.MLAT.PG.ZS,Multilateral debt service (% of public and publicly guaranteed debt service),32.1362343532448,level
 2019-12-31,national,DT.TDS.MLAT.PG.ZS,Multilateral debt service (% of public and publicly guaranteed debt service),31.0535355613502,level
@@ -32475,14 +32502,15 @@ date,region,item_code,item_name,value,transformation
 1996-12-31,national,DT.TDS.MLAT.PG.ZS,Multilateral debt service (% of public and publicly guaranteed debt service),25.3575067867424,level
 1995-12-31,national,DT.TDS.MLAT.PG.ZS,Multilateral debt service (% of public and publicly guaranteed debt service),7.84913427406052,level
 1994-12-31,national,DT.TDS.MLAT.PG.ZS,Multilateral debt service (% of public and publicly guaranteed debt service),14.3132849346439,level
-2024-12-31,national,DT.DOD.DECT.GN.ZS,External debt stocks (% of GNI),62.6029318152699,level
-2023-12-31,national,DT.DOD.DECT.GN.ZS,External debt stocks (% of GNI),72.9017800635209,level
-2022-12-31,national,DT.DOD.DECT.GN.ZS,External debt stocks (% of GNI),84.7932235856559,level
-2021-12-31,national,DT.DOD.DECT.GN.ZS,External debt stocks (% of GNI),100.270147736422,level
-2020-12-31,national,DT.DOD.DECT.GN.ZS,External debt stocks (% of GNI),110.819683629583,level
-2019-12-31,national,DT.DOD.DECT.GN.ZS,External debt stocks (% of GNI),107.373342903391,level
-2018-12-31,national,DT.DOD.DECT.GN.ZS,External debt stocks (% of GNI),102.472812128434,level
-2017-12-31,national,DT.DOD.DECT.GN.ZS,External debt stocks (% of GNI),109.692413392467,level
+2025-12-31,national,DT.DOD.DECT.GN.ZS,External debt stocks (% of GNI),64.4486137378991,level
+2024-12-31,national,DT.DOD.DECT.GN.ZS,External debt stocks (% of GNI),61.9164607803955,level
+2023-12-31,national,DT.DOD.DECT.GN.ZS,External debt stocks (% of GNI),72.7972299778337,level
+2022-12-31,national,DT.DOD.DECT.GN.ZS,External debt stocks (% of GNI),85.3248115258395,level
+2021-12-31,national,DT.DOD.DECT.GN.ZS,External debt stocks (% of GNI),100.261132726568,level
+2020-12-31,national,DT.DOD.DECT.GN.ZS,External debt stocks (% of GNI),110.890514326739,level
+2019-12-31,national,DT.DOD.DECT.GN.ZS,External debt stocks (% of GNI),107.39490856933,level
+2018-12-31,national,DT.DOD.DECT.GN.ZS,External debt stocks (% of GNI),102.407277571538,level
+2017-12-31,national,DT.DOD.DECT.GN.ZS,External debt stocks (% of GNI),109.685011144123,level
 2016-12-31,national,DT.DOD.DECT.GN.ZS,External debt stocks (% of GNI),134.847682725523,level
 2015-12-31,national,DT.DOD.DECT.GN.ZS,External debt stocks (% of GNI),90.3781219318061,level
 2014-12-31,national,DT.DOD.DECT.GN.ZS,External debt stocks (% of GNI),80.6316289334986,level
@@ -32507,9 +32535,10 @@ date,region,item_code,item_name,value,transformation
 1995-12-31,national,DT.DOD.DECT.GN.ZS,External debt stocks (% of GNI),18.5351082484006,level
 1994-12-31,national,DT.DOD.DECT.GN.ZS,External debt stocks (% of GNI),13.1868044954173,level
 1993-12-31,national,DT.DOD.DECT.GN.ZS,External debt stocks (% of GNI),7.39492238559103,level
-2024-12-31,national,DT.TDS.DPPF.XP.ZS,"Debt service (PPG and IMF only, % of exports of goods, services and primary income)",5.89679684672979,level
-2023-12-31,national,DT.TDS.DPPF.XP.ZS,"Debt service (PPG and IMF only, % of exports of goods, services and primary income)",6.67290247278213,level
-2022-12-31,national,DT.TDS.DPPF.XP.ZS,"Debt service (PPG and IMF only, % of exports of goods, services and primary income)",7.86092059981527,level
+2025-12-31,national,DT.TDS.DPPF.XP.ZS,"Debt service (PPG and IMF only, % of exports of goods, services and primary income)",13.1965467101021,level
+2024-12-31,national,DT.TDS.DPPF.XP.ZS,"Debt service (PPG and IMF only, % of exports of goods, services and primary income)",7.62164912542928,level
+2023-12-31,national,DT.TDS.DPPF.XP.ZS,"Debt service (PPG and IMF only, % of exports of goods, services and primary income)",8.93302013004462,level
+2022-12-31,national,DT.TDS.DPPF.XP.ZS,"Debt service (PPG and IMF only, % of exports of goods, services and primary income)",7.10364545108301,level
 2021-12-31,national,DT.TDS.DPPF.XP.ZS,"Debt service (PPG and IMF only, % of exports of goods, services and primary income)",4.08103507796358,level
 2020-12-31,national,DT.TDS.DPPF.XP.ZS,"Debt service (PPG and IMF only, % of exports of goods, services and primary income)",8.5805596539514,level
 2019-12-31,national,DT.TDS.DPPF.XP.ZS,"Debt service (PPG and IMF only, % of exports of goods, services and primary income)",5.53654787456532,level
@@ -32537,6 +32566,7 @@ date,region,item_code,item_name,value,transformation
 1997-12-31,national,DT.TDS.DPPF.XP.ZS,"Debt service (PPG and IMF only, % of exports of goods, services and primary income)",4.42807043889955,level
 1996-12-31,national,DT.TDS.DPPF.XP.ZS,"Debt service (PPG and IMF only, % of exports of goods, services and primary income)",3.81609258262492,level
 1995-12-31,national,DT.TDS.DPPF.XP.ZS,"Debt service (PPG and IMF only, % of exports of goods, services and primary income)",3.52613184876323,level
+2025-12-31,national,DT.DOD.DIMF.CD,"Use of IMF credit (DOD, current US$)",1991158489.8,level
 2024-12-31,national,DT.DOD.DIMF.CD,"Use of IMF credit (DOD, current US$)",1896117852.0,level
 2023-12-31,national,DT.DOD.DIMF.CD,"Use of IMF credit (DOD, current US$)",1950690959.8,level
 2022-12-31,national,DT.DOD.DIMF.CD,"Use of IMF credit (DOD, current US$)",1934951018.3,level
@@ -32569,7 +32599,8 @@ date,region,item_code,item_name,value,transformation
 1995-12-31,national,DT.DOD.DIMF.CD,"Use of IMF credit (DOD, current US$)",432301025.1,level
 1994-12-31,national,DT.DOD.DIMF.CD,"Use of IMF credit (DOD, current US$)",289050290.8,level
 1993-12-31,national,DT.DOD.DIMF.CD,"Use of IMF credit (DOD, current US$)",84989022.0,level
-2024-12-31,national,DT.DOD.PVLX.CD,Present value of external debt (current US$),31663652910.1,level
+2025-12-31,national,DT.DOD.PVLX.CD,Present value of external debt (current US$),42051918717.7,level
+2025-12-31,national,DT.DOD.MIBR.CD,"PPG, IBRD (DOD, current US$)",3633293000.0,level
 2024-12-31,national,DT.DOD.MIBR.CD,"PPG, IBRD (DOD, current US$)",3831067000.0,level
 2023-12-31,national,DT.DOD.MIBR.CD,"PPG, IBRD (DOD, current US$)",3383267000.0,level
 2022-12-31,national,DT.DOD.MIBR.CD,"PPG, IBRD (DOD, current US$)",3576185000.0,level
@@ -32602,6 +32633,7 @@ date,region,item_code,item_name,value,transformation
 1995-12-31,national,DT.DOD.MIBR.CD,"PPG, IBRD (DOD, current US$)",295244000.0,level
 1994-12-31,national,DT.DOD.MIBR.CD,"PPG, IBRD (DOD, current US$)",186772000.0,level
 1993-12-31,national,DT.DOD.MIBR.CD,"PPG, IBRD (DOD, current US$)",0.0,level
+2025-12-31,national,DT.DOD.MWBG.CD,"IBRD loans and IDA credits (DOD, current US$)",3633293000.0,level
 2024-12-31,national,DT.DOD.MWBG.CD,"IBRD loans and IDA credits (DOD, current US$)",3831067000.0,level
 2023-12-31,national,DT.DOD.MWBG.CD,"IBRD loans and IDA credits (DOD, current US$)",3383267000.0,level
 2022-12-31,national,DT.DOD.MWBG.CD,"IBRD loans and IDA credits (DOD, current US$)",3576185000.0,level
@@ -32634,9 +32666,10 @@ date,region,item_code,item_name,value,transformation
 1995-12-31,national,DT.DOD.MWBG.CD,"IBRD loans and IDA credits (DOD, current US$)",295244000.0,level
 1994-12-31,national,DT.DOD.MWBG.CD,"IBRD loans and IDA credits (DOD, current US$)",186772000.0,level
 1993-12-31,national,DT.DOD.MWBG.CD,"IBRD loans and IDA credits (DOD, current US$)",0.0,level
-2024-12-31,national,DT.DOD.DECT.CD,"External debt stocks, total (DOD, current US$)",167535209792.2,level
-2023-12-31,national,DT.DOD.DECT.CD,"External debt stocks, total (DOD, current US$)",171483605932.5,level
-2022-12-31,national,DT.DOD.DECT.CD,"External debt stocks, total (DOD, current US$)",169570449960.3,level
+2025-12-31,national,DT.DOD.DECT.CD,"External debt stocks, total (DOD, current US$)",183101689821.4,level
+2024-12-31,national,DT.DOD.DECT.CD,"External debt stocks, total (DOD, current US$)",166023846436.8,level
+2023-12-31,national,DT.DOD.DECT.CD,"External debt stocks, total (DOD, current US$)",171512922932.5,level
+2022-12-31,national,DT.DOD.DECT.CD,"External debt stocks, total (DOD, current US$)",170307301960.3,level
 2021-12-31,national,DT.DOD.DECT.CD,"External debt stocks, total (DOD, current US$)",173390460628.2,level
 2020-12-31,national,DT.DOD.DECT.CD,"External debt stocks, total (DOD, current US$)",172889421872.9,level
 2019-12-31,national,DT.DOD.DECT.CD,"External debt stocks, total (DOD, current US$)",170696302166.4,level
@@ -32667,8 +32700,9 @@ date,region,item_code,item_name,value,transformation
 1994-12-31,national,DT.DOD.DECT.CD,"External debt stocks, total (DOD, current US$)",2789562086.4,level
 1993-12-31,national,DT.DOD.DECT.CD,"External debt stocks, total (DOD, current US$)",1727754137.6,level
 1992-12-31,national,DT.DOD.DECT.CD,"External debt stocks, total (DOD, current US$)",34977844.5,level
-2024-12-31,national,DT.DOD.DSTC.CD,"External debt stocks, short-term (DOD, current US$)",19594364000.0,level
-2023-12-31,national,DT.DOD.DSTC.CD,"External debt stocks, short-term (DOD, current US$)",19375258000.0,level
+2025-12-31,national,DT.DOD.DSTC.CD,"External debt stocks, short-term (DOD, current US$)",21696498000.0,level
+2024-12-31,national,DT.DOD.DSTC.CD,"External debt stocks, short-term (DOD, current US$)",19488570000.0,level
+2023-12-31,national,DT.DOD.DSTC.CD,"External debt stocks, short-term (DOD, current US$)",19404575000.0,level
 2022-12-31,national,DT.DOD.DSTC.CD,"External debt stocks, short-term (DOD, current US$)",16384374000.0,level
 2021-12-31,national,DT.DOD.DSTC.CD,"External debt stocks, short-term (DOD, current US$)",12057874000.0,level
 2020-12-31,national,DT.DOD.DSTC.CD,"External debt stocks, short-term (DOD, current US$)",9515929000.0,level
@@ -32700,9 +32734,10 @@ date,region,item_code,item_name,value,transformation
 1994-12-31,national,DT.DOD.DSTC.CD,"External debt stocks, short-term (DOD, current US$)",232346464.2,level
 1993-12-31,national,DT.DOD.DSTC.CD,"External debt stocks, short-term (DOD, current US$)",21625120.4,level
 1992-12-31,national,DT.DOD.DSTC.CD,"External debt stocks, short-term (DOD, current US$)",9230000.0,level
-2024-12-31,national,DT.DOD.DPPG.CD,"External debt stocks, public and publicly guaranteed (PPG) (DOD, current US$)",34031829383.1,level
+2025-12-31,national,DT.DOD.DPPG.CD,"External debt stocks, public and publicly guaranteed (PPG) (DOD, current US$)",44414705680.3,level
+2024-12-31,national,DT.DOD.DPPG.CD,"External debt stocks, public and publicly guaranteed (PPG) (DOD, current US$)",34561236154.4,level
 2023-12-31,national,DT.DOD.DPPG.CD,"External debt stocks, public and publicly guaranteed (PPG) (DOD, current US$)",32828744888.4,level
-2022-12-31,national,DT.DOD.DPPG.CD,"External debt stocks, public and publicly guaranteed (PPG) (DOD, current US$)",35407055771.4,level
+2022-12-31,national,DT.DOD.DPPG.CD,"External debt stocks, public and publicly guaranteed (PPG) (DOD, current US$)",36143907771.4,level
 2021-12-31,national,DT.DOD.DPPG.CD,"External debt stocks, public and publicly guaranteed (PPG) (DOD, current US$)",40368641923.1,level
 2020-12-31,national,DT.DOD.DPPG.CD,"External debt stocks, public and publicly guaranteed (PPG) (DOD, current US$)",37636701853.5,level
 2019-12-31,national,DT.DOD.DPPG.CD,"External debt stocks, public and publicly guaranteed (PPG) (DOD, current US$)",36420510623.6,level
@@ -32733,7 +32768,8 @@ date,region,item_code,item_name,value,transformation
 1994-12-31,national,DT.DOD.DPPG.CD,"External debt stocks, public and publicly guaranteed (PPG) (DOD, current US$)",2226969331.4,level
 1993-12-31,national,DT.DOD.DPPG.CD,"External debt stocks, public and publicly guaranteed (PPG) (DOD, current US$)",1621139995.2,level
 1992-12-31,national,DT.DOD.DPPG.CD,"External debt stocks, public and publicly guaranteed (PPG) (DOD, current US$)",25747844.5,level
-2024-12-31,national,DT.DOD.DPNG.CD,"External debt stocks, private nonguaranteed (PNG) (DOD, current US$)",112012898557.1,level
+2025-12-31,national,DT.DOD.DPNG.CD,"External debt stocks, private nonguaranteed (PNG) (DOD, current US$)",114999327651.3,level
+2024-12-31,national,DT.DOD.DPNG.CD,"External debt stocks, private nonguaranteed (PNG) (DOD, current US$)",110077922430.4,level
 2023-12-31,national,DT.DOD.DPNG.CD,"External debt stocks, private nonguaranteed (PNG) (DOD, current US$)",117328912084.3,level
 2022-12-31,national,DT.DOD.DPNG.CD,"External debt stocks, private nonguaranteed (PNG) (DOD, current US$)",115844069170.6,level
 2021-12-31,national,DT.DOD.DPNG.CD,"External debt stocks, private nonguaranteed (PNG) (DOD, current US$)",118929036035.6,level
@@ -32764,9 +32800,10 @@ date,region,item_code,item_name,value,transformation
 1996-12-31,national,DT.DOD.DPNG.CD,"External debt stocks, private nonguaranteed (PNG) (DOD, current US$)",202900000.0,level
 1995-12-31,national,DT.DOD.DPNG.CD,"External debt stocks, private nonguaranteed (PNG) (DOD, current US$)",102700000.0,level
 1994-12-31,national,DT.DOD.DPNG.CD,"External debt stocks, private nonguaranteed (PNG) (DOD, current US$)",41196000.0,level
-2024-12-31,national,DT.DOD.DLXF.CD,"External debt stocks, long-term (DOD, current US$)",146044727940.2,level
+2025-12-31,national,DT.DOD.DLXF.CD,"External debt stocks, long-term (DOD, current US$)",159414033331.6,level
+2024-12-31,national,DT.DOD.DLXF.CD,"External debt stocks, long-term (DOD, current US$)",144639158584.8,level
 2023-12-31,national,DT.DOD.DLXF.CD,"External debt stocks, long-term (DOD, current US$)",150157656972.7,level
-2022-12-31,national,DT.DOD.DLXF.CD,"External debt stocks, long-term (DOD, current US$)",151251124942.0,level
+2022-12-31,national,DT.DOD.DLXF.CD,"External debt stocks, long-term (DOD, current US$)",151987976942.0,level
 2021-12-31,national,DT.DOD.DLXF.CD,"External debt stocks, long-term (DOD, current US$)",159297677958.7,level
 2020-12-31,national,DT.DOD.DLXF.CD,"External debt stocks, long-term (DOD, current US$)",162878538853.5,level
 2019-12-31,national,DT.DOD.DLXF.CD,"External debt stocks, long-term (DOD, current US$)",161199029623.6,level
@@ -32926,18 +32963,19 @@ date,region,item_code,item_name,value,transformation
 1995-12-31,national,FI.RES.TOTL.DT.ZS,Total reserves (% of total external debt),44.2609128214047,level
 1994-12-31,national,FI.RES.TOTL.DT.ZS,Total reserves (% of total external debt),43.5973774865529,level
 1993-12-31,national,FI.RES.TOTL.DT.ZS,Total reserves (% of total external debt),41.1631732693232,level
+2024-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",44826596.0,level
 2023-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",37404172.0,level
-2022-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",34311372.0,level
-2021-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",37276231.0,level
-2020-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",42053487.0,level
-2019-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",40932004.0,level
-2018-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",35130212.0,level
+2022-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",34311373.0,level
+2021-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",37276229.0,level
+2020-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",42053484.0,level
+2019-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",40932002.0,level
+2018-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",35130213.0,level
 2017-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",40061936.0,level
 2016-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",38332688.0,level
-2015-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",55429062.0,level
+2015-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",55429063.0,level
 2014-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",40302809.0,level
 2013-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",52463012.0,level
-2012-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",43531482.0,level
+2012-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",43531483.0,level
 2011-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",48190000.0,level
 2010-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",56160000.0,level
 2009-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",59120000.0,level
@@ -32958,16 +32996,17 @@ date,region,item_code,item_name,value,transformation
 1994-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",21620000.0,level
 1993-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",4500000.0,level
 1992-12-31,national,BX.GRT.TECH.CD.WD,"Technical cooperation grants (BoP, current US$)",8200000.0,level
-2023-12-31,national,BX.GRT.EXTA.CD.WD,"Grants, excluding technical cooperation (BoP, current US$)",81706775.0,level
-2022-12-31,national,BX.GRT.EXTA.CD.WD,"Grants, excluding technical cooperation (BoP, current US$)",74815406.0,level
+2024-12-31,national,BX.GRT.EXTA.CD.WD,"Grants, excluding technical cooperation (BoP, current US$)",76179227.0,level
+2023-12-31,national,BX.GRT.EXTA.CD.WD,"Grants, excluding technical cooperation (BoP, current US$)",81768466.0,level
+2022-12-31,national,BX.GRT.EXTA.CD.WD,"Grants, excluding technical cooperation (BoP, current US$)",74844851.0,level
 2021-12-31,national,BX.GRT.EXTA.CD.WD,"Grants, excluding technical cooperation (BoP, current US$)",73961411.0,level
-2020-12-31,national,BX.GRT.EXTA.CD.WD,"Grants, excluding technical cooperation (BoP, current US$)",84074953.0,level
-2019-12-31,national,BX.GRT.EXTA.CD.WD,"Grants, excluding technical cooperation (BoP, current US$)",67796678.0,level
-2018-12-31,national,BX.GRT.EXTA.CD.WD,"Grants, excluding technical cooperation (BoP, current US$)",95251974.0,level
-2017-12-31,national,BX.GRT.EXTA.CD.WD,"Grants, excluding technical cooperation (BoP, current US$)",71612842.0,level
+2020-12-31,national,BX.GRT.EXTA.CD.WD,"Grants, excluding technical cooperation (BoP, current US$)",84074952.0,level
+2019-12-31,national,BX.GRT.EXTA.CD.WD,"Grants, excluding technical cooperation (BoP, current US$)",67796683.0,level
+2018-12-31,national,BX.GRT.EXTA.CD.WD,"Grants, excluding technical cooperation (BoP, current US$)",95251971.0,level
+2017-12-31,national,BX.GRT.EXTA.CD.WD,"Grants, excluding technical cooperation (BoP, current US$)",71612844.0,level
 2016-12-31,national,BX.GRT.EXTA.CD.WD,"Grants, excluding technical cooperation (BoP, current US$)",91261052.0,level
-2015-12-31,national,BX.GRT.EXTA.CD.WD,"Grants, excluding technical cooperation (BoP, current US$)",75588545.0,level
-2014-12-31,national,BX.GRT.EXTA.CD.WD,"Grants, excluding technical cooperation (BoP, current US$)",98785648.0,level
+2015-12-31,national,BX.GRT.EXTA.CD.WD,"Grants, excluding technical cooperation (BoP, current US$)",75588544.0,level
+2014-12-31,national,BX.GRT.EXTA.CD.WD,"Grants, excluding technical cooperation (BoP, current US$)",98785649.0,level
 2013-12-31,national,BX.GRT.EXTA.CD.WD,"Grants, excluding technical cooperation (BoP, current US$)",93176938.0,level
 2012-12-31,national,BX.GRT.EXTA.CD.WD,"Grants, excluding technical cooperation (BoP, current US$)",111989970.0,level
 2011-12-31,national,BX.GRT.EXTA.CD.WD,"Grants, excluding technical cooperation (BoP, current US$)",196078908.0,level

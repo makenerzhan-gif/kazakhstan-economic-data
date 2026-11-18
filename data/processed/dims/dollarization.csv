@@ -413,6 +413,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,BUSINESS_LOANS_FX_SHARE,"Доля кредитов бизнесу в иностранной валюте, %",32.254,level
 2026-08-01,national,BUSINESS_LOANS_FX_SHARE,"Доля кредитов бизнесу в иностранной валюте, %",31.8214,level
 2026-09-01,national,BUSINESS_LOANS_FX_SHARE,"Доля кредитов бизнесу в иностранной валюте, %",31.75,level
+2026-10-01,national,BUSINESS_LOANS_FX_SHARE,"Доля кредитов бизнесу в иностранной валюте, %",31.0879,level
 2023-01-01,national,HOUSEHOLD_DEPOSITS_FX_SHARE,"Доля вкладов населения в иностранной валюте, %",33.9613,level
 2023-02-01,national,HOUSEHOLD_DEPOSITS_FX_SHARE,"Доля вкладов населения в иностранной валюте, %",34.1418,level
 2023-03-01,national,HOUSEHOLD_DEPOSITS_FX_SHARE,"Доля вкладов населения в иностранной валюте, %",32.7347,level
@@ -851,6 +852,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,DEPOSITS_FX_SHARE,"Доля депозитов в иностранной валюте, все депозиты в депозитных организациях, %",19.1415,level
 2026-09-01,national,DEPOSITS_FX_SHARE,"Доля депозитов в иностранной валюте, все депозиты в депозитных организациях, %",18.3342,level
 2026-10-01,national,DEPOSITS_FX_SHARE,"Доля депозитов в иностранной валюте, все депозиты в депозитных организациях, %",18.6747,level
+2026-11-01,national,DEPOSITS_FX_SHARE,"Доля депозитов в иностранной валюте, все депозиты в депозитных организациях, %",19.0145,level
 1998-01-01,national,LEGAL_ENTITY_DEPOSITS_FX_SHARE,"Доля депозитов небанковских юридических лиц в иностранной валюте, %",22.378,level
 1998-02-01,national,LEGAL_ENTITY_DEPOSITS_FX_SHARE,"Доля депозитов небанковских юридических лиц в иностранной валюте, %",25.7251,level
 1998-03-01,national,LEGAL_ENTITY_DEPOSITS_FX_SHARE,"Доля депозитов небанковских юридических лиц в иностранной валюте, %",26.3957,level
@@ -1197,6 +1199,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,LEGAL_ENTITY_DEPOSITS_FX_SHARE,"Доля депозитов небанковских юридических лиц в иностранной валюте, %",23.7366,level
 2026-09-01,national,LEGAL_ENTITY_DEPOSITS_FX_SHARE,"Доля депозитов небанковских юридических лиц в иностранной валюте, %",22.1435,level
 2026-10-01,national,LEGAL_ENTITY_DEPOSITS_FX_SHARE,"Доля депозитов небанковских юридических лиц в иностранной валюте, %",24.167,level
+2026-11-01,national,LEGAL_ENTITY_DEPOSITS_FX_SHARE,"Доля депозитов небанковских юридических лиц в иностранной валюте, %",25.2495,level
 1998-01-01,national,INDIVIDUALS_DEPOSITS_FX_SHARE,"Доля депозитов физических лиц в иностранной валюте (обзор депозитных организаций), %",24.8814,level
 1998-02-01,national,INDIVIDUALS_DEPOSITS_FX_SHARE,"Доля депозитов физических лиц в иностранной валюте (обзор депозитных организаций), %",27.075,level
 1998-03-01,national,INDIVIDUALS_DEPOSITS_FX_SHARE,"Доля депозитов физических лиц в иностранной валюте (обзор депозитных организаций), %",26.4473,level
@@ -1543,3 +1546,4 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,INDIVIDUALS_DEPOSITS_FX_SHARE,"Доля депозитов физических лиц в иностранной валюте (обзор депозитных организаций), %",15.5011,level
 2026-09-01,national,INDIVIDUALS_DEPOSITS_FX_SHARE,"Доля депозитов физических лиц в иностранной валюте (обзор депозитных организаций), %",15.4486,level
 2026-10-01,national,INDIVIDUALS_DEPOSITS_FX_SHARE,"Доля депозитов физических лиц в иностранной валюте (обзор депозитных организаций), %",14.2872,level
+2026-11-01,national,INDIVIDUALS_DEPOSITS_FX_SHARE,"Доля депозитов физических лиц в иностранной валюте (обзор депозитных организаций), %",14.0369,level

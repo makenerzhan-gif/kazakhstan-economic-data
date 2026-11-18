@@ -11,3 +11,11 @@
 {"indicator_id": "IMPORTS", "period": "2026-05-01", "old_value": 5137905.197800036, "new_value": 5158556.241120036, "detected_date": "2026-10-17", "source": "bns", "reason": "not stated by source"}
 {"indicator_id": "IMPORTS", "period": "2026-06-01", "old_value": 5449234.164369994, "new_value": 5467262.2628799835, "detected_date": "2026-10-17", "source": "bns", "reason": "not stated by source"}
 {"indicator_id": "IMPORTS", "period": "2026-07-01", "old_value": 5394479.500139972, "new_value": 5394855.824999973, "detected_date": "2026-10-17", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "IMPORTS", "period": "2026-01-01", "old_value": 4707217.64999001, "new_value": 4715478.2525300095, "detected_date": "2026-11-18", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "IMPORTS", "period": "2026-02-01", "old_value": 4983809.017140005, "new_value": 4985924.129210006, "detected_date": "2026-11-18", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "IMPORTS", "period": "2026-03-01", "old_value": 5292885.700860002, "new_value": 5298906.176619998, "detected_date": "2026-11-18", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "IMPORTS", "period": "2026-04-01", "old_value": 6033508.729720034, "new_value": 6035132.511880033, "detected_date": "2026-11-18", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "IMPORTS", "period": "2026-05-01", "old_value": 5158556.241120036, "new_value": 5158687.618970036, "detected_date": "2026-11-18", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "IMPORTS", "period": "2026-06-01", "old_value": 5467262.2628799835, "new_value": 5471559.718159982, "detected_date": "2026-11-18", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "IMPORTS", "period": "2026-07-01", "old_value": 5394855.824999973, "new_value": 5395947.039139973, "detected_date": "2026-11-18", "source": "bns", "reason": "not stated by source"}
+{"indicator_id": "IMPORTS", "period": "2026-08-01", "old_value": 5532062.07865, "new_value": 5535963.712699999, "detected_date": "2026-11-18", "source": "bns", "reason": "not stated by source"}

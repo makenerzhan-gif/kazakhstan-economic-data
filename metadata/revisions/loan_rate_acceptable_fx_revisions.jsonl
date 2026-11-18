@@ -1,0 +1,3 @@
+{"indicator_id": "LOAN_RATE_ACCEPTABLE_FX", "period": "2026-01-01", "old_value": 3.422892, "new_value": 3.425927, "detected_date": "2026-11-18", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "LOAN_RATE_ACCEPTABLE_FX", "period": "2026-04-01", "old_value": 3.815915, "new_value": 3.788717, "detected_date": "2026-11-18", "source": "nbk", "reason": "not stated by source"}
+{"indicator_id": "LOAN_RATE_ACCEPTABLE_FX", "period": "2026-07-01", "old_value": 3.602035, "new_value": 3.582208, "detected_date": "2026-11-18", "source": "nbk", "reason": "not stated by source"}

@@ -51,6 +51,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ABY,TOTAL,Краткосрочный экономический индикатор,104.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-08-01,ABY,TOTAL,Краткосрочный экономический индикатор,103.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-09-01,ABY,TOTAL,Краткосрочный экономический индикатор,103.3,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-10-01,ABY,TOTAL,Краткосрочный экономический индикатор,103.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-01-01,AKM,TOTAL,Краткосрочный экономический индикатор,102.3,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-02-01,AKM,TOTAL,Краткосрочный экономический индикатор,105.3,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-03-01,AKM,TOTAL,Краткосрочный экономический индикатор,105.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -120,6 +121,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,AKM,TOTAL,Краткосрочный экономический индикатор,99.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-08-01,AKM,TOTAL,Краткосрочный экономический индикатор,99.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-09-01,AKM,TOTAL,Краткосрочный экономический индикатор,99.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-10-01,AKM,TOTAL,Краткосрочный экономический индикатор,98.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-01-01,AKT,TOTAL,Краткосрочный экономический индикатор,92.3,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-02-01,AKT,TOTAL,Краткосрочный экономический индикатор,100.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-03-01,AKT,TOTAL,Краткосрочный экономический индикатор,101.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -189,6 +191,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,AKT,TOTAL,Краткосрочный экономический индикатор,102.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-08-01,AKT,TOTAL,Краткосрочный экономический индикатор,101.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-09-01,AKT,TOTAL,Краткосрочный экономический индикатор,101.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-10-01,AKT,TOTAL,Краткосрочный экономический индикатор,102.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-01-01,ALA,TOTAL,Краткосрочный экономический индикатор,94.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-02-01,ALA,TOTAL,Краткосрочный экономический индикатор,97.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-03-01,ALA,TOTAL,Краткосрочный экономический индикатор,101.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -258,6 +261,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ALA,TOTAL,Краткосрочный экономический индикатор,110.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-08-01,ALA,TOTAL,Краткосрочный экономический индикатор,109.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-09-01,ALA,TOTAL,Краткосрочный экономический индикатор,109.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-10-01,ALA,TOTAL,Краткосрочный экономический индикатор,109.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-01-01,ALM,TOTAL,Краткосрочный экономический индикатор,98.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-02-01,ALM,TOTAL,Краткосрочный экономический индикатор,102.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-03-01,ALM,TOTAL,Краткосрочный экономический индикатор,104.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -327,6 +331,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ALM,TOTAL,Краткосрочный экономический индикатор,115.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-08-01,ALM,TOTAL,Краткосрочный экономический индикатор,115.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-09-01,ALM,TOTAL,Краткосрочный экономический индикатор,113.3,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-10-01,ALM,TOTAL,Краткосрочный экономический индикатор,115.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-01-01,AST,TOTAL,Краткосрочный экономический индикатор,97.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-02-01,AST,TOTAL,Краткосрочный экономический индикатор,102.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-03-01,AST,TOTAL,Краткосрочный экономический индикатор,105.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -396,6 +401,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,AST,TOTAL,Краткосрочный экономический индикатор,108.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-08-01,AST,TOTAL,Краткосрочный экономический индикатор,109.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-09-01,AST,TOTAL,Краткосрочный экономический индикатор,109.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-10-01,AST,TOTAL,Краткосрочный экономический индикатор,110.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-01-01,ATY,TOTAL,Краткосрочный экономический индикатор,83.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-02-01,ATY,TOTAL,Краткосрочный экономический индикатор,87.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-03-01,ATY,TOTAL,Краткосрочный экономический индикатор,90.3,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -465,6 +471,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ATY,TOTAL,Краткосрочный экономический индикатор,94.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-08-01,ATY,TOTAL,Краткосрочный экономический индикатор,95.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-09-01,ATY,TOTAL,Краткосрочный экономический индикатор,95.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-10-01,ATY,TOTAL,Краткосрочный экономический индикатор,98.3,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-01-01,KRG,TOTAL,Краткосрочный экономический индикатор,96.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-02-01,KRG,TOTAL,Краткосрочный экономический индикатор,97.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-03-01,KRG,TOTAL,Краткосрочный экономический индикатор,98.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -534,6 +541,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,KRG,TOTAL,Краткосрочный экономический индикатор,102.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-08-01,KRG,TOTAL,Краткосрочный экономический индикатор,102.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-09-01,KRG,TOTAL,Краткосрочный экономический индикатор,102.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-10-01,KRG,TOTAL,Краткосрочный экономический индикатор,102.3,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-01-01,KST,TOTAL,Краткосрочный экономический индикатор,102.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-02-01,KST,TOTAL,Краткосрочный экономический индикатор,101.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-03-01,KST,TOTAL,Краткосрочный экономический индикатор,102.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -603,6 +611,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,KST,TOTAL,Краткосрочный экономический индикатор,104.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-08-01,KST,TOTAL,Краткосрочный экономический индикатор,104.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-09-01,KST,TOTAL,Краткосрочный экономический индикатор,104.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-10-01,KST,TOTAL,Краткосрочный экономический индикатор,103.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-01-01,KZL,TOTAL,Краткосрочный экономический индикатор,93.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-02-01,KZL,TOTAL,Краткосрочный экономический индикатор,93.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-03-01,KZL,TOTAL,Краткосрочный экономический индикатор,94.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -672,6 +681,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,KZL,TOTAL,Краткосрочный экономический индикатор,110.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-08-01,KZL,TOTAL,Краткосрочный экономический индикатор,110.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-09-01,KZL,TOTAL,Краткосрочный экономический индикатор,110.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-10-01,KZL,TOTAL,Краткосрочный экономический индикатор,109.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-01-01,MNG,TOTAL,Краткосрочный экономический индикатор,95.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-02-01,MNG,TOTAL,Краткосрочный экономический индикатор,93.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-03-01,MNG,TOTAL,Краткосрочный экономический индикатор,91.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -741,6 +751,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,MNG,TOTAL,Краткосрочный экономический индикатор,104.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-08-01,MNG,TOTAL,Краткосрочный экономический индикатор,103.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-09-01,MNG,TOTAL,Краткосрочный экономический индикатор,105.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-10-01,MNG,TOTAL,Краткосрочный экономический индикатор,104.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-01-01,PVL,TOTAL,Краткосрочный экономический индикатор,96.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-02-01,PVL,TOTAL,Краткосрочный экономический индикатор,98.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-03-01,PVL,TOTAL,Краткосрочный экономический индикатор,99.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -810,6 +821,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,PVL,TOTAL,Краткосрочный экономический индикатор,109.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-08-01,PVL,TOTAL,Краткосрочный экономический индикатор,110.3,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-09-01,PVL,TOTAL,Краткосрочный экономический индикатор,109.3,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-10-01,PVL,TOTAL,Краткосрочный экономический индикатор,109.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-01-01,SHM,TOTAL,Краткосрочный экономический индикатор,104.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-02-01,SHM,TOTAL,Краткосрочный экономический индикатор,104.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-03-01,SHM,TOTAL,Краткосрочный экономический индикатор,105.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -879,6 +891,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,SHM,TOTAL,Краткосрочный экономический индикатор,115.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-08-01,SHM,TOTAL,Краткосрочный экономический индикатор,117.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-09-01,SHM,TOTAL,Краткосрочный экономический индикатор,117.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-10-01,SHM,TOTAL,Краткосрочный экономический индикатор,116.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-01-01,SKO,TOTAL,Краткосрочный экономический индикатор,96.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-02-01,SKO,TOTAL,Краткосрочный экономический индикатор,99.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-03-01,SKO,TOTAL,Краткосрочный экономический индикатор,101.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -948,6 +961,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,SKO,TOTAL,Краткосрочный экономический индикатор,113.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-08-01,SKO,TOTAL,Краткосрочный экономический индикатор,111.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-09-01,SKO,TOTAL,Краткосрочный экономический индикатор,111.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-10-01,SKO,TOTAL,Краткосрочный экономический индикатор,112.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-01-01,TRK,TOTAL,Краткосрочный экономический индикатор,95.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-02-01,TRK,TOTAL,Краткосрочный экономический индикатор,100.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-03-01,TRK,TOTAL,Краткосрочный экономический индикатор,103.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -1017,6 +1031,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,TRK,TOTAL,Краткосрочный экономический индикатор,124.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-08-01,TRK,TOTAL,Краткосрочный экономический индикатор,121.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-09-01,TRK,TOTAL,Краткосрочный экономический индикатор,117.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-10-01,TRK,TOTAL,Краткосрочный экономический индикатор,117.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2022-06-01,ULT,TOTAL,Краткосрочный экономический индикатор,105.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2022-07-01,ULT,TOTAL,Краткосрочный экономический индикатор,102.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2022-08-01,ULT,TOTAL,Краткосрочный экономический индикатор,105.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -1069,6 +1084,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ULT,TOTAL,Краткосрочный экономический индикатор,115.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-08-01,ULT,TOTAL,Краткосрочный экономический индикатор,113.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-09-01,ULT,TOTAL,Краткосрочный экономический индикатор,112.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-10-01,ULT,TOTAL,Краткосрочный экономический индикатор,112.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-01-01,VKO,TOTAL,Краткосрочный экономический индикатор,104.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-02-01,VKO,TOTAL,Краткосрочный экономический индикатор,104.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-03-01,VKO,TOTAL,Краткосрочный экономический индикатор,104.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -1138,6 +1154,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,VKO,TOTAL,Краткосрочный экономический индикатор,99.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-08-01,VKO,TOTAL,Краткосрочный экономический индикатор,97.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-09-01,VKO,TOTAL,Краткосрочный экономический индикатор,97.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-10-01,VKO,TOTAL,Краткосрочный экономический индикатор,98.1,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-01-01,ZHM,TOTAL,Краткосрочный экономический индикатор,96.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-02-01,ZHM,TOTAL,Краткосрочный экономический индикатор,93.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-03-01,ZHM,TOTAL,Краткосрочный экономический индикатор,96.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -1207,6 +1224,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ZHM,TOTAL,Краткосрочный экономический индикатор,114.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-08-01,ZHM,TOTAL,Краткосрочный экономический индикатор,113.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-09-01,ZHM,TOTAL,Краткосрочный экономический индикатор,111.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-10-01,ZHM,TOTAL,Краткосрочный экономический индикатор,111.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2022-06-01,ZHT,TOTAL,Краткосрочный экономический индикатор,96.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2022-07-01,ZHT,TOTAL,Краткосрочный экономический индикатор,101.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2022-08-01,ZHT,TOTAL,Краткосрочный экономический индикатор,99.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -1259,6 +1277,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ZHT,TOTAL,Краткосрочный экономический индикатор,104.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-08-01,ZHT,TOTAL,Краткосрочный экономический индикатор,103.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-09-01,ZHT,TOTAL,Краткосрочный экономический индикатор,105.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-10-01,ZHT,TOTAL,Краткосрочный экономический индикатор,106.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-01-01,ZKO,TOTAL,Краткосрочный экономический индикатор,94.4,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-02-01,ZKO,TOTAL,Краткосрочный экономический индикатор,92.6,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-03-01,ZKO,TOTAL,Краткосрочный экономический индикатор,93.7,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -1328,6 +1347,7 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,ZKO,TOTAL,Краткосрочный экономический индикатор,93.5,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-08-01,ZKO,TOTAL,Краткосрочный экономический индикатор,93.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-09-01,ZKO,TOTAL,Краткосрочный экономический индикатор,90.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-10-01,ZKO,TOTAL,Краткосрочный экономический индикатор,91.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-01-01,national,TOTAL,Краткосрочный экономический индикатор,94.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-02-01,national,TOTAL,Краткосрочный экономический индикатор,96.0,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2021-03-01,national,TOTAL,Краткосрочный экономический индикатор,98.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
@@ -1397,3 +1417,4 @@ date,region,item_code,item_name,value,transformation
 2026-07-01,national,TOTAL,Краткосрочный экономический индикатор,104.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-08-01,national,TOTAL,Краткосрочный экономический индикатор,104.9,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
 2026-09-01,national,TOTAL,Краткосрочный экономический индикатор,104.8,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods
+2026-10-01,national,TOTAL,Краткосрочный экономический индикатор,105.2,as published: year-to-date period in % of the same period of the previous year -- not converted to discrete periods

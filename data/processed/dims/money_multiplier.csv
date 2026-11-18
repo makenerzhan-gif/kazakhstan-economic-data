@@ -392,6 +392,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,MULTIPLIER_M2,Денежный мультипликатор: M2 / денежная база,2.9143,level
 2026-09-01,national,MULTIPLIER_M2,Денежный мультипликатор: M2 / денежная база,3.0615,level
 2026-10-01,national,MULTIPLIER_M2,Денежный мультипликатор: M2 / денежная база,3.0752,level
+2026-11-01,national,MULTIPLIER_M2,Денежный мультипликатор: M2 / денежная база,2.9488,level
 1994-02-01,national,MULTIPLIER_M3,Денежный мультипликатор: M3 / денежная база,1.6182,level
 1994-03-01,national,MULTIPLIER_M3,Денежный мультипликатор: M3 / денежная база,1.9911,level
 1994-04-01,national,MULTIPLIER_M3,Денежный мультипликатор: M3 / денежная база,2.4605,level
@@ -785,6 +786,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,MULTIPLIER_M3,Денежный мультипликатор: M3 / денежная база,3.3304,level
 2026-09-01,national,MULTIPLIER_M3,Денежный мультипликатор: M3 / денежная база,3.4833,level
 2026-10-01,national,MULTIPLIER_M3,Денежный мультипликатор: M3 / денежная база,3.4776,level
+2026-11-01,national,MULTIPLIER_M3,Денежный мультипликатор: M3 / денежная база,3.3629,level
 1994-02-01,national,CASH_SHARE_M3,"Доля наличных денег в обращении (M0) в M3, %",30.8795,level
 1994-03-01,national,CASH_SHARE_M3,"Доля наличных денег в обращении (M0) в M3, %",24.9043,level
 1994-04-01,national,CASH_SHARE_M3,"Доля наличных денег в обращении (M0) в M3, %",7.6116,level
@@ -1178,6 +1180,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,CASH_SHARE_M3,"Доля наличных денег в обращении (M0) в M3, %",8.7509,level
 2026-09-01,national,CASH_SHARE_M3,"Доля наличных денег в обращении (M0) в M3, %",8.7949,level
 2026-10-01,national,CASH_SHARE_M3,"Доля наличных денег в обращении (M0) в M3, %",8.5179,level
+2026-11-01,national,CASH_SHARE_M3,"Доля наличных денег в обращении (M0) в M3, %",8.4924,level
 1994-02-01,national,M2_SHARE_M3,"Доля M2 в M3, % (остаток -- прочие депозиты в иностранной валюте)",100.0,level
 1994-03-01,national,M2_SHARE_M3,"Доля M2 в M3, % (остаток -- прочие депозиты в иностранной валюте)",100.0,level
 1994-04-01,national,M2_SHARE_M3,"Доля M2 в M3, % (остаток -- прочие депозиты в иностранной валюте)",100.0,level
@@ -1571,3 +1574,4 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,M2_SHARE_M3,"Доля M2 в M3, % (остаток -- прочие депозиты в иностранной валюте)",87.5061,level
 2026-09-01,national,M2_SHARE_M3,"Доля M2 в M3, % (остаток -- прочие депозиты в иностранной валюте)",87.8917,level
 2026-10-01,national,M2_SHARE_M3,"Доля M2 в M3, % (остаток -- прочие депозиты в иностранной валюте)",88.4275,level
+2026-11-01,national,M2_SHARE_M3,"Доля M2 в M3, % (остаток -- прочие депозиты в иностранной валюте)",87.6865,level

@@ -345,6 +345,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,FX,Депозиты в иностранной валюте,9743450.0,level
 2026-09-01,national,FX,Депозиты в иностранной валюте,9196044.0,level
 2026-10-01,national,FX,Депозиты в иностранной валюте,9609118.0,level
+2026-11-01,national,FX,Депозиты в иностранной валюте,10052540.0,level
 1998-01-01,national,FX.HOUSEHOLDS,Депозиты в иностранной валюте: физические лица,6872.0,level
 1998-02-01,national,FX.HOUSEHOLDS,Депозиты в иностранной валюте: физические лица,7545.0,level
 1998-03-01,national,FX.HOUSEHOLDS,Депозиты в иностранной валюте: физические лица,7579.0,level
@@ -691,6 +692,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,FX.HOUSEHOLDS,Депозиты в иностранной валюте: физические лица,4402528.0,level
 2026-09-01,national,FX.HOUSEHOLDS,Депозиты в иностранной валюте: физические лица,4408877.0,level
 2026-10-01,national,FX.HOUSEHOLDS,Депозиты в иностранной валюте: физические лица,4086758.0,level
+2026-11-01,national,FX.HOUSEHOLDS,Депозиты в иностранной валюте: физические лица,4126565.0,level
 1998-01-01,national,FX.LEGAL,Депозиты в иностранной валюте: небанковские юридические лица,11767.0,level
 1998-02-01,national,FX.LEGAL,Депозиты в иностранной валюте: небанковские юридические лица,11743.0,level
 1998-03-01,national,FX.LEGAL,Депозиты в иностранной валюте: небанковские юридические лица,11451.0,level
@@ -1037,6 +1039,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,FX.LEGAL,Депозиты в иностранной валюте: небанковские юридические лица,5340922.0,level
 2026-09-01,national,FX.LEGAL,Депозиты в иностранной валюте: небанковские юридические лица,4787167.0,level
 2026-10-01,national,FX.LEGAL,Депозиты в иностранной валюте: небанковские юридические лица,5522360.0,level
+2026-11-01,national,FX.LEGAL,Депозиты в иностранной валюте: небанковские юридические лица,5925975.0,level
 1998-01-01,national,FX.OTHER,Другие депозиты в иностранной валюте,8848.0,level
 1998-02-01,national,FX.OTHER,Другие депозиты в иностранной валюте,9142.0,level
 1998-03-01,national,FX.OTHER,Другие депозиты в иностранной валюте,9671.0,level
@@ -1383,6 +1386,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,FX.OTHER,Другие депозиты в иностранной валюте,6969575.0,level
 2026-09-01,national,FX.OTHER,Другие депозиты в иностранной валюте,6658898.0,level
 2026-10-01,national,FX.OTHER,Другие депозиты в иностранной валюте,6509081.0,level
+2026-11-01,national,FX.OTHER,Другие депозиты в иностранной валюте,7113989.0,level
 1998-01-01,national,FX.OTHER.HOUSEHOLDS,Другие депозиты в иностранной валюте: физические лица,6368.0,level
 1998-02-01,national,FX.OTHER.HOUSEHOLDS,Другие депозиты в иностранной валюте: физические лица,6912.0,level
 1998-03-01,national,FX.OTHER.HOUSEHOLDS,Другие депозиты в иностранной валюте: физические лица,6917.0,level
@@ -1729,6 +1733,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,FX.OTHER.HOUSEHOLDS,Другие депозиты в иностранной валюте: физические лица,3941004.0,level
 2026-09-01,national,FX.OTHER.HOUSEHOLDS,Другие депозиты в иностранной валюте: физические лица,3896614.0,level
 2026-10-01,national,FX.OTHER.HOUSEHOLDS,Другие депозиты в иностранной валюте: физические лица,3646799.0,level
+2026-11-01,national,FX.OTHER.HOUSEHOLDS,Другие депозиты в иностранной валюте: физические лица,3693598.0,level
 1998-01-01,national,FX.OTHER.LEGAL,Другие депозиты в иностранной валюте: юридические лица,2480.0,level
 1998-02-01,national,FX.OTHER.LEGAL,Другие депозиты в иностранной валюте: юридические лица,2230.0,level
 1998-03-01,national,FX.OTHER.LEGAL,Другие депозиты в иностранной валюте: юридические лица,2754.0,level
@@ -2075,6 +2080,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,FX.OTHER.LEGAL,Другие депозиты в иностранной валюте: юридические лица,3028570.0,level
 2026-09-01,national,FX.OTHER.LEGAL,Другие депозиты в иностранной валюте: юридические лица,2762284.0,level
 2026-10-01,national,FX.OTHER.LEGAL,Другие депозиты в иностранной валюте: юридические лица,2862282.0,level
+2026-11-01,national,FX.OTHER.LEGAL,Другие депозиты в иностранной валюте: юридические лица,3420391.0,level
 1998-01-01,national,FX.TRANSFERABLE,Переводимые депозиты в иностранной валюте,9791.0,level
 1998-02-01,national,FX.TRANSFERABLE,Переводимые депозиты в иностранной валюте,10146.0,level
 1998-03-01,national,FX.TRANSFERABLE,Переводимые депозиты в иностранной валюте,9359.0,level
@@ -2421,6 +2427,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,FX.TRANSFERABLE,Переводимые депозиты в иностранной валюте,2773875.0,level
 2026-09-01,national,FX.TRANSFERABLE,Переводимые депозиты в иностранной валюте,2537146.0,level
 2026-10-01,national,FX.TRANSFERABLE,Переводимые депозиты в иностранной валюте,3100038.0,level
+2026-11-01,national,FX.TRANSFERABLE,Переводимые депозиты в иностранной валюте,2938551.0,level
 1998-01-01,national,FX.TRANSFERABLE.HOUSEHOLDS,Переводимые депозиты в иностранной валюте: физические лица,504.0,level
 1998-02-01,national,FX.TRANSFERABLE.HOUSEHOLDS,Переводимые депозиты в иностранной валюте: физические лица,633.0,level
 1998-03-01,national,FX.TRANSFERABLE.HOUSEHOLDS,Переводимые депозиты в иностранной валюте: физические лица,663.0,level
@@ -2767,6 +2774,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,FX.TRANSFERABLE.HOUSEHOLDS,Переводимые депозиты в иностранной валюте: физические лица,461523.0,level
 2026-09-01,national,FX.TRANSFERABLE.HOUSEHOLDS,Переводимые депозиты в иностранной валюте: физические лица,512263.0,level
 2026-10-01,national,FX.TRANSFERABLE.HOUSEHOLDS,Переводимые депозиты в иностранной валюте: физические лица,439959.0,level
+2026-11-01,national,FX.TRANSFERABLE.HOUSEHOLDS,Переводимые депозиты в иностранной валюте: физические лица,432967.0,level
 1998-01-01,national,FX.TRANSFERABLE.LEGAL,Переводимые депозиты в иностранной валюте: юридические лица,9287.0,level
 1998-02-01,national,FX.TRANSFERABLE.LEGAL,Переводимые депозиты в иностранной валюте: юридические лица,9513.0,level
 1998-03-01,national,FX.TRANSFERABLE.LEGAL,Переводимые депозиты в иностранной валюте: юридические лица,8697.0,level
@@ -3113,6 +3121,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,FX.TRANSFERABLE.LEGAL,Переводимые депозиты в иностранной валюте: юридические лица,2312352.0,level
 2026-09-01,national,FX.TRANSFERABLE.LEGAL,Переводимые депозиты в иностранной валюте: юридические лица,2024882.0,level
 2026-10-01,national,FX.TRANSFERABLE.LEGAL,Переводимые депозиты в иностранной валюте: юридические лица,2660078.0,level
+2026-11-01,national,FX.TRANSFERABLE.LEGAL,Переводимые депозиты в иностранной валюте: юридические лица,2505584.0,level
 1998-01-01,national,KZT,Депозиты в национальной валюте,61565.0,level
 1998-02-01,national,KZT,Депозиты в национальной валюте,54226.0,level
 1998-03-01,national,KZT,Депозиты в национальной валюте,53009.0,level
@@ -3459,6 +3468,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,KZT,Депозиты в национальной валюте,41158687.0,level
 2026-09-01,national,KZT,Депозиты в национальной валюте,40961765.0,level
 2026-10-01,national,KZT,Депозиты в национальной валюте,41846068.0,level
+2026-11-01,national,KZT,Депозиты в национальной валюте,42815155.0,level
 1998-01-01,national,KZT.HOUSEHOLDS,Депозиты в национальной валюте: физические лица,20748.0,level
 1998-02-01,national,KZT.HOUSEHOLDS,Депозиты в национальной валюте: физические лица,20321.0,level
 1998-03-01,national,KZT.HOUSEHOLDS,Депозиты в национальной валюте: физические лица,21078.0,level
@@ -3805,6 +3815,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,KZT.HOUSEHOLDS,Депозиты в национальной валюте: физические лица,23998856.0,level
 2026-09-01,national,KZT.HOUSEHOLDS,Депозиты в национальной валюте: физические лица,24130137.0,level
 2026-10-01,national,KZT.HOUSEHOLDS,Депозиты в национальной валюте: физические лица,24517611.0,level
+2026-11-01,national,KZT.HOUSEHOLDS,Депозиты в национальной валюте: физические лица,25271492.0,level
 1998-01-01,national,KZT.LEGAL,Депозиты в национальной валюте: небанковские юридические лица,40817.0,level
 1998-02-01,national,KZT.LEGAL,Депозиты в национальной валюте: небанковские юридические лица,33905.0,level
 1998-03-01,national,KZT.LEGAL,Депозиты в национальной валюте: небанковские юридические лица,31931.0,level
@@ -4151,6 +4162,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,KZT.LEGAL,Депозиты в национальной валюте: небанковские юридические лица,17159831.0,level
 2026-09-01,national,KZT.LEGAL,Депозиты в национальной валюте: небанковские юридические лица,16831628.0,level
 2026-10-01,national,KZT.LEGAL,Депозиты в национальной валюте: небанковские юридические лица,17328458.0,level
+2026-11-01,national,KZT.LEGAL,Депозиты в национальной валюте: небанковские юридические лица,17543663.0,level
 1998-01-01,national,KZT.OTHER,Другие депозиты в национальной валюте,13226.0,level
 1998-02-01,national,KZT.OTHER,Другие депозиты в национальной валюте,12946.0,level
 1998-03-01,national,KZT.OTHER,Другие депозиты в национальной валюте,12831.0,level
@@ -4497,6 +4509,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,KZT.OTHER,Другие депозиты в национальной валюте,34124978.0,level
 2026-09-01,national,KZT.OTHER,Другие депозиты в национальной валюте,33743326.0,level
 2026-10-01,national,KZT.OTHER,Другие депозиты в национальной валюте,34556059.0,level
+2026-11-01,national,KZT.OTHER,Другие депозиты в национальной валюте,35792097.0,level
 1998-01-01,national,KZT.OTHER.HOUSEHOLDS,Другие депозиты в национальной валюте: физические лица,8168.0,level
 1998-02-01,national,KZT.OTHER.HOUSEHOLDS,Другие депозиты в национальной валюте: физические лица,8279.0,level
 1998-03-01,national,KZT.OTHER.HOUSEHOLDS,Другие депозиты в национальной валюте: физические лица,8410.0,level
@@ -4843,6 +4856,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,KZT.OTHER.HOUSEHOLDS,Другие депозиты в национальной валюте: физические лица,21629372.0,level
 2026-09-01,national,KZT.OTHER.HOUSEHOLDS,Другие депозиты в национальной валюте: физические лица,21898225.0,level
 2026-10-01,national,KZT.OTHER.HOUSEHOLDS,Другие депозиты в национальной валюте: физические лица,22248368.0,level
+2026-11-01,national,KZT.OTHER.HOUSEHOLDS,Другие депозиты в национальной валюте: физические лица,23006528.0,level
 1998-01-01,national,KZT.OTHER.LEGAL,Другие депозиты в национальной валюте: юридические лица,5058.0,level
 1998-02-01,national,KZT.OTHER.LEGAL,Другие депозиты в национальной валюте: юридические лица,4666.0,level
 1998-03-01,national,KZT.OTHER.LEGAL,Другие депозиты в национальной валюте: юридические лица,4421.0,level
@@ -5189,6 +5203,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,KZT.OTHER.LEGAL,Другие депозиты в национальной валюте: юридические лица,12495606.0,level
 2026-09-01,national,KZT.OTHER.LEGAL,Другие депозиты в национальной валюте: юридические лица,11845101.0,level
 2026-10-01,national,KZT.OTHER.LEGAL,Другие депозиты в национальной валюте: юридические лица,12307691.0,level
+2026-11-01,national,KZT.OTHER.LEGAL,Другие депозиты в национальной валюте: юридические лица,12785570.0,level
 1998-01-01,national,KZT.TRANSFERABLE,Переводимые депозиты в национальной валюте,48339.0,level
 1998-02-01,national,KZT.TRANSFERABLE,Переводимые депозиты в национальной валюте,41281.0,level
 1998-03-01,national,KZT.TRANSFERABLE,Переводимые депозиты в национальной валюте,40178.0,level
@@ -5535,6 +5550,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,KZT.TRANSFERABLE,Переводимые депозиты в национальной валюте,7033709.0,level
 2026-09-01,national,KZT.TRANSFERABLE,Переводимые депозиты в национальной валюте,7218438.0,level
 2026-10-01,national,KZT.TRANSFERABLE,Переводимые депозиты в национальной валюте,7290010.0,level
+2026-11-01,national,KZT.TRANSFERABLE,Переводимые депозиты в национальной валюте,7023058.0,level
 1998-01-01,national,KZT.TRANSFERABLE.HOUSEHOLDS,Переводимые депозиты в национальной валюте: физические лица,12580.0,level
 1998-02-01,national,KZT.TRANSFERABLE.HOUSEHOLDS,Переводимые депозиты в национальной валюте: физические лица,12042.0,level
 1998-03-01,national,KZT.TRANSFERABLE.HOUSEHOLDS,Переводимые депозиты в национальной валюте: физические лица,12668.0,level
@@ -5881,6 +5897,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,KZT.TRANSFERABLE.HOUSEHOLDS,Переводимые депозиты в национальной валюте: физические лица,2369484.0,level
 2026-09-01,national,KZT.TRANSFERABLE.HOUSEHOLDS,Переводимые депозиты в национальной валюте: физические лица,2231911.0,level
 2026-10-01,national,KZT.TRANSFERABLE.HOUSEHOLDS,Переводимые депозиты в национальной валюте: физические лица,2269243.0,level
+2026-11-01,national,KZT.TRANSFERABLE.HOUSEHOLDS,Переводимые депозиты в национальной валюте: физические лица,2264964.0,level
 1998-01-01,national,KZT.TRANSFERABLE.LEGAL,Переводимые депозиты в национальной валюте: юридические лица,35759.0,level
 1998-02-01,national,KZT.TRANSFERABLE.LEGAL,Переводимые депозиты в национальной валюте: юридические лица,29239.0,level
 1998-03-01,national,KZT.TRANSFERABLE.LEGAL,Переводимые депозиты в национальной валюте: юридические лица,27510.0,level
@@ -6227,6 +6244,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,KZT.TRANSFERABLE.LEGAL,Переводимые депозиты в национальной валюте: юридические лица,4664225.0,level
 2026-09-01,national,KZT.TRANSFERABLE.LEGAL,Переводимые депозиты в национальной валюте: юридические лица,4986527.0,level
 2026-10-01,national,KZT.TRANSFERABLE.LEGAL,Переводимые депозиты в национальной валюте: юридические лица,5020767.0,level
+2026-11-01,national,KZT.TRANSFERABLE.LEGAL,Переводимые депозиты в национальной валюте: юридические лица,4758093.0,level
 1998-01-01,national,TOTAL,"Депозиты, всего",80203.0,level
 1998-02-01,national,TOTAL,"Депозиты, всего",73514.0,level
 1998-03-01,national,TOTAL,"Депозиты, всего",72039.0,level
@@ -6573,6 +6591,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,TOTAL,"Депозиты, всего",50902137.0,level
 2026-09-01,national,TOTAL,"Депозиты, всего",50157809.0,level
 2026-10-01,national,TOTAL,"Депозиты, всего",51455187.0,level
+2026-11-01,national,TOTAL,"Депозиты, всего",52867695.0,level
 1998-01-01,national,TOTAL.HOUSEHOLDS,Депозиты физических лиц,27619.0,level
 1998-02-01,national,TOTAL.HOUSEHOLDS,Депозиты физических лиц,27867.0,level
 1998-03-01,national,TOTAL.HOUSEHOLDS,Депозиты физических лиц,28657.0,level
@@ -6919,6 +6938,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,TOTAL.HOUSEHOLDS,Депозиты физических лиц,28401384.0,level
 2026-09-01,national,TOTAL.HOUSEHOLDS,Депозиты физических лиц,28539014.0,level
 2026-10-01,national,TOTAL.HOUSEHOLDS,Депозиты физических лиц,28604369.0,level
+2026-11-01,national,TOTAL.HOUSEHOLDS,Депозиты физических лиц,29398057.0,level
 1998-01-01,national,TOTAL.LEGAL,Депозиты небанковских юридических лиц,52583.0,level
 1998-02-01,national,TOTAL.LEGAL,Депозиты небанковских юридических лиц,45648.0,level
 1998-03-01,national,TOTAL.LEGAL,Депозиты небанковских юридических лиц,43382.0,level
@@ -7265,3 +7285,4 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,TOTAL.LEGAL,Депозиты небанковских юридических лиц,22500753.0,level
 2026-09-01,national,TOTAL.LEGAL,Депозиты небанковских юридических лиц,21618795.0,level
 2026-10-01,national,TOTAL.LEGAL,Депозиты небанковских юридических лиц,22850818.0,level
+2026-11-01,national,TOTAL.LEGAL,Депозиты небанковских юридических лиц,23469638.0,level

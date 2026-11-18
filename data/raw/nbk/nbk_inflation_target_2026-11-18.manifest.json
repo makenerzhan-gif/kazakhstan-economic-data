@@ -1,0 +1,8 @@
+{
+  "downloaded_at": "2026-11-18T15:08:27.888185",
+  "source_url": "https://data.nationalbank.kz/api/v1/data/indicators",
+  "field": "inflationTarget",
+  "already_had": 1,
+  "in_window": 264,
+  "total_after_merge": 1
+}
