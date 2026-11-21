@@ -58,3 +58,15 @@
 {"indicator_id": "KASE_INDICES", "period": "2026-11-01 MM_INDEX.EOM", "old_value": 13.9, "new_value": 13.05, "detected_date": "2026-11-18", "source": "kase", "reason": "not stated by source"}
 {"indicator_id": "KASE_INDICES", "period": "2026-11-01 CAPBILLS_KZT.AVG", "old_value": 37739.6651, "new_value": 37841.8759, "detected_date": "2026-11-18", "source": "kase", "reason": "not stated by source"}
 {"indicator_id": "KASE_INDICES", "period": "2026-11-01 CAPBILLS_KZT.EOM", "old_value": 37962.9792, "new_value": 38143.8815, "detected_date": "2026-11-18", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "KASE_INDICES", "period": "2026-11-01 INDEX_KASE.AVG", "old_value": 7846.8577, "new_value": 7838.914, "detected_date": "2026-11-21", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "KASE_INDICES", "period": "2026-11-01 INDEX_KASE.EOM", "old_value": 7807.92, "new_value": 7779.5, "detected_date": "2026-11-21", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "KASE_INDICES", "period": "2026-11-01 KASE_TR.AVG", "old_value": 8694.8477, "new_value": 8686.044, "detected_date": "2026-11-21", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "KASE_INDICES", "period": "2026-11-01 KASE_TR.EOM", "old_value": 8651.69, "new_value": 8620.2, "detected_date": "2026-11-21", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "KASE_INDICES", "period": "2026-11-01 KASE_BMY.AVG", "old_value": 15.5608, "new_value": 15.5613, "detected_date": "2026-11-21", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "KASE_INDICES", "period": "2026-11-01 KASE_BMY.EOM", "old_value": 15.72, "new_value": 15.58, "detected_date": "2026-11-21", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "KASE_INDICES", "period": "2026-11-01 KASE_BMC.AVG", "old_value": 99.12, "new_value": 99.1353, "detected_date": "2026-11-21", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "KASE_INDICES", "period": "2026-11-01 KASE_BMC.EOM", "old_value": 99.02, "new_value": 99.24, "detected_date": "2026-11-21", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "KASE_INDICES", "period": "2026-11-01 MM_INDEX.AVG", "old_value": 13.8138, "new_value": 13.8113, "detected_date": "2026-11-21", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "KASE_INDICES", "period": "2026-11-01 MM_INDEX.EOM", "old_value": 13.05, "new_value": 13.94, "detected_date": "2026-11-21", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "KASE_INDICES", "period": "2026-11-01 CAPBILLS_KZT.AVG", "old_value": 37841.8759, "new_value": 37893.6872, "detected_date": "2026-11-21", "source": "kase", "reason": "not stated by source"}
+{"indicator_id": "KASE_INDICES", "period": "2026-11-01 CAPBILLS_KZT.EOM", "old_value": 38143.8815, "new_value": 38254.8103, "detected_date": "2026-11-21", "source": "kase", "reason": "not stated by source"}

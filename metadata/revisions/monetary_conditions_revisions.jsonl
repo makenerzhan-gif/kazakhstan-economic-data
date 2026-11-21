@@ -517,3 +517,4 @@
 {"indicator_id": "MONETARY_CONDITIONS", "period": "2026-08-01 MCI_REER_PART", "old_value": 7.9115, "new_value": 7.8292, "detected_date": "2026-11-12", "source": "derived", "reason": "not stated by source"}
 {"indicator_id": "MONETARY_CONDITIONS", "period": "2026-11-01 TONIA", "old_value": 15.3, "new_value": 15.28, "detected_date": "2026-11-14", "source": "derived", "reason": "not stated by source"}
 {"indicator_id": "MONETARY_CONDITIONS", "period": "2026-11-01 TONIA", "old_value": 15.28, "new_value": 15.1623, "detected_date": "2026-11-18", "source": "derived", "reason": "not stated by source"}
+{"indicator_id": "MONETARY_CONDITIONS", "period": "2026-11-01 TONIA", "old_value": 15.1623, "new_value": 15.1107, "detected_date": "2026-11-21", "source": "derived", "reason": "not stated by source"}

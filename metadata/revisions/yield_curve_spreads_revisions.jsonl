@@ -8,3 +8,8 @@
 {"indicator_id": "YIELD_CURVE_SPREADS", "period": "2026-11-01 SLOPE_5Y_2Y", "old_value": -0.5908, "new_value": -0.5791, "detected_date": "2026-11-18", "source": "derived", "reason": "not stated by source"}
 {"indicator_id": "YIELD_CURVE_SPREADS", "period": "2026-11-01 GS_1Y_BASE_SPREAD", "old_value": -1.748, "new_value": -1.7795, "detected_date": "2026-11-18", "source": "derived", "reason": "not stated by source"}
 {"indicator_id": "YIELD_CURVE_SPREADS", "period": "2026-11-01 TONIA_BASE_SPREAD", "old_value": -0.47, "new_value": -0.5877, "detected_date": "2026-11-18", "source": "derived", "reason": "not stated by source"}
+{"indicator_id": "YIELD_CURVE_SPREADS", "period": "2026-11-01 SLOPE_10Y_1Y", "old_value": -1.2608, "new_value": -1.2524, "detected_date": "2026-11-21", "source": "derived", "reason": "not stated by source"}
+{"indicator_id": "YIELD_CURVE_SPREADS", "period": "2026-11-01 SLOPE_10Y_3M", "old_value": -1.3879, "new_value": -1.3635, "detected_date": "2026-11-21", "source": "derived", "reason": "not stated by source"}
+{"indicator_id": "YIELD_CURVE_SPREADS", "period": "2026-11-01 SLOPE_5Y_2Y", "old_value": -0.5791, "new_value": -0.5757, "detected_date": "2026-11-21", "source": "derived", "reason": "not stated by source"}
+{"indicator_id": "YIELD_CURVE_SPREADS", "period": "2026-11-01 GS_1Y_BASE_SPREAD", "old_value": -1.7795, "new_value": -1.7989, "detected_date": "2026-11-21", "source": "derived", "reason": "not stated by source"}
+{"indicator_id": "YIELD_CURVE_SPREADS", "period": "2026-11-01 TONIA_BASE_SPREAD", "old_value": -0.5877, "new_value": -0.6393, "detected_date": "2026-11-21", "source": "derived", "reason": "not stated by source"}
