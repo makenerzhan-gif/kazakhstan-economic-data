@@ -823,6 +823,43 @@ def _is_bulletin_title(title) -> bool:
     `"Statistical bulletin" in title` test skipped it, so every bulletin series stood one edition
     behind until 2026-11-13."""
     return bool(re.search(r"statistical\s+bulletin", title or "", re.IGNORECASE))
+
+
+# The edition for January-December 2025 (doc 964016, posted 2026-02-04) is titled only «(Is developed in
+# Kazakh and Russian, while English translation is not provided)» -- the note every bulletin title ends
+# with, without the title itself. Read by title alone, it was skipped: the three item-level bulletin
+# datasets had no December 2025 (found 2026-11-22). Such a document is taken when its workbook carries
+# the bulletin's tables; the download is cached and serves the readers afterwards.
+_LANGUAGE_NOTE_RE = re.compile(r"is\s+developed\s+in\s+kazakh\s+and\s+russian", re.IGNORECASE)
+BULLETIN_SHEETS = ("таб3", "таб4", "таб8(дох)")
+_CONTENT_CHECKED: dict[str, bool] = {}
+
+
+def _has_bulletin_sheets(doc: dict) -> bool:
+    path = str(((doc.get("full_text") or [{}])[0]).get("document") or "")
+    if not path.lower().endswith((".xlsx", ".xls")):
+        return False
+    if path not in _CONTENT_CHECKED:
+        try:
+            import openpyxl
+            wb = openpyxl.load_workbook(io.BytesIO(_download(path)), read_only=True)
+            names = {_sheet_key(n) for n in wb.sheetnames}
+            wb.close()
+            _CONTENT_CHECKED[path] = all(k in names for k in BULLETIN_SHEETS)
+        except Exception:  # noqa: BLE001  (an unreadable file is not a bulletin; the listing must not fail on it)
+            _CONTENT_CHECKED[path] = False
+    return _CONTENT_CHECKED[path]
+
+
+def _is_bulletin(doc: dict) -> bool:
+    """A listed document is a bulletin by its title, or -- when the title is only the language note -- by
+    its content."""
+    title = doc.get("title") or ""
+    if _is_bulletin_title(title):
+        return True
+    rest = re.sub(r"[()\s.]+", " ", _LANGUAGE_NOTE_RE.sub("", title)).strip(" ,;")
+    rest = re.sub(r"while\s+english\s+translation\s+is\s+not\s+provided", "", rest, flags=re.IGNORECASE).strip(" ,;")
+    return bool(_LANGUAGE_NOTE_RE.search(title)) and not rest and _has_bulletin_sheets(doc)
 # THE ARCHIVE (added 2026-09-27). The budget direction's listing holds only its latest 100
 # documents, so the daily run sees about 14 bulletins (early 2025 onward). Minfin keeps the
 # monthly bulletins back to January 2019 online, reachable by title search («Статистический
@@ -839,7 +876,7 @@ def _bulletin_documents() -> list[dict]:
     """The monthly bulletins, newest first: the budget direction's listing, and in archive mode
     every bulletin a title search finds as well."""
     docs = [d for d in _list_documents(directions=BUDGET_DIRECTION_ID)
-            if _is_bulletin_title(d.get("title"))]
+            if _is_bulletin(d)]
     if not BULLETIN_ARCHIVE:
         return docs
     found = {d.get("id"): d for d in docs}
@@ -851,7 +888,7 @@ def _bulletin_documents() -> list[dict]:
             if len(batch) < 100:
                 break
     keep = [d for d in found.values()
-            if BULLETIN_TITLE_RE.search(d.get("title") or "") and not _ANNUAL_VOLUME_RE.search(d.get("title") or "")
+            if (BULLETIN_TITLE_RE.search(d.get("title") or "") or _is_bulletin(d)) and not _ANNUAL_VOLUME_RE.search(d.get("title") or "")
             and d.get("full_text") and str(d["full_text"][0].get("document", "")).lower().endswith((".xlsx", ".xls"))]
     return sorted(keep, key=lambda d: d.get("created_date") or "", reverse=True)
 
@@ -1443,7 +1480,7 @@ def _fetch_nf_row(row_finder, indicator_id: str, description_note: str) -> tuple
     fetch_national_fund_savings_bonds for how that ambiguity is resolved.
     """
     docs = _list_documents(directions=BUDGET_DIRECTION_ID)
-    bulletins = [d for d in docs if _is_bulletin_title(d.get("title"))]
+    bulletins = [d for d in docs if _is_bulletin(d)]
     if not bulletins:
         raise validation.StructuralChangeError(
             "\n".join([
@@ -1717,7 +1754,7 @@ def fetch_gov_financial_assets_sold() -> tuple[list[dict], dict]:
     within each year (2025: 192.41 Mar to 4,545.42 Nov; 2026: 27.30 Jan to
     3,394.45 Jun)."""
     docs = _list_documents(directions=BUDGET_DIRECTION_ID)
-    bulletins = [d for d in docs if _is_bulletin_title(d.get("title"))]
+    bulletins = [d for d in docs if _is_bulletin(d)]
     if not bulletins:
         raise validation.StructuralChangeError(
             "\n".join([
@@ -1854,7 +1891,7 @@ def fetch_gov_audit_violations_amount() -> tuple[list[dict], dict]:
     live 2026-08-31: 13 documents parsed, monotonic within each year (2025:
     18,398 Feb to 395,858 Nov; 2026: 19,655 Jan to 455,695 Jun)."""
     docs = _list_documents(directions=BUDGET_DIRECTION_ID)
-    bulletins = [d for d in docs if _is_bulletin_title(d.get("title"))]
+    bulletins = [d for d in docs if _is_bulletin(d)]
     if not bulletins:
         raise validation.StructuralChangeError(
             "\n".join([
@@ -2082,7 +2119,7 @@ def _fetch_pension_row(column_half: str, indicator_id: str, note: str) -> tuple[
     and the first whose table 27 is dated 1 January is used -- the 1-July figures are not
     stored (a half-year variant would be a separate indicator, not this one)."""
     docs = _list_documents(directions=BUDGET_DIRECTION_ID)
-    bulletins = [d for d in docs if _is_bulletin_title(d.get("title"))]
+    bulletins = [d for d in docs if _is_bulletin(d)]
     if not bulletins:
         raise validation.StructuralChangeError(
             "\n".join([
@@ -2191,7 +2228,7 @@ def fetch_gov_procurement_total_value() -> tuple[list[dict], dict]:
     the 13 listed bulletins (this sheet is published once per closed year,
     not monthly) -- 2024: 7,296,933.87; 2025: 8,141,829.16 million KZT."""
     docs = _list_documents(directions=BUDGET_DIRECTION_ID)
-    bulletins = [d for d in docs if _is_bulletin_title(d.get("title"))]
+    bulletins = [d for d in docs if _is_bulletin(d)]
     if not bulletins:
         raise validation.StructuralChangeError(
             "\n".join([
@@ -2580,7 +2617,7 @@ def _fetch_debt_structure_row(section: str, row_code: str, russian_marker: str,
                               indicator_id: str, note: str,
                               currency: str = "KZT") -> tuple[list[dict], dict]:
     docs = _list_documents(directions=BUDGET_DIRECTION_ID)
-    bulletins = [d for d in docs if _is_bulletin_title(d.get("title"))]
+    bulletins = [d for d in docs if _is_bulletin(d)]
     if not bulletins:
         raise validation.StructuralChangeError(
             "\n".join([
@@ -2990,7 +3027,7 @@ REPUBLICAN_BUDGET_MARKER = "Республикалық бюджет"
 def _fetch_budget_financing_row(sheet_prefix: str, kazakh_label: str, russian_marker: str,
                                  indicator_id: str, note: str) -> tuple[list[dict], dict]:
     docs = _list_documents(directions=BUDGET_DIRECTION_ID)
-    bulletins = [d for d in docs if _is_bulletin_title(d.get("title"))]
+    bulletins = [d for d in docs if _is_bulletin(d)]
     if not bulletins:
         raise validation.StructuralChangeError(
             "\n".join([
@@ -3332,7 +3369,7 @@ def _verify_state_budget_identity(indicator_id: str) -> str:
     rather than one per component. Returns the period checked.
     """
     docs = _list_documents(directions=BUDGET_DIRECTION_ID)
-    bulletins = [d for d in docs if _is_bulletin_title(d.get("title"))]
+    bulletins = [d for d in docs if _is_bulletin(d)]
     if not bulletins:
         raise validation.StructuralChangeError(
             "\n".join([

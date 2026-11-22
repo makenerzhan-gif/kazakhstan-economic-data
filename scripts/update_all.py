@@ -260,7 +260,7 @@ def main() -> int:
     except Exception as exc:  # noqa: BLE001 -- a page, never a reason to lose the run
         print(f"::warning title=Dashboard not rebuilt::{type(exc).__name__}: {str(exc)[:300]}")
     model_problem = build_model_data_safely()
-    stale = staleness.stale_series(indicators)
+    stale = staleness.stale_series(indicators) + staleness.stale_datasets()
     announce_stale(stale)
     _write_report(run_ts, logger, unified_updated=True, tests_passed=True,
                   cross_source_failed=cross_failed, stale=stale, model_problem=model_problem)

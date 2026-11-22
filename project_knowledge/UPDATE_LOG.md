@@ -1,37 +1,7 @@
 # Update Log
 
-Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-09-28 — weekend rows removed from the daily official USD rate (user: «Почисти записи за выходные в дневном ряде USD»)» are in docs/UPDATE_LOG_ARCHIVE.md in the
+Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-10-13 — the daily run unblocked; NBK form 324 found stale since 2023 (user: «проверь пайплайн, прогон сегодня не прошел»)» are in docs/UPDATE_LOG_ARCHIVE.md in the
 repository (not synced into the Claude Project). When this file grows past ~60 KB, move the oldest entries there.
-
-## 2026-10-08 — the daily run's push now survives a GitHub outage (user: «почему прогон сломался?»)
-
-The 2026-10-07 run collected everything (12:11-15:09 UTC, a commit of 1,740 files) and then lost it:
-`git push` stopped in git-lfs's pre-push lock check ("Fatal error: Unable to verify locks"), which fell
-into GitHub's 15:06-15:16 UTC outage of git operations and Actions (githubstatus.com). The runner image
-and git were the same as in the green 2026-10-06 run. The repository never uses LFS file locking, so
-`update.yml` now sets `lfs.locksverify false` (git-lfs then sends only the objects/batch upload request;
-checked with GIT_TRACE), and retries pull --rebase + push after pauses of 1, 3, 10 and 20 minutes
-(5 attempts over ~34 minutes). A rebase conflict still fails at once. The step was run against a local
-remote for four cases: push failing twice then succeeding, a conflict, push failing every time, no
-changes. The next run refetches every source; only the raw snapshots dated 2026-10-07 are lost, and
-that day's logs/ and reports/ are in the run's diagnostics artifact until 2027-01-05.
-
-## 2026-10-13 — the daily run unblocked; NBK form 324 found stale since 2023 (user: «проверь пайплайн, прогон сегодня не прошел»)
-
-The 2026-10-13 run fetched everything and then withheld it: one test failed,
-test_quarterly_current_account_sums_to_the_imf_calendar_year, 2023: four NBK quarters -9 315.5 mln USD
-against the IMF's -8 284.3. The October 2026 WEO (country update 24.09.2026) had revised Kazakhstan's
-2023-2025 current account; the NBK revised it too, in its workbook «Платежный баланс Республики Казахстан
-за период с 2000 года по 1 полугодие 2026 года» (30.09.2026: 2023 -8 284.4, 2024 -6 819.4, 2025
--13 093.5), but its open-data formId=324, which feeds CURRENT_ACCOUNT_BALANCE and the four
-BOP_* current-account lines, has not changed since 2026-09-26 and still differs from the workbook in every
-quarter from 2023-Q1 (2026-Q1: -2 008.0 vs -796.1); it also lacks 2025-Q3 (-3 688.6) and 2026-Q2
-(+3 171.0). 2000-2022 are equal in all three sources. The test now checks exact equality only on the
-years before the IMF's last three actual years (2000-2022 today, 23 years; it still fails all 23 under
-the source's own unshifted dating), since the two publications take revisions up at different times
-(the WEO's 2024, -6 763.9, matches neither NBK vintage). The stale vintage is registered in
-config/source_issues.yaml (nbk_bop_form_324_stale_2023_2026) and shows in DATA_CATALOG. No number was
-changed. The run's failure was reproduced locally with the refetched IMF series, and the new test passes on it.
 
 ## 2026-10-16 — balance of payments from NBK form 481, with 324 filling in (user: «почему упал прогон»)
 
@@ -639,3 +609,30 @@ sources. `source_issues`: `qna_2026_first_estimate` (replaces `qna_production_20
 
 **KGD National Fund receipts.** The run of 2026-11-14 dropped eleven months of 2021 and of 2023 (a January
 edition replaced the stored year); stored rows are now kept by month, the 308 rows are restored.
+## 2026-11-22 — Pipeline check: December 2025 missing from every Minfin bulletin series; freshness check extended to item-level datasets
+
+**Minfin bulletin, January-December 2025.** The edition (gov.kz document 964016, posted 2026-02-04) is titled only
+«(Is developed in Kazakh and Russian, while English translation is not provided)»; every bulletin reader filtered
+the listing by title, so December 2025 -- the year's total -- was missing from 27 scalar series (customs duties,
+export duties on oil and oil products, property and land tax, wages, subsidies, capital expenditure and pensions of
+the state, republican and local budgets, budget plans, net lending, transfers received, financial assets) and from
+BUDGET_RECEIPTS_BY_CODE_YTD, BUDGET_EXPENDITURE_ECONOMIC_YTD, RESOURCE_PAYMENTS_YTD and REGIONAL_BUDGETS_YTD.
+`fetchers/minfin.py`: `_is_bulletin(doc)` takes a document titled only with that note when its workbook has the
+bulletin's tables 3, 4 and 8; all nine title filters use it. December 2025 loaded from the edition itself: only
+that month added, no stored value changed. Checks: state revenue 29 871 047.8 and tax receipts 23 188 178.6
+million equal STATE_BUDGET_REVENUE_YTD and STATE_TAX_REVENUE_YTD; state wages 4 632 146.9 equal in the scalar series
+and in the economic classification. April 2026 stays missing: of the three documents titled «as of April 1, 2026»
+the files hold January-February, January-March and January-May; the January-April edition was never posted.
+
+**Freshness check.** `lib/staleness.py` checked only the scalar indicators; the 319 item-level datasets were not
+checked, so two Taldau regional datasets that stopped at 2026-06 went unnoticed: INDUSTRY_SHIPMENTS_BY_REGION_MONTHLY
+(index 701622) and FUEL_PRICES_BY_CITY (703115) -- the source's only segments end there, the other regional indices
+run to 2026-09/10. `stale_datasets()` now covers config/dims.yaml; the 20 datasets past their limit carry
+`stale_ok` with the reason (two Taldau stops, WITS and IMF dataflows to 2023 / 2024 Q1 / 2025 Q4, four historical
+datasets).
+
+**Also seen, not changed.** `tax_revenue_sa` in model_data stops at 2026-03: seasonal adjustment runs on the longest
+gap-free stretch and the source gap (April 2026) leaves the post-gap stretch shorter for good. Run of 2026-11-18
+took 1 h 56 min (usually 45-50): every source was slower, with one 33-minute stall in the KASE statements; 2026-11-21
+was back to 51 min. EXCHANGE_RATES_OFFICIAL_MONTHLY failed once on 2026-11-21 (connection reset); its data run to
+November 2026.

@@ -10,7 +10,8 @@ nothing in the report said so. This check compares each series' last date with t
 
 The limits leave room for ordinary publication lags (annual national accounts arrive up to
 a year and a half after the year ends) -- a series past them needs a look, not a fix by
-default. Projections are skipped. An indicator whose stop is understood stays in the report
+default. Projections are skipped. From 2026-11-22 the item-level datasets of config/dims.yaml are checked too (stale_datasets).
+An indicator whose stop is understood stays in the report
 but in a separate, quiet list (`known`), so it is not forgotten and does not raise the warning:
   * `lifecycle:` (superseded / superseded_not_spliceable / stale_source, with its note) -- the
     series is finished, config/indicators.yaml names the replacement;
@@ -58,6 +59,26 @@ def stale_series(indicators: list[dict], today: date | None = None, processed_ro
     return sorted(out, key=lambda r: r["last"])
 
 
+def stale_datasets(datasets: list[dict] | None = None, today: date | None = None, processed_root: Path | None = None) -> list[dict]:
+    """The same check for the item-level datasets of config/dims.yaml (added 2026-11-22: two Taldau regional
+    datasets had stopped at 2026-06 and nothing said so). `stale_ok` works as for indicators."""
+    if datasets is None:
+        import yaml
+        datasets = yaml.safe_load((REPO_ROOT / "config" / "dims.yaml").read_text(encoding="utf-8"))["datasets"]
+    today = today or date.today()
+    root = processed_root or REPO_ROOT / "data" / "processed" / "dims"
+    out = []
+    for ds in datasets:
+        limit = LIMIT_DAYS.get(ds.get("frequency"))
+        if limit is None or ds.get("category") in SKIP_CATEGORIES:
+            continue
+        last = last_date(root / f"{ds['id'].lower()}.csv")
+        if last is not None and (today - last).days > limit:
+            out.append({"id": ds["id"], "agency": ds.get("agency", "dims"), "frequency": ds["frequency"],
+                        "last": last.isoformat(), "days": (today - last).days, "known": ds.get("stale_ok")})
+    return sorted(out, key=lambda r: r["last"])
+
+
 def unexplained(stale: list[dict]) -> list[dict]:
     return [r for r in stale if not r.get("known")]
 
@@ -68,8 +89,8 @@ def report_lines(stale: list[dict]) -> list[str]:
     if new:
         lines += ["## Series with no new observations for longer than their frequency allows", "",
                   "The source answered, but its newest observation is old: it may have stopped publishing, moved, or "
-                  "the fetcher reads a superseded document. Fix the fetcher, or say why in config/indicators.yaml "
-                  "(`stale_ok: \"reason\"`, or a `lifecycle`; scripts/lib/staleness.py).", ""]
+                  "the fetcher reads a superseded document. Fix the fetcher, or say why in config/indicators.yaml or "
+                  "config/dims.yaml (`stale_ok: \"reason\"`, or a `lifecycle`; scripts/lib/staleness.py).", ""]
         lines += [f"- **{r['agency']}/{r['id']}** ({r['frequency']}): last observation {r['last']}, {r['days']} days ago" for r in new]
         lines.append("")
     if known:
