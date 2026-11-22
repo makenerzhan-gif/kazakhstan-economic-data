@@ -1,4 +1,4 @@
-# Update Log — archive (2026-08-30 .. 2026-09-28)
+# Update Log — archive (2026-08-30 .. 2026-10-13)
 
 Older entries of project_knowledge/UPDATE_LOG.md, moved here on 2026-09-26 and 2026-09-27 so the Claude Project's
 context holds only the recent log. Oldest first; nothing edited.
@@ -5705,3 +5705,33 @@ now keeps weekdays only after the merge, for all four official-rate series (EUR,
 weekend rows). The August 2026 mean of the daily series moves from 463.96 to 464.55, equal to
 EXCHANGE_RATES_OFFICIAL_MONTHLY USD (464.551429); model_data usdkzt 2026-08 likewise (usdkzt_yoy
 -13.91 -> -13.80). Test: tests/test_fx_history.py::test_fetcher_drops_weekend_rows_already_stored.
+
+## 2026-10-08 — the daily run's push now survives a GitHub outage (user: «почему прогон сломался?»)
+
+The 2026-10-07 run collected everything (12:11-15:09 UTC, a commit of 1,740 files) and then lost it:
+`git push` stopped in git-lfs's pre-push lock check ("Fatal error: Unable to verify locks"), which fell
+into GitHub's 15:06-15:16 UTC outage of git operations and Actions (githubstatus.com). The runner image
+and git were the same as in the green 2026-10-06 run. The repository never uses LFS file locking, so
+`update.yml` now sets `lfs.locksverify false` (git-lfs then sends only the objects/batch upload request;
+checked with GIT_TRACE), and retries pull --rebase + push after pauses of 1, 3, 10 and 20 minutes
+(5 attempts over ~34 minutes). A rebase conflict still fails at once. The step was run against a local
+remote for four cases: push failing twice then succeeding, a conflict, push failing every time, no
+changes. The next run refetches every source; only the raw snapshots dated 2026-10-07 are lost, and
+that day's logs/ and reports/ are in the run's diagnostics artifact until 2027-01-05.
+
+## 2026-10-13 — the daily run unblocked; NBK form 324 found stale since 2023 (user: «проверь пайплайн, прогон сегодня не прошел»)
+
+The 2026-10-13 run fetched everything and then withheld it: one test failed,
+test_quarterly_current_account_sums_to_the_imf_calendar_year, 2023: four NBK quarters -9 315.5 mln USD
+against the IMF's -8 284.3. The October 2026 WEO (country update 24.09.2026) had revised Kazakhstan's
+2023-2025 current account; the NBK revised it too, in its workbook «Платежный баланс Республики Казахстан
+за период с 2000 года по 1 полугодие 2026 года» (30.09.2026: 2023 -8 284.4, 2024 -6 819.4, 2025
+-13 093.5), but its open-data formId=324, which feeds CURRENT_ACCOUNT_BALANCE and the four
+BOP_* current-account lines, has not changed since 2026-09-26 and still differs from the workbook in every
+quarter from 2023-Q1 (2026-Q1: -2 008.0 vs -796.1); it also lacks 2025-Q3 (-3 688.6) and 2026-Q2
+(+3 171.0). 2000-2022 are equal in all three sources. The test now checks exact equality only on the
+years before the IMF's last three actual years (2000-2022 today, 23 years; it still fails all 23 under
+the source's own unshifted dating), since the two publications take revisions up at different times
+(the WEO's 2024, -6 763.9, matches neither NBK vintage). The stale vintage is registered in
+config/source_issues.yaml (nbk_bop_form_324_stale_2023_2026) and shows in DATA_CATALOG. No number was
+changed. The run's failure was reproduced locally with the refetched IMF series, and the new test passes on it.

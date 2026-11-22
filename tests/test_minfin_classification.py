@@ -279,3 +279,32 @@ def test_archive_mode_keeps_an_edition_whose_table_omits_specifics(monkeypatch):
     rows[5][5] = "700"                                              # a class that does not add up is a real break
     d, records, notes = mc.receipts_edition({"табл 4": rows}, {"id": "B"})
     assert not records and any(n.startswith("SKIPPED STATE") for n in notes)
+
+
+def test_a_bulletin_titled_only_with_the_language_note_is_recognised_by_its_content(monkeypatch):
+    """The January-December 2025 edition (doc 964016) is titled only «(Is developed in Kazakh and Russian, while
+    English translation is not provided)»; read by title it was skipped and December 2025 was missing from the
+    item-level bulletin datasets (found 2026-11-22)."""
+    import io
+    import openpyxl
+    from fetchers import minfin
+
+    def book(sheets):
+        wb = openpyxl.Workbook()
+        wb.remove(wb.active)
+        for n in sheets:
+            wb.create_sheet(n)
+        buf = io.BytesIO()
+        wb.save(buf)
+        return buf.getvalue()
+    note = "(Is developed in Kazakh and Russian, while English translation is not provided)"
+    files = {"a.xlsx": book(["табл 1", "табл 3", "табл 4", "табл 8 (дох)"]), "b.xlsx": book(["Лист1"]),
+             "c.xlsx": book(["табл 3", "табл 4", "табл 8 (дох)"])}
+    listing = [{"id": 1, "title": note, "full_text": [{"document": "/u/a.xlsx"}]},
+               {"id": 2, "title": note, "full_text": [{"document": "/u/b.xlsx"}]},                # same title, not a bulletin
+               {"id": 3, "title": "Analytical report " + note, "full_text": [{"document": "/u/c.xlsx"}]},   # another title
+               {"id": 4, "title": "Statistical Bulletin as of oktober 1, 2026", "full_text": [{"document": "/u/d.xlsx"}]}]
+    monkeypatch.setattr(minfin, "_list_documents", lambda **p: listing if p.get("directions") else [])
+    monkeypatch.setattr(minfin, "_download", lambda path: files[path.rsplit("/", 1)[-1]])
+    monkeypatch.setattr(minfin, "_CONTENT_CHECKED", {})
+    assert [d["id"] for d in minfin._bulletin_documents()] == [1, 4]
