@@ -1,4 +1,4 @@
-# Update Log — archive (2026-08-30 .. 2026-10-13)
+# Update Log — archive (2026-08-30 .. 2026-10-16)
 
 Older entries of project_knowledge/UPDATE_LOG.md, moved here on 2026-09-26 and 2026-09-27 so the Claude Project's
 context holds only the recent log. Oldest first; nothing edited.
@@ -5735,3 +5735,33 @@ the source's own unshifted dating), since the two publications take revisions up
 (the WEO's 2024, -6 763.9, matches neither NBK vintage). The stale vintage is registered in
 config/source_issues.yaml (nbk_bop_form_324_stale_2023_2026) and shows in DATA_CATALOG. No number was
 changed. The run's failure was reproduced locally with the refetched IMF series, and the new test passes on it.
+
+## 2026-10-16 — balance of payments from NBK form 481, with 324 filling in (user: «почему упал прогон»)
+
+The runs of 2026-10-15 and 10-16 fetched everything and committed nothing: CURRENT_ACCOUNT_BALANCE
+came out with 25-26 quarters instead of 104, so test_quarterly_current_account_sums_to_the_imf_calendar_year
+(no quarters for 2000) and test_imf_current_account_is_nbks (25 < 100 shared quarters) failed. The NBK
+had refreshed both of its balance-of-payments forms, unevenly. formId=481 (2000 on) now carries its
+revision of 30.09.2026 in full: on 2026-10-16 all five current-account lines, 106 quarters 2000-Q1 to
+2026-Q2, one amount each, every one equal to the NBK's workbook «Платежный баланс Республики Казахстан за
+период с 2000 года по 1 полугодие 2026 года». formId=324 (2020 on) took the revision from 2024 and
+added 2025-Q3 and 2026-Q2, but still carries the unrevised 2023 (current account Q1 -1 632.7 against
+-1 405.2). The fetcher spliced 481 in only for the quarters before 2020 and only while 481 equalled 324
+on every shared quarter, so the 2023 disagreement dropped 2000-2019 from all five series.
+
+481 had been the more complete form all along (2025-Q3 was in it on 2026-09-26 and reached 324 on
+2026-10-16; 2026-Q2 reached 481 on 10-14, 324 on 10-16), and the two-amounts-per-quarter defect that
+once disqualified it is gone from the 2026-10-16 download. nbk._bop_merge now takes 481's amount for
+every quarter where it has exactly one and 324's otherwise (where the two agree to 1e-6, 324's
+value, which prints a seventh decimal, so only genuinely revised quarters enter the revisions files);
+it raises, keeping the stored series, when
+481 is empty, disagrees with 324 on the first four quarters both carry (2020: a wrong row, not a
+revision), gives two amounts where 324 has none, or breaks goods + services + primary + secondary =
+current account. The manifest note names the quarters where 324 differs. test_imf_current_account_is_nbks
+no longer requires the last two shared quarters to agree: the IMF's quarterly BOP has the NBK's 2023
+revision but not its 2024-2026 one (2026-Q1 -2 008.0 against -796.1); differences must now lie in the
+last three years and NBK must reach the IMF's latest quarter. config/source_issues.yaml drops
+nbk_bop_form_324_stale_2023_2026 (the series no longer uses 324's 2023). Run locally on the day's
+download: all five series 106 quarters 2000-Q1 to 2026-Q2, identity holding in all 106, current
+account 2023 -8 284.4, 2024 -6 819.4, 2025 -13 093.5, 2026-H1 +2 374.9 (equal to the NBK workbook);
+the revisions files record 2023-Q1..2026-Q1 only; 830 tests pass on that data and on main's.

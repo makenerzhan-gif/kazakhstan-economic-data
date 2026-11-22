@@ -4607,8 +4607,41 @@ indicators:
     source_status: confirmed
     observation_type: period_total
     cumulation: year_to_date
-    observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; строка поступлений «инвестиционные доходы от управления Фондом» — доход последнего утверждённого НБК периода (лаг от квартала до трёх); декабрь = год только в 2018, 2020, 2021; за 2024–2025 декабря нет (в утверждённых годовых отчётах инвестдоход вне поступлений); итог «Инвестиционный доход, всего» с курсовой переоценкой не берётся"
+    observation_evidence: "Отчёт МФ о поступлениях и использовании Национального фонда «на 1 <месяц>» = январь–предыдущий месяц; строка поступлений «инвестиционные доходы от управления Фондом» — доход последнего утверждённого НБК периода (лаг от квартала до трёх); декабрь = год только в 2018, 2020, 2021; за 2024–2025 декабря нет (в утверждённых годовых отчётах инвестдоход вне поступлений); итог «Инвестиционный доход, всего» с курсовой переоценкой — отдельный годовой ряд NF_INVESTMENT_RESULT"
     stale_ok: "Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checked 2026-11-13 under activities 7294 and 9394 and by title). No other published source carries this line monthly."
+
+  - id: NF_INVESTMENT_RESULT
+    name_ru: "Инвестиционный доход Национального фонда за год, всего (результат управления плюс курсовая разница), по отчёту Минфина"
+    name_en: "National Fund investment income for the year, total (management result plus exchange-rate difference), Minfin report"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "Пункт 4 «Инвестиционный доход, всего» отчёта МФ о поступлениях и использовании Национального фонда «на 1 января» следующего года: годовой результат НБК, = «прибыль/(убыток) по результатам управления» + «курсовая разница при пересчёте»; печатается с отчёта за 2022 год; в отчётах 2018-2021 пункта нет"
+
+  - id: NF_INVESTMENT_RESULT_MANAGEMENT
+    name_ru: "Инвестиционный доход Национального фонда за год: прибыль/(убыток) по результатам управления, в тенге"
+    name_en: "National Fund investment income for the year: profit/(loss) from management, in tenge"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "Подпункт пункта 4 отчёта МФ о Национальном фонде «на 1 января» следующего года; с 2022 года"
+
+  - id: NF_INVESTMENT_RESULT_FX
+    name_ru: "Инвестиционный доход Национального фонда за год: курсовая разница при пересчёте в тенге"
+    name_en: "National Fund investment income for the year: exchange-rate difference on recalculation into tenge"
+    agency: minfin
+    frequency: annual
+    unit: "million KZT"
+    category: fiscal
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "Подпункт пункта 4 отчёта МФ о Национальном фонде «на 1 января» следующего года; с 2022 года. Знак совпадает с изменением курса USD/KZT за год (2022 +6,8 %, 2023 −1,6 %, 2024 +15,4 %, 2025 −4,0 %)"
 
   - id: NF_GUARANTEED_TRANSFER_YTD
     name_ru: "Гарантированный трансферт из Национального фонда в республиканский бюджет, нарастающим итогом с начала года, помесячно"

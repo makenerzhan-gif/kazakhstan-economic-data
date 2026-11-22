@@ -1,0 +1,21 @@
+{
+  "source": "minfin",
+  "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents?activities=7294",
+  "dataset_id": "gov.kz-minfin-national-fund-receipts-and-use,all pages",
+  "indicator_id": "NF_INVESTMENT_RESULT_FX",
+  "indicator_name": "National Fund investment income for the year: exchange-rate difference on recalculation into tenge",
+  "description": "Инвестиционный доход Национального фонда за год: курсовая разница при пересчёте в тенге",
+  "frequency": "annual",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million KZT (source: thousand KZT), National Fund of the Republic of Kazakhstan, exchange-rate difference on recalculation (the revaluation of the Fund's foreign-currency assets into tenge), for the calendar year. Item 4 «Investment income, TOTAL» of the Minfin report as of 1 January of the next year (and of the approved annual reports): the NBK's full-year result. Printed from the year 2022 on; the earlier reports carry only the investment income booked into receipts (NF_INVESTMENT_INCOME_YTD), a different and lagged measure. Every report that prints the item passes total = management result + exchange-rate difference.",
+  "publication_date": null,
+  "last_update_date": "2026-11-22",
+  "download_date": "2026-11-22",
+  "period_start": "2022-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

@@ -1,37 +1,7 @@
 # Update Log
 
-Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-10-13 — the daily run unblocked; NBK form 324 found stale since 2023 (user: «проверь пайплайн, прогон сегодня не прошел»)» are in docs/UPDATE_LOG_ARCHIVE.md in the
+Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-10-16 — balance of payments from NBK form 481, with 324 filling in (user: «почему упал прогон»)» are in docs/UPDATE_LOG_ARCHIVE.md in the
 repository (not synced into the Claude Project). When this file grows past ~60 KB, move the oldest entries there.
-
-## 2026-10-16 — balance of payments from NBK form 481, with 324 filling in (user: «почему упал прогон»)
-
-The runs of 2026-10-15 and 10-16 fetched everything and committed nothing: CURRENT_ACCOUNT_BALANCE
-came out with 25-26 quarters instead of 104, so test_quarterly_current_account_sums_to_the_imf_calendar_year
-(no quarters for 2000) and test_imf_current_account_is_nbks (25 < 100 shared quarters) failed. The NBK
-had refreshed both of its balance-of-payments forms, unevenly. formId=481 (2000 on) now carries its
-revision of 30.09.2026 in full: on 2026-10-16 all five current-account lines, 106 quarters 2000-Q1 to
-2026-Q2, one amount each, every one equal to the NBK's workbook «Платежный баланс Республики Казахстан за
-период с 2000 года по 1 полугодие 2026 года». formId=324 (2020 on) took the revision from 2024 and
-added 2025-Q3 and 2026-Q2, but still carries the unrevised 2023 (current account Q1 -1 632.7 against
--1 405.2). The fetcher spliced 481 in only for the quarters before 2020 and only while 481 equalled 324
-on every shared quarter, so the 2023 disagreement dropped 2000-2019 from all five series.
-
-481 had been the more complete form all along (2025-Q3 was in it on 2026-09-26 and reached 324 on
-2026-10-16; 2026-Q2 reached 481 on 10-14, 324 on 10-16), and the two-amounts-per-quarter defect that
-once disqualified it is gone from the 2026-10-16 download. nbk._bop_merge now takes 481's amount for
-every quarter where it has exactly one and 324's otherwise (where the two agree to 1e-6, 324's
-value, which prints a seventh decimal, so only genuinely revised quarters enter the revisions files);
-it raises, keeping the stored series, when
-481 is empty, disagrees with 324 on the first four quarters both carry (2020: a wrong row, not a
-revision), gives two amounts where 324 has none, or breaks goods + services + primary + secondary =
-current account. The manifest note names the quarters where 324 differs. test_imf_current_account_is_nbks
-no longer requires the last two shared quarters to agree: the IMF's quarterly BOP has the NBK's 2023
-revision but not its 2024-2026 one (2026-Q1 -2 008.0 against -796.1); differences must now lie in the
-last three years and NBK must reach the IMF's latest quarter. config/source_issues.yaml drops
-nbk_bop_form_324_stale_2023_2026 (the series no longer uses 324's 2023). Run locally on the day's
-download: all five series 106 quarters 2000-Q1 to 2026-Q2, identity holding in all 106, current
-account 2023 -8 284.4, 2024 -6 819.4, 2025 -13 093.5, 2026-H1 +2 374.9 (equal to the NBK workbook);
-the revisions files record 2023-Q1..2026-Q1 only; 830 tests pass on that data and on main's.
 
 ## 2026-10-19 — the IIP comparison with the IMF allows the revision window (user: «почему упал прогнон»)
 
@@ -636,3 +606,24 @@ gap-free stretch and the source gap (April 2026) leaves the post-gap stretch sho
 took 1 h 56 min (usually 45-50): every source was slower, with one 33-minute stall in the KASE statements; 2026-11-21
 was back to 51 min. EXCHANGE_RATES_OFFICIAL_MONTHLY failed once on 2026-11-21 (connection reset); its data run to
 November 2026.
+## 2026-11-22 — National Fund investment result for the year (item 4 of the Minfin report)
+
+`NF_INVESTMENT_INCOME_YTD` has no December 2024 or 2025, correctly: the reports as of 1 January 2025 and 2026 have
+no «investment income from the Fund management» line in receipts (receipts total 3 770 297 032 thousand tenge in
+the report as of 1 January 2026 is the sum of its other lines). The full-year result is item 4 «Investment income,
+TOTAL», printed from the year 2022 on and not read until now. Three new annual series (million KZT, dated 31
+December), from the 106 archived reports:
+
+| Year | NF_INVESTMENT_RESULT | _MANAGEMENT | _FX |
+|---|---|---|---|
+| 2022 | −826 513.5 | −2 656 312.8 | 1 829 799.3 |
+| 2023 | 2 607 008.1 | 3 073 142.1 | −466 134.0 |
+| 2024 | 7 070 737.2 | 2 406 901.5 | 4 663 835.7 |
+| 2025 | 4 614 369.4 | 6 016 890.2 | −1 402 520.8 |
+
+Checks: total = management + FX in every report (added to the report identities); the stock-flow identity of each
+report (means at the end = beginning + receipts − application + item 4 + items 5-7) holds to 0.0 million; the FX
+part has the sign of the year's USD/KZT change (+6.8 %, −1.6 %, +15.4 %, −4.0 %) and about the size of the
+opening assets times that change (2024: 29 854 bn × 15.4 % ≈ 4 598 bn against 4 664; 2025: 34 730 bn × −4.0 % ≈
+−1 393 bn against −1 403). The existing 15 National Fund series are unchanged (all 106 reports parse, 0 values
+differ).

@@ -3928,7 +3928,17 @@ NF_DERIVED = {
     "NF_OIL_RECEIPTS_YTD": ("NF_OIL_DIRECT_TAXES_YTD", "NF_OIL_OTHER_RECEIPTS_YTD"),
     "NF_TRANSFERS_YTD": ("NF_GUARANTEED_TRANSFER_YTD", "NF_TARGETED_TRANSFERS_YTD"),
 }
-NF_INDICATORS = tuple(NF_LINES) + tuple(NF_DERIVED)
+# Item 4 «Investment income, TOTAL» of the reports as of 1 January (2022 on; the approved annual reports for 2023
+# and 2024 too): the Fund's full-year investment result as the NBK reports it -- the result of management in tenge
+# plus the exchange-rate difference on recalculation. A different measure from NF_INVESTMENT_INCOME_YTD (income
+# booked into receipts). Added 2026-11-22. Checked in every report that prints it: total = management + FX.
+NF_RESULT_LINES = {
+    "NF_INVESTMENT_RESULT": lambda s: s.startswith(NF_INVESTMENT_TOTAL),
+    "NF_INVESTMENT_RESULT_MANAGEMENT": lambda s: s.startswith(("profit/(loss)", "прибыль/(убыток)", "прибыль (убыток)",
+                                                              "доход/(убыток)", "доход (убыток)")),
+    "NF_INVESTMENT_RESULT_FX": lambda s: "exchange rate difference" in s or "курсов" in s,
+}
+NF_INDICATORS = tuple(NF_LINES) + tuple(NF_DERIVED) + tuple(NF_RESULT_LINES)
 NF_HISTORY_PATH = Path(__file__).resolve().parents[2] / "data" / "reference" / "nf_receipts_kgd_history.csv"
 
 
@@ -4008,7 +4018,8 @@ def parse_nf_report(rows: list[list]) -> dict[str, float]:
     Investment income is the receipts line «investment income from the Fund management»,
     the income booked into the Fund's receipts. The approved annual reports (and the one
     as of 1 January 2023) also carry item «Investment income, total» -- the NBK's full-year
-    result including the exchange-rate revaluation; it is not used. A report that has that
+    result including the exchange-rate revaluation; it is not used here but read into NF_INVESTMENT_RESULT
+    (with its two parts, NF_RESULT_LINES). A report that has that
     item and leaves the receipts line blank or out (the approved reports for 2023-2025)
     gives no investment-income value, so the report as of 1 January stands for December.
 
@@ -4038,7 +4049,16 @@ def parse_nf_report(rows: list[list]) -> dict[str, float]:
             continue
         if numbered or s.startswith(NF_INVESTMENT_TOTAL):
             section = "other"                              # «1. Means at the beginning», «4. ...», «8. ...»
-            inv_total_seen = inv_total_seen or s.startswith(NF_INVESTMENT_TOTAL)
+            if s.startswith(NF_INVESTMENT_TOTAL):
+                inv_total_seen = True
+                section = "investment"                     # its two parts follow, unnumbered
+                if value is not None:
+                    out["NF_INVESTMENT_RESULT"] = value
+            continue
+        if section == "investment":
+            for ind in ("NF_INVESTMENT_RESULT_MANAGEMENT", "NF_INVESTMENT_RESULT_FX"):
+                if NF_RESULT_LINES[ind](s) and value is not None:
+                    out[ind] = value
             continue
         if section == "receipts":
             if any(f(s) for f in NF_OTHER_OIL_ITEMS):
@@ -4082,6 +4102,9 @@ def nf_identity_errors(values: dict[str, float]) -> list[str]:
               ("application lines minus «Application, total»", values.get("_APPLICATION_LINES", 0.0), "_APPLICATION_TOTAL")]
     if "_OTHER_OIL_ITEMS_SUM" in values and "NF_OIL_OTHER_RECEIPTS_YTD" in values:
         checks.append(("other oil-sector items minus their line", values["_OTHER_OIL_ITEMS_SUM"], "NF_OIL_OTHER_RECEIPTS_YTD"))
+    if all(k in values for k in NF_RESULT_LINES):
+        checks.append(("management result plus exchange-rate difference minus «Investment income, total»",
+                       values["NF_INVESTMENT_RESULT_MANAGEMENT"] + values["NF_INVESTMENT_RESULT_FX"], "NF_INVESTMENT_RESULT"))
     for name, parts, total in checks:
         gap = parts - values[total]
         if abs(gap) > NF_IDENTITY_TOLERANCE:
@@ -4224,8 +4247,8 @@ NF_NAMES = {
                                 "last period the NBK has approved, a quarter to three quarters behind the month "
                                 "dated. December is the full year in 2018, 2020 and 2021, nine months in 2019 and "
                                 "2023, and 30.3 bn KZT in 2022 (the NBK's full-year result, item 'Investment income, "
-                                "total' with the exchange-rate revaluation, was a loss of 826.5 bn; that item is not "
-                                "used). No December 2024 or 2025: the approved annual reports book no investment "
+                                "total' with the exchange-rate revaluation, was a loss of 826.5 bn; that item is the "
+                                "separate series NF_INVESTMENT_RESULT). No December 2024 or 2025: the approved annual reports book no investment "
                                 "income in receipts",
     "NF_GUARANTEED_TRANSFER_YTD": "guaranteed transfer to the republican budget",
     "NF_TARGETED_TRANSFERS_YTD": "targeted transfers to the republican budget",
@@ -4282,6 +4305,45 @@ def fetch_nf_investment_income_ytd(): return _fetch_nf("NF_INVESTMENT_INCOME_YTD
 def fetch_nf_guaranteed_transfer_ytd(): return _fetch_nf("NF_GUARANTEED_TRANSFER_YTD")          # noqa: E704
 def fetch_nf_targeted_transfers_ytd(): return _fetch_nf("NF_TARGETED_TRANSFERS_YTD")            # noqa: E704
 def fetch_nf_transfers_ytd(): return _fetch_nf("NF_TRANSFERS_YTD")                              # noqa: E704
+
+
+NF_RESULT_NAMES = {
+    "NF_INVESTMENT_RESULT": "investment income, total (item 4 of the report): the result of management in tenge plus "
+                            "the exchange-rate difference on recalculation",
+    "NF_INVESTMENT_RESULT_MANAGEMENT": "profit/(loss) from management, calculated in tenge",
+    "NF_INVESTMENT_RESULT_FX": "exchange-rate difference on recalculation (the revaluation of the Fund's foreign-currency "
+                               "assets into tenge)",
+}
+
+
+def _fetch_nf_result(indicator_id: str) -> tuple[list[dict], dict]:
+    """The full-year investment result of the National Fund from item 4 of the reports as of 1 January: one point a
+    year, dated 31 December. Printed from the report as of 1 January 2023 (year 2022) on."""
+    data, info = _nf_reports()
+    vals = {y: v for (y, m), v in data[indicator_id].items() if m == 12}
+    if len(vals) < 4:
+        raise validation.StructuralChangeError("\n".join([
+            f"STRUCTURAL CHANGE DETECTED in minfin/{indicator_id}",
+            f"WHAT CHANGED: item «Investment income, TOTAL» found for {len(vals)} years (2022-2025 expected) in "
+            f"{info['parsed']} of {info['n_documents']} National Fund reports",
+            f"ACTION REQUIRED: inspect a report as of 1 January ({LISTING_URL}?activities={NF_ACTIVITY_ID}) and "
+            "NF_RESULT_LINES in scripts/fetchers/minfin.py"]))
+    records = [{"date": f"{y:04d}-12-31", "value": round(v / 1000.0, 6)} for y, v in sorted(vals.items())]
+    return records, {
+        "frequency": "annual", "source_url": f"{LISTING_URL}?activities={NF_ACTIVITY_ID}",
+        "dataset_id": "gov.kz-minfin-national-fund-receipts-and-use,all pages",
+        "note": (f"Million KZT (source: thousand KZT), National Fund of the Republic of Kazakhstan, "
+                 f"{NF_RESULT_NAMES[indicator_id]}, for the calendar year. Item 4 «Investment income, TOTAL» of the "
+                 "Minfin report as of 1 January of the next year (and of the approved annual reports): the NBK's "
+                 "full-year result. Printed from the year 2022 on; the earlier reports carry only the investment "
+                 "income booked into receipts (NF_INVESTMENT_INCOME_YTD), a different and lagged measure. Every "
+                 "report that prints the item passes total = management result + exchange-rate difference."),
+    }
+
+
+def fetch_nf_investment_result(): return _fetch_nf_result("NF_INVESTMENT_RESULT")                         # noqa: E704
+def fetch_nf_investment_result_management(): return _fetch_nf_result("NF_INVESTMENT_RESULT_MANAGEMENT")   # noqa: E704
+def fetch_nf_investment_result_fx(): return _fetch_nf_result("NF_INVESTMENT_RESULT_FX")                  # noqa: E704
 
 
 # ---------------------------------------------------------------------------
