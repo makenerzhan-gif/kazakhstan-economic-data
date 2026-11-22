@@ -1,6 +1,6 @@
 # Update report — 2026-11-22
 
-Run timestamp: 2026-11-22T11:07:08.026144
+Run timestamp: 2026-11-22T12:49:16.990594
 Unified dataset updated: True
 Tests passed: True
 Cross-source checks failed: 0
@@ -4454,6 +4454,16 @@ Cross-source checks failed: 0
   - warning: Unexpected jump of 51.8% in own-period contribution between 2024-11-01 (635000.0) and 2024-12-01 (306000.0).
   - warning: Unexpected jump of 79.7% in own-period contribution between 2024-12-01 (306000.0) and 2025-01-01 (550000.0).
   - warning: Unexpected jump of 211.8% in own-period contribution between 2026-03-01 (340000.0) and 2026-06-01 (1060000.0).
+- **minfin/NF_INVESTMENT_RESULT** — fetch+validate+process: ok (downloaded=4, processed=4)
+  - warning: Unexpected jump of 415.4% in value between 2022-12-31 (-826513.501) and 2023-12-31 (2607008.148).
+  - warning: Unexpected jump of 171.2% in value between 2023-12-31 (2607008.148) and 2024-12-31 (7070737.196).
+- **minfin/NF_INVESTMENT_RESULT_MANAGEMENT** — fetch+validate+process: ok (downloaded=4, processed=4)
+  - warning: Unexpected jump of 215.7% in value between 2022-12-31 (-2656312.817) and 2023-12-31 (3073142.125).
+  - warning: Unexpected jump of 150.0% in value between 2024-12-31 (2406901.537) and 2025-12-31 (6016890.188).
+- **minfin/NF_INVESTMENT_RESULT_FX** — fetch+validate+process: ok (downloaded=4, processed=4)
+  - warning: Unexpected jump of 125.5% in value between 2022-12-31 (1829799.316) and 2023-12-31 (-466133.977).
+  - warning: Unexpected jump of 1100.5% in value between 2023-12-31 (-466133.977) and 2024-12-31 (4663835.659).
+  - warning: Unexpected jump of 130.1% in value between 2024-12-31 (4663835.659) and 2025-12-31 (-1402520.792).
 - **minfin/STATE_NON_OIL_DEFICIT** — fetch+validate+process: ok (downloaded=13, processed=13)
   - warning: Unexpected jump of 59.0% in value between 2016-12-31 (-4229087.935576) and 2017-12-31 (-6724167.500391).
 - **minfin/STATE_NON_OIL_DEFICIT_YTD** — fetch+validate+process: ok (downloaded=166, processed=166)
@@ -4878,10 +4888,10 @@ Cross-source checks failed: 0
 - **ardfm/BANK_PROVISIONS_IFRS** — fetch+validate+process: ok (downloaded=6, processed=6)
 - **ardfm/BANK_CAPITAL_ADEQUACY_K1** — fetch+validate+process: ok (downloaded=6, processed=6)
 - **ardfm/BANK_CAPITAL_ADEQUACY_K2** — fetch+validate+process: ok (downloaded=6, processed=6)
-- **ardfm/BANK_ROA_MONTHLY** — fetch+validate+process: ok (downloaded=62, processed=62)
-- **ardfm/BANK_ROE_MONTHLY** — fetch+validate+process: ok (downloaded=63, processed=63)
-- **ardfm/BANK_NET_INCOME** — fetch+validate+process: ok (downloaded=63, processed=63)
-  - warning: Unexpected jump of 100.0% in own-period contribution between 2021-07-01 (795.9) and 2021-08-01 (0.0).
+- **ardfm/BANK_ROA_MONTHLY** — fetch+validate+process: ok (downloaded=63, processed=63)
+- **ardfm/BANK_ROE_MONTHLY** — fetch+validate+process: ok (downloaded=64, processed=64)
+- **ardfm/BANK_NET_INCOME** — fetch+validate+process: ok (downloaded=64, processed=64)
+  - warning: Unexpected jump of 100.0% in own-period contribution between 2021-06-01 (795.9) and 2021-07-01 (0.0).
   - warning: Unexpected jump of 100.0% in own-period contribution between 2022-01-01 (795.9) and 2022-02-01 (0.0).
   - warning: Unexpected jump of 100.0% in own-period contribution between 2023-01-01 (795.9) and 2023-02-01 (0.0).
   - warning: Unexpected jump of 100.0% in own-period contribution between 2024-01-01 (795.9) and 2024-02-01 (0.0).
@@ -4896,7 +4906,7 @@ Cross-source checks failed: 0
 - **ardfm/BANK_DEPOSITS_LEGAL_ENTITIES** — fetch+validate+process: ok (downloaded=6, processed=6)
 - **ardfm/BANK_DEPOSITS_INDIVIDUALS** — fetch+validate+process: ok (downloaded=6, processed=6)
 - **ardfm/BANK_DEPOSITS_INDIVIDUALS_FX_SHARE** — fetch+validate+process: ok (downloaded=6, processed=6)
-- **ardfm/BANK_LIQUID_ASSETS** — fetch+validate+process: ok (downloaded=63, processed=63)
+- **ardfm/BANK_LIQUID_ASSETS** — fetch+validate+process: ok (downloaded=64, processed=64)
 - **ardfm/BANK_ASSETS_TO_GDP** — fetch+validate+process: ok (downloaded=6, processed=6)
 - **ardfm/BANK_LOANS_TO_GDP** — fetch+validate+process: ok (downloaded=6, processed=6)
 - **ardfm/BANK_DEPOSITS_TO_GDP** — fetch+validate+process: ok (downloaded=6, processed=6)
@@ -12228,36 +12238,36 @@ ACTION REQUIRED: open the trade workbook, compare with the layout described in s
   - warning: [NET] Unexpected jump of 477.5% in value between 1999-10-01 (16.9) and 1999-11-01 (97.6).
   - warning: ... 164 more warnings not listed
 - **nbk/NBK_OPEN_POSITION** — fetch+validate+process: ok (downloaded=1568, processed=1568)
-  - warning: [FX_SWAP.AVG] Unexpected jump of 64.9% in value between 2020-01-01 (-0.5695) and 2020-02-01 (-0.939).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 278.1% in value between 2020-02-01 (-0.939) and 2020-03-01 (1.6723).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 54.2% in value between 2020-03-01 (1.6723) and 2020-04-01 (0.7663).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 2142.0% in value between 2020-04-01 (0.7663) and 2020-05-01 (-15.6477).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 78.6% in value between 2020-05-01 (-15.6477) and 2020-06-01 (-3.3465).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 423.1% in value between 2020-06-01 (-3.3465) and 2020-07-01 (-17.5062).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 59.8% in value between 2020-07-01 (-17.5062) and 2020-08-01 (-7.0325).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 101.3% in value between 2020-08-01 (-7.0325) and 2020-09-01 (0.0896).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 429.0% in value between 2020-09-01 (0.0896) and 2020-10-01 (0.474).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 1407.3% in value between 2020-10-01 (0.474) and 2020-11-01 (-6.1965).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 308.8% in value between 2020-11-01 (-6.1965) and 2020-12-01 (-25.3331).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 53.6% in value between 2020-12-01 (-25.3331) and 2021-01-01 (-38.9194).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 93.6% in value between 2021-02-01 (-28.3316) and 2021-03-01 (-1.8233).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 214.6% in value between 2021-03-01 (-1.8233) and 2021-04-01 (-5.7364).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 425.1% in value between 2021-04-01 (-5.7364) and 2021-05-01 (-30.1198).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 93.8% in value between 2021-05-01 (-30.1198) and 2021-06-01 (-1.8805).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 278.9% in value between 2021-06-01 (-1.8805) and 2021-07-01 (-7.1244).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 81.6% in value between 2021-07-01 (-7.1244) and 2021-08-01 (-1.3079).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 1425.9% in value between 2021-09-01 (-0.6762) and 2021-10-01 (-10.3183).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 100.4% in value between 2021-10-01 (-10.3183) and 2021-11-01 (0.0373).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 93.3% in value between 2021-11-01 (0.0373) and 2021-12-01 (0.0025).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 4844.0% in value between 2021-12-01 (0.0025) and 2022-01-01 (-0.1186).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 6849.5% in value between 2022-01-01 (-0.1186) and 2022-02-01 (8.0049).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 1194.9% in value between 2022-02-01 (8.0049) and 2022-03-01 (103.6574).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 98.1% in value between 2022-05-01 (33.3376) and 2022-06-01 (0.6296).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 100.0% in value between 2022-06-01 (0.6296) and 2022-07-01 (0.0).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 57.6% in value between 2022-08-01 (15.4722) and 2022-09-01 (6.5556).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 1815.5% in value between 2022-11-01 (2.5083) and 2022-12-01 (48.0472).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 100.0% in value between 2022-12-01 (48.0472) and 2023-01-01 (0.0).
-  - warning: [FX_SWAP.AVG] Unexpected jump of 90.2% in value between 2023-02-01 (2.4648) and 2023-03-01 (0.2416).
+  - warning: [DEPOSITS.AVG] Unexpected jump of 51.2% in value between 2020-04-01 (-150.5064) and 2020-05-01 (-227.5133).
+  - warning: [DEPOSITS.AVG] Unexpected jump of 116.0% in value between 2020-11-01 (-216.1724) and 2020-12-01 (-467.039).
+  - warning: [DEPOSITS.AVG] Unexpected jump of 50.6% in value between 2021-04-01 (-371.4877) and 2021-05-01 (-559.5004).
+  - warning: [DEPOSITS.AVG] Unexpected jump of 80.4% in value between 2022-06-01 (-350.1364) and 2022-07-01 (-631.5625).
+  - warning: [DEPOSITS.EOM] Unexpected jump of 69.1% in value between 2020-02-01 (-135.12) and 2020-03-01 (-228.45).
+  - warning: [DEPOSITS.EOM] Unexpected jump of 79.8% in value between 2020-09-01 (-145.15) and 2020-10-01 (-260.95).
+  - warning: [DEPOSITS.EOM] Unexpected jump of 204.4% in value between 2020-11-01 (-236.67) and 2020-12-01 (-720.4).
+  - warning: [DEPOSITS.EOM] Unexpected jump of 64.2% in value between 2020-12-01 (-720.4) and 2021-01-01 (-258.2).
+  - warning: [DEPOSITS.EOM] Unexpected jump of 80.3% in value between 2021-04-01 (-255.0553) and 2021-05-01 (-459.8097).
+  - warning: [DEPOSITS.EOM] Unexpected jump of 57.1% in value between 2021-05-01 (-459.8097) and 2021-06-01 (-197.3043).
+  - warning: [DEPOSITS.EOM] Unexpected jump of 105.3% in value between 2021-07-01 (-249.456) and 2021-08-01 (-512.14).
+  - warning: [DEPOSITS.EOM] Unexpected jump of 63.2% in value between 2021-11-01 (-349.991) and 2021-12-01 (-571.278).
+  - warning: [DEPOSITS.EOM] Unexpected jump of 56.5% in value between 2022-04-01 (-257.85) and 2022-05-01 (-403.45).
+  - warning: [DEPOSITS.EOM] Unexpected jump of 50.3% in value between 2022-12-01 (-894.8) and 2023-01-01 (-444.45).
+  - warning: [DEPOSITS.EOM] Unexpected jump of 56.1% in value between 2023-02-01 (-366.15) and 2023-03-01 (-571.73).
+  - warning: [DEPOSITS.EOM] Unexpected jump of 55.8% in value between 2024-04-01 (-753.7) and 2024-05-01 (-1174.6).
+  - warning: [DEPOSITS.EOM] Unexpected jump of 113.3% in value between 2024-11-01 (-640.7) and 2024-12-01 (-1366.9).
+  - warning: [DEPOSITS.EOM] Unexpected jump of 67.1% in value between 2025-11-01 (-848.86) and 2025-12-01 (-1418.3).
+  - warning: [DEPOSITS.EOM] Unexpected jump of 68.9% in value between 2026-02-01 (-552.52) and 2026-03-01 (-933.38).
+  - warning: [DEPOSITS.EOM] Unexpected jump of 81.0% in value between 2026-07-01 (-1096.11) and 2026-08-01 (-1984.47).
+  - warning: [DEPOSITS.EOM] Unexpected jump of 66.8% in value between 2026-08-01 (-1984.47) and 2026-09-01 (-659.12).
+  - warning: [NOTES.AVG] Unexpected jump of 68.4% in value between 2026-01-01 (-485.7137) and 2026-02-01 (-818.044).
+  - warning: [NOTES.AVG] Unexpected jump of 81.3% in value between 2026-02-01 (-818.044) and 2026-03-01 (-1483.0106).
+  - warning: [NOTES.EOM] Unexpected jump of 97.7% in value between 2026-01-01 (-568.31) and 2026-02-01 (-1123.57).
+  - warning: [NOTES.EOM] Unexpected jump of 52.5% in value between 2026-02-01 (-1123.57) and 2026-03-01 (-1713.38).
+  - warning: [REVERSE_REPO.AVG] Unexpected jump of 7197.3% in value between 2020-01-01 (1.1325) and 2020-02-01 (82.6421).
+  - warning: [REVERSE_REPO.AVG] Unexpected jump of 125.0% in value between 2020-02-01 (82.6421) and 2020-03-01 (185.9319).
+  - warning: [REVERSE_REPO.AVG] Unexpected jump of 92.5% in value between 2020-03-01 (185.9319) and 2020-04-01 (13.9035).
+  - warning: [REVERSE_REPO.AVG] Unexpected jump of 89.6% in value between 2020-04-01 (13.9035) and 2020-05-01 (1.4406).
+  - warning: [REVERSE_REPO.AVG] Unexpected jump of 100.0% in value between 2020-05-01 (1.4406) and 2020-06-01 (0.0).
   - warning: ... 211 more warnings not listed
 - **nbk/NBK_DEPOSIT_AUCTIONS** — fetch+validate+process: ok (downloaded=282, processed=282)
   - warning: [VOLUME] Unexpected jump of 120.9% in value between 2019-02-01 (687.24) and 2019-03-01 (1518.0).
