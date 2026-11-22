@@ -308,3 +308,39 @@ def test_a_bulletin_titled_only_with_the_language_note_is_recognised_by_its_cont
     monkeypatch.setattr(minfin, "_download", lambda path: files[path.rsplit("/", 1)[-1]])
     monkeypatch.setattr(minfin, "_CONTENT_CHECKED", {})
     assert [d["id"] for d in minfin._bulletin_documents()] == [1, 4]
+
+
+def test_national_fund_item_4_investment_result_is_read_and_checked():
+    """Item 4 «Investment income, TOTAL» of the National Fund report as of 1 January (2022 on) and its two parts;
+    the receipts line «investment income from the Fund management» stays a separate indicator (added 2026-11-22)."""
+    from fetchers import minfin
+    rows = [["", "STATEMENT OF RECEIPTS AND APPLICATION OF THE NATIONAL FUND OF THE REPUBLIC OF KAZAKHSTAN AS OF 1 JANUARY 2026"],
+            ["1.", "National Fund's Means as of the Beginning of the Reporting Period", 100.0],
+            ["2.", "Receipts, total:", 10.0], ["", "- proceeds from the sale of agricultural land plots", 10.0],
+            ["3.", "Application, total:", 0.0],
+            ["4.", "Investment income, TOTAL:", 4614369396.0],
+            ["", "- profit/(loss) based on management results, calculated in tenge", 6016890188.0],
+            ["", "- exchange rate difference on recalculation", -1402520792.0],
+            ["5.", "Change in the amount of accrued and unpaid expenses", 1.0]]
+    v = minfin.parse_nf_report(rows)
+    assert v["NF_INVESTMENT_RESULT"] == 4614369396.0 and v["NF_INVESTMENT_RESULT_MANAGEMENT"] == 6016890188.0
+    assert v["NF_INVESTMENT_RESULT_FX"] == -1402520792.0 and "NF_INVESTMENT_INCOME_YTD" not in v
+    rows[7][2] = -1402520000.0                                                     # the parts no longer add up
+    v = minfin.parse_nf_report(rows)
+    v.update({k: 0.0 for k in minfin.NF_TAX_ITEMS}, NF_OIL_DIRECT_TAXES_YTD=0.0)
+    assert any("exchange-rate difference" in e for e in minfin.nf_identity_errors(v))
+
+
+def test_national_fund_investment_result_history():
+    import csv
+    from pathlib import Path
+    path = Path(__file__).resolve().parents[1] / "data" / "processed" / "minfin" / "nf_investment_result.csv"
+    if not path.exists():
+        pytest.skip("processed file absent")
+    total = {r["date"][:4]: float(r["value"]) for r in csv.DictReader(path.open(encoding="utf-8"))}
+    parts = {}
+    for name in ("nf_investment_result_management", "nf_investment_result_fx"):
+        for r in csv.DictReader((path.parent / f"{name}.csv").open(encoding="utf-8")):
+            parts[r["date"][:4]] = parts.get(r["date"][:4], 0.0) + float(r["value"])
+    assert min(total) == "2022" and total["2025"] == pytest.approx(4614369.396)                 # million KZT
+    assert all(total[y] == pytest.approx(parts[y], abs=0.01) for y in total)

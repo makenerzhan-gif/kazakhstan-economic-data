@@ -135,6 +135,9 @@ FETCHERS = {
     "NF_GUARANTEED_TRANSFER_YTD": minfin_fetchers.fetch_nf_guaranteed_transfer_ytd,
     "NF_TARGETED_TRANSFERS_YTD": minfin_fetchers.fetch_nf_targeted_transfers_ytd,
     "NF_TRANSFERS_YTD": minfin_fetchers.fetch_nf_transfers_ytd,
+    "NF_INVESTMENT_RESULT": minfin_fetchers.fetch_nf_investment_result,
+    "NF_INVESTMENT_RESULT_MANAGEMENT": minfin_fetchers.fetch_nf_investment_result_management,
+    "NF_INVESTMENT_RESULT_FX": minfin_fetchers.fetch_nf_investment_result_fx,
 }
 
 INDICATOR_IDS = [
@@ -203,6 +206,9 @@ INDICATOR_IDS = [
     "NF_GUARANTEED_TRANSFER_YTD",
     "NF_TARGETED_TRANSFERS_YTD",
     "NF_TRANSFERS_YTD",
+    "NF_INVESTMENT_RESULT",
+    "NF_INVESTMENT_RESULT_MANAGEMENT",
+    "NF_INVESTMENT_RESULT_FX",
     # derived from rows above (deficit, transfers, crude oil export duty): kept last
     "STATE_NON_OIL_DEFICIT", "STATE_NON_OIL_DEFICIT_YTD",
 ]

@@ -79260,6 +79260,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-12-31,KZ,national,annual,NET_BUDGET_LENDING,477376.10534981,million KZT,minfin,2026-11-22,level,2026-11-22
 2022-12-31,KZ,national,annual,NET_EXPORTS,15361139200000.0,KZT,bns,2026-11-22,level,2026-11-22
 2022-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,7398002700000.0,KZT,bns,2026-11-22,level,2026-11-22
+2022-12-31,KZ,national,annual,NF_INVESTMENT_RESULT,-826513.501,million KZT,minfin,2026-11-22,level,2026-11-22
+2022-12-31,KZ,national,annual,NF_INVESTMENT_RESULT_FX,1829799.316,million KZT,minfin,2026-11-22,level,2026-11-22
+2022-12-31,KZ,national,annual,NF_INVESTMENT_RESULT_MANAGEMENT,-2656312.817,million KZT,minfin,2026-11-22,level,2026-11-22
 2022-12-31,KZ,national,annual,NON_OIL_BUDGET_DEFICIT,-8592225.68932949,million KZT,minfin,2026-11-22,level,2026-11-22
 2022-12-31,KZ,national,irregular,OIL_EXPORT_DUTY,1621377.52527893,"million KZT, year-to-date cumulative",minfin,2026-11-22,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-22
 2022-12-31,KZ,national,irregular,OIL_PRODUCTS_EXPORT_DUTY,38058.65305266,"million KZT, year-to-date cumulative",minfin,2026-11-22,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-22
@@ -83786,6 +83789,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-31,KZ,national,annual,NET_BUDGET_LENDING,402804.9704923,million KZT,minfin,2026-11-22,level,2026-11-22
 2023-12-31,KZ,national,annual,NET_EXPORTS,8321390400000.0,KZT,bns,2026-11-22,level,2026-11-22
 2023-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,8841170700000.0,KZT,bns,2026-11-22,level,2026-11-22
+2023-12-31,KZ,national,annual,NF_INVESTMENT_RESULT,2607008.148,million KZT,minfin,2026-11-22,level,2026-11-22
+2023-12-31,KZ,national,annual,NF_INVESTMENT_RESULT_FX,-466133.977,million KZT,minfin,2026-11-22,level,2026-11-22
+2023-12-31,KZ,national,annual,NF_INVESTMENT_RESULT_MANAGEMENT,3073142.125,million KZT,minfin,2026-11-22,level,2026-11-22
 2023-12-31,KZ,national,annual,NON_OIL_BUDGET_DEFICIT,-8763995.14536183,million KZT,minfin,2026-11-22,level,2026-11-22
 2023-12-31,KZ,national,irregular,OIL_EXPORT_DUTY,1643144.85989882,"million KZT, year-to-date cumulative",minfin,2026-11-22,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-22
 2023-12-31,KZ,national,irregular,OIL_PRODUCTS_EXPORT_DUTY,27155.50377084,"million KZT, year-to-date cumulative",minfin,2026-11-22,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-22
@@ -88452,6 +88458,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-31,KZ,national,annual,NET_BUDGET_LENDING,116738.4461162,million KZT,minfin,2026-11-22,level,2026-11-22
 2024-12-31,KZ,national,annual,NET_EXPORTS,7454952100000.0,KZT,bns,2026-11-22,level,2026-11-22
 2024-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,8286490200000.0,KZT,bns,2026-11-22,level,2026-11-22
+2024-12-31,KZ,national,annual,NF_INVESTMENT_RESULT,7070737.196,million KZT,minfin,2026-11-22,level,2026-11-22
+2024-12-31,KZ,national,annual,NF_INVESTMENT_RESULT_FX,4663835.659,million KZT,minfin,2026-11-22,level,2026-11-22
+2024-12-31,KZ,national,annual,NF_INVESTMENT_RESULT_MANAGEMENT,2406901.537,million KZT,minfin,2026-11-22,level,2026-11-22
 2024-12-31,KZ,national,annual,NON_OIL_BUDGET_DEFICIT,-10847264.2478702,million KZT,minfin,2026-11-22,level,2026-11-22
 2024-12-31,KZ,national,irregular,OIL_EXPORT_DUTY,1598373.74468125,"million KZT, year-to-date cumulative",minfin,2026-11-22,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-22
 2024-12-31,KZ,national,irregular,OIL_PRODUCTS_EXPORT_DUTY,28017.99356238,"million KZT, year-to-date cumulative",minfin,2026-11-22,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-22
@@ -93198,6 +93207,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-31,KZ,national,annual,NET_BUDGET_LENDING,149771.08565277,million KZT,minfin,2026-11-22,level,2026-11-22
 2025-12-31,KZ,national,annual,NET_EXPORTS,5173993200000.0,KZT,bns,2026-11-22,level,2026-11-22
 2025-12-31,KZ,national,annual,NET_TAXES_ON_PRODUCTS,9329876300000.0,KZT,bns,2026-11-22,level,2026-11-22
+2025-12-31,KZ,national,annual,NF_INVESTMENT_RESULT,4614369.396,million KZT,minfin,2026-11-22,level,2026-11-22
+2025-12-31,KZ,national,annual,NF_INVESTMENT_RESULT_FX,-1402520.792,million KZT,minfin,2026-11-22,level,2026-11-22
+2025-12-31,KZ,national,annual,NF_INVESTMENT_RESULT_MANAGEMENT,6016890.188,million KZT,minfin,2026-11-22,level,2026-11-22
 2025-12-31,KZ,national,annual,NON_OIL_BUDGET_DEFICIT,-11074831.2012809,million KZT,minfin,2026-11-22,level,2026-11-22
 2025-12-31,KZ,national,irregular,OIL_EXPORT_DUTY,1759608.32580297,"million KZT, year-to-date cumulative",minfin,2026-11-22,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-22
 2025-12-31,KZ,national,irregular,OIL_PRODUCTS_EXPORT_DUTY,24086.72534984,"million KZT, year-to-date cumulative",minfin,2026-11-22,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-22
