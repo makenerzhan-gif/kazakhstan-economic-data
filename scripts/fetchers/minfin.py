@@ -3719,7 +3719,7 @@ def _state_tax_history() -> tuple[dict[str, dict[tuple[int, int], float]], dict]
     if _STATE_TAX_CACHE:
         return _STATE_TAX_CACHE["data"], _STATE_TAX_CACHE["info"]
     docs = [d for d in _list_all_documents(directions=BUDGET_DIRECTION_ID)
-            if BULLETIN_TITLE_RE.search(d.get("title") or "")
+            if (BULLETIN_TITLE_RE.search(d.get("title") or "") or _is_bulletin(d))      # _is_bulletin: an edition titled only with the language note
             and d.get("full_text") and str(d["full_text"][0].get("document", "")).lower().endswith((".xlsx", ".xls"))]
     docs.sort(key=lambda d: d.get("created_date") or "")          # oldest first: later editions overwrite
     data: dict[str, dict[tuple[int, int], float]] = {k: {} for k in STATE_TAX_ROWS}
