@@ -200,3 +200,20 @@ def test_printed_quarter_columns_carry_the_year_across_merged_cells():
     got = minfin.printed_quarters(rows, minfin._state_budget_row_matcher("I. ДОХОДЫ"))
     assert got == {"2011-01-01": 1075486.29, "2011-04-01": 1531235.19, "2011-07-01": 1371503.9, "2011-10-01": 1392600.62}
     assert abs(sum(got.values()) - 5370826.0) < 1.0
+
+
+def test_republican_non_oil_deficit_2021_copied_financing_row_replaced(monkeypatch):
+    """NON_OIL_BUDGET_DEFICIT: the Dynamics sheet's 2021 cell is minus BUDGET_DEFICIT (financing row);
+    it is replaced by deficit - NF transfers - export duty, genuine printed years are kept."""
+    hist = {"BUDGET_DEFICIT": {"2021-12-31": -2526271.0, "2022-12-31": -2390848.0},
+            "NF_TRANSFERS_YTD": {"2021-12-01": 4499953.0, "2022-12-01": 4580000.0},
+            "STATE_TRANSFERS_RECEIVED_YTD": {},
+            "OIL_EXPORT_DUTY": {"2021-12-31": 1023051.0, "2022-12-31": 1621378.0}}
+    monkeypatch.setattr(minfin, "_processed_history", lambda i: hist.get(i, {}))
+    monkeypatch.setattr(minfin, "_fetch_dynamics_row", lambda label, ind: (
+        [{"date": "2021-12-31", "value": 2526271.0}, {"date": "2022-12-31", "value": -8592226.0}], {}))
+    recs, man = minfin.fetch_non_oil_budget_deficit()
+    got = {r["date"]: r["value"] for r in recs}
+    assert got["2021-12-31"] == -2526271.0 - 4499953.0 - 1023051.0
+    assert got["2022-12-31"] == -8592226.0
+    assert "2021-12-31" in man["warnings"][0]

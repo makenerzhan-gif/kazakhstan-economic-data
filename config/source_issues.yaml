@@ -36,7 +36,10 @@ issues:
     evidence: >
       minfin_budget_deficit_2026-08-30.xls, row «VI. NON-OIL BUDGET DEFICIT (SURPLUS)», 2021 = +2 526 271.2,
       identical to the financing row (and to minus BUDGET_DEFICIT) of the same year; 2022-2025 run -8.6 to -11.1 trn.
-    advice: Treat 2021 as missing.
+    advice: >
+      Treat 2021 as missing. From 2026-11-24 the fetcher (fetch_non_oil_budget_deficit) replaces it by the identity
+      deficit - NF transfers - crude oil export duty (-8 049 276 mln KZT; the identity reproduces the printed 2022-2024
+      to 1 mln KZT), as it already does for STATE_NON_OIL_DEFICIT 2019-2021; the printed value stays in the raw file.
 
   - id: eurobonds_2022_q4
     kind: error

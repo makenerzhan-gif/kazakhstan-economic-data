@@ -559,8 +559,20 @@ def fetch_budget_deficit() -> tuple[list[dict], dict]:
 
 def fetch_non_oil_budget_deficit() -> tuple[list[dict], dict]:
     """Non-oil budget deficit -- a standard, KZ-specific fiscal indicator given the economy's
-    oil-revenue dependence (excludes National Fund transfers from the balance)."""
-    return _fetch_dynamics_row("NON-OIL BUDGET DEFICIT", "NON_OIL_BUDGET_DEFICIT")
+    oil-revenue dependence (excludes National Fund transfers from the balance).
+
+    The Dynamics sheet prints the financing row in the 2021 column (+2,526,271 = minus
+    BUDGET_DEFICIT 2021; config/source_issues.yaml non_oil_deficit_2021), the same defect as the
+    state-budget bulletin. As for STATE_NON_OIL_DEFICIT, a printed value equal to minus the deficit
+    is replaced by the identity deficit - NF transfers - crude oil export duty (Decembers), which
+    reproduces the printed 2022-2024 values to 1 mln KZT (checked 2026-11-24); years the sheet
+    does not print get the identity too."""
+    records, manifest = _fetch_dynamics_row("NON-OIL BUDGET DEFICIT", "NON_OIL_BUDGET_DEFICIT")
+    december_duty = {d: v for d, v in _processed_history("OIL_EXPORT_DUTY").items() if d[5:7] == "12"}
+    fixed, replaced = _non_oil_with_identity(records, "BUDGET_DEFICIT", december_duty)
+    if replaced:
+        manifest.setdefault("warnings", []).append(f"printed values equal to minus the deficit replaced by the identity: {replaced}")
+    return fixed, manifest
 
 
 # ---------------------------------------------------------------------------
