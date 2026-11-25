@@ -1,0 +1,10 @@
+{
+  "downloaded_at": "2026-11-25T16:47:22.880676",
+  "n_documents_listed": 15,
+  "n_parsed": 12,
+  "skipped_document_ids": [
+    1096440,
+    964016
+  ],
+  "source_url": "https://www.gov.kz/api/v1/public/content-manager/documents?directions=448"
+}

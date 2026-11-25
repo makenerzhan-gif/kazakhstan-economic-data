@@ -20,3 +20,4 @@
 {"indicator_id": "US_GDP_REAL", "period": "2025-10-01", "old_value": 24055.749, "new_value": 24125.479, "detected_date": "2026-10-01", "source": "fred", "reason": "not stated by source"}
 {"indicator_id": "US_GDP_REAL", "period": "2026-01-01", "old_value": 24180.419, "new_value": 24274.383, "detected_date": "2026-10-01", "source": "fred", "reason": "not stated by source"}
 {"indicator_id": "US_GDP_REAL", "period": "2026-04-01", "old_value": 24269.613, "new_value": 24408.011, "detected_date": "2026-10-01", "source": "fred", "reason": "not stated by source"}
+{"indicator_id": "US_GDP_REAL", "period": "2026-07-01", "old_value": 24611.077, "new_value": 24665.201, "detected_date": "2026-11-25", "source": "fred", "reason": "not stated by source"}

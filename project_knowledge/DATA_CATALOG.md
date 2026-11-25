@@ -29,7 +29,8 @@ From config/source_issues.yaml (audit 2026-09-25). The values are what the offic
 | Variable | Dates | Kind | Status | What to do |
 |---|---|---|---|---|
 | EXPORTS_VOLUME_BY_COMMODITY_GROUP | 2026-06-01 | error | no longer in the data -- source corrected? remove the entry | Treat June 2026 export tonnage (FLAT_ROLLED and TOTAL) as missing. Value series (USD) are unaffected. |
-| NON_OIL_BUDGET_DEFICIT | 2021-12-31 | error | still in the data | Treat 2021 as missing. |
+| NON_OIL_BUDGET_DEFICIT | 2021-12-31 | error | no longer in the data -- source corrected? remove the entry | Treat 2021 as missing. From 2026-11-24 the fetcher (fetch_non_oil_budget_deficit) replaces it by the identity deficit - NF transfers - crude oil export duty (-8 049 276 mln KZT; the identity reproduces the printed 2022-2024 to 1 mln KZT), as it already does for STATE_NON_OIL_DEFICIT 2019-2021; the printed value stays in the raw file.
+ |
 | GOV_DEBT_EUROBONDS | 2022-10-01 | error | still in the data | Treat 2022-10-01 as missing or interpolate. |
 | UNEMPLOYMENT_RATE_BY_REGION | 2019-12-31 | inconsistent | still in the data | Use 4.8 or IMF_UNEMPLOYMENT for 2019. |
 | INFLATION_EXPECTATIONS | 2022-02-01 | error | still in the data | Treat February 2022 as missing (also Q6.* and MEDIAN.EXPECTED_12M of INFLATION_EXPECTATIONS_SURVEY). |
