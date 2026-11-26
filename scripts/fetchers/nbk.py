@@ -1968,12 +1968,16 @@ def fetch_iip_net() -> tuple[list[dict], dict]:
     quarterly (foreign assets minus foreign liabilities). Negative = net
     external liability position (typical for an FDI-heavy emerging
     market)."""
-    return _fetch_iip_row(
+    records, manifest = _fetch_iip_row(
         IIP_NET_ATTRIBUTE, "IIP_NET",
         "USD million. Net International Investment Position (total foreign assets held by "
         "Kazakhstan residents minus total foreign liabilities owed by Kazakhstan residents). "
         "Negative values indicate a net external liability position.",
     )
+    rows, url = _nbk_xlsx_rows("IIP")
+    records = splice_xlsx_history("IIP_NET", records, nbk_stock_by_line(rows, 1), url)
+    manifest["note"] += f" Before the API's first quarter: line 1 of the NBK IIP file ({url}), equal to the API on all shared quarters."
+    return records, manifest
 
 
 def fetch_iip_assets() -> tuple[list[dict], dict]:
@@ -2872,7 +2876,15 @@ def fetch_external_debt_long_term() -> tuple[list[dict], dict]:
 
 
 def fetch_external_debt_short_term() -> tuple[list[dict], dict]:
-    """External Debt, Short-Term (USD million, quarterly)."""
+    """External Debt, Short-Term (USD million, quarterly), from 2001 (NBK file before the API's 2014-10)."""
+    records, manifest = _fetch_external_debt_short_term_api()
+    rows, url = _nbk_xlsx_rows("ED")
+    records = splice_xlsx_history("EXTERNAL_DEBT_SHORT_TERM", records, nbk_stock_by_line(rows, 2), url)
+    manifest["note"] += f" Before the API's first quarter: line 2 of the NBK external debt file ({url}), equal to the API on all shared quarters."
+    return records, manifest
+
+
+def _fetch_external_debt_short_term_api() -> tuple[list[dict], dict]:
     return _fetch_nbk_exact_row(
         "340", {'period': 'Quarter', 'type': ' mln USD', 'class_type': 'Total External debt of Kazakhstan', 'matiruty': 'Short-term'},
         "EXTERNAL_DEBT_SHORT_TERM",
@@ -4196,3 +4208,222 @@ def fetch_bank_loans_stb_business():
 
 def fetch_bank_loans_stb_households():
     return _fetch_bank_loans_stb("BANK_LOANS_STB_HOUSEHOLDS", "To households for purposes other than business; from 2003.")
+
+
+# ---------------------------------------------------------------------------
+# NBK statistical xlsx files (added 2026-11-26): the balance of payments from 2000, the IIP
+# and the external debt from 2001-01-01. The open-data API forms start later (IIP formId=309
+# at 2021-01-01, external debt formId=340 at 2014-10-01) and carry no gross BoP flows. The
+# files are found on their section pages by link text (their download ids change with every
+# release), archived in the raw store, and read by the row code NBK prints in column B:
+# the IMF code (BXG_BP6_USD ...) in the BoP, the line number («1=2-141» -> 1) in the IIP and
+# the external debt. Stocks are dated as the files date them (01.04.2001 = end of 2001 Q1),
+# which is the API's convention: on every shared quarter the files equal the API (IIP_NET
+# 23 quarters, max 5e-7; EXTERNAL_DEBT_SHORT_TERM 48 quarters, max 6e-4 USD million; checked
+# 2026-11-26). BoP flows are dated on the quarter's first day, as CURRENT_ACCOUNT_BALANCE.
+# ---------------------------------------------------------------------------
+NBK_XLSX_FILES = {  # key: (section page, regex on the link text, sheet)
+    "BOP": ("https://nationalbank.kz/ru/news/platezhnyy-balans-vn-sektora",
+            r"^Платежный баланс Республики Казахстан за период с 2000", "2. Аналитический ПБ"),
+    "IIP": ("https://nationalbank.kz/ru/news/mezhdunarodnaya-investicionnaya-poziciya",
+            r"стандартное представление", "1.МИП стандартное представление"),
+    "ED": ("https://nationalbank.kz/ru/news/vneshniy-dolg",
+           r"^Внешний долг Республики Казахстан на", "1. стандартное представление"),
+}
+_NBK_XLSX_CACHE: dict[str, tuple[list[list], str]] = {}
+XLSX_SPLICE_TOLERANCE = 0.01   # USD million
+
+
+def _nbk_xlsx_rows(key: str) -> tuple[list[list], str]:
+    """(rows of the file's sheet, file URL), downloaded once per process."""
+    if key in _NBK_XLSX_CACHE:
+        return _NBK_XLSX_CACHE[key]
+    import html as _html
+    import io
+    import openpyxl
+    page, pattern, sheet = NBK_XLSX_FILES[key]
+    resp = requests.get(page, headers=HEADERS, timeout=120)
+    resp.raise_for_status()
+    url = None
+    for href, text in re.findall(r'<a[^>]+href="([^"]+)"[^>]*>(.*?)</a>', resp.content.decode("utf-8", "replace"), re.S):
+        t = _html.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", text))).strip()
+        if re.search(pattern, t):
+            url = href if href.startswith("http") else "https://nationalbank.kz" + href
+            break
+    if url is None:
+        raise validation.StructuralChangeError("\n".join([
+            f"STRUCTURAL CHANGE DETECTED in nbk/NBK_XLSX_{key}",
+            f"WHAT CHANGED: no link matching {pattern!r} on {page}",
+            "ACTION REQUIRED: inspect the page and update NBK_XLSX_FILES in scripts/fetchers/nbk.py",
+        ]))
+    r = requests.get(url, headers=HEADERS, timeout=180)
+    r.raise_for_status()
+    today = date.today()
+    path = raw_store.save_raw_bytes(SOURCE, f"NBK_XLSX_{key}", today, "xlsx", r.content)
+    raw_store.write_download_manifest(SOURCE, f"NBK_XLSX_{key}", today, {
+        "downloaded_at": datetime.now().isoformat(), "source_url": url, "page_url": page, "raw_file": path.name})
+    wb = openpyxl.load_workbook(io.BytesIO(r.content), read_only=True, data_only=True)
+    if sheet not in wb.sheetnames:
+        raise validation.StructuralChangeError("\n".join([
+            f"STRUCTURAL CHANGE DETECTED in nbk/NBK_XLSX_{key}",
+            f"WHAT CHANGED: no sheet {sheet!r} in {url} (sheets: {wb.sheetnames})",
+            "ACTION REQUIRED: update NBK_XLSX_FILES in scripts/fetchers/nbk.py",
+        ]))
+    rows = [list(x) for x in wb[sheet].iter_rows(values_only=True)]
+    _NBK_XLSX_CACHE[key] = (rows, url)
+    return rows, url
+
+
+def nbk_stock_by_line(rows: list[list], line: int) -> dict[str, float]:
+    """{YYYY-MM-DD: value} of the row whose code (column B) starts with `line`; the header row
+    is the one whose cells read «Состояние на 01.01.2001 г.» or «01.01.2001»."""
+    hdr = next((r for r in rows if sum(bool(re.search(r"\d\d\.\d\d\.\d{4}", str(c))) for c in r if c is not None) >= 4), None)
+    row = next((r for r in rows if len(r) > 1 and r[1] is not None and str(r[1]).split("=")[0].strip() == str(line)), None)
+    if hdr is None or row is None:
+        return {}
+    out = {}
+    for h, v in zip(hdr, row):
+        m = re.search(r"(\d\d)\.(\d\d)\.(\d{4})", str(h)) if h is not None else None
+        if m and isinstance(v, (int, float)):
+            out[f"{m.group(3)}-{m.group(2)}-{m.group(1)}"] = float(v)
+    return out
+
+
+def nbk_bop_by_code(rows: list[list], code: str) -> dict[str, float]:
+    """{quarter's first day: value} of the BoP row with IMF code `code` (column B). The header has
+    the year on one row (filled forward over its quarters) and I..IV on the next; annual and
+    half-year columns (no Roman numeral) are skipped."""
+    years_i = next(i for i, r in enumerate(rows) if sum(bool(re.fullmatch(r"\s*(19|20)\d\d(\.0)?\s*", str(c))) for c in r if c is not None) >= 4)
+    years, quarters = rows[years_i], rows[years_i + 1]
+    row = next((r for r in rows if len(r) > 1 and isinstance(r[1], str) and r[1].strip() == code), None)
+    if row is None:
+        return {}
+    out, year = {}, None
+    roman = {"I": 1, "II": 4, "III": 7, "IV": 10}
+    for i, v in enumerate(row):
+        y = years[i] if i < len(years) else None
+        m = re.fullmatch(r"\s*(\d{4})(?:\.0)?\s*", str(y)) if y is not None else None
+        if m:   # an int, or a string such as '2024\n' (the 2024 header in the 2026 H1 release)
+            year = int(m.group(1))
+        q = str(quarters[i]).strip() if i < len(quarters) and quarters[i] is not None else ""
+        if year and q in roman and isinstance(v, (int, float)):
+            out[f"{year}-{roman[q]:02d}-01"] = float(v)
+    return out
+
+
+def splice_xlsx_history(indicator_id: str, records: list[dict], hist: dict[str, float], source: str) -> list[dict]:
+    """The API records preceded by the file's values for dates before the API's first; every
+    shared date must agree within XLSX_SPLICE_TOLERANCE."""
+    if not records or not hist:
+        return records
+    api = {r["date"]: r["value"] for r in records}
+    bad = [(d, hist[d], api[d]) for d in sorted(set(hist) & set(api)) if abs(hist[d] - api[d]) > XLSX_SPLICE_TOLERANCE]
+    if bad or not set(hist) & set(api):
+        raise validation.StructuralChangeError("\n".join([
+            f"STRUCTURAL CHANGE DETECTED in nbk/{indicator_id} (history from {source})",
+            f"WHAT CHANGED: {len(bad)} shared date(s) differ, first {bad[0] if bad else None}; shared dates: {len(set(hist) & set(api))}",
+            f"EXPECTED: the file equal to the API within {XLSX_SPLICE_TOLERANCE} on every shared date",
+            "ACTION REQUIRED: inspect the NBK file and the API form; do not loosen the check.",
+        ]))
+    first = min(api)
+    return [{"date": d, "value": v} for d, v in sorted(hist.items()) if d < first] + records
+
+
+def _xlsx_series(key: str, indicator_id: str, values: dict[str, float], url: str, frequency: str, note: str) -> tuple[list[dict], dict]:
+    if len(values) < 40:
+        raise validation.StructuralChangeError("\n".join([
+            f"STRUCTURAL CHANGE DETECTED in nbk/{indicator_id}",
+            f"WHAT CHANGED: only {len(values)} values read from {url}",
+            "ACTION REQUIRED: inspect the file layout and update scripts/fetchers/nbk.py",
+        ]))
+    return [{"date": d, "value": v} for d, v in sorted(values.items())], {
+        "frequency": frequency, "source_url": url, "dataset_id": f"nbk-xlsx/{key}", "note": note}
+
+
+def fetch_bop_goods_exports() -> tuple[list[dict], dict]:
+    rows, url = _nbk_xlsx_rows("BOP")
+    return _xlsx_series("BOP:BXG_BP6_USD", "BOP_GOODS_EXPORTS", nbk_bop_by_code(rows, "BXG_BP6_USD"), url, "quarterly",
+                        "USD million. Exports of goods (credit), balance of payments BPM6, analytic presentation, "
+                        "NBK file «Платежный баланс Республики Казахстан за период с 2000 года ...», code BXG_BP6_USD.")
+
+
+def fetch_bop_services_exports() -> tuple[list[dict], dict]:
+    rows, url = _nbk_xlsx_rows("BOP")
+    return _xlsx_series("BOP:BXS_BP6_USD", "BOP_SERVICES_EXPORTS", nbk_bop_by_code(rows, "BXS_BP6_USD"), url, "quarterly",
+                        "USD million. Exports of services (credit), balance of payments BPM6, analytic presentation, "
+                        "NBK file «Платежный баланс Республики Казахстан за период с 2000 года ...», code BXS_BP6_USD.")
+
+
+def fetch_iip_portfolio_liabilities() -> tuple[list[dict], dict]:
+    rows, url = _nbk_xlsx_rows("IIP")
+    return _xlsx_series("IIP:151", "IIP_PORTFOLIO_LIABILITIES", nbk_stock_by_line(rows, 151), url, "quarterly",
+                        "USD million, end of quarter (dated as the file: 01.04 = end of Q1). Portfolio investment "
+                        "liabilities, IIP standard presentation, line 151=152+159 of the NBK file.")
+
+
+# ---------------------------------------------------------------------------
+# Foreign-currency «other deposits» in M3 by holder (added 2026-11-26), from the /records JSON
+# of the NBK page «Денежная база и агрегаты широкой денежной массы», 1995 on, million KZT. The
+# page dates a month by an irregular reporting day inside the month; the stock is the one the
+# API dates on the first day of the NEXT month: with that shift the page's m_3 equals M3 on all
+# 382 months 1995-01..2026-10 (checked 2026-11-26), and the two series below take the same dates.
+# ---------------------------------------------------------------------------
+MONETARY_PAGE = "https://nationalbank.kz/ru/monetarybase/denezhnaya-baza-i-agregaty-shirokoy-denezhnoy-massy"
+_MONETARY_PAGE_CACHE: list[dict] = []
+
+
+def _monetary_page_records() -> list[dict]:
+    if not _MONETARY_PAGE_CACHE:
+        today = date.today()
+        params = {"beginMount": 1, "beginYear": 1995, "endMount": 12, "endYear": today.year}
+        resp = requests.get(f"{MONETARY_PAGE}/records", headers=HEADERS, params=params, timeout=180)
+        resp.raise_for_status()
+        path = raw_store.save_raw_bytes(SOURCE, "NBK_MONETARY_PAGE", today, "json", resp.content)
+        raw_store.write_download_manifest(SOURCE, "NBK_MONETARY_PAGE", today, {
+            "downloaded_at": datetime.now().isoformat(), "source_url": f"{MONETARY_PAGE}/records", "params": params,
+            "raw_file": path.name})
+        _MONETARY_PAGE_CACHE.extend(resp.json())
+    return _MONETARY_PAGE_CACHE
+
+
+def _next_month_start(reporting_date: str) -> str:
+    y, m = int(reporting_date[:4]), int(reporting_date[5:7])
+    y, m = (y + 1, 1) if m == 12 else (y, m + 1)
+    return f"{y:04d}-{m:02d}-01"
+
+
+def monetary_page_series(records: list[dict], field: str) -> dict[str, float]:
+    out = {}
+    for r in records:
+        v = r.get(field)
+        if isinstance(v, (int, float)) and not isinstance(v, bool) and r.get("reporting_date"):
+            d = _next_month_start(str(r["reporting_date"]))
+            if d in out:
+                raise validation.StructuralChangeError(f"STRUCTURAL CHANGE DETECTED in nbk/{field}: two page records fall on {d}")
+            out[d] = float(v)
+    return out
+
+
+def _fetch_monetary_page_field(field: str, indicator_id: str, note: str) -> tuple[list[dict], dict]:
+    values = monetary_page_series(_monetary_page_records(), field)
+    if len(values) < 100:
+        raise validation.StructuralChangeError("\n".join([
+            f"STRUCTURAL CHANGE DETECTED in nbk/{indicator_id}",
+            f"WHAT CHANGED: only {len(values)} months of {field!r} on {MONETARY_PAGE}/records",
+            "ACTION REQUIRED: inspect the page's JSON fields and update scripts/fetchers/nbk.py",
+        ]))
+    return [{"date": d, "value": v} for d, v in sorted(values.items())], {
+        "frequency": "monthly", "source_url": f"{MONETARY_PAGE}/records", "dataset_id": f"nbk-page/monetarybase/{field}",
+        "note": note + " Page month + 1 = the API's date (as M3)."}
+
+
+def fetch_m3_other_fx_deposits_households() -> tuple[list[dict], dict]:
+    return _fetch_monetary_page_field(
+        "m_3_other_foreign_currency_population", "M3_OTHER_FX_DEPOSITS_HOUSEHOLDS",
+        "Million KZT. Other deposits in foreign currency of the population (households) in M3, end of month.")
+
+
+def fetch_m3_other_fx_deposits_nonbank() -> tuple[list[dict], dict]:
+    return _fetch_monetary_page_field(
+        "m_3_other_foreign_currency_not_banking", "M3_OTHER_FX_DEPOSITS_NONBANK",
+        "Million KZT. Other deposits in foreign currency of non-bank legal entities in M3, end of month.")

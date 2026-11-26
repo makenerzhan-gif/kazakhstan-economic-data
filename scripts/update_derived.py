@@ -86,6 +86,15 @@ def run(run_logger: pipeline_logging.RunLogger) -> None:
             if not source_rows:
                 raise FileNotFoundError(f"data/processed/dims/{dataset.lower()}.csv is missing or empty")
             records = derive(ind, source_rows)
+            # `earlier_from`: sheets of the SAME BNS table that the main dataset does not read (e.g. 4435's
+            # «1990-2006» beside «2007-2026»), kept as their own dataset; only dates before the main
+            # dataset's first are taken, so the two never overlap and nothing is overwritten.
+            for extra in spec.get("earlier_from") or []:
+                extra_rows = dims.load_processed(extra)
+                if not extra_rows:
+                    raise FileNotFoundError(f"data/processed/dims/{extra.lower()}.csv is missing or empty")
+                first = records[0]["date"] if records else "9999"
+                records = [r for r in derive(ind, extra_rows) if r["date"] < first] + records
             if not records:
                 raise validation.StructuralChangeError("\n".join([
                     f"STRUCTURAL CHANGE DETECTED in {agency}/{indicator_id} (derived)",
@@ -129,6 +138,7 @@ def run(run_logger: pipeline_logging.RunLogger) -> None:
             currency="KZT" if "KZT" in ind["unit"] else ("USD" if "USD" in ind["unit"] else ""),
             geography=src_meta.get("geography", "Kazakhstan (national)"),
             methodology=f"Derived from the item-level dataset {dataset}, item {spec['item']}"
+                        + (f" (earlier years from {', '.join(spec['earlier_from'])})" if spec.get("earlier_from") else "")
                         + (f" minus {spec['minus']}" if spec.get("minus") else "")
                         + (f", scale {spec['scale']}" if spec.get("scale") not in (None, 1, 1.0) else "")
                         + f". {src_meta.get('methodology', '')}".rstrip(),

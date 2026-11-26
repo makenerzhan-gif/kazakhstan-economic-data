@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/4435/file/ru/",
+  "dataset_id": "4435",
+  "indicator_id": "GDP_EXPENDITURE_NOMINAL_1993_2006",
+  "indicator_name": "GDP by expenditure, current prices, by component, 1993-2006 (sheet «1990-2006» of table 4435)",
+  "description": "ВВП методом конечного использования в текущих ценах, 1993-2006 (лист «1990-2006» таблицы 4435)",
+  "frequency": "annual",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Added 2026-11-26 for kz-model-suite (fin_cycle.py: annual nominal GDP before 2007, until then KZ_Macro_DB NA_GDP_N). 1990-1992 are dropped: the sheet prints them in million roubles (footnote 1). The «ВВП» row is GDP by the production approach (footnote 3), as in GDP_EXPENDITURE_NOMINAL.",
+  "publication_date": "2026-10-12",
+  "last_update_date": "2026-11-26",
+  "download_date": "2026-11-26",
+  "period_start": "1993-12-31",
+  "period_end": "2006-12-31",
+  "next_update_date": "2026-12-15",
+  "transformation": "level",
+  "revision_status": "original"
+}

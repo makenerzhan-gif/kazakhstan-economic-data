@@ -46,7 +46,7 @@ def test_every_derived_indicator_points_at_a_real_dataset_and_has_no_fetcher_of_
     derived = update_derived.derived_indicators()
     assert {i["id"] for i in derived} == {"IND_PROD", "IND_PROD_MINING", "IND_PROD_MANUFACTURING", "IND_PROD_ELECTRICITY", "INVESTMENT",
                                           "EXPORTS", "OIL_EXPORTS_VALUE", "OIL_EXPORTS_VOLUME", "POPULATION_BNS", "POPULATION_BOY_BNS", "EMPLOYED_TOTAL", "ELECTRICITY_PRODUCTION",
-                                          "GDP_NOMINAL", "GDP_NOMINAL_Q", "GDP_REAL_SA", "GDP_EX_MINING_REAL_SA", "CONSUMPTION_HH_REAL_SA",
+                                          "GDP_NOMINAL", "GDP_NOMINAL_Q", "GDP_NOMINAL_ANNUAL", "GDP_REAL_SA", "GDP_EX_MINING_REAL_SA", "CONSUMPTION_HH_REAL_SA",
                                           "GFCF_REAL_SA", "EXPORTS_GS_REAL_SA", "IMPORTS_GS_REAL_SA"}
     for i in derived:
         spec = i["derived_from"]
@@ -124,3 +124,14 @@ def test_expenditure_components_cover_2010_to_2013():
         path = REPO_ROOT / "data" / "processed" / ind["agency"] / f"{ind['id'].lower()}.csv"
         years = {line.split(",")[0][:4] for line in path.read_text(encoding="utf-8").splitlines()[1:]}
         assert {"2010", "2011", "2012", "2013"} <= years, ind["id"]
+
+
+def test_earlier_from_prepends_only_dates_before_the_main_dataset(monkeypatch):
+    main = [{"date": "2007-12-31", "region": "national", "item_code": "GDP", "value": "7.0"}]
+    early = [{"date": "2006-12-31", "region": "national", "item_code": "GDP", "value": "6.0"},
+             {"date": "2007-12-31", "region": "national", "item_code": "GDP", "value": "999"}]
+    ind = {"id": "X", "frequency": "annual", "derived_from": {"dataset": "A", "item": "GDP", "earlier_from": ["B"]}}
+    rows = update_derived.derive(ind, main)
+    first = rows[0]["date"]
+    rows = [r for r in update_derived.derive(ind, early) if r["date"] < first] + rows
+    assert [(r["date"], r["value"]) for r in rows] == [("2006-12-31", 6.0), ("2007-12-31", 7.0)]

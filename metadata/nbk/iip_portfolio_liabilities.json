@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://nationalbank.kz/file/download/136322",
+  "dataset_id": "nbk-xlsx/IIP:151",
+  "indicator_id": "IIP_PORTFOLIO_LIABILITIES",
+  "indicator_name": "IIP: portfolio investment liabilities",
+  "description": "МИП: обязательства по портфельным инвестициям",
+  "frequency": "quarterly",
+  "unit": "USD million",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "USD million, end of quarter (dated as the file: 01.04 = end of Q1). Portfolio investment liabilities, IIP standard presentation, line 151=152+159 of the NBK file.",
+  "publication_date": null,
+  "last_update_date": "2026-11-26",
+  "download_date": "2026-11-26",
+  "period_start": "2001-01-01",
+  "period_end": "2026-07-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://nationalbank.kz/ru/monetarybase/denezhnaya-baza-i-agregaty-shirokoy-denezhnoy-massy/records",
+  "dataset_id": "nbk-page/monetarybase/m_3_other_foreign_currency_population",
+  "indicator_id": "M3_OTHER_FX_DEPOSITS_HOUSEHOLDS",
+  "indicator_name": "M3: other foreign-currency deposits of households",
+  "description": "M3: прочие депозиты населения в иностранной валюте",
+  "frequency": "monthly",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Million KZT. Other deposits in foreign currency of the population (households) in M3, end of month. Page month + 1 = the API's date (as M3).",
+  "publication_date": null,
+  "last_update_date": "2026-11-26",
+  "download_date": "2026-11-26",
+  "period_start": "1995-02-01",
+  "period_end": "2026-11-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

@@ -78,3 +78,40 @@ def test_year_links_are_read_from_the_page():
             '<a href="/file/download/1">2016 год</a><a href="/x">Отчёт за 2025 год</a>')
     assert nbk.official_avg_year_links(html) == {2026: "https://nationalbank.kz/file/download/138811",
                                                  2017: "https://nationalbank.kz/file/download/22825"}
+
+
+# ---------------------------------------------------------------- NBK xlsx files, monetary page (2026-11-26)
+
+def test_bop_quarters_survive_a_year_written_as_text():
+    rows = [[None, None, 2023, 2023, None, None, None, "2024", "2024\n", None, None, None],
+            [None, None, None, "I", "II", "III", "IV", None, "I", "II", "III", "IV"],
+            ["Кредит (Экспорт)", "BXG_BP6_USD", 80.0, 19.0, 20.0, 21.0, 20.0, 78.0, 18.0, 21.0, 20.0, 19.0]]
+    rows = [["Платежный баланс", None] + [None] * 10, ["(млн.долларов США)"] + [None] * 11] + rows  # found by content
+    got = nbk.nbk_bop_by_code(rows, "BXG_BP6_USD")
+    assert got["2023-01-01"] == 19.0 and got["2023-10-01"] == 20.0
+    assert got["2024-01-01"] == 18.0 and got["2024-10-01"] == 19.0
+    assert len(got) == 8   # annual columns (no Roman numeral) are skipped
+
+
+def test_stock_rows_are_found_by_the_line_number_before_the_equals_sign():
+    rows = [[None, "Код строки", "Состояние на 01.01.2001 г.", "01.04.2001", "01.07.2001", "01.10.2001"],
+            ["МИП, нетто", "1=2-141", -1.0, -2.0, -3.0, -4.0],
+            ["Портфельные", "151=152+159", 5.0, 6.0, None, 8.0]]
+    assert nbk.nbk_stock_by_line(rows, 1) == {"2001-01-01": -1.0, "2001-04-01": -2.0, "2001-07-01": -3.0, "2001-10-01": -4.0}
+    assert nbk.nbk_stock_by_line(rows, 151) == {"2001-01-01": 5.0, "2001-04-01": 6.0, "2001-10-01": 8.0}
+
+
+def test_xlsx_splice_refuses_a_disagreeing_overlap():
+    api = [{"date": "2021-01-01", "value": 10.0}]
+    assert [r["date"] for r in nbk.splice_xlsx_history("X", api, {"2020-10-01": 9.0, "2021-01-01": 10.0}, "f")] == ["2020-10-01", "2021-01-01"]
+    with pytest.raises(validation.StructuralChangeError):
+        nbk.splice_xlsx_history("X", api, {"2020-10-01": 9.0, "2021-01-01": 10.5}, "f")
+    with pytest.raises(validation.StructuralChangeError):
+        nbk.splice_xlsx_history("X", api, {"2020-10-01": 9.0}, "f")   # no shared date: cannot prove one series
+
+
+def test_monetary_page_month_plus_one_and_no_two_records_per_month():
+    recs = [{"reporting_date": "2025-12-08 00:00:00", "m_3": 1.0}, {"reporting_date": "2026-01-09 00:00:00", "m_3": 2.0}]
+    assert nbk.monetary_page_series(recs, "m_3") == {"2026-01-01": 1.0, "2026-02-01": 2.0}
+    with pytest.raises(validation.StructuralChangeError):
+        nbk.monetary_page_series(recs + [{"reporting_date": "2026-01-20", "m_3": 3.0}], "m_3")

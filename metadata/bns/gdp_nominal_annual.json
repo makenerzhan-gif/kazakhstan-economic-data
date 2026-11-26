@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://stat.gov.kz/api/iblock/element/4435/file/ru/",
+  "dataset_id": "GDP_EXPENDITURE_NOMINAL[GDP]",
+  "indicator_id": "GDP_NOMINAL_ANNUAL",
+  "indicator_name": "Nominal GDP, annual (table 4435), from 1993",
+  "description": "ВВП в текущих ценах, год (таблица 4435), с 1993 г.",
+  "frequency": "annual",
+  "unit": "million KZT",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Derived from the item-level dataset GDP_EXPENDITURE_NOMINAL, item GDP (earlier years from GDP_EXPENDITURE_NOMINAL_1993_2006). annual values from the xlsx export; quarterly year-to-date columns skipped",
+  "publication_date": "2026-10-12",
+  "last_update_date": "2026-11-26",
+  "download_date": "2026-11-25",
+  "period_start": "1993-12-31",
+  "period_end": "2025-12-31",
+  "next_update_date": "2026-12-15",
+  "transformation": "level",
+  "revision_status": "original"
+}

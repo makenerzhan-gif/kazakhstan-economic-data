@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://nationalbank.kz/file/download/137396",
+  "dataset_id": "nbk-xlsx/BOP:BXG_BP6_USD",
+  "indicator_id": "BOP_GOODS_EXPORTS",
+  "indicator_name": "Exports of goods (credit), balance of payments",
+  "description": "Экспорт товаров (кредит), платёжный баланс",
+  "frequency": "quarterly",
+  "unit": "USD million",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "USD million. Exports of goods (credit), balance of payments BPM6, analytic presentation, NBK file «Платежный баланс Республики Казахстан за период с 2000 года ...», code BXG_BP6_USD.",
+  "publication_date": null,
+  "last_update_date": "2026-11-26",
+  "download_date": "2026-11-26",
+  "period_start": "2000-01-01",
+  "period_end": "2026-04-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "revised"
+}

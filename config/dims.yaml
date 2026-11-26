@@ -120,6 +120,24 @@ datasets:
     unit: "million KZT"
     category: national_accounts
 
+  - id: GDP_EXPENDITURE_NOMINAL_1993_2006
+    name_ru: "ВВП методом конечного использования в текущих ценах, 1993-2006 (лист «1990-2006» таблицы 4435)"
+    name_en: "GDP by expenditure, current prices, by component, 1993-2006 (sheet «1990-2006» of table 4435)"
+    agency: bns
+    element_id: 4435
+    layout: periods_across
+    sheets: ["1990-2006"]
+    label_col: 1
+    dictionary: expenditure_items
+    year_regex: "^\\s*(\\d{4})(?=\\D|$|\\d\\))"
+    years_from: 1993
+    min_items: 12
+    frequency: annual
+    stale_ok: "Historical by design: the sheet closes in 2006; GDP_EXPENDITURE_NOMINAL continues it from 2007."
+    unit: "million KZT"
+    category: national_accounts
+    note: "Added 2026-11-26 for kz-model-suite (fin_cycle.py: annual nominal GDP before 2007, until then KZ_Macro_DB NA_GDP_N). 1990-1992 are dropped: the sheet prints them in million roubles (footnote 1). The «ВВП» row is GDP by the production approach (footnote 3), as in GDP_EXPENDITURE_NOMINAL."
+
   - id: GDP_EXPENDITURE_VOLUME_INDEX
     name_ru: "ИФО ВВП методом конечного использования"
     name_en: "GDP volume index by expenditure, by component"

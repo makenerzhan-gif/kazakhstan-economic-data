@@ -47,6 +47,19 @@ indicators:
   # KZ_Macro_DB values in the panel on all 66 quarters 2010Q1-2026Q2: max relative difference 4e-6 (rounding).
   # GDP is taken from the expenditure table, as in the panel: BNS adjusts the two tables separately, and their SA GDP
   # differ by up to 0.73 % (2010Q1-2026Q2); GDP excluding mining is built from the production table (GDP minus section B).
+  - id: GDP_NOMINAL_ANNUAL
+    name_ru: "ВВП в текущих ценах, год (таблица 4435), с 1993 г."
+    name_en: "Nominal GDP, annual (table 4435), from 1993"
+    agency: bns
+    frequency: annual
+    unit: "million KZT"
+    category: national_accounts
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "таблица 4435 «ВВП методом конечного использования»: строка «Валовой внутренний продукт» (методом производства, сноска 3), столбцы «год»"
+    derived_from: {dataset: GDP_EXPENDITURE_NOMINAL, item: GDP, region: national, earlier_from: [GDP_EXPENDITURE_NOMINAL_1993_2006]}
+    derived_note: "2007 on from sheet «2007-2026», 1993-2006 from sheet «1990-2006» of the same table (1990-1992 are in million roubles there and are not taken). Added 2026-11-26 for kz-model-suite (fin_cycle.py, until then KZ_Macro_DB NA_GDP_N annual)."
+
   - id: GDP_NOMINAL_Q
     name_ru: "ВВП в текущих ценах, квартал (дискретный, квартальные национальные счета)"
     name_en: "Nominal GDP, discrete quarter (quarterly national accounts)"
@@ -2030,6 +2043,66 @@ indicators:
     source_status: confirmed
     observation_type: point_in_time
     observation_evidence: "название формы: позиция/остаток — international investment position"
+
+  - id: M3_OTHER_FX_DEPOSITS_HOUSEHOLDS
+    name_ru: "M3: прочие депозиты населения в иностранной валюте"
+    name_en: "M3: other foreign-currency deposits of households"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "страница НБК «Денежная база и агрегаты широкой денежной массы», поле m_3_other_foreign_currency_population, остаток"
+    source_note: "Added 2026-11-26 for kz-model-suite (bsa.py, until then KZ_Macro_DB MB_M_3_OTHER_FOREIGN_CURRENCY_POPULATION from the same page)."
+
+  - id: M3_OTHER_FX_DEPOSITS_NONBANK
+    name_ru: "M3: прочие депозиты небанковских юридических лиц в иностранной валюте"
+    name_en: "M3: other foreign-currency deposits of non-bank legal entities"
+    agency: nbk
+    frequency: monthly
+    unit: "million KZT"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "страница НБК «Денежная база и агрегаты широкой денежной массы», поле m_3_other_foreign_currency_not_banking, остаток"
+    source_note: "Added 2026-11-26 for kz-model-suite (bsa.py, until then KZ_Macro_DB MB_M_3_OTHER_FOREIGN_CURRENCY_NOT_BANKING from the same page)."
+
+  - id: BOP_GOODS_EXPORTS
+    name_ru: "Экспорт товаров (кредит), платёжный баланс"
+    name_en: "Exports of goods (credit), balance of payments"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "файл НБК «Платежный баланс ... с 2000 года», аналитическое представление, код BXG_BP6_USD, поток за квартал"
+    source_note: "Added 2026-11-26 for kz-model-suite (external.py, until then KZ_Macro_DB BOP_GX from the same NBK file)."
+
+  - id: BOP_SERVICES_EXPORTS
+    name_ru: "Экспорт услуг (кредит), платёжный баланс"
+    name_en: "Exports of services (credit), balance of payments"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "файл НБК «Платежный баланс ... с 2000 года», аналитическое представление, код BXS_BP6_USD, поток за квартал"
+    source_note: "Added 2026-11-26 for kz-model-suite (external.py, until then KZ_Macro_DB BOP_SX from the same NBK file)."
+
+  - id: IIP_PORTFOLIO_LIABILITIES
+    name_ru: "МИП: обязательства по портфельным инвестициям"
+    name_en: "IIP: portfolio investment liabilities"
+    agency: nbk
+    frequency: quarterly
+    unit: "USD million"
+    category: monetary
+    source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "файл НБК «Международная инвестиционная позиция ... стандартное представление», строка 151, состояние на дату"
+    source_note: "Added 2026-11-26 for kz-model-suite (external.py, until then KZ_Macro_DB IIP_L_PORT from the same NBK file). Dated as the file: 01.04.2001 = end of 2001 Q1."
 
   - id: CURRENT_ACCOUNT_BALANCE
     name_ru: "Сальдо счета текущих операций"
