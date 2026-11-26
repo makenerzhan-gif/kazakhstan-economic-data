@@ -670,6 +670,33 @@ ROW_CODE_M1 = "3"
 
 RESERVES_NATFUND_FORM_ID = "34"
 
+# formId=34 starts at 2018-01-01. NBK's site publishes the same table from 1995 (whole USD
+# million); scripts/load_nbk_reserves_history.py stores it in data/reference/
+# nbk_reserves_history.csv on the API's date convention. Only months before the API's first
+# are prepended, and every month both carry must agree after rounding the API to whole numbers.
+RESERVES_HISTORY_PATH = Path(__file__).resolve().parents[2] / "data" / "reference" / "nbk_reserves_history.csv"
+
+
+def splice_reserves_history(indicator_id: str, column: str, records: list[dict],
+                            path: Path = RESERVES_HISTORY_PATH) -> list[dict]:
+    if not path.exists() or not records:
+        return records
+    with path.open(encoding="utf-8") as f:
+        hist = {r["date"]: float(r[column]) for r in csv.DictReader(f) if r[column] not in ("", None)}
+    api = {r["date"]: r["value"] for r in records}
+    bad = [(d, hist[d], api[d]) for d in sorted(set(hist) & set(api)) if abs(round(api[d]) - hist[d]) > 0.5]
+    if bad:
+        raise validation.StructuralChangeError("\n".join([
+            f"STRUCTURAL CHANGE DETECTED in nbk/{indicator_id} (history splice)",
+            f"WHAT CHANGED: data/reference/nbk_reserves_history.csv differs from formId={RESERVES_NATFUND_FORM_ID} "
+            f"on {len(bad)} month(s), first {bad[0][0]}: history {bad[0][1]}, API {bad[0][2]}",
+            "EXPECTED: equal after rounding the API to whole USD million on every shared month",
+            "ACTION REQUIRED: if NBK revised the series, rerun scripts/load_nbk_reserves_history.py. Do not loosen the check.",
+        ]))
+    first = min(api)
+    head = [{"date": d, "value": v} for d, v in sorted(hist.items()) if d < first]
+    return head + records
+
 
 def _fetch_reserves_natfund_rows() -> list[dict]:
     all_rows: list[dict] = []
@@ -714,11 +741,14 @@ def fetch_fx_reserves() -> tuple[list[dict], dict]:
         )
     records = [{"date": r["report_date"], "value": float(r["amount"])} for r in matching]
     records.sort(key=lambda r: r["date"])
+    records = splice_reserves_history("FX_RESERVES", "fx_reserves", records)
     manifest = {
         "frequency": "monthly",
         "source_url": f"{MONETARY_AGGREGATES_URL}?formId={RESERVES_NATFUND_FORM_ID}",
         "dataset_id": f"formId={RESERVES_NATFUND_FORM_ID},class_type=gross_international_reserves",
-        "note": "USD million. Gross reserves (monetary gold + FX assets), no breakdown by component.",
+        "note": "USD million. Gross reserves (monetary gold + FX assets), no breakdown by component. "
+                "1995-02 .. 2017-12 from NBK's site table (data/reference/nbk_reserves_history.csv, whole USD million), "
+                "equal to the API rounded on all shared months.",
     }
     return records, manifest
 
@@ -746,11 +776,14 @@ def fetch_national_fund_assets() -> tuple[list[dict], dict]:
         )
     records = [{"date": r["report_date"], "value": float(r["amount"])} for r in matching]
     records.sort(key=lambda r: r["date"])
+    records = splice_reserves_history("NATIONAL_FUND_ASSETS", "national_fund_assets", records)
     manifest = {
         "frequency": "monthly",
         "source_url": f"{MONETARY_AGGREGATES_URL}?formId={RESERVES_NATFUND_FORM_ID}",
         "dataset_id": f"formId={RESERVES_NATFUND_FORM_ID},subtype=national_fund_fx_assets",
-        "note": "USD million. Foreign currency assets of the National Fund of Kazakhstan (sovereign wealth fund).",
+        "note": "USD million. Foreign currency assets of the National Fund of Kazakhstan (sovereign wealth fund). "
+                "2001-02 .. 2017-12 from NBK's site table (data/reference/nbk_reserves_history.csv, whole USD million), "
+                "equal to the API rounded on all shared months.",
     }
     return records, manifest
 
