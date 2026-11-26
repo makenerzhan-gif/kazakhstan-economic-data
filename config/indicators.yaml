@@ -47,6 +47,19 @@ indicators:
   # KZ_Macro_DB values in the panel on all 66 quarters 2010Q1-2026Q2: max relative difference 4e-6 (rounding).
   # GDP is taken from the expenditure table, as in the panel: BNS adjusts the two tables separately, and their SA GDP
   # differ by up to 0.73 % (2010Q1-2026Q2); GDP excluding mining is built from the production table (GDP minus section B).
+  - id: GDP_NOMINAL_Q
+    name_ru: "ВВП в текущих ценах, квартал (дискретный, квартальные национальные счета)"
+    name_en: "Nominal GDP, discrete quarter (quarterly national accounts)"
+    agency: bns
+    frequency: quarterly
+    unit: "million KZT"
+    category: national_accounts
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "лист 1 элемента 283161: дискретный квартал, текущие цены"
+    derived_from: {dataset: QNA_GDP_EXPENDITURE, item: GDP_PRODUCTION, region: national}
+    derived_note: "row «Валовой внутренний продукт методом производства» of sheet 1, element 283161 (the official GDP of the quarterly accounts, discrete quarters). Not GDP_NOMINAL (table 4439, year-to-date): their annual sums differ in 2010-2022 by up to 9.4 % (different releases of the history). Equals KZ_Macro_DB NA_GDP_N (quarterly) on all 66 quarters 2010Q1-2026Q2 within 50 million KZT."
+
   - id: GDP_REAL_SA
     name_ru: "ВВП в ценах 2010 г., с исключением сезонного фактора (метод конечного использования)"
     name_en: "Real GDP, 2010 prices, seasonally adjusted (expenditure table)"

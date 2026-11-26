@@ -35725,6 +35725,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2010-01-01,KZ,national,monthly,FX_RESERVES,23091.0,USD million,nbk,2026-11-25,level,2026-11-26
 2010-01-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,4695701.781252341,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2010-01-01,KZ,national,quarterly,GDP_NOMINAL,4020878400000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2010-01-01,KZ,national,quarterly,GDP_NOMINAL_Q,4988685.554750743,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2010-01-01,KZ,national,quarterly,GDP_REAL_SA,5789917.160676701,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2010-01-01,KZ,national,quarterly,GFCF_REAL_SA,1421795.3446119805,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2010-01-01,KZ,national,quarterly,IMPORTS_GS_REAL_SA,1628962.4902451965,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
@@ -36340,6 +36341,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2010-04-01,KZ,national,monthly,FX_RESERVES,27143.0,USD million,nbk,2026-11-25,level,2026-11-26
 2010-04-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,4384576.182162805,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2010-04-01,KZ,national,quarterly,GDP_NOMINAL,8712143900000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2010-04-01,KZ,national,quarterly,GDP_NOMINAL_Q,5546029.27813243,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2010-04-01,KZ,national,quarterly,GDP_REAL_SA,5402878.477231496,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2010-04-01,KZ,national,quarterly,GFCF_REAL_SA,1316622.7886300595,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2010-04-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,317783.0,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -36971,6 +36973,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2010-07-01,KZ,national,monthly,FX_RESERVES,26603.0,USD million,nbk,2026-11-25,level,2026-11-26
 2010-07-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,4798203.673977804,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2010-07-01,KZ,national,quarterly,GDP_NOMINAL,14135228100000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2010-07-01,KZ,national,quarterly,GDP_NOMINAL_Q,6270494.891819027,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2010-07-01,KZ,national,quarterly,GDP_REAL_SA,5847831.206932324,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2010-07-01,KZ,national,quarterly,GFCF_REAL_SA,1593667.4176824687,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2010-07-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,350596.0,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -37611,6 +37614,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2010-10-01,KZ,national,monthly,FX_RESERVES,27831.0,USD million,nbk,2026-11-25,level,2026-11-26
 2010-10-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,5253020.262240031,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2010-10-01,KZ,national,quarterly,GDP_NOMINAL,21815517000000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2010-10-01,KZ,national,quarterly,GDP_NOMINAL_Q,7069103.075297797,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2010-10-01,KZ,national,quarterly,GDP_REAL_SA,6439842.904029679,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2010-10-01,KZ,national,quarterly,GFCF_REAL_SA,1606101.550802521,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2010-10-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,433921.0,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -38347,6 +38351,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-01-01,KZ,national,monthly,FX_RESERVES,28275.0,USD million,nbk,2026-11-25,level,2026-11-26
 2011-01-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,5036400.938437098,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2011-01-01,KZ,national,quarterly,GDP_NOMINAL,5240223500000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2011-01-01,KZ,national,quarterly,GDP_NOMINAL_Q,6484297.5849538185,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2011-01-01,KZ,national,quarterly,GDP_REAL_SA,6149161.332151553,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2011-01-01,KZ,national,quarterly,GFCF_REAL_SA,1401923.7217635906,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2011-01-01,KZ,national,quarterly,GINI_COEFFICIENT,0.29,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -38992,6 +38997,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-04-01,KZ,national,monthly,FX_RESERVES,35189.0,USD million,nbk,2026-11-25,level,2026-11-26
 2011-04-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,5167628.97277768,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2011-04-01,KZ,national,quarterly,GDP_NOMINAL,11240030900000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2011-04-01,KZ,national,quarterly,GDP_NOMINAL_Q,7082745.402476071,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2011-04-01,KZ,national,quarterly,GDP_REAL_SA,6282120.68255679,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2011-04-01,KZ,national,quarterly,GFCF_REAL_SA,1512963.0350977734,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2011-04-01,KZ,national,quarterly,GINI_COEFFICIENT,0.287,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -39649,6 +39655,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-07-01,KZ,national,monthly,FX_RESERVES,34615.0,USD million,nbk,2026-11-25,level,2026-11-26
 2011-07-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,5275923.534655861,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2011-07-01,KZ,national,quarterly,GDP_NOMINAL,18664939500000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2011-07-01,KZ,national,quarterly,GDP_NOMINAL_Q,7957591.795787388,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2011-07-01,KZ,national,quarterly,GDP_REAL_SA,6374471.220346157,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2011-07-01,KZ,national,quarterly,GFCF_REAL_SA,1551665.140123303,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2011-07-01,KZ,national,quarterly,GINI_COEFFICIENT,0.291,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -40319,6 +40326,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2011-10-01,KZ,national,monthly,FX_RESERVES,32489.0,USD million,nbk,2026-11-25,level,2026-11-26
 2011-10-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,5315576.195243504,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2011-10-01,KZ,national,quarterly,GDP_NOMINAL,28243052700000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2011-10-01,KZ,national,quarterly,GDP_NOMINAL_Q,8561870.51678272,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2011-10-01,KZ,national,quarterly,GDP_REAL_SA,6398476.306644182,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2011-10-01,KZ,national,quarterly,GFCF_REAL_SA,1606076.9995692496,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2011-10-01,KZ,national,quarterly,GINI_COEFFICIENT,0.283,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -41089,6 +41097,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-01-01,KZ,national,monthly,FX_RESERVES,29328.0,USD million,nbk,2026-11-25,level,2026-11-26
 2012-01-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,5403184.853613737,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2012-01-01,KZ,national,quarterly,GDP_NOMINAL,6097729900000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2012-01-01,KZ,national,quarterly,GDP_NOMINAL_Q,7152554.0796553865,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2012-01-01,KZ,national,quarterly,GDP_REAL_SA,6481812.549027827,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2012-01-01,KZ,national,quarterly,GFCF_REAL_SA,1703847.4355969478,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2012-01-01,KZ,national,quarterly,GINI_COEFFICIENT,0.285,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -41753,6 +41762,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-04-01,KZ,national,monthly,FX_RESERVES,32289.0,USD million,nbk,2026-11-25,level,2026-11-26
 2012-04-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,5408719.25013518,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2012-04-01,KZ,national,quarterly,GDP_NOMINAL,12849001600000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2012-04-01,KZ,national,quarterly,GDP_NOMINAL_Q,7812599.809389366,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2012-04-01,KZ,national,quarterly,GDP_REAL_SA,6527169.594079907,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2012-04-01,KZ,national,quarterly,GFCF_REAL_SA,1663479.9005944438,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2012-04-01,KZ,national,quarterly,GINI_COEFFICIENT,0.285,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -42412,6 +42422,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-07-01,KZ,national,monthly,FX_RESERVES,32326.0,USD million,nbk,2026-11-25,level,2026-11-26
 2012-07-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,5511810.9634046955,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2012-07-01,KZ,national,quarterly,GDP_NOMINAL,20848732600000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2012-07-01,KZ,national,quarterly,GDP_NOMINAL_Q,8517237.220265007,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2012-07-01,KZ,national,quarterly,GDP_REAL_SA,6610419.70567003,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2012-07-01,KZ,national,quarterly,GFCF_REAL_SA,1721015.2266815344,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2012-07-01,KZ,national,quarterly,GINI_COEFFICIENT,0.288,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -43090,6 +43101,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2012-10-01,KZ,national,monthly,FX_RESERVES,30091.0,USD million,nbk,2026-11-25,level,2026-11-26
 2012-10-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,5542925.888905429,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2012-10-01,KZ,national,quarterly,GDP_NOMINAL,31015186600000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2012-10-01,KZ,national,quarterly,GDP_NOMINAL_Q,9349787.09069024,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2012-10-01,KZ,national,quarterly,GDP_REAL_SA,6679350.405510475,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2012-10-01,KZ,national,quarterly,GFCF_REAL_SA,1777186.5557845056,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2012-10-01,KZ,national,quarterly,GINI_COEFFICIENT,0.279,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -43862,6 +43874,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-01-01,KZ,national,monthly,FX_RESERVES,28269.0,USD million,nbk,2026-11-25,level,2026-11-26
 2013-01-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,5773202.30848166,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2013-01-01,KZ,national,quarterly,GDP_NOMINAL,6966935000000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2013-01-01,KZ,national,quarterly,GDP_NOMINAL_Q,8145259.251254946,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2013-01-01,KZ,national,quarterly,GDP_REAL_SA,6944798.697243884,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2013-01-01,KZ,national,quarterly,GFCF_REAL_SA,1820516.6629233595,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2013-01-01,KZ,national,quarterly,GINI_COEFFICIENT,0.274,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -44553,6 +44566,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-04-01,KZ,national,monthly,FX_RESERVES,28109.0,USD million,nbk,2026-11-25,level,2026-11-26
 2013-04-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,5845870.453992035,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2013-04-01,KZ,national,quarterly,GDP_NOMINAL,14499992200000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2013-04-01,KZ,national,quarterly,GDP_NOMINAL_Q,8837174.84728526,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2013-04-01,KZ,national,quarterly,GDP_REAL_SA,7015492.740070867,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2013-04-01,KZ,national,quarterly,GFCF_REAL_SA,1812464.4129920655,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2013-04-01,KZ,national,quarterly,GINI_COEFFICIENT,0.281,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -45253,6 +45267,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-07-01,KZ,national,monthly,FX_RESERVES,26118.0,USD million,nbk,2026-11-25,level,2026-11-26
 2013-07-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,5809491.021472845,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2013-07-01,KZ,national,quarterly,GDP_NOMINAL,23767993400000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2013-07-01,KZ,national,quarterly,GDP_NOMINAL_Q,9818280.15758279,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2013-07-01,KZ,national,quarterly,GDP_REAL_SA,6973281.390013741,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2013-07-01,KZ,national,quarterly,GFCF_REAL_SA,1826797.2027767887,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2013-07-01,KZ,national,quarterly,GINI_COEFFICIENT,0.278,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -45962,6 +45977,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2013-10-01,KZ,national,monthly,FX_RESERVES,24159.0,USD million,nbk,2026-11-25,level,2026-11-26
 2013-10-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,5919848.461007736,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2013-10-01,KZ,national,quarterly,GDP_NOMINAL,35999025100000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2013-10-01,KZ,national,quarterly,GDP_NOMINAL_Q,10418345.04387701,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2013-10-01,KZ,national,quarterly,GDP_REAL_SA,7015628.706090201,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2013-10-01,KZ,national,quarterly,GFCF_REAL_SA,1899813.423681355,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2013-10-01,KZ,national,quarterly,GINI_COEFFICIENT,0.271,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -46771,6 +46787,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-01-01,KZ,national,monthly,FX_RESERVES,24715.0,USD million,nbk,2026-11-25,level,2026-11-26
 2014-01-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,6115804.261048355,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2014-01-01,KZ,national,quarterly,GDP_NOMINAL,7933827500000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2014-01-01,KZ,national,quarterly,GDP_NOMINAL_Q,8842321.954864502,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2014-01-01,KZ,national,quarterly,GDP_REAL_SA,7230398.044600974,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2014-01-01,KZ,national,quarterly,GFCF_REAL_SA,1872780.9304612647,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2014-01-01,KZ,national,quarterly,GINI_COEFFICIENT,0.275,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -47487,6 +47504,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-04-01,KZ,national,monthly,FX_RESERVES,26516.0,USD million,nbk,2026-11-25,level,2026-11-26
 2014-04-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,5979401.378909088,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2014-04-01,KZ,national,quarterly,GDP_NOMINAL,16482952200000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2014-04-01,KZ,national,quarterly,GDP_NOMINAL_Q,9972433.088213053,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2014-04-01,KZ,national,quarterly,GDP_REAL_SA,7100466.0000912305,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2014-04-01,KZ,national,quarterly,GFCF_REAL_SA,1938100.3301387015,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2014-04-01,KZ,national,quarterly,GINI_COEFFICIENT,0.279,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -48236,6 +48254,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-07-01,KZ,national,monthly,FX_RESERVES,26468.0,USD million,nbk,2026-11-25,level,2026-11-26
 2014-07-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,6055790.432261054,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2014-07-01,KZ,national,quarterly,GDP_NOMINAL,27040987300000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2014-07-01,KZ,national,quarterly,GDP_NOMINAL_Q,10764043.244234981,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2014-07-01,KZ,national,quarterly,GDP_REAL_SA,7241471.015631762,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2014-07-01,KZ,national,quarterly,GFCF_REAL_SA,1947912.853682294,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2014-07-01,KZ,national,quarterly,GINI_COEFFICIENT,0.28,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -49038,6 +49057,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-10-01,KZ,national,monthly,FX_RESERVES,27961.0,USD million,nbk,2026-11-25,level,2026-11-26
 2014-10-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,6144608.961970959,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2014-10-01,KZ,national,quarterly,GDP_NOMINAL,39675832900000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2014-10-01,KZ,national,quarterly,GDP_NOMINAL_Q,11312298.112687463,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2014-10-01,KZ,national,quarterly,GDP_REAL_SA,7320435.0150994435,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2014-10-01,KZ,national,quarterly,GFCF_REAL_SA,1891829.356714074,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2014-10-01,KZ,national,quarterly,GINI_COEFFICIENT,0.275,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -49979,6 +49999,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-01-01,KZ,national,monthly,FX_RESERVES,29209.0,USD million,nbk,2026-11-25,level,2026-11-26
 2015-01-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,6165571.363314788,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2015-01-01,KZ,national,quarterly,GDP_NOMINAL,8267517700000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2015-01-01,KZ,national,quarterly,GDP_NOMINAL_Q,8867831.358953852,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2015-01-01,KZ,national,quarterly,GDP_REAL_SA,7214473.142262829,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2015-01-01,KZ,national,quarterly,GFCF_REAL_SA,1876035.1191909506,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2015-01-01,KZ,national,quarterly,GINI_COEFFICIENT,0.281,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -50786,6 +50807,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-04-01,KZ,national,monthly,FX_RESERVES,29120.0,USD million,nbk,2026-11-25,level,2026-11-26
 2015-04-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,6231454.054838007,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2015-04-01,KZ,national,quarterly,GDP_NOMINAL,16804418100000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2015-04-01,KZ,national,quarterly,GDP_NOMINAL_Q,10056862.701934364,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2015-04-01,KZ,national,quarterly,GDP_REAL_SA,7386349.436083345,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2015-04-01,KZ,national,quarterly,GFCF_REAL_SA,1995962.0712870853,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2015-04-01,KZ,national,quarterly,GINI_COEFFICIENT,0.275,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -51614,6 +51636,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-07-01,KZ,national,monthly,FX_RESERVES,28891.0,USD million,nbk,2026-11-25,level,2026-11-26
 2015-07-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,6127692.580399614,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2015-07-01,KZ,national,quarterly,GDP_NOMINAL,27436536700000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2015-07-01,KZ,national,quarterly,GDP_NOMINAL_Q,10841656.212708656,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2015-07-01,KZ,national,quarterly,GDP_REAL_SA,7262909.331577144,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2015-07-01,KZ,national,quarterly,GFCF_REAL_SA,2107067.8461333285,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2015-07-01,KZ,national,quarterly,GINI_COEFFICIENT,0.28,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -52453,6 +52476,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-10-01,KZ,national,monthly,FX_RESERVES,28341.0,USD million,nbk,2026-11-25,level,2026-11-26
 2015-10-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,6152036.308854189,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2015-10-01,KZ,national,quarterly,GDP_NOMINAL,40884133600000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2015-10-01,KZ,national,quarterly,GDP_NOMINAL_Q,11781510.926403133,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2015-10-01,KZ,national,quarterly,GDP_REAL_SA,7297489.585438874,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2015-10-01,KZ,national,quarterly,GFCF_REAL_SA,1925825.3225811631,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2015-10-01,KZ,national,quarterly,GINI_COEFFICIENT,0.276,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -53416,6 +53440,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-01-01,KZ,national,monthly,FX_RESERVES,27871.0,USD million,nbk,2026-11-25,level,2026-11-26
 2016-01-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,6159052.478131551,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2016-01-01,KZ,national,quarterly,GDP_NOMINAL,9309090900000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2016-01-01,KZ,national,quarterly,GDP_NOMINAL_Q,10248858.004698066,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2016-01-01,KZ,national,quarterly,GDP_REAL_SA,7281781.845011838,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2016-01-01,KZ,national,quarterly,GFCF_REAL_SA,2070443.777819523,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2016-01-01,KZ,national,quarterly,GINI_COEFFICIENT,0.276,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -54246,6 +54271,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-04-01,KZ,national,monthly,FX_RESERVES,28394.0,USD million,nbk,2026-11-25,level,2026-11-26
 2016-04-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,6228720.045065349,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2016-04-01,KZ,national,quarterly,GDP_NOMINAL,19357056900000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2016-04-01,KZ,national,quarterly,GDP_NOMINAL_Q,11229608.110477723,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2016-04-01,KZ,national,quarterly,GDP_REAL_SA,7299258.14430785,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2016-04-01,KZ,national,quarterly,GFCF_REAL_SA,2054502.7675783513,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2016-04-01,KZ,national,quarterly,GINI_COEFFICIENT,0.276,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -55105,6 +55131,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-07-01,KZ,national,monthly,FX_RESERVES,30374.0,USD million,nbk,2026-11-25,level,2026-11-26
 2016-07-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,6303027.202848297,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2016-07-01,KZ,national,quarterly,GDP_NOMINAL,31355126100000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2016-07-01,KZ,national,quarterly,GDP_NOMINAL_Q,12105583.26826855,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2016-07-01,KZ,national,quarterly,GDP_REAL_SA,7373246.458037071,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2016-07-01,KZ,national,quarterly,GFCF_REAL_SA,2030153.4624151501,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2016-07-01,KZ,national,quarterly,GINI_COEFFICIENT,0.281,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -55969,6 +55996,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-10-01,KZ,national,monthly,FX_RESERVES,31231.0,USD million,nbk,2026-11-25,level,2026-11-26
 2016-10-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,6351907.822194395,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2016-10-01,KZ,national,quarterly,GDP_NOMINAL,46971150000000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2016-10-01,KZ,national,quarterly,GDP_NOMINAL_Q,13444347.716555659,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2016-10-01,KZ,national,quarterly,GDP_REAL_SA,7493211.482361565,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2016-10-01,KZ,national,quarterly,GFCF_REAL_SA,2125970.1385373864,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2016-10-01,KZ,national,quarterly,GINI_COEFFICIENT,0.28,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -56977,6 +57005,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-01-01,KZ,national,monthly,FX_RESERVES,29710.0,USD million,nbk,2026-11-25,level,2026-11-26
 2017-01-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,6369735.437844107,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2017-01-01,KZ,national,quarterly,GDP_NOMINAL,10431358000000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2017-01-01,KZ,national,quarterly,GDP_NOMINAL_Q,11557524.940323409,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2017-01-01,KZ,national,quarterly,GDP_REAL_SA,7502671.966093927,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2017-01-01,KZ,national,quarterly,GFCF_REAL_SA,2091314.7565937995,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2017-01-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2548037.0,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -57806,6 +57835,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-04-01,KZ,national,monthly,FX_RESERVES,29742.0,USD million,nbk,2026-11-25,level,2026-11-26
 2017-04-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,6439123.051366653,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2017-04-01,KZ,national,quarterly,GDP_NOMINAL,21546269700000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2017-04-01,KZ,national,quarterly,GDP_NOMINAL_Q,12400570.661957119,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2017-04-01,KZ,national,quarterly,GDP_REAL_SA,7683911.805634539,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2017-04-01,KZ,national,quarterly,GFCF_REAL_SA,2098754.708798563,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2017-04-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2597818.0,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -58657,6 +58687,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-07-01,KZ,national,monthly,FX_RESERVES,30011.0,USD million,nbk,2026-11-25,level,2026-11-26
 2017-07-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,6466695.483725451,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2017-07-01,KZ,national,quarterly,GDP_NOMINAL,35142065200000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2017-07-01,KZ,national,quarterly,GDP_NOMINAL_Q,13699270.225338738,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2017-07-01,KZ,national,quarterly,GDP_REAL_SA,7699927.520231344,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2017-07-01,KZ,national,quarterly,GFCF_REAL_SA,2150442.97916034,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2017-07-01,KZ,national,quarterly,GOLD_BULLION_SALES,225.0,pieces,nbk,2026-11-25,level,2026-11-25
@@ -59521,6 +59552,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-10-01,KZ,national,monthly,FX_RESERVES,32209.0,USD million,nbk,2026-11-25,level,2026-11-26
 2017-10-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,6523838.424549344,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2017-10-01,KZ,national,quarterly,GDP_NOMINAL,54378857800000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2017-10-01,KZ,national,quarterly,GDP_NOMINAL_Q,15284409.872380735,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2017-10-01,KZ,national,quarterly,GDP_REAL_SA,7739512.700371029,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2017-10-01,KZ,national,quarterly,GFCF_REAL_SA,2331155.784603925,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2017-10-01,KZ,national,quarterly,GINI_COEFFICIENT,0.283,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -60542,6 +60574,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-01-01,KZ,national,monthly,FX_RESERVES,30996.649283570427,USD million,nbk,2026-11-25,level,2026-11-26
 2018-01-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,6667131.620007317,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2018-01-01,KZ,national,quarterly,GDP_NOMINAL,11786166700000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2018-01-01,KZ,national,quarterly,GDP_NOMINAL_Q,12839144.168606224,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2018-01-01,KZ,national,quarterly,GDP_REAL_SA,7922691.06780772,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2018-01-01,KZ,national,quarterly,GFCF_REAL_SA,2447183.582575074,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2018-01-01,KZ,national,quarterly,GINI_COEFFICIENT,0.285,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -61432,6 +61465,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-04-01,KZ,national,monthly,FX_RESERVES,30648.651152681254,USD million,nbk,2026-11-25,level,2026-11-26
 2018-04-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,6719197.956281015,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2018-04-01,KZ,national,quarterly,GDP_NOMINAL,24857119200000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2018-04-01,KZ,national,quarterly,GDP_NOMINAL_Q,14560288.736611618,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2018-04-01,KZ,national,quarterly,GDP_REAL_SA,7992181.029649341,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2018-04-01,KZ,national,quarterly,GFCF_REAL_SA,2268745.386066878,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2018-04-01,KZ,national,quarterly,GINI_COEFFICIENT,0.29,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -62318,6 +62352,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-07-01,KZ,national,monthly,FX_RESERVES,30096.07779336144,USD million,nbk,2026-11-25,level,2026-11-26
 2018-07-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,6709331.972511895,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2018-07-01,KZ,national,quarterly,GDP_NOMINAL,39767105700000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2018-07-01,KZ,national,quarterly,GDP_NOMINAL_Q,15661260.918988433,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2018-07-01,KZ,national,quarterly,GDP_REAL_SA,7976419.533733376,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2018-07-01,KZ,national,quarterly,GFCF_REAL_SA,2319739.989653469,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2018-07-01,KZ,national,quarterly,GINI_COEFFICIENT,0.289,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -63230,6 +63265,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-10-01,KZ,national,monthly,FX_RESERVES,29977.093037618088,USD million,nbk,2026-11-25,level,2026-11-26
 2018-10-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,6669943.76956168,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2018-10-01,KZ,national,quarterly,GDP_NOMINAL,61819536400000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2018-10-01,KZ,national,quarterly,GDP_NOMINAL_Q,16994938.275793727,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2018-10-01,KZ,national,quarterly,GDP_REAL_SA,7917442.488375594,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2018-10-01,KZ,national,quarterly,GFCF_REAL_SA,2120916.3119810685,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2018-10-01,KZ,national,quarterly,GINI_COEFFICIENT,0.295,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -64277,6 +64313,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-01-01,KZ,national,monthly,FX_RESERVES,30927.02695042712,USD million,nbk,2026-11-25,level,2026-11-26
 2019-01-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,7024437.2187904185,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2019-01-01,KZ,national,quarterly,GDP_NOMINAL,13180857200000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2019-01-01,KZ,national,quarterly,GDP_NOMINAL_Q,14637077.025237978,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2019-01-01,KZ,national,quarterly,GDP_REAL_SA,8322541.921508484,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2019-01-01,KZ,national,quarterly,GFCF_REAL_SA,2217228.143387205,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2019-01-01,KZ,national,quarterly,GINI_COEFFICIENT,0.29,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -65168,6 +65205,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-04-01,KZ,national,monthly,FX_RESERVES,27042.136883539362,USD million,nbk,2026-11-25,level,2026-11-26
 2019-04-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,7066981.203050182,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2019-04-01,KZ,national,quarterly,GDP_NOMINAL,27908618100000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2019-04-01,KZ,national,quarterly,GDP_NOMINAL_Q,16342751.696159566,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2019-04-01,KZ,national,quarterly,GDP_REAL_SA,8330011.963401278,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2019-04-01,KZ,national,quarterly,GFCF_REAL_SA,2790249.731867179,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2019-04-01,KZ,national,quarterly,GINI_COEFFICIENT,0.288,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -66079,6 +66117,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-07-01,KZ,national,monthly,FX_RESERVES,28222.287780827268,USD million,nbk,2026-11-25,level,2026-11-26
 2019-07-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,6967119.264100764,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2019-07-01,KZ,national,quarterly,GDP_NOMINAL,44297912100000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2019-07-01,KZ,national,quarterly,GDP_NOMINAL_Q,17413491.85990476,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2019-07-01,KZ,national,quarterly,GDP_REAL_SA,8371268.079292185,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2019-07-01,KZ,national,quarterly,GFCF_REAL_SA,2485348.831801821,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2019-07-01,KZ,national,quarterly,GINI_COEFFICIENT,0.288,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -67012,6 +67051,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-10-01,KZ,national,monthly,FX_RESERVES,28796.20361443929,USD million,nbk,2026-11-25,level,2026-11-26
 2019-10-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,6969852.666238862,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2019-10-01,KZ,national,quarterly,GDP_NOMINAL,69532626500000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2019-10-01,KZ,national,quarterly,GDP_NOMINAL_Q,19105693.318697695,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2019-10-01,KZ,national,quarterly,GDP_REAL_SA,8202222.157913025,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2019-10-01,KZ,national,quarterly,GFCF_REAL_SA,2362404.9548870004,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2019-10-01,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,-250916.60798209533,million KZT,minfin,2026-11-25,level,2026-11-25
@@ -68114,6 +68154,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-01-01,KZ,national,monthly,FX_RESERVES,28957.509887228625,USD million,nbk,2026-11-25,level,2026-11-26
 2020-01-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,6892386.304442212,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2020-01-01,KZ,national,quarterly,GDP_NOMINAL,15093342400000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2020-01-01,KZ,national,quarterly,GDP_NOMINAL_Q,15751261.61062284,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2020-01-01,KZ,national,quarterly,GDP_REAL_SA,8163282.324777454,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2020-01-01,KZ,national,quarterly,GFCF_REAL_SA,2559037.8942313953,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2020-01-01,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,-381343.48881481064,million KZT,minfin,2026-11-25,level,2026-11-25
@@ -69085,6 +69126,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-04-01,KZ,national,monthly,FX_RESERVES,29782.410425670023,USD million,nbk,2026-11-25,level,2026-11-26
 2020-04-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,6598944.404305782,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2020-04-01,KZ,national,quarterly,GDP_NOMINAL,28399592700000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2020-04-01,KZ,national,quarterly,GDP_NOMINAL_Q,15114071.945021931,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2020-04-01,KZ,national,quarterly,GDP_REAL_SA,7803879.983576384,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2020-04-01,KZ,national,quarterly,GFCF_REAL_SA,2319868.9535018816,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2020-04-01,KZ,national,quarterly,GINI_COEFFICIENT,0.287,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -70041,6 +70083,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-07-01,KZ,national,monthly,FX_RESERVES,32891.25856584111,USD million,nbk,2026-11-25,level,2026-11-26
 2020-07-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,7222778.9084911905,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2020-07-01,KZ,national,quarterly,GDP_NOMINAL,45803255200000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2020-07-01,KZ,national,quarterly,GDP_NOMINAL_Q,17890894.021959282,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2020-07-01,KZ,national,quarterly,GDP_REAL_SA,8480193.109935736,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2020-07-01,KZ,national,quarterly,GFCF_REAL_SA,2314048.629412749,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2020-07-01,KZ,national,quarterly,GINI_COEFFICIENT,0.292,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -71030,6 +71073,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-10-01,KZ,national,monthly,FX_RESERVES,33783.83925432426,USD million,nbk,2026-11-25,level,2026-11-26
 2020-10-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,7029603.390528117,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2020-10-01,KZ,national,quarterly,GDP_NOMINAL,70649033200000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2020-10-01,KZ,national,quarterly,GDP_NOMINAL_Q,20448442.122395948,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2020-10-01,KZ,national,quarterly,GDP_REAL_SA,8271685.5955672925,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2020-10-01,KZ,national,quarterly,GFCF_REAL_SA,2671369.329229245,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2020-10-01,KZ,national,quarterly,GINI_COEFFICIENT,0.29,coefficient (0-1),bns,2026-11-25,level,2026-11-25
@@ -72165,6 +72209,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-01-01,KZ,national,monthly,FX_RESERVES,35638.084976284,USD million,nbk,2026-11-25,level,2026-11-26
 2021-01-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,7048321.557414452,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2021-01-01,KZ,national,quarterly,GDP_NOMINAL,15938671500000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2021-01-01,KZ,national,quarterly,GDP_NOMINAL_Q,17666917.699617438,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2021-01-01,KZ,national,quarterly,GDP_REAL_SA,8281757.214152032,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2021-01-01,KZ,national,quarterly,GFCF_REAL_SA,2467917.212714065,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2021-01-01,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,-1275300.8272018605,million KZT,minfin,2026-11-25,level,2026-11-25
@@ -73139,6 +73184,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-04-01,KZ,national,monthly,FX_RESERVES,33506.21559239921,USD million,nbk,2026-11-25,level,2026-11-26
 2021-04-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,7185714.254416882,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2021-04-01,KZ,national,quarterly,GDP_NOMINAL,32265436500000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2021-04-01,KZ,national,quarterly,GDP_NOMINAL_Q,19878161.74891148,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2021-04-01,KZ,national,quarterly,GDP_REAL_SA,8497595.234506581,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2021-04-01,KZ,national,quarterly,GFCF_REAL_SA,2622737.557317643,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2021-04-01,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,-571044.759064831,million KZT,minfin,2026-11-25,level,2026-11-25
@@ -74138,6 +74184,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-07-01,KZ,national,monthly,FX_RESERVES,35049.40957607142,USD million,nbk,2026-11-25,level,2026-11-26
 2021-07-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,7529615.818714584,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2021-07-01,KZ,national,quarterly,GDP_NOMINAL,53029365700000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2021-07-01,KZ,national,quarterly,GDP_NOMINAL_Q,21432045.495793834,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2021-07-01,KZ,national,quarterly,GDP_REAL_SA,8789662.290925035,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2021-07-01,KZ,national,quarterly,GFCF_REAL_SA,2545585.816978198,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2021-07-01,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,-17425.756952329946,million KZT,minfin,2026-11-25,level,2026-11-25
@@ -75167,6 +75214,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-10-01,KZ,national,monthly,FX_RESERVES,35520.27673012755,USD million,nbk,2026-11-25,level,2026-11-26
 2021-10-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,7431102.313609813,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2021-10-01,KZ,national,quarterly,GDP_NOMINAL,83951587900000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2021-10-01,KZ,national,quarterly,GDP_NOMINAL_Q,23659945.055677243,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2021-10-01,KZ,national,quarterly,GDP_REAL_SA,8703210.363727225,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2021-10-01,KZ,national,quarterly,GFCF_REAL_SA,2538551.6965095284,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2021-10-01,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,-886916.1184843306,million KZT,minfin,2026-11-25,level,2026-11-25
@@ -76364,6 +76412,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-01-01,KZ,national,monthly,FX_RESERVES,34377.97403821167,USD million,nbk,2026-11-25,level,2026-11-26
 2022-01-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,7455798.015139309,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2022-01-01,KZ,national,quarterly,GDP_NOMINAL,19695592800000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2022-01-01,KZ,national,quarterly,GDP_NOMINAL_Q,22819149.66043371,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2022-01-01,KZ,national,quarterly,GDP_REAL_SA,8652063.07729741,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2022-01-01,KZ,national,quarterly,GFCF_REAL_SA,2669957.0025664396,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2022-01-01,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,522065.1325183007,million KZT,minfin,2026-11-25,level,2026-11-25
@@ -77391,6 +77440,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-04-01,KZ,national,monthly,FX_RESERVES,33125.09938720851,USD million,nbk,2026-11-25,level,2026-11-26
 2022-04-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,7504256.5133057255,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2022-04-01,KZ,national,quarterly,GDP_NOMINAL,40034332600000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2022-04-01,KZ,national,quarterly,GDP_NOMINAL_Q,24012708.66261683,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2022-04-01,KZ,national,quarterly,GDP_REAL_SA,8733767.497379206,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2022-04-01,KZ,national,quarterly,GFCF_REAL_SA,2549251.759267045,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2022-04-01,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,1470827.9447816992,million KZT,minfin,2026-11-25,level,2026-11-25
@@ -78440,6 +78490,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-07-01,KZ,national,monthly,FX_RESERVES,31960.657346680062,USD million,nbk,2026-11-25,level,2026-11-26
 2022-07-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,7626287.448624463,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2022-07-01,KZ,national,quarterly,GDP_NOMINAL,65487797900000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2022-07-01,KZ,national,quarterly,GDP_NOMINAL_Q,26344049.606527507,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2022-07-01,KZ,national,quarterly,GDP_REAL_SA,8890329.249952767,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2022-07-01,KZ,national,quarterly,GFCF_REAL_SA,2624141.0426977454,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2022-07-01,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,-1109016.7054016993,million KZT,minfin,2026-11-25,level,2026-11-25
@@ -79501,6 +79552,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-10-01,KZ,national,monthly,FX_RESERVES,32638.671263871118,USD million,nbk,2026-11-25,level,2026-11-26
 2022-10-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,7775560.254138523,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2022-10-01,KZ,national,quarterly,GDP_NOMINAL,103765518200000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2022-10-01,KZ,national,quarterly,GDP_NOMINAL_Q,29017905.070421956,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2022-10-01,KZ,national,quarterly,GDP_REAL_SA,9114168.159775306,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2022-10-01,KZ,national,quarterly,GFCF_REAL_SA,2537323.6345116966,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2022-10-01,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,-897001.2492683001,million KZT,minfin,2026-11-25,level,2026-11-25
@@ -80736,6 +80788,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-01-01,KZ,national,monthly,FX_RESERVES,35076.02886017335,USD million,nbk,2026-11-25,level,2026-11-26
 2023-01-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,7930784.025950356,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2023-01-01,KZ,national,quarterly,GDP_NOMINAL,23582637000000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2023-01-01,KZ,national,quarterly,GDP_NOMINAL_Q,25683000.760162883,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2023-01-01,KZ,national,quarterly,GDP_REAL_SA,9282449.768913288,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2023-01-01,KZ,national,quarterly,GFCF_REAL_SA,2981720.205482628,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2023-01-01,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,188595.4212616301,million KZT,minfin,2026-11-25,level,2026-11-25
@@ -81848,6 +81901,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-04-01,KZ,national,monthly,FX_RESERVES,36214.79977751212,USD million,nbk,2026-11-25,level,2026-11-26
 2023-04-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,7908984.879995659,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2023-04-01,KZ,national,quarterly,GDP_NOMINAL,47244671500000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2023-04-01,KZ,national,quarterly,GDP_NOMINAL_Q,28076870.26906311,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2023-04-01,KZ,national,quarterly,GDP_REAL_SA,9272523.120883208,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2023-04-01,KZ,national,quarterly,GFCF_REAL_SA,3031161.610688585,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2023-04-01,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,-51253.952961635034,million KZT,minfin,2026-11-25,level,2026-11-25
@@ -82964,6 +83018,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-07-01,KZ,national,monthly,FX_RESERVES,34456.779236480965,USD million,nbk,2026-11-25,level,2026-11-26
 2023-07-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,7981866.304448552,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2023-07-01,KZ,national,quarterly,GDP_NOMINAL,75546820300000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2023-07-01,KZ,national,quarterly,GDP_NOMINAL_Q,31020560.531046264,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2023-07-01,KZ,national,quarterly,GDP_REAL_SA,9300180.501526542,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2023-07-01,KZ,national,quarterly,GFCF_REAL_SA,3055682.7987529854,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2023-07-01,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,-133682.33699999246,million KZT,minfin,2026-11-25,level,2026-11-25
@@ -84015,6 +84070,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-10-01,KZ,national,monthly,FX_RESERVES,31883.450429953424,USD million,nbk,2026-11-25,level,2026-11-26
 2023-10-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,8166316.137866332,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2023-10-01,KZ,national,quarterly,GDP_NOMINAL,119442289700000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2023-10-01,KZ,national,quarterly,GDP_NOMINAL_Q,34661858.13972775,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2023-10-01,KZ,national,quarterly,GDP_REAL_SA,9427536.198702335,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2023-10-01,KZ,national,quarterly,GFCF_REAL_SA,3112475.3140812167,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2023-10-01,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,1219931.6138144995,million KZT,minfin,2026-11-25,level,2026-11-25
@@ -85316,6 +85372,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-01,KZ,national,monthly,FX_RESERVES,35944.0531031745,USD million,nbk,2026-11-25,level,2026-11-26
 2024-01-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,8220113.482662529,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2024-01-01,KZ,national,quarterly,GDP_NOMINAL,26023903800000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2024-01-01,KZ,national,quarterly,GDP_NOMINAL_Q,27968848.200556,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2024-01-01,KZ,national,quarterly,GDP_REAL_SA,9615298.865141932,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2024-01-01,KZ,national,quarterly,GFCF_REAL_SA,2784554.7440655045,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2024-01-01,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,-273677.80152991903,million KZT,minfin,2026-11-25,level,2026-11-25
@@ -86441,6 +86498,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-04-01,KZ,national,monthly,FX_RESERVES,37847.046933613856,USD million,nbk,2026-11-25,level,2026-11-26
 2024-04-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,8091471.359010023,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2024-04-01,KZ,national,quarterly,GDP_NOMINAL,52342740300000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2024-04-01,KZ,national,quarterly,GDP_NOMINAL_Q,31274330.981994797,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2024-04-01,KZ,national,quarterly,GDP_REAL_SA,9427445.499992836,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2024-04-01,KZ,national,quarterly,GFCF_REAL_SA,2899419.2945004245,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2024-04-01,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,-300695.30380014086,million KZT,minfin,2026-11-25,level,2026-11-25
@@ -87571,6 +87629,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-07-01,KZ,national,monthly,FX_RESERVES,39932.60633881984,USD million,nbk,2026-11-25,level,2026-11-26
 2024-07-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,8426597.879829476,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2024-07-01,KZ,national,quarterly,GDP_NOMINAL,84962626100000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2024-07-01,KZ,national,quarterly,GDP_NOMINAL_Q,36512293.14276452,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2024-07-01,KZ,national,quarterly,GDP_REAL_SA,9825256.715063391,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2024-07-01,KZ,national,quarterly,GFCF_REAL_SA,3302244.444294004,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2024-07-01,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,790708.0638805606,million KZT,minfin,2026-11-25,level,2026-11-25
@@ -88717,6 +88776,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-10-01,KZ,national,monthly,FX_RESERVES,44590.880130214675,USD million,nbk,2026-11-25,level,2026-11-26
 2024-10-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,8778239.68092731,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2024-10-01,KZ,national,quarterly,GDP_NOMINAL,136693318300000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2024-10-01,KZ,national,quarterly,GDP_NOMINAL_Q,40937845.97468467,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2024-10-01,KZ,national,quarterly,GDP_REAL_SA,9955537.760248322,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2024-10-01,KZ,national,quarterly,GFCF_REAL_SA,3360162.3954066555,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2024-10-01,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,387589.57756531663,million KZT,minfin,2026-11-25,level,2026-11-25
@@ -90034,6 +90094,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,monthly,FX_RESERVES,45823.48534821276,USD million,nbk,2026-11-25,level,2026-11-26
 2025-01-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,8638308.97255397,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2025-01-01,KZ,national,quarterly,GDP_NOMINAL,30467333700000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2025-01-01,KZ,national,quarterly,GDP_NOMINAL_Q,32673208.77015426,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2025-01-01,KZ,national,quarterly,GDP_REAL_SA,10295398.070857424,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2025-01-01,KZ,national,quarterly,GFCF_REAL_SA,3398283.669198122,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2025-01-01,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,-337893.34243903897,million KZT,minfin,2026-11-25,level,2026-11-25
@@ -91179,6 +91240,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-04-01,KZ,national,monthly,FX_RESERVES,50072.505616723494,USD million,nbk,2026-11-25,level,2026-11-26
 2025-04-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,8871221.984768758,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2025-04-01,KZ,national,quarterly,GDP_NOMINAL,61371821900000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2025-04-01,KZ,national,quarterly,GDP_NOMINAL_Q,36504983.17130458,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2025-04-01,KZ,national,quarterly,GDP_REAL_SA,10347636.793006508,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2025-04-01,KZ,national,quarterly,GFCF_REAL_SA,3669418.5847682604,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2025-04-01,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,-1936306.6720745338,million KZT,minfin,2026-11-25,level,2026-11-25
@@ -92334,6 +92396,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-01,KZ,national,monthly,FX_RESERVES,51817.44842198445,USD million,nbk,2026-11-25,level,2026-11-26
 2025-07-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,8900556.90539143,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2025-07-01,KZ,national,quarterly,GDP_NOMINAL,99724898500000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2025-07-01,KZ,national,quarterly,GDP_NOMINAL_Q,42156657.11495662,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2025-07-01,KZ,national,quarterly,GDP_REAL_SA,10394503.241209561,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2025-07-01,KZ,national,quarterly,GFCF_REAL_SA,3604451.56602072,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2025-07-01,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,2420012.540493233,million KZT,minfin,2026-11-25,level,2026-11-25
@@ -93515,6 +93578,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-01,KZ,national,monthly,FX_RESERVES,57416.079677365495,USD million,nbk,2026-11-25,level,2026-11-26
 2025-10-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,9414106.47500762,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2025-10-01,KZ,national,quarterly,GDP_NOMINAL,159608552900000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2025-10-01,KZ,national,quarterly,GDP_NOMINAL_Q,48273703.84358454,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2025-10-01,KZ,national,quarterly,GDP_REAL_SA,10611584.185648091,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2025-10-01,KZ,national,quarterly,GFCF_REAL_SA,3680629.697433745,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2025-10-01,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,2180188.231371036,million KZT,minfin,2026-11-25,level,2026-11-25
@@ -94831,6 +94895,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,monthly,FX_RESERVES,65414.43553814808,USD million,nbk,2026-11-25,level,2026-11-26
 2026-01-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,9088905.376178626,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2026-01-01,KZ,national,quarterly,GDP_NOMINAL,34102358100000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2026-01-01,KZ,national,quarterly,GDP_NOMINAL_Q,36492185.62138357,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2026-01-01,KZ,national,quarterly,GDP_REAL_SA,10482201.551717289,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2026-01-01,KZ,national,quarterly,GFCF_REAL_SA,3708154.1807445707,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2026-01-01,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,148601.7281751192,million KZT,minfin,2026-11-25,level,2026-11-25
@@ -95993,6 +96058,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-01,KZ,national,monthly,FX_RESERVES,66786.22022115943,USD million,nbk,2026-11-25,level,2026-11-26
 2026-04-01,KZ,national,quarterly,GDP_EX_MINING_REAL_SA,9433222.257406062,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2026-04-01,KZ,national,quarterly,GDP_NOMINAL,71215382400000.0,KZT,bns,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete quarters)",2026-11-25
+2026-04-01,KZ,national,quarterly,GDP_NOMINAL_Q,43822822.5607536,million KZT,bns,2026-11-25,"level (discrete quarter, as published; quarterly national accounts vintage -- see metadata)",2026-11-26
 2026-04-01,KZ,national,quarterly,GDP_REAL_SA,11163843.239391021,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2026-04-01,KZ,national,quarterly,GFCF_REAL_SA,3784710.4087116416,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2026-04-01,KZ,national,quarterly,GG_CASH_SURPLUS_DEFICIT,-1565373.91449593,million KZT,minfin,2026-11-25,level,2026-11-25
