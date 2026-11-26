@@ -1,0 +1,21 @@
+{
+  "source": "nbk",
+  "source_url": "https://nationalbank.kz/ru/news/oficialnye-kursy",
+  "dataset_id": "official-rates-average/USD",
+  "indicator_id": "EXCHANGE_RATE_AVG",
+  "indicator_name": "Official USD/KZT Exchange Rate, monthly average (NBK)",
+  "description": "Официальный курс USD/KZT, в среднем за месяц (НБК)",
+  "frequency": "monthly",
+  "unit": "KZT per 1 USD",
+  "currency": "KZT",
+  "geography": "Kazakhstan (national)",
+  "methodology": "NBK monthly average of the official USD/KZT rate, KZT per USD, as published in the NBK's yearly files «Официальные обменные курсы иностранных валют в YYYY году» (2017-2022 PDF, from 2023 xlsx). Not the weekday mean of EXCHANGE_RATE (differs by up to 0.7 % in volatile months and by 1.7 % in 2023-08, when the daily report has no rate for 2023-07-28..2023-08-21).",
+  "publication_date": null,
+  "last_update_date": "2026-11-26",
+  "download_date": "2026-11-26",
+  "period_start": "2017-01-01",
+  "period_end": "2026-10-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

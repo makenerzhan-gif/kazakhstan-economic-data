@@ -57,3 +57,24 @@ def test_stored_history_equals_the_api_on_every_shared_month():
         shared = [d for d in api if d in hist and hist[d][col]]
         assert len(shared) >= 100
         assert all(abs(round(api[d]) - float(hist[d][col])) <= 0.5 for d in shared), ind
+
+
+# ---------------------------------------------------------------- EXCHANGE_RATE_AVG (2026-11-26)
+
+def test_official_average_files_parse_twelve_months_from_pdf_and_xlsx():
+    raw = REPO_ROOT / "data" / "raw" / "nbk"
+    pdf = sorted(raw.glob("nbk_exchange_rate_avg_2018_*.pdf"))
+    xlsx = sorted(raw.glob("nbk_exchange_rate_avg_2023_*.xlsx"))
+    if not pdf or not xlsx:
+        pytest.skip("raw files of EXCHANGE_RATE_AVG not present")
+    p = nbk.parse_official_avg_file(pdf[-1].read_bytes(), 2018)
+    assert len(p) == 12 and p["2018-01-01"] == 327.01 and p["2018-04-01"] == 324.89 and p["2018-11-01"] == 370.49 and p["2018-12-01"] == 371.82
+    x = nbk.parse_official_avg_file(xlsx[-1].read_bytes(), 2023)
+    assert len(x) == 12 and x["2023-08-01"] == 451.94
+
+
+def test_year_links_are_read_from_the_page():
+    html = ('<a href="/file/download/138811">2026 год</a><a href="/file/download/22825"> 2017\n год </a>'
+            '<a href="/file/download/1">2016 год</a><a href="/x">Отчёт за 2025 год</a>')
+    assert nbk.official_avg_year_links(html) == {2026: "https://nationalbank.kz/file/download/138811",
+                                                 2017: "https://nationalbank.kz/file/download/22825"}

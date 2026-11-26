@@ -225,6 +225,18 @@ indicators:
     observation_type: point_in_time
     observation_evidence: "официальный курс на дату"
 
+  - id: EXCHANGE_RATE_AVG
+    name_ru: "Официальный курс USD/KZT, в среднем за месяц (НБК)"
+    name_en: "Official USD/KZT Exchange Rate, monthly average (NBK)"
+    agency: nbk
+    frequency: monthly
+    unit: "KZT per 1 USD"
+    category: monetary
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "файлы НБК «Официальные обменные курсы иностранных валют в YYYY году»: среднее за месяц"
+    source_note: "NBK's published monthly average, 2017-01 on; not the weekday mean of EXCHANGE_RATE (differs by up to 0.7 % in volatile months, 1.7 % in 2023-08 where the daily report has no rate for 2023-07-28..2023-08-21). Equals KZ_Macro_DB FX_USD_AVG on all 118 months 2017-01..2026-10 (checked 2026-11-26)."
+
   - id: EXCHANGE_RATE_EUR
     name_ru: "Официальный курс тенге к евро (EUR/KZT)"
     name_en: "Official EUR/KZT Exchange Rate"

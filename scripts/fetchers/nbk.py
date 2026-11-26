@@ -252,6 +252,109 @@ def _fetch_official_rate(code: str, indicator_id: str, begin: date | None = None
     return records, manifest
 
 
+# ---------------------------------------------------------------------------
+# EXCHANGE_RATE_AVG (added 2026-11-26): the NBK's own published monthly average of the
+# official USD/KZT rate, one file per year on «Официальные курсы» (2017-2022 PDF, 2023- xlsx;
+# a row per currency: January, February, March, Q1, April, ..., Q4, year). It is not the
+# weekday mean of EXCHANGE_RATE: the two differ by up to 0.7 % in volatile months (2020-03),
+# and in 2023-08, when the daily report publishes no rate for 2023-07-28..2023-08-21, the
+# weekday mean is 459.82 against the NBK's 451.94.
+# ---------------------------------------------------------------------------
+OFFICIAL_RATES_AVG_PAGE = "https://nationalbank.kz/ru/news/oficialnye-kursy"
+OFFICIAL_RATES_AVG_FIRST_YEAR = 2017
+_RU_MONTHS = ["январ", "феврал", "март", "апрел", "май", "июн", "июл", "август", "сентябр", "октябр", "ноябр", "декабр"]
+
+
+def official_avg_year_links(page_html: str) -> dict[int, str]:
+    """{year: absolute file URL} for the «YYYY год» links of the page."""
+    import html as _html
+    out = {}
+    for href, text in re.findall(r'<a[^>]+href="([^"]+)"[^>]*>(.*?)</a>', page_html, re.S):
+        t = _html.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", text))).strip()
+        m = re.fullmatch(r"(20\d\d) год", t)
+        if m and int(m.group(1)) >= OFFICIAL_RATES_AVG_FIRST_YEAR:
+            out.setdefault(int(m.group(1)), href if href.startswith("http") else "https://nationalbank.kz" + href)
+    return out
+
+
+def parse_official_avg_file(content: bytes, year: int, code: str = "USD") -> dict[str, float]:
+    """{YYYY-MM-01: monthly average} of one year's file; quarters and the year are not kept."""
+    out: dict[str, float] = {}
+    if content[:4] == b"%PDF":
+        import io
+        from pypdf import PdfReader
+        text = "\n".join(p.extract_text() or "" for p in PdfReader(io.BytesIO(content)).pages)
+        for line in text.splitlines():
+            m = re.search(rf"\b{code}\b\s+(.*)$", line)
+            if not m:
+                continue
+            nums = [float(x.replace(",", ".")) for x in re.findall(r"\d+,\d+", m.group(1))]
+            if len(nums) != 17:   # 12 months + 4 quarters + the year, a complete year only
+                continue
+            months = [v for i, v in enumerate(nums[:16]) if i % 4 != 3]
+            out = {f"{year}-{mo:02d}-01": v for mo, v in enumerate(months, 1)}
+            break
+        return out
+    import io
+    import openpyxl
+    ws = openpyxl.load_workbook(io.BytesIO(content), read_only=True, data_only=True).worksheets[0]
+    rows = [list(r) for r in ws.iter_rows(values_only=True)]
+    head = next((r for r in rows if any(isinstance(c, str) and c.strip().lower().startswith("январ") for c in r)), None)
+    row = next((r for r in rows if any(isinstance(c, str) and c.strip() == code for c in r)), None)
+    if head is None or row is None:
+        return out
+    for i, h in enumerate(head):
+        if not isinstance(h, str):
+            continue
+        mo = next((k for k, stem in enumerate(_RU_MONTHS, 1) if h.strip().lower().startswith(stem)), None)
+        v = row[i] if i < len(row) else None
+        if mo and isinstance(v, (int, float)):
+            out[f"{year}-{mo:02d}-01"] = float(v)
+    return out
+
+
+def fetch_exchange_rate_avg() -> tuple[list[dict], dict]:
+    """NBK monthly average of the official USD/KZT rate, from 2017-01."""
+    today = date.today()
+    resp = requests.get(OFFICIAL_RATES_AVG_PAGE, headers=HEADERS, timeout=120)
+    resp.raise_for_status()
+    links = official_avg_year_links(resp.content.decode("utf-8", "replace"))
+    missing = [y for y in range(OFFICIAL_RATES_AVG_FIRST_YEAR, today.year) if y not in links]
+    if missing:
+        raise validation.StructuralChangeError("\n".join([
+            "STRUCTURAL CHANGE DETECTED in nbk/EXCHANGE_RATE_AVG",
+            f"WHAT CHANGED: no «YYYY год» link for {missing} on {OFFICIAL_RATES_AVG_PAGE}",
+            "ACTION REQUIRED: inspect the page and update official_avg_year_links in scripts/fetchers/nbk.py",
+        ]))
+    values: dict[str, float] = {}
+    for year, url in sorted(links.items()):
+        r = requests.get(url, headers=HEADERS, timeout=120)
+        r.raise_for_status()
+        ext = "pdf" if r.content[:4] == b"%PDF" else "xlsx"
+        path = raw_store.save_raw_bytes(SOURCE, f"EXCHANGE_RATE_AVG_{year}", today, ext, r.content)
+        raw_store.write_download_manifest(SOURCE, f"EXCHANGE_RATE_AVG_{year}", today, {
+            "downloaded_at": datetime.now().isoformat(), "source_url": url, "raw_file": path.name,
+            "page_url": OFFICIAL_RATES_AVG_PAGE})
+        got = parse_official_avg_file(r.content, year)
+        if year < today.year and len(got) != 12:
+            raise validation.StructuralChangeError("\n".join([
+                "STRUCTURAL CHANGE DETECTED in nbk/EXCHANGE_RATE_AVG",
+                f"WHAT CHANGED: {len(got)} months of USD read from the {year} file ({url}), a complete year has 12",
+                "ACTION REQUIRED: inspect the file layout and update parse_official_avg_file in scripts/fetchers/nbk.py",
+            ]))
+        values.update(got)
+    records = [{"date": d, "value": v} for d, v in sorted(values.items())]
+    manifest = {
+        "frequency": "monthly", "source_url": OFFICIAL_RATES_AVG_PAGE,
+        "dataset_id": "official-rates-average/USD",
+        "note": "NBK monthly average of the official USD/KZT rate, KZT per USD, as published in the NBK's yearly files "
+                "«Официальные обменные курсы иностранных валют в YYYY году» (2017-2022 PDF, from 2023 xlsx). "
+                "Not the weekday mean of EXCHANGE_RATE (differs by up to 0.7 % in volatile months and by 1.7 % in "
+                "2023-08, when the daily report has no rate for 2023-07-28..2023-08-21).",
+    }
+    return records, manifest
+
+
 def fetch_exchange_rate_usd() -> tuple[list[dict], dict]:
     """Official daily USD/KZT rate, weekdays, from 1993-11-18 (the NBK archive before 1999-11-17)."""
     return _fetch_official_rate("USD", "EXCHANGE_RATE")

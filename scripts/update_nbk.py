@@ -20,6 +20,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 FETCHERS = {
     "BASE_RATE": nbk_fetchers.fetch_base_rate,
     "EXCHANGE_RATE": nbk_fetchers.fetch_exchange_rate_usd,
+    "EXCHANGE_RATE_AVG": nbk_fetchers.fetch_exchange_rate_avg,
     "EXCHANGE_RATE_EUR": nbk_fetchers.fetch_exchange_rate_eur,
     "EXCHANGE_RATE_CNY": nbk_fetchers.fetch_exchange_rate_cny,
     "EXCHANGE_RATE_RUB": nbk_fetchers.fetch_exchange_rate_rub,
@@ -183,7 +184,7 @@ FETCHERS = {
 }
 
 INDICATOR_IDS = [
-    "BASE_RATE", "EXCHANGE_RATE", "EXCHANGE_RATE_EUR", "EXCHANGE_RATE_CNY", "EXCHANGE_RATE_RUB", "M2", "M3", "MONETARY_BASE", "M0", "M1",
+    "BASE_RATE", "EXCHANGE_RATE", "EXCHANGE_RATE_AVG", "EXCHANGE_RATE_EUR", "EXCHANGE_RATE_CNY", "EXCHANGE_RATE_RUB", "M2", "M3", "MONETARY_BASE", "M0", "M1",
     "FX_RESERVES", "NATIONAL_FUND_ASSETS", "REER", "NEER", "DEPOSITS_TOTAL",
     "EXTERNAL_DEBT", "LENDING_RATE", "DEPOSIT_RATE", "LOAN_RATE_ISSUED_LEGAL_KZT", "LOAN_RATE_ISSUED_INDIVIDUAL_KZT",
     "NATIONAL_FUND_TRANSFERS", "KASE_USD_VOLUME",

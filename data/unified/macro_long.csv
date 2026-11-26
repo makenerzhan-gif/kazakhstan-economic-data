@@ -56588,6 +56588,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-01-01,KZ,national,monthly,DEPOSIT_RATE,12.3,%,nbk,2026-11-25,level,2026-11-25
 2017-01-01,EA,national,quarterly,EA_GDP_REAL,2958252.2689724,"million EUR, chain-linked 2015",ecb,2026-11-25,level,2026-11-25
 2017-01-01,EA,national,monthly,EA_HICP_YOY,1.7,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2017-01-01,KZ,national,monthly,EXCHANGE_RATE_AVG,331.14,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2017-01-01,KZ,national,monthly,EXPORTS,3267415.1881399974,thousand USD,bns,2026-11-14,level,2026-11-25
 2017-01-01,KZ,national,quarterly,EXPORTS_GS_REAL_SA,2107348.2,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2017-01-01,KZ,national,quarterly,EXTERNAL_DEBT,163528.4924,million USD,nbk,2026-11-25,level,2026-11-25
@@ -56904,6 +56905,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-02-01,KZ,national,monthly,DEPOSIT_RATE,11.8,%,nbk,2026-11-25,level,2026-11-25
 2017-02-01,EA,national,monthly,EA_HICP_YOY,2.0,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2017-02-01,KZ,national,daily,EXCHANGE_RATE,324.24,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2017-02-01,KZ,national,monthly,EXCHANGE_RATE_AVG,320.18,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2017-02-01,KZ,national,daily,EXCHANGE_RATE_CNY,47.15,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2017-02-01,KZ,national,daily,EXCHANGE_RATE_EUR,347.2,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2017-02-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.4,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -57144,6 +57146,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-03-01,KZ,national,monthly,DEPOSIT_RATE,12.1,%,nbk,2026-11-25,level,2026-11-25
 2017-03-01,EA,national,monthly,EA_HICP_YOY,1.5,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2017-03-01,KZ,national,daily,EXCHANGE_RATE,312.76,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2017-03-01,KZ,national,monthly,EXCHANGE_RATE_AVG,316.07,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2017-03-01,KZ,national,daily,EXCHANGE_RATE_CNY,45.53,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2017-03-01,KZ,national,daily,EXCHANGE_RATE_EUR,331.09,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2017-03-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.4,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -57411,6 +57414,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-04-01,KZ,national,monthly,DEPOSIT_RATE,12.0,%,nbk,2026-11-25,level,2026-11-25
 2017-04-01,EA,national,quarterly,EA_GDP_REAL,2978094.02952397,"million EUR, chain-linked 2015",ecb,2026-11-25,level,2026-11-25
 2017-04-01,EA,national,monthly,EA_HICP_YOY,1.9,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2017-04-01,KZ,national,monthly,EXCHANGE_RATE_AVG,312.24,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2017-04-01,KZ,national,monthly,EXPORTS,3976569.296850001,thousand USD,bns,2026-11-14,level,2026-11-25
 2017-04-01,KZ,national,quarterly,EXPORTS_GS_REAL_SA,2285016.9,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2017-04-01,KZ,national,quarterly,EXTERNAL_DEBT,165292.701039,million USD,nbk,2026-11-25,level,2026-11-25
@@ -57717,6 +57721,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-05-01,KZ,national,monthly,DEPOSIT_RATE,12.0,%,nbk,2026-11-25,level,2026-11-25
 2017-05-01,EA,national,monthly,EA_HICP_YOY,1.4,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2017-05-01,KZ,national,daily,EXCHANGE_RATE,314.4,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2017-05-01,KZ,national,monthly,EXCHANGE_RATE_AVG,313.51,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2017-05-01,KZ,national,daily,EXCHANGE_RATE_CNY,45.6,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2017-05-01,KZ,national,daily,EXCHANGE_RATE_EUR,343.83,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2017-05-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.51,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -57976,6 +57981,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-06-01,KZ,national,monthly,DEPOSIT_RATE,12.1,%,nbk,2026-11-25,level,2026-11-25
 2017-06-01,EA,national,monthly,EA_HICP_YOY,1.3,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2017-06-01,KZ,national,daily,EXCHANGE_RATE,312.26,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2017-06-01,KZ,national,monthly,EXCHANGE_RATE_AVG,318.42,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2017-06-01,KZ,national,daily,EXCHANGE_RATE_CNY,45.84,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2017-06-01,KZ,national,daily,EXCHANGE_RATE_EUR,349.51,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2017-06-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.51,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -58256,6 +58262,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-07-01,KZ,national,monthly,DEPOSIT_RATE,11.9,%,nbk,2026-11-25,level,2026-11-25
 2017-07-01,EA,national,quarterly,EA_GDP_REAL,3000436.66325338,"million EUR, chain-linked 2015",ecb,2026-11-25,level,2026-11-25
 2017-07-01,EA,national,monthly,EA_HICP_YOY,1.3,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2017-07-01,KZ,national,monthly,EXCHANGE_RATE_AVG,325.31,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2017-07-01,KZ,national,monthly,EXPORTS,3827712.495979994,thousand USD,bns,2026-11-14,level,2026-11-25
 2017-07-01,KZ,national,quarterly,EXPORTS_GS_REAL_SA,2551519.9,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2017-07-01,KZ,national,quarterly,EXTERNAL_DEBT,167774.327133,million USD,nbk,2026-11-25,level,2026-11-25
@@ -58573,6 +58580,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-08-01,KZ,national,monthly,DEPOSIT_RATE,11.9,%,nbk,2026-11-25,level,2026-11-25
 2017-08-01,EA,national,monthly,EA_HICP_YOY,1.5,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2017-08-01,KZ,national,daily,EXCHANGE_RATE,328.07,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2017-08-01,KZ,national,monthly,EXCHANGE_RATE_AVG,332.69,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2017-08-01,KZ,national,daily,EXCHANGE_RATE_CNY,48.77,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2017-08-01,KZ,national,daily,EXCHANGE_RATE_EUR,384.83,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2017-08-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.47,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -58841,6 +58849,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-09-01,KZ,national,monthly,DEPOSIT_RATE,11.9,%,nbk,2026-11-25,level,2026-11-25
 2017-09-01,EA,national,monthly,EA_HICP_YOY,1.6,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2017-09-01,KZ,national,daily,EXCHANGE_RATE,337.04,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2017-09-01,KZ,national,monthly,EXCHANGE_RATE_AVG,339.22,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2017-09-01,KZ,national,daily,EXCHANGE_RATE_CNY,51.09,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2017-09-01,KZ,national,daily,EXCHANGE_RATE_EUR,400.2,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2017-09-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.77,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -59114,6 +59123,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-10-01,KZ,national,monthly,DEPOSIT_RATE,11.5,%,nbk,2026-11-25,level,2026-11-25
 2017-10-01,EA,national,quarterly,EA_GDP_REAL,3024637.53866144,"million EUR, chain-linked 2015",ecb,2026-11-25,level,2026-11-25
 2017-10-01,EA,national,monthly,EA_HICP_YOY,1.4,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2017-10-01,KZ,national,monthly,EXCHANGE_RATE_AVG,337.1,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2017-10-01,KZ,national,monthly,EXPORTS,4034666.2309600017,thousand USD,bns,2026-11-14,level,2026-11-25
 2017-10-01,KZ,national,quarterly,EXPORTS_GS_REAL_SA,2628016.2,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2017-10-01,KZ,national,quarterly,EXTERNAL_DEBT,168847.74978,million USD,nbk,2026-11-25,level,2026-11-25
@@ -59442,6 +59452,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-11-01,KZ,national,monthly,DEPOSIT_RATE,10.3,%,nbk,2026-11-25,level,2026-11-25
 2017-11-01,EA,national,monthly,EA_HICP_YOY,1.5,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2017-11-01,KZ,national,daily,EXCHANGE_RATE,334.71,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2017-11-01,KZ,national,monthly,EXCHANGE_RATE_AVG,332.47,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2017-11-01,KZ,national,daily,EXCHANGE_RATE_CNY,50.48,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2017-11-01,KZ,national,daily,EXCHANGE_RATE_EUR,389.27,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2017-11-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.75,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -59703,6 +59714,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-12-01,KZ,national,monthly,DEPOSIT_RATE,10.5,%,nbk,2026-11-25,level,2026-11-25
 2017-12-01,EA,national,monthly,EA_HICP_YOY,1.3,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2017-12-01,KZ,national,daily,EXCHANGE_RATE,331.22,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2017-12-01,KZ,national,monthly,EXCHANGE_RATE_AVG,333.66,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2017-12-01,KZ,national,daily,EXCHANGE_RATE_CNY,50.07,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2017-12-01,KZ,national,daily,EXCHANGE_RATE_EUR,391.4,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2017-12-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.65,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -60126,6 +60138,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-01-01,EA,national,quarterly,EA_GDP_REAL,3025453.14181953,"million EUR, chain-linked 2015",ecb,2026-11-25,level,2026-11-25
 2018-01-01,EA,national,monthly,EA_HICP_YOY,1.3,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2018-01-01,KZ,national,daily,EXCHANGE_RATE,332.33,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2018-01-01,KZ,national,monthly,EXCHANGE_RATE_AVG,327.01,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2018-01-01,KZ,national,daily,EXCHANGE_RATE_CNY,51.09,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2018-01-01,KZ,national,daily,EXCHANGE_RATE_EUR,398.23,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2018-01-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.77,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -60465,6 +60478,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-02-01,KZ,national,monthly,DEPOSIT_RATE,10.3,%,nbk,2026-11-25,level,2026-11-25
 2018-02-01,EA,national,monthly,EA_HICP_YOY,1.1,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2018-02-01,KZ,national,daily,EXCHANGE_RATE,322.9,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2018-02-01,KZ,national,monthly,EXCHANGE_RATE_AVG,321.93,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2018-02-01,KZ,national,daily,EXCHANGE_RATE_CNY,51.38,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2018-02-01,KZ,national,daily,EXCHANGE_RATE_EUR,402.08,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2018-02-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.75,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -60727,6 +60741,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-03-01,KZ,national,monthly,DEPOSIT_RATE,10.1,%,nbk,2026-11-25,level,2026-11-25
 2018-03-01,EA,national,monthly,EA_HICP_YOY,1.4,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2018-03-01,KZ,national,daily,EXCHANGE_RATE,320.3,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2018-03-01,KZ,national,monthly,EXCHANGE_RATE_AVG,320.73,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2018-03-01,KZ,national,daily,EXCHANGE_RATE_CNY,50.66,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2018-03-01,KZ,national,daily,EXCHANGE_RATE_EUR,391.41,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2018-03-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.7,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -61013,6 +61028,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-04-01,KZ,national,monthly,DEPOSIT_RATE,10.3,%,nbk,2026-11-25,level,2026-11-25
 2018-04-01,EA,national,quarterly,EA_GDP_REAL,3041241.12901884,"million EUR, chain-linked 2015",ecb,2026-11-25,level,2026-11-25
 2018-04-01,EA,national,monthly,EA_HICP_YOY,1.2,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2018-04-01,KZ,national,monthly,EXCHANGE_RATE_AVG,324.89,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2018-04-01,KZ,national,monthly,EXPORTS,4831437.913489998,thousand USD,bns,2026-11-14,level,2026-11-25
 2018-04-01,KZ,national,quarterly,EXPORTS_GS_REAL_SA,2645289.5,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2018-04-01,KZ,national,quarterly,EXTERNAL_DEBT,167755.597133,million USD,nbk,2026-11-25,level,2026-11-25
@@ -61350,6 +61366,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-05-01,KZ,national,monthly,DEPOSIT_RATE,9.9,%,nbk,2026-11-25,level,2026-11-25
 2018-05-01,EA,national,monthly,EA_HICP_YOY,2.0,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2018-05-01,KZ,national,daily,EXCHANGE_RATE,327.25,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2018-05-01,KZ,national,monthly,EXCHANGE_RATE_AVG,328.26,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2018-05-01,KZ,national,daily,EXCHANGE_RATE_CNY,51.68,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2018-05-01,KZ,national,daily,EXCHANGE_RATE_EUR,396.89,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2018-05-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.28,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -61606,6 +61623,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-06-01,KZ,national,monthly,DEPOSIT_RATE,10.0,%,nbk,2026-11-25,level,2026-11-25
 2018-06-01,EA,national,monthly,EA_HICP_YOY,2.0,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2018-06-01,KZ,national,daily,EXCHANGE_RATE,329.35,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2018-06-01,KZ,national,monthly,EXCHANGE_RATE_AVG,336.11,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2018-06-01,KZ,national,daily,EXCHANGE_RATE_CNY,51.42,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2018-06-01,KZ,national,daily,EXCHANGE_RATE_EUR,385.34,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2018-06-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.31,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -61893,6 +61911,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-07-01,KZ,national,monthly,DEPOSIT_RATE,9.9,%,nbk,2026-11-25,level,2026-11-25
 2018-07-01,EA,national,quarterly,EA_GDP_REAL,3043918.58074311,"million EUR, chain-linked 2015",ecb,2026-11-25,level,2026-11-25
 2018-07-01,EA,national,monthly,EA_HICP_YOY,2.2,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2018-07-01,KZ,national,monthly,EXCHANGE_RATE_AVG,344.19,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2018-07-01,KZ,national,monthly,EXPORTS,5170735.315289991,thousand USD,bns,2026-11-14,level,2026-11-25
 2018-07-01,KZ,national,quarterly,EXPORTS_GS_REAL_SA,2566325.6,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2018-07-01,KZ,national,quarterly,EXTERNAL_DEBT,165679.600388,million USD,nbk,2026-11-25,level,2026-11-25
@@ -62233,6 +62252,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-08-01,KZ,national,monthly,DEPOSIT_RATE,9.7,%,nbk,2026-11-25,level,2026-11-25
 2018-08-01,EA,national,monthly,EA_HICP_YOY,2.1,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2018-08-01,KZ,national,daily,EXCHANGE_RATE,346.7,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2018-08-01,KZ,national,monthly,EXCHANGE_RATE_AVG,356.54,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2018-08-01,KZ,national,daily,EXCHANGE_RATE_CNY,50.74,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2018-08-01,KZ,national,daily,EXCHANGE_RATE_EUR,406.44,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2018-08-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.56,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -62510,6 +62530,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-09-01,KZ,national,monthly,DEPOSITS_TOTAL,17679878.0,million KZT,nbk,2026-11-25,level,2026-11-25
 2018-09-01,KZ,national,monthly,DEPOSIT_RATE,9.9,%,nbk,2026-11-25,level,2026-11-25
 2018-09-01,EA,national,monthly,EA_HICP_YOY,2.1,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2018-09-01,KZ,national,monthly,EXCHANGE_RATE_AVG,367.33,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2018-09-01,KZ,national,monthly,EXPORTS,5360090.131460016,thousand USD,bns,2026-11-14,level,2026-11-25
 2018-09-01,KZ,national,monthly,FX_RESERVES,30509.909207138073,USD million,nbk,2026-11-25,level,2026-11-26
 2018-09-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,3798951.0,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -62796,6 +62817,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-10-01,EA,national,quarterly,EA_GDP_REAL,3059887.2956915,"million EUR, chain-linked 2015",ecb,2026-11-25,level,2026-11-25
 2018-10-01,EA,national,monthly,EA_HICP_YOY,2.3,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2018-10-01,KZ,national,daily,EXCHANGE_RATE,363.07,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2018-10-01,KZ,national,monthly,EXCHANGE_RATE_AVG,367.17,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2018-10-01,KZ,national,daily,EXCHANGE_RATE_CNY,52.76,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2018-10-01,KZ,national,daily,EXCHANGE_RATE_EUR,420.91,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2018-10-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.52,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -63144,6 +63166,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-11-01,KZ,national,monthly,DEPOSIT_RATE,9.7,%,nbk,2026-11-25,level,2026-11-25
 2018-11-01,EA,national,monthly,EA_HICP_YOY,1.9,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2018-11-01,KZ,national,daily,EXCHANGE_RATE,368.95,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2018-11-01,KZ,national,monthly,EXCHANGE_RATE_AVG,370.49,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2018-11-01,KZ,national,daily,EXCHANGE_RATE_CNY,52.92,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2018-11-01,KZ,national,daily,EXCHANGE_RATE_EUR,418.28,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2018-11-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.62,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -63401,6 +63424,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-12-01,KZ,national,monthly,DEPOSITS_TOTAL,17814117.0,million KZT,nbk,2026-11-25,level,2026-11-25
 2018-12-01,KZ,national,monthly,DEPOSIT_RATE,9.7,%,nbk,2026-11-25,level,2026-11-25
 2018-12-01,EA,national,monthly,EA_HICP_YOY,1.5,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2018-12-01,KZ,national,monthly,EXCHANGE_RATE_AVG,371.82,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2018-12-01,KZ,national,monthly,EXPORTS,6154810.464640005,thousand USD,bns,2026-11-14,level,2026-11-25
 2018-12-01,KZ,national,monthly,FX_RESERVES,30146.45025175503,USD million,nbk,2026-11-25,level,2026-11-26
 2018-12-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,3789794.0,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -63837,6 +63861,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-01-01,EA,national,quarterly,EA_GDP_REAL,3082307.14146633,"million EUR, chain-linked 2015",ecb,2026-11-25,level,2026-11-25
 2019-01-01,EA,national,monthly,EA_HICP_YOY,1.4,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2019-01-01,KZ,national,daily,EXCHANGE_RATE,384.2,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2019-01-01,KZ,national,monthly,EXCHANGE_RATE_AVG,378.13,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2019-01-01,KZ,national,daily,EXCHANGE_RATE_CNY,55.88,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2019-01-01,KZ,national,daily,EXCHANGE_RATE_EUR,439.37,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2019-01-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.52,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -64178,6 +64203,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-02-01,KZ,national,monthly,DEPOSIT_RATE,9.1,%,nbk,2026-11-25,level,2026-11-25
 2019-02-01,EA,national,monthly,EA_HICP_YOY,1.5,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2019-02-01,KZ,national,daily,EXCHANGE_RATE,380.06,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2019-02-01,KZ,national,monthly,EXCHANGE_RATE_AVG,377.43,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2019-02-01,KZ,national,daily,EXCHANGE_RATE_CNY,56.64,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2019-02-01,KZ,national,daily,EXCHANGE_RATE_EUR,436.35,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2019-02-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.83,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -64436,6 +64462,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-03-01,KZ,national,monthly,DEPOSIT_RATE,9.3,%,nbk,2026-11-25,level,2026-11-25
 2019-03-01,EA,national,monthly,EA_HICP_YOY,1.4,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2019-03-01,KZ,national,daily,EXCHANGE_RATE,374.96,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2019-03-01,KZ,national,monthly,EXCHANGE_RATE_AVG,377.64,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2019-03-01,KZ,national,daily,EXCHANGE_RATE_CNY,56.08,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2019-03-01,KZ,national,daily,EXCHANGE_RATE_EUR,427.08,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2019-03-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.7,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -64722,6 +64749,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-04-01,EA,national,quarterly,EA_GDP_REAL,3092660.07342542,"million EUR, chain-linked 2015",ecb,2026-11-25,level,2026-11-25
 2019-04-01,EA,national,monthly,EA_HICP_YOY,1.7,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2019-04-01,KZ,national,daily,EXCHANGE_RATE,380.04,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2019-04-01,KZ,national,monthly,EXCHANGE_RATE_AVG,379.42,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2019-04-01,KZ,national,daily,EXCHANGE_RATE_CNY,56.59,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2019-04-01,KZ,national,daily,EXCHANGE_RATE_EUR,425.95,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2019-04-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.87,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -65068,6 +65096,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-05-01,KZ,national,monthly,DEPOSIT_RATE,9.2,%,nbk,2026-11-25,level,2026-11-25
 2019-05-01,EA,national,monthly,EA_HICP_YOY,1.2,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2019-05-01,KZ,national,daily,EXCHANGE_RATE,381.08,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2019-05-01,KZ,national,monthly,EXCHANGE_RATE_AVG,379.98,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2019-05-01,KZ,national,daily,EXCHANGE_RATE_CNY,56.59,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2019-05-01,KZ,national,daily,EXCHANGE_RATE_EUR,427.15,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2019-05-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.91,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -65341,6 +65370,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-06-01,KZ,national,monthly,DEPOSITS_TOTAL,17491563.0,million KZT,nbk,2026-11-25,level,2026-11-25
 2019-06-01,KZ,national,monthly,DEPOSIT_RATE,9.3,%,nbk,2026-11-25,level,2026-11-25
 2019-06-01,EA,national,monthly,EA_HICP_YOY,1.3,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2019-06-01,KZ,national,monthly,EXCHANGE_RATE_AVG,382.26,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2019-06-01,KZ,national,monthly,EXPORTS,5029506.973999987,thousand USD,bns,2026-11-14,level,2026-11-25
 2019-06-01,KZ,national,monthly,FX_RESERVES,28050.26017347632,USD million,nbk,2026-11-25,level,2026-11-26
 2019-06-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,4354502.0,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -65627,6 +65657,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-07-01,EA,national,quarterly,EA_GDP_REAL,3099291.68433246,"million EUR, chain-linked 2015",ecb,2026-11-25,level,2026-11-25
 2019-07-01,EA,national,monthly,EA_HICP_YOY,1.0,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2019-07-01,KZ,national,daily,EXCHANGE_RATE,380.53,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2019-07-01,KZ,national,monthly,EXCHANGE_RATE_AVG,383.66,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2019-07-01,KZ,national,daily,EXCHANGE_RATE_CNY,55.41,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2019-07-01,KZ,national,daily,EXCHANGE_RATE_EUR,433.08,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2019-07-01,KZ,national,daily,EXCHANGE_RATE_RUB,6.04,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -65979,6 +66010,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-08-01,KZ,national,monthly,DEPOSIT_RATE,9.2,%,nbk,2026-11-25,level,2026-11-25
 2019-08-01,EA,national,monthly,EA_HICP_YOY,1.0,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2019-08-01,KZ,national,daily,EXCHANGE_RATE,384.2,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2019-08-01,KZ,national,monthly,EXCHANGE_RATE_AVG,386.67,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2019-08-01,KZ,national,daily,EXCHANGE_RATE_CNY,55.83,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2019-08-01,KZ,national,daily,EXCHANGE_RATE_EUR,428.15,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2019-08-01,KZ,national,daily,EXCHANGE_RATE_RUB,6.06,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -66257,6 +66289,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-09-01,KZ,national,monthly,DEPOSITS_TOTAL,17534805.0,million KZT,nbk,2026-11-25,level,2026-11-25
 2019-09-01,KZ,national,monthly,DEPOSIT_RATE,9.2,%,nbk,2026-11-25,level,2026-11-25
 2019-09-01,EA,national,monthly,EA_HICP_YOY,0.8,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2019-09-01,KZ,national,monthly,EXCHANGE_RATE_AVG,386.99,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2019-09-01,KZ,national,monthly,EXPORTS,5317152.093239978,thousand USD,bns,2026-11-14,level,2026-11-25
 2019-09-01,KZ,national,monthly,FX_RESERVES,28236.373828024312,USD million,nbk,2026-11-25,level,2026-11-26
 2019-09-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,4914966.0,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -66554,6 +66587,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-10-01,EA,national,quarterly,EA_GDP_REAL,3095509.73874802,"million EUR, chain-linked 2015",ecb,2026-11-25,level,2026-11-25
 2019-10-01,EA,national,monthly,EA_HICP_YOY,0.7,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2019-10-01,KZ,national,daily,EXCHANGE_RATE,387.99,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2019-10-01,KZ,national,monthly,EXCHANGE_RATE_AVG,389.19,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2019-10-01,KZ,national,daily,EXCHANGE_RATE_CNY,54.36,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2019-10-01,KZ,national,daily,EXCHANGE_RATE_EUR,423.72,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2019-10-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.98,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -66902,6 +66936,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-11-01,KZ,national,monthly,DEPOSIT_RATE,9.0,%,nbk,2026-11-25,level,2026-11-25
 2019-11-01,EA,national,monthly,EA_HICP_YOY,1.0,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2019-11-01,KZ,national,daily,EXCHANGE_RATE,388.67,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2019-11-01,KZ,national,monthly,EXCHANGE_RATE_AVG,387.74,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2019-11-01,KZ,national,daily,EXCHANGE_RATE_CNY,55.17,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2019-11-01,KZ,national,daily,EXCHANGE_RATE_EUR,433.83,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2019-11-01,KZ,national,daily,EXCHANGE_RATE_RUB,6.07,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -67181,6 +67216,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-12-01,KZ,national,monthly,DEPOSITS_TOTAL,18284346.0,million KZT,nbk,2026-11-25,level,2026-11-25
 2019-12-01,KZ,national,monthly,DEPOSIT_RATE,8.8,%,nbk,2026-11-25,level,2026-11-25
 2019-12-01,EA,national,monthly,EA_HICP_YOY,1.3,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2019-12-01,KZ,national,monthly,EXCHANGE_RATE_AVG,383.86,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2019-12-01,KZ,national,monthly,EXPORTS,5042017.8237599945,thousand USD,bns,2026-11-14,level,2026-11-25
 2019-12-01,KZ,national,monthly,FX_RESERVES,28636.943794315,USD million,nbk,2026-11-25,level,2026-11-26
 2019-12-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,4939929.0,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -67646,6 +67682,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-01-01,EA,national,quarterly,EA_GDP_REAL,2996366.162073,"million EUR, chain-linked 2015",ecb,2026-11-25,level,2026-11-25
 2020-01-01,EA,national,monthly,EA_HICP_YOY,1.4,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2020-01-01,KZ,national,daily,EXCHANGE_RATE,382.59,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2020-01-01,KZ,national,monthly,EXCHANGE_RATE_AVG,378.71,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2020-01-01,KZ,national,daily,EXCHANGE_RATE_CNY,54.97,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2020-01-01,KZ,national,daily,EXCHANGE_RATE_EUR,429.0,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2020-01-01,KZ,national,daily,EXCHANGE_RATE_RUB,6.16,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -68012,6 +68049,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-02-01,KZ,national,monthly,DEPOSITS_TOTAL,18686033.0,million KZT,nbk,2026-11-25,level,2026-11-25
 2020-02-01,KZ,national,monthly,DEPOSIT_RATE,8.8,%,nbk,2026-11-25,level,2026-11-25
 2020-02-01,EA,national,monthly,EA_HICP_YOY,1.2,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2020-02-01,KZ,national,monthly,EXCHANGE_RATE_AVG,377.73,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2020-02-01,KZ,national,monthly,EXPORTS,4907435.960909992,thousand USD,bns,2026-11-14,level,2026-11-25
 2020-02-01,KZ,national,monthly,FX_RESERVES,29336.17423200095,USD million,nbk,2026-11-25,level,2026-11-26
 2020-02-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,5137106.0,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -68297,6 +68335,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-03-01,KZ,national,monthly,DEPOSITS_TOTAL,18578821.0,million KZT,nbk,2026-11-25,level,2026-11-25
 2020-03-01,KZ,national,monthly,DEPOSIT_RATE,9.0,%,nbk,2026-11-25,level,2026-11-25
 2020-03-01,EA,national,monthly,EA_HICP_YOY,0.7,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2020-03-01,KZ,national,monthly,EXCHANGE_RATE_AVG,412.25,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2020-03-01,KZ,national,monthly,EXPORTS,4964794.981599992,thousand USD,bns,2026-11-14,level,2026-11-25
 2020-03-01,KZ,national,monthly,FX_RESERVES,29888.55629769168,USD million,nbk,2026-11-25,level,2026-11-26
 2020-03-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,5197472.0,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -68610,6 +68649,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-04-01,EA,national,monthly,EA_HICP_YOY,0.3,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2020-04-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,15.76768,percent,nbk,2026-11-25,level,2026-11-25
 2020-04-01,KZ,national,daily,EXCHANGE_RATE,447.67,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2020-04-01,KZ,national,monthly,EXCHANGE_RATE_AVG,433.79,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2020-04-01,KZ,national,daily,EXCHANGE_RATE_CNY,63.07,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2020-04-01,KZ,national,daily,EXCHANGE_RATE_EUR,491.36,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2020-04-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.74,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -68958,6 +68998,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-05-01,KZ,national,monthly,DEPOSIT_RATE,10.2,%,nbk,2026-11-25,level,2026-11-25
 2020-05-01,EA,national,monthly,EA_HICP_YOY,0.1,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2020-05-01,KZ,national,daily,EXCHANGE_RATE,424.57,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2020-05-01,KZ,national,monthly,EXCHANGE_RATE_AVG,418.09,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2020-05-01,KZ,national,daily,EXCHANGE_RATE_CNY,60.23,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2020-05-01,KZ,national,daily,EXCHANGE_RATE_EUR,461.13,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2020-05-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.81,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -69239,6 +69280,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-06-01,KZ,national,monthly,DEPOSIT_RATE,9.8,%,nbk,2026-11-25,level,2026-11-25
 2020-06-01,EA,national,monthly,EA_HICP_YOY,0.3,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2020-06-01,KZ,national,daily,EXCHANGE_RATE,411.54,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2020-06-01,KZ,national,monthly,EXCHANGE_RATE_AVG,402.44,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2020-06-01,KZ,national,daily,EXCHANGE_RATE_CNY,57.64,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2020-06-01,KZ,national,daily,EXCHANGE_RATE_EUR,458.13,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2020-06-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.84,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -69560,6 +69602,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-07-01,EA,national,monthly,EA_HICP_YOY,0.4,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2020-07-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,15.657652,percent,nbk,2026-11-25,level,2026-11-25
 2020-07-01,KZ,national,daily,EXCHANGE_RATE,403.93,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2020-07-01,KZ,national,monthly,EXCHANGE_RATE_AVG,411.35,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2020-07-01,KZ,national,daily,EXCHANGE_RATE_CNY,57.08,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2020-07-01,KZ,national,daily,EXCHANGE_RATE_EUR,452.52,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2020-07-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.7,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -69934,6 +69977,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-08-01,KZ,national,monthly,DEPOSITS_TOTAL,20685434.0,million KZT,nbk,2026-11-25,level,2026-11-25
 2020-08-01,KZ,national,monthly,DEPOSIT_RATE,9.8,%,nbk,2026-11-25,level,2026-11-25
 2020-08-01,EA,national,monthly,EA_HICP_YOY,-0.2,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2020-08-01,KZ,national,monthly,EXCHANGE_RATE_AVG,418.55,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2020-08-01,KZ,national,monthly,EXPORTS,3314200.9581899936,thousand USD,bns,2026-11-14,level,2026-11-25
 2020-08-01,KZ,national,monthly,FX_RESERVES,35371.797273580385,USD million,nbk,2026-11-25,level,2026-11-26
 2020-08-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,6354041.0,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -70224,6 +70268,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-09-01,KZ,national,monthly,DEPOSIT_RATE,9.7,%,nbk,2026-11-25,level,2026-11-25
 2020-09-01,EA,national,monthly,EA_HICP_YOY,-0.3,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2020-09-01,KZ,national,daily,EXCHANGE_RATE,420.11,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2020-09-01,KZ,national,monthly,EXCHANGE_RATE_AVG,423.86,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2020-09-01,KZ,national,daily,EXCHANGE_RATE_CNY,61.2,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2020-09-01,KZ,national,daily,EXCHANGE_RATE_EUR,499.47,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2020-09-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.64,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -70543,6 +70588,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-10-01,EA,national,monthly,EA_HICP_YOY,-0.3,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2020-10-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,13.690476,percent,nbk,2026-11-25,level,2026-11-25
 2020-10-01,KZ,national,daily,EXCHANGE_RATE,431.82,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2020-10-01,KZ,national,monthly,EXCHANGE_RATE_AVG,429.16,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2020-10-01,KZ,national,daily,EXCHANGE_RATE_CNY,63.44,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2020-10-01,KZ,national,daily,EXCHANGE_RATE_EUR,505.57,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2020-10-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.52,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -70911,6 +70957,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-11-01,KZ,national,monthly,DEPOSITS_TOTAL,21937481.0,million KZT,nbk,2026-11-25,level,2026-11-25
 2020-11-01,KZ,national,monthly,DEPOSIT_RATE,9.3,%,nbk,2026-11-25,level,2026-11-25
 2020-11-01,EA,national,monthly,EA_HICP_YOY,-0.3,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2020-11-01,KZ,national,monthly,EXCHANGE_RATE_AVG,428.84,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2020-11-01,KZ,national,monthly,EXPORTS,4088727.8907100023,thousand USD,bns,2026-11-14,level,2026-11-25
 2020-11-01,KZ,national,monthly,FX_RESERVES,33573.863242423264,USD million,nbk,2026-11-25,level,2026-11-26
 2020-11-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,7052903.0,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -71196,6 +71243,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-12-01,KZ,national,monthly,DEPOSIT_RATE,9.2,%,nbk,2026-11-25,level,2026-11-25
 2020-12-01,EA,national,monthly,EA_HICP_YOY,-0.3,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2020-12-01,KZ,national,daily,EXCHANGE_RATE,425.05,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2020-12-01,KZ,national,monthly,EXCHANGE_RATE_AVG,420.67,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2020-12-01,KZ,national,daily,EXCHANGE_RATE_CNY,64.66,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2020-12-01,KZ,national,daily,EXCHANGE_RATE_EUR,509.29,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2020-12-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.58,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -71672,6 +71720,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-01-01,EA,national,monthly,EA_HICP_YOY,0.9,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2021-01-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,14.653179,percent,nbk,2026-11-25,level,2026-11-25
 2021-01-01,KZ,national,daily,EXCHANGE_RATE,420.91,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2021-01-01,KZ,national,monthly,EXCHANGE_RATE_AVG,420.17,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2021-01-01,KZ,national,daily,EXCHANGE_RATE_CNY,64.36,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2021-01-01,KZ,national,daily,EXCHANGE_RATE_EUR,516.79,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2021-01-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.62,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -72040,6 +72089,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-02-01,KZ,national,monthly,DEPOSIT_RATE,8.9,%,nbk,2026-11-25,level,2026-11-25
 2021-02-01,EA,national,monthly,EA_HICP_YOY,0.9,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2021-02-01,KZ,national,daily,EXCHANGE_RATE,424.22,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2021-02-01,KZ,national,monthly,EXCHANGE_RATE_AVG,418.75,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2021-02-01,KZ,national,daily,EXCHANGE_RATE_CNY,65.83,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2021-02-01,KZ,national,daily,EXCHANGE_RATE_EUR,513.9,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2021-02-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.56,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -72321,6 +72371,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-03-01,KZ,national,monthly,DEPOSIT_RATE,9.3,%,nbk,2026-11-25,level,2026-11-25
 2021-03-01,EA,national,monthly,EA_HICP_YOY,1.3,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2021-03-01,KZ,national,daily,EXCHANGE_RATE,417.02,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2021-03-01,KZ,national,monthly,EXCHANGE_RATE_AVG,420.26,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2021-03-01,KZ,national,daily,EXCHANGE_RATE_CNY,64.52,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2021-03-01,KZ,national,daily,EXCHANGE_RATE_EUR,505.51,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2021-03-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.59,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -72640,6 +72691,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-04-01,EA,national,monthly,EA_HICP_YOY,1.6,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2021-04-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,14.429134,percent,nbk,2026-11-25,level,2026-11-25
 2021-04-01,KZ,national,daily,EXCHANGE_RATE,424.89,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2021-04-01,KZ,national,monthly,EXCHANGE_RATE_AVG,430.11,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2021-04-01,KZ,national,daily,EXCHANGE_RATE_CNY,64.84,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2021-04-01,KZ,national,daily,EXCHANGE_RATE_EUR,498.31,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2021-04-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.62,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -73021,6 +73073,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-05-01,KZ,national,monthly,DEPOSITS_TOTAL,23969483.0,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-05-01,KZ,national,monthly,DEPOSIT_RATE,8.6,%,nbk,2026-11-25,level,2026-11-25
 2021-05-01,EA,national,monthly,EA_HICP_YOY,2.0,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2021-05-01,KZ,national,monthly,EXCHANGE_RATE_AVG,427.66,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2021-05-01,KZ,national,monthly,EXPORTS,4916912.062209999,thousand USD,bns,2026-11-14,level,2026-11-25
 2021-05-01,KZ,national,monthly,FX_RESERVES,34220.79597716478,USD million,nbk,2026-11-25,level,2026-11-26
 2021-05-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,7799774.0,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -73306,6 +73359,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-06-01,KZ,national,monthly,DEPOSIT_RATE,8.3,%,nbk,2026-11-25,level,2026-11-25
 2021-06-01,EA,national,monthly,EA_HICP_YOY,1.9,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2021-06-01,KZ,national,daily,EXCHANGE_RATE,428.7,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2021-06-01,KZ,national,monthly,EXCHANGE_RATE_AVG,427.17,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2021-06-01,KZ,national,daily,EXCHANGE_RATE_CNY,67.29,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2021-06-01,KZ,national,daily,EXCHANGE_RATE_EUR,522.37,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2021-06-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.84,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -73633,6 +73687,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-07-01,EA,national,monthly,EA_HICP_YOY,2.2,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2021-07-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,13.793416,percent,nbk,2026-11-25,level,2026-11-25
 2021-07-01,KZ,national,daily,EXCHANGE_RATE,427.89,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2021-07-01,KZ,national,monthly,EXCHANGE_RATE_AVG,426.47,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2021-07-01,KZ,national,daily,EXCHANGE_RATE_CNY,66.26,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2021-07-01,KZ,national,daily,EXCHANGE_RATE_EUR,508.85,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2021-07-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.85,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -74020,6 +74075,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-08-01,KZ,national,monthly,DEPOSITS_TOTAL,25205093.0,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-08-01,KZ,national,monthly,DEPOSIT_RATE,8.2,%,nbk,2026-11-25,level,2026-11-25
 2021-08-01,EA,national,monthly,EA_HICP_YOY,3.0,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2021-08-01,KZ,national,monthly,EXCHANGE_RATE_AVG,425.21,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2021-08-01,KZ,national,monthly,EXPORTS,5402312.951760008,thousand USD,bns,2026-11-14,level,2026-11-25
 2021-08-01,KZ,national,monthly,FX_RESERVES,34986.962665813546,USD million,nbk,2026-11-25,level,2026-11-26
 2021-08-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,8296702.0,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -74319,6 +74375,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-09-01,KZ,national,monthly,DEPOSIT_RATE,8.2,%,nbk,2026-11-25,level,2026-11-25
 2021-09-01,EA,national,monthly,EA_HICP_YOY,3.4,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2021-09-01,KZ,national,daily,EXCHANGE_RATE,425.41,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2021-09-01,KZ,national,monthly,EXCHANGE_RATE_AVG,425.51,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2021-09-01,KZ,national,daily,EXCHANGE_RATE_CNY,65.84,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2021-09-01,KZ,national,daily,EXCHANGE_RATE_EUR,502.88,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2021-09-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.81,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -74656,6 +74713,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-10-01,EA,national,monthly,EA_HICP_YOY,4.1,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2021-10-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,13.451594,percent,nbk,2026-11-25,level,2026-11-25
 2021-10-01,KZ,national,daily,EXCHANGE_RATE,425.7,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2021-10-01,KZ,national,monthly,EXCHANGE_RATE_AVG,425.64,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2021-10-01,KZ,national,daily,EXCHANGE_RATE_CNY,65.92,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2021-10-01,KZ,national,daily,EXCHANGE_RATE_EUR,493.64,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2021-10-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.85,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -75051,6 +75109,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-11-01,KZ,national,monthly,DEPOSIT_RATE,8.4,%,nbk,2026-11-25,level,2026-11-25
 2021-11-01,EA,national,monthly,EA_HICP_YOY,4.9,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2021-11-01,KZ,national,daily,EXCHANGE_RATE,427.11,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2021-11-01,KZ,national,monthly,EXCHANGE_RATE_AVG,429.82,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2021-11-01,KZ,national,daily,EXCHANGE_RATE_CNY,66.77,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2021-11-01,KZ,national,daily,EXCHANGE_RATE_EUR,497.5,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2021-11-01,KZ,national,daily,EXCHANGE_RATE_RUB,6.05,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -75357,6 +75416,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-12-01,KZ,national,monthly,DEPOSIT_RATE,8.0,%,nbk,2026-11-25,level,2026-11-25
 2021-12-01,EA,national,monthly,EA_HICP_YOY,5.0,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2021-12-01,KZ,national,daily,EXCHANGE_RATE,434.16,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2021-12-01,KZ,national,monthly,EXCHANGE_RATE_AVG,434.12,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2021-12-01,KZ,national,daily,EXCHANGE_RATE_CNY,68.15,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2021-12-01,KZ,national,daily,EXCHANGE_RATE_EUR,493.29,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2021-12-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.81,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -75850,6 +75910,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-01-01,EA,national,quarterly,EA_GDP_REAL,3170556.92922838,"million EUR, chain-linked 2015",ecb,2026-11-25,level,2026-11-25
 2022-01-01,EA,national,monthly,EA_HICP_YOY,5.1,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2022-01-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,12.875788,percent,nbk,2026-11-25,level,2026-11-25
+2022-01-01,KZ,national,monthly,EXCHANGE_RATE_AVG,433.66,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2022-01-01,KZ,national,quarterly,EXPORTERS_SHARE,6.750675,percent of respondents,nbk,2026-11-25,level,2026-11-25
 2022-01-01,KZ,national,monthly,EXPORTS,6093897.247329982,thousand USD,bns,2026-11-14,level,2026-11-25
 2022-01-01,KZ,national,quarterly,EXPORTS_GS_REAL_SA,2709447.6,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
@@ -76234,6 +76295,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-02-01,KZ,national,monthly,DEPOSIT_RATE,8.5,%,nbk,2026-11-25,level,2026-11-25
 2022-02-01,EA,national,monthly,EA_HICP_YOY,5.9,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2022-02-01,KZ,national,daily,EXCHANGE_RATE,433.5,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2022-02-01,KZ,national,monthly,EXCHANGE_RATE_AVG,434.44,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2022-02-01,KZ,national,daily,EXCHANGE_RATE_CNY,68.16,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2022-02-01,KZ,national,daily,EXCHANGE_RATE_EUR,484.39,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2022-02-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.6,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -76533,6 +76595,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-03-01,KZ,national,monthly,DEPOSIT_RATE,9.9,%,nbk,2026-11-25,level,2026-11-25
 2022-03-01,EA,national,monthly,EA_HICP_YOY,7.4,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2022-03-01,KZ,national,daily,EXCHANGE_RATE,495.0,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2022-03-01,KZ,national,monthly,EXCHANGE_RATE_AVG,497.18,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2022-03-01,KZ,national,daily,EXCHANGE_RATE_CNY,78.52,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2022-03-01,KZ,national,daily,EXCHANGE_RATE_EUR,553.46,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2022-03-01,KZ,national,daily,EXCHANGE_RATE_RUB,4.95,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -76868,6 +76931,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-04-01,EA,national,monthly,EA_HICP_YOY,7.5,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2022-04-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,13.495801,percent,nbk,2026-11-25,level,2026-11-25
 2022-04-01,KZ,national,daily,EXCHANGE_RATE,466.31,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2022-04-01,KZ,national,monthly,EXCHANGE_RATE_AVG,453.32,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2022-04-01,KZ,national,daily,EXCHANGE_RATE_CNY,73.53,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2022-04-01,KZ,national,daily,EXCHANGE_RATE_EUR,517.98,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2022-04-01,KZ,national,daily,EXCHANGE_RATE_RUB,5.7,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -77270,6 +77334,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-05-01,KZ,national,monthly,DEPOSITS_TOTAL,25877631.0,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-05-01,KZ,national,monthly,DEPOSIT_RATE,11.0,%,nbk,2026-11-25,level,2026-11-25
 2022-05-01,EA,national,monthly,EA_HICP_YOY,8.1,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2022-05-01,KZ,national,monthly,EXCHANGE_RATE_AVG,430.71,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2022-05-01,KZ,national,monthly,EXPORTS,7718603.470970001,thousand USD,bns,2026-11-14,level,2026-11-25
 2022-05-01,KZ,national,monthly,FX_RESERVES,33406.59237879385,USD million,nbk,2026-11-25,level,2026-11-26
 2022-05-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,9381717.0,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -77573,6 +77638,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-06-01,KZ,national,monthly,DEPOSIT_RATE,11.4,%,nbk,2026-11-25,level,2026-11-25
 2022-06-01,EA,national,monthly,EA_HICP_YOY,8.6,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2022-06-01,KZ,national,daily,EXCHANGE_RATE,414.67,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2022-06-01,KZ,national,monthly,EXCHANGE_RATE_AVG,442.35,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2022-06-01,KZ,national,daily,EXCHANGE_RATE_CNY,62.3,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2022-06-01,KZ,national,daily,EXCHANGE_RATE_EUR,444.65,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2022-06-01,KZ,national,daily,EXCHANGE_RATE_RUB,6.78,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -77911,6 +77977,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-07-01,EA,national,monthly,EA_HICP_YOY,8.9,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2022-07-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,13.72681,percent,nbk,2026-11-25,level,2026-11-25
 2022-07-01,KZ,national,daily,EXCHANGE_RATE,470.34,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2022-07-01,KZ,national,monthly,EXCHANGE_RATE_AVG,476.08,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2022-07-01,KZ,national,daily,EXCHANGE_RATE_CNY,70.25,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2022-07-01,KZ,national,daily,EXCHANGE_RATE_EUR,490.47,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2022-07-01,KZ,national,daily,EXCHANGE_RATE_RUB,8.98,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -78314,6 +78381,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-08-01,KZ,national,monthly,DEPOSIT_RATE,12.0,%,nbk,2026-11-25,level,2026-11-25
 2022-08-01,EA,national,monthly,EA_HICP_YOY,9.1,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2022-08-01,KZ,national,daily,EXCHANGE_RATE,477.09,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2022-08-01,KZ,national,monthly,EXCHANGE_RATE_AVG,474.66,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2022-08-01,KZ,national,daily,EXCHANGE_RATE_CNY,70.83,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2022-08-01,KZ,national,daily,EXCHANGE_RATE_EUR,486.73,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2022-08-01,KZ,national,daily,EXCHANGE_RATE_RUB,7.75,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -78631,6 +78699,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-09-01,KZ,national,monthly,DEPOSIT_RATE,12.2,%,nbk,2026-11-25,level,2026-11-25
 2022-09-01,EA,national,monthly,EA_HICP_YOY,9.9,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2022-09-01,KZ,national,daily,EXCHANGE_RATE,472.21,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2022-09-01,KZ,national,monthly,EXCHANGE_RATE_AVG,475.57,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2022-09-01,KZ,national,daily,EXCHANGE_RATE_CNY,68.46,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2022-09-01,KZ,national,daily,EXCHANGE_RATE_EUR,471.22,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2022-09-01,KZ,national,daily,EXCHANGE_RATE_RUB,7.84,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -78969,6 +79038,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-10-01,EA,national,quarterly,EA_GDP_REAL,3215698.20050631,"million EUR, chain-linked 2015",ecb,2026-11-25,level,2026-11-25
 2022-10-01,EA,national,monthly,EA_HICP_YOY,10.6,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2022-10-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,12.981115,percent,nbk,2026-11-25,level,2026-11-25
+2022-10-01,KZ,national,monthly,EXCHANGE_RATE_AVG,472.48,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2022-10-01,KZ,national,quarterly,EXPORTERS_SHARE,6.085132,percent of respondents,nbk,2026-11-25,level,2026-11-25
 2022-10-01,KZ,national,monthly,EXPORTS,6940850.361629987,thousand USD,bns,2026-11-14,level,2026-11-25
 2022-10-01,KZ,national,quarterly,EXPORTS_GS_REAL_SA,2795814.4,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-25,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
@@ -79367,6 +79437,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-11-01,KZ,national,monthly,DEPOSIT_RATE,13.0,%,nbk,2026-11-25,level,2026-11-25
 2022-11-01,EA,national,monthly,EA_HICP_YOY,10.1,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2022-11-01,KZ,national,daily,EXCHANGE_RATE,468.35,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2022-11-01,KZ,national,monthly,EXCHANGE_RATE_AVG,463.79,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2022-11-01,KZ,national,daily,EXCHANGE_RATE_CNY,64.18,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2022-11-01,KZ,national,daily,EXCHANGE_RATE_EUR,465.73,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2022-11-01,KZ,national,daily,EXCHANGE_RATE_RUB,7.6,KZT per RUB,nbk,2026-11-25,level,2026-11-25
@@ -79678,6 +79749,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-12-01,KZ,national,monthly,DEPOSIT_RATE,13.3,%,nbk,2026-11-25,level,2026-11-25
 2022-12-01,EA,national,monthly,EA_HICP_YOY,9.2,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2022-12-01,KZ,national,daily,EXCHANGE_RATE,468.9,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2022-12-01,KZ,national,monthly,EXCHANGE_RATE_AVG,467.74,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2022-12-01,KZ,national,daily,EXCHANGE_RATE_CNY,66.1,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2022-12-01,KZ,national,daily,EXCHANGE_RATE_EUR,485.64,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2022-12-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,494.2175127560394,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
@@ -80192,6 +80264,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-01-01,EA,national,quarterly,EA_GDP_REAL,3211545.73032886,"million EUR, chain-linked 2015",ecb,2026-11-25,level,2026-11-25
 2023-01-01,EA,national,monthly,EA_HICP_YOY,8.6,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2023-01-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,12.343843,percent,nbk,2026-11-25,level,2026-11-25
+2023-01-01,KZ,national,monthly,EXCHANGE_RATE_AVG,462.61,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2023-01-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,500.09246368125713,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
 2023-01-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,6.553204640162121,KZT per 1 RUB,nbk,2026-11-25,level,2026-11-25
 2023-01-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,465.9688470622853,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
@@ -80619,6 +80692,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-02-01,KZ,national,monthly,DEPOSIT_RATE,13.5,%,nbk,2026-11-25,level,2026-11-25
 2023-02-01,EA,national,monthly,EA_HICP_YOY,8.5,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2023-02-01,KZ,national,daily,EXCHANGE_RATE,460.51,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2023-02-01,KZ,national,monthly,EXCHANGE_RATE_AVG,451.94,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2023-02-01,KZ,national,daily,EXCHANGE_RATE_CNY,68.18,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2023-02-01,KZ,national,daily,EXCHANGE_RATE_EUR,498.69,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2023-02-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,481.2680486224477,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
@@ -80936,6 +81010,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-03-01,KZ,national,monthly,DEPOSIT_RATE,13.5,%,nbk,2026-11-25,level,2026-11-25
 2023-03-01,EA,national,monthly,EA_HICP_YOY,6.9,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2023-03-01,KZ,national,daily,EXCHANGE_RATE,445.82,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2023-03-01,KZ,national,monthly,EXCHANGE_RATE_AVG,449.99,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2023-03-01,KZ,national,daily,EXCHANGE_RATE_CNY,64.28,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2023-03-01,KZ,national,daily,EXCHANGE_RATE_EUR,472.75,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2023-03-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,489.425031277527,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
@@ -81298,6 +81373,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-04-01,EA,national,quarterly,EA_GDP_REAL,3218434.55335667,"million EUR, chain-linked 2015",ecb,2026-11-25,level,2026-11-25
 2023-04-01,EA,national,monthly,EA_HICP_YOY,6.9,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2023-04-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,12.219911,percent,nbk,2026-11-25,level,2026-11-25
+2023-04-01,KZ,national,monthly,EXCHANGE_RATE_AVG,451.33,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2023-04-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,497.7010048992442,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
 2023-04-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,5.549002372652407,KZT per 1 RUB,nbk,2026-11-25,level,2026-11-25
 2023-04-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,455.2383921167716,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
@@ -81720,6 +81796,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-05-01,KZ,national,monthly,DEPOSIT_RATE,13.8,%,nbk,2026-11-25,level,2026-11-25
 2023-05-01,EA,national,monthly,EA_HICP_YOY,6.1,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2023-05-01,KZ,national,daily,EXCHANGE_RATE,453.39,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2023-05-01,KZ,national,monthly,EXCHANGE_RATE_AVG,446.6,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2023-05-01,KZ,national,daily,EXCHANGE_RATE_CNY,65.5,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2023-05-01,KZ,national,daily,EXCHANGE_RATE_EUR,498.18,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2023-05-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,485.52721110864775,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
@@ -82050,6 +82127,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-06-01,KZ,national,monthly,DEPOSIT_RATE,14.0,%,nbk,2026-11-25,level,2026-11-25
 2023-06-01,EA,national,monthly,EA_HICP_YOY,5.5,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2023-06-01,KZ,national,daily,EXCHANGE_RATE,448.13,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2023-06-01,KZ,national,monthly,EXCHANGE_RATE_AVG,448.54,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2023-06-01,KZ,national,daily,EXCHANGE_RATE_CNY,63.05,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2023-06-01,KZ,national,daily,EXCHANGE_RATE_EUR,478.33,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2023-06-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,486.7645345915705,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
@@ -82408,6 +82486,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-07-01,EA,national,quarterly,EA_GDP_REAL,3222771.45428201,"million EUR, chain-linked 2015",ecb,2026-11-25,level,2026-11-25
 2023-07-01,EA,national,monthly,EA_HICP_YOY,5.3,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2023-07-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,12.320048,percent,nbk,2026-11-25,level,2026-11-25
+2023-07-01,KZ,national,monthly,EXCHANGE_RATE_AVG,445.2,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2023-07-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,493.45562869515624,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
 2023-07-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,4.879161672760574,KZT per 1 RUB,nbk,2026-11-25,level,2026-11-25
 2023-07-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,448.25144961800197,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
@@ -82818,6 +82897,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-08-01,KZ,national,monthly,DEPOSITS_TOTAL,30708946.0,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-08-01,KZ,national,monthly,DEPOSIT_RATE,13.9,%,nbk,2026-11-25,level,2026-11-25
 2023-08-01,EA,national,monthly,EA_HICP_YOY,5.2,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2023-08-01,KZ,national,monthly,EXCHANGE_RATE_AVG,451.94,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2023-08-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,493.23837507332325,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
 2023-08-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,4.693504657366079,KZT per 1 RUB,nbk,2026-11-25,level,2026-11-25
 2023-08-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,456.5500028787526,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
@@ -83089,6 +83169,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-09-01,KZ,national,monthly,DEPOSIT_RATE,14.0,%,nbk,2026-11-25,level,2026-11-25
 2023-09-01,EA,national,monthly,EA_HICP_YOY,4.3,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2023-09-01,KZ,national,daily,EXCHANGE_RATE,459.69,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2023-09-01,KZ,national,monthly,EXCHANGE_RATE_AVG,467.86,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2023-09-01,KZ,national,daily,EXCHANGE_RATE_CNY,63.06,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2023-09-01,KZ,national,daily,EXCHANGE_RATE_EUR,499.82,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2023-09-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,499.7257495428145,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
@@ -83453,6 +83534,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-10-01,EA,national,quarterly,EA_GDP_REAL,3223108.73696107,"million EUR, chain-linked 2015",ecb,2026-11-25,level,2026-11-25
 2023-10-01,EA,national,monthly,EA_HICP_YOY,2.9,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2023-10-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,12.551141,percent,nbk,2026-11-25,level,2026-11-25
+2023-10-01,KZ,national,monthly,EXCHANGE_RATE_AVG,476.65,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2023-10-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,501.93701527424804,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
 2023-10-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,4.885011589799716,KZT per 1 RUB,nbk,2026-11-25,level,2026-11-25
 2023-10-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,475.9699224640113,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
@@ -83882,6 +83964,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-11-01,KZ,national,monthly,DEPOSIT_RATE,13.9,%,nbk,2026-11-25,level,2026-11-25
 2023-11-01,EA,national,monthly,EA_HICP_YOY,2.4,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2023-11-01,KZ,national,daily,EXCHANGE_RATE,469.67,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2023-11-01,KZ,national,monthly,EXCHANGE_RATE_AVG,463.56,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2023-11-01,KZ,national,daily,EXCHANGE_RATE_CNY,64.21,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2023-11-01,KZ,national,daily,EXCHANGE_RATE_EUR,501.09,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2023-11-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,501.8964126319409,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
@@ -84219,6 +84302,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-01,KZ,national,monthly,DEPOSIT_RATE,13.7,%,nbk,2026-11-25,level,2026-11-25
 2023-12-01,EA,national,monthly,EA_HICP_YOY,2.9,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2023-12-01,KZ,national,daily,EXCHANGE_RATE,458.04,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2023-12-01,KZ,national,monthly,EXCHANGE_RATE_AVG,457.76,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2023-12-01,KZ,national,daily,EXCHANGE_RATE_CNY,64.22,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2023-12-01,KZ,national,daily,EXCHANGE_RATE_EUR,500.41,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2023-12-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,500.4845225198605,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
@@ -84745,6 +84829,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-01,EA,national,monthly,EA_HICP_YOY,2.8,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2024-01-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,13.411105,percent,nbk,2026-11-25,level,2026-11-25
 2024-01-01,KZ,national,daily,EXCHANGE_RATE,454.56,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2024-01-01,KZ,national,monthly,EXCHANGE_RATE_AVG,451.28,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2024-01-01,KZ,national,daily,EXCHANGE_RATE_CNY,63.94,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2024-01-01,KZ,national,daily,EXCHANGE_RATE_EUR,502.24,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2024-01-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,493.9597781117849,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
@@ -85179,6 +85264,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-02-01,KZ,national,monthly,DEPOSIT_RATE,13.6,%,nbk,2026-11-25,level,2026-11-25
 2024-02-01,EA,national,monthly,EA_HICP_YOY,2.6,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2024-02-01,KZ,national,daily,EXCHANGE_RATE,447.74,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2024-02-01,KZ,national,monthly,EXCHANGE_RATE_AVG,449.95,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2024-02-01,KZ,national,daily,EXCHANGE_RATE_CNY,62.39,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2024-02-01,KZ,national,daily,EXCHANGE_RATE_EUR,484.5,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2024-02-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,484.3027685689158,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
@@ -85510,6 +85596,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-03-01,KZ,national,monthly,DEPOSIT_RATE,13.8,%,nbk,2026-11-25,level,2026-11-25
 2024-03-01,EA,national,monthly,EA_HICP_YOY,2.4,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2024-03-01,KZ,national,daily,EXCHANGE_RATE,450.61,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2024-03-01,KZ,national,monthly,EXCHANGE_RATE_AVG,449.74,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2024-03-01,KZ,national,daily,EXCHANGE_RATE_CNY,62.63,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2024-03-01,KZ,national,daily,EXCHANGE_RATE_EUR,488.91,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2024-03-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,487.9880791933384,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
@@ -85864,6 +85951,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-04-01,EA,national,monthly,EA_HICP_YOY,2.4,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2024-04-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,13.106553,percent,nbk,2026-11-25,level,2026-11-25
 2024-04-01,KZ,national,daily,EXCHANGE_RATE,446.78,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2024-04-01,KZ,national,monthly,EXCHANGE_RATE_AVG,446.34,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2024-04-01,KZ,national,daily,EXCHANGE_RATE_CNY,61.88,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2024-04-01,KZ,national,daily,EXCHANGE_RATE_EUR,481.81,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2024-04-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,477.01551210630737,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
@@ -86298,6 +86386,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-05-01,KZ,national,monthly,DEPOSIT_RATE,13.6,%,nbk,2026-11-25,level,2026-11-25
 2024-05-01,EA,national,monthly,EA_HICP_YOY,2.6,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2024-05-01,KZ,national,daily,EXCHANGE_RATE,442.05,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2024-05-01,KZ,national,monthly,EXCHANGE_RATE_AVG,442.19,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2024-05-01,KZ,national,daily,EXCHANGE_RATE_CNY,61.07,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2024-05-01,KZ,national,daily,EXCHANGE_RATE_EUR,474.14,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2024-05-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,478.71509736742024,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
@@ -86631,6 +86720,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-06-01,KZ,national,monthly,DEPOSITS_TOTAL,34457842.0,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-06-01,KZ,national,monthly,DEPOSIT_RATE,13.6,%,nbk,2026-11-25,level,2026-11-25
 2024-06-01,EA,national,monthly,EA_HICP_YOY,2.5,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2024-06-01,KZ,national,monthly,EXCHANGE_RATE_AVG,454.69,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2024-06-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,492.48774238062487,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
 2024-06-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,5.202094883246965,KZT per 1 RUB,nbk,2026-11-25,level,2026-11-25
 2024-06-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,457.89614949733357,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
@@ -86988,6 +87078,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-07-01,EA,national,monthly,EA_HICP_YOY,2.6,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2024-07-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,13.86651,percent,nbk,2026-11-25,level,2026-11-25
 2024-07-01,KZ,national,daily,EXCHANGE_RATE,471.46,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2024-07-01,KZ,national,monthly,EXCHANGE_RATE_AVG,474.86,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2024-07-01,KZ,national,daily,EXCHANGE_RATE_CNY,64.92,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2024-07-01,KZ,national,daily,EXCHANGE_RATE_EUR,504.79,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2024-07-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,515.5118518502036,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
@@ -87426,6 +87517,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-08-01,KZ,national,monthly,DEPOSIT_RATE,13.5,%,nbk,2026-11-25,level,2026-11-25
 2024-08-01,EA,national,monthly,EA_HICP_YOY,2.2,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2024-08-01,KZ,national,daily,EXCHANGE_RATE,473.95,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2024-08-01,KZ,national,monthly,EXCHANGE_RATE_AVG,478.28,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2024-08-01,KZ,national,daily,EXCHANGE_RATE_CNY,65.64,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2024-08-01,KZ,national,daily,EXCHANGE_RATE_EUR,513.38,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2024-08-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,524.5997152322444,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
@@ -87764,6 +87856,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-09-01,KZ,national,monthly,DEPOSITS_TOTAL,36203854.0,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-09-01,KZ,national,monthly,DEPOSIT_RATE,13.4,%,nbk,2026-11-25,level,2026-11-25
 2024-09-01,EA,national,monthly,EA_HICP_YOY,1.7,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2024-09-01,KZ,national,monthly,EXCHANGE_RATE_AVG,479.94,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2024-09-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,533.0543183469989,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
 2024-09-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,5.207528511195026,KZT per 1 RUB,nbk,2026-11-25,level,2026-11-25
 2024-09-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,481.7977120187766,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
@@ -88128,6 +88221,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-10-01,EA,national,monthly,EA_HICP_YOY,2.0,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2024-10-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,14.135874,percent,nbk,2026-11-25,level,2026-11-25
 2024-10-01,KZ,national,daily,EXCHANGE_RATE,481.19,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2024-10-01,KZ,national,monthly,EXCHANGE_RATE_AVG,485.71,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2024-10-01,KZ,national,daily,EXCHANGE_RATE_CNY,68.63,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2024-10-01,KZ,national,daily,EXCHANGE_RATE_EUR,538.45,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2024-10-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,529.139902063699,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
@@ -88568,6 +88662,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-11-01,KZ,national,monthly,DEPOSIT_RATE,13.2,%,nbk,2026-11-25,level,2026-11-25
 2024-11-01,EA,national,monthly,EA_HICP_YOY,2.2,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2024-11-01,KZ,national,daily,EXCHANGE_RATE,488.26,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2024-11-01,KZ,national,monthly,EXCHANGE_RATE_AVG,494.92,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2024-11-01,KZ,national,daily,EXCHANGE_RATE_CNY,68.59,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2024-11-01,KZ,national,daily,EXCHANGE_RATE_EUR,530.54,KZT per EUR,nbk,2026-11-25,level,2026-11-25
 2024-11-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,524.306719664216,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
@@ -88899,6 +88994,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-01,KZ,national,monthly,DEPOSITS_TOTAL,38550370.0,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-12-01,KZ,national,monthly,DEPOSIT_RATE,13.2,%,nbk,2026-11-25,level,2026-11-25
 2024-12-01,EA,national,monthly,EA_HICP_YOY,2.4,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2024-12-01,KZ,national,monthly,EXCHANGE_RATE_AVG,519.65,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2024-12-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,544.43809007167,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
 2024-12-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,5.114756720611198,KZT per 1 RUB,nbk,2026-11-25,level,2026-11-25
 2024-12-01,KZ,national,monthly,EXCHANGE_RATE_USD_OTC,522.0710841921002,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
@@ -89438,6 +89534,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,EA,national,monthly,EA_HICP_YOY,2.5,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2025-01-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,14.492312,percent,nbk,2026-11-25,level,2026-11-25
 2025-01-01,KZ,national,daily,EXCHANGE_RATE,525.11,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2025-01-01,KZ,national,monthly,EXCHANGE_RATE_AVG,524.67,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2025-01-01,KZ,national,daily,EXCHANGE_RATE_CNY,71.94,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2025-01-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,71.75782608695653,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2025-01-01,KZ,national,daily,EXCHANGE_RATE_EUR,546.74,KZT per EUR,nbk,2026-11-25,level,2026-11-25
@@ -89871,6 +89968,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-02-01,KZ,national,monthly,DEPOSITS_TOTAL,40402754.0,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-02-01,KZ,national,monthly,DEPOSIT_RATE,13.3,%,nbk,2026-11-25,level,2026-11-25
 2025-02-01,EA,national,monthly,EA_HICP_YOY,2.3,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2025-02-01,KZ,national,monthly,EXCHANGE_RATE_AVG,506.03,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2025-02-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,71.13691099476439,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2025-02-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,520.103468220573,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
 2025-02-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,5.3440145900474505,KZT per 1 RUB,nbk,2026-11-25,level,2026-11-25
@@ -90202,6 +90300,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-03-01,KZ,national,monthly,DEPOSITS_TOTAL,40449631.0,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-03-01,KZ,national,monthly,DEPOSIT_RATE,13.6,%,nbk,2026-11-25,level,2026-11-25
 2025-03-01,EA,national,monthly,EA_HICP_YOY,2.2,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2025-03-01,KZ,national,monthly,EXCHANGE_RATE_AVG,497.99,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2025-03-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,68.47575791855203,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2025-03-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,540.007947303249,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
 2025-03-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,5.824242886030211,KZT per 1 RUB,nbk,2026-11-25,level,2026-11-25
@@ -90577,6 +90676,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-04-01,EA,national,monthly,EA_HICP_YOY,2.2,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2025-04-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,14.981159,percent,nbk,2026-11-25,level,2026-11-25
 2025-04-01,KZ,national,daily,EXCHANGE_RATE,504.44,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2025-04-01,KZ,national,monthly,EXCHANGE_RATE_AVG,514.64,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2025-04-01,KZ,national,daily,EXCHANGE_RATE_CNY,69.55,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2025-04-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,69.47731958762887,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2025-04-01,KZ,national,daily,EXCHANGE_RATE_EUR,545.65,KZT per EUR,nbk,2026-11-25,level,2026-11-25
@@ -91014,6 +91114,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-05-01,KZ,national,monthly,DEPOSIT_RATE,14.2,%,nbk,2026-11-25,level,2026-11-25
 2025-05-01,EA,national,monthly,EA_HICP_YOY,1.9,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2025-05-01,KZ,national,daily,EXCHANGE_RATE,512.34,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2025-05-01,KZ,national,monthly,EXCHANGE_RATE_AVG,511.77,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2025-05-01,KZ,national,daily,EXCHANGE_RATE_CNY,70.53,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2025-05-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,70.49798076923076,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2025-05-01,KZ,national,daily,EXCHANGE_RATE_EUR,582.07,KZT per EUR,nbk,2026-11-25,level,2026-11-25
@@ -91347,6 +91448,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-06-01,KZ,national,monthly,DEPOSITS_TOTAL,41440760.0,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-06-01,KZ,national,monthly,DEPOSIT_RATE,14.2,%,nbk,2026-11-25,level,2026-11-25
 2025-06-01,EA,national,monthly,EA_HICP_YOY,2.0,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2025-06-01,KZ,national,monthly,EXCHANGE_RATE_AVG,514.72,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2025-06-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,71.00583092067168,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2025-06-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,588.4549746797239,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
 2025-06-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,6.520177283332588,KZT per 1 RUB,nbk,2026-11-25,level,2026-11-25
@@ -91726,6 +91828,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-01,EA,national,monthly,EA_HICP_YOY,2.0,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2025-07-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,14.807414,percent,nbk,2026-11-25,level,2026-11-25
 2025-07-01,KZ,national,daily,EXCHANGE_RATE,519.64,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2025-07-01,KZ,national,monthly,EXCHANGE_RATE_AVG,528.81,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2025-07-01,KZ,national,daily,EXCHANGE_RATE_CNY,72.53,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2025-07-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,72.57734513274336,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2025-07-01,KZ,national,daily,EXCHANGE_RATE_EUR,609.23,KZT per EUR,nbk,2026-11-25,level,2026-11-25
@@ -92179,6 +92282,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-08-01,KZ,national,monthly,DEPOSIT_RATE,14.3,%,nbk,2026-11-25,level,2026-11-25
 2025-08-01,EA,national,monthly,EA_HICP_YOY,2.0,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2025-08-01,KZ,national,daily,EXCHANGE_RATE,540.78,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2025-08-01,KZ,national,monthly,EXCHANGE_RATE_AVG,538.95,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2025-08-01,KZ,national,daily,EXCHANGE_RATE_CNY,75.15,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2025-08-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,75.04478613861386,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2025-08-01,KZ,national,daily,EXCHANGE_RATE_EUR,618.65,KZT per EUR,nbk,2026-11-25,level,2026-11-25
@@ -92523,6 +92627,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-09-01,KZ,national,monthly,DEPOSIT_RATE,14.4,%,nbk,2026-11-25,level,2026-11-25
 2025-09-01,EA,national,monthly,EA_HICP_YOY,2.2,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2025-09-01,KZ,national,daily,EXCHANGE_RATE,538.54,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2025-09-01,KZ,national,monthly,EXCHANGE_RATE_AVG,540.7390476190476,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2025-09-01,KZ,national,daily,EXCHANGE_RATE_CNY,75.5,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2025-09-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,75.5608359621451,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2025-09-01,KZ,national,daily,EXCHANGE_RATE_EUR,628.31,KZT per EUR,nbk,2026-11-25,level,2026-11-25
@@ -92901,6 +93006,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-01,EA,national,monthly,EA_HICP_YOY,2.1,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2025-10-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,15.161012,percent,nbk,2026-11-25,level,2026-11-25
 2025-10-01,KZ,national,daily,EXCHANGE_RATE,549.06,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2025-10-01,KZ,national,monthly,EXCHANGE_RATE_AVG,539.92,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2025-10-01,KZ,national,daily,EXCHANGE_RATE_CNY,77.13,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2025-10-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,76.92596109942926,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2025-10-01,KZ,national,daily,EXCHANGE_RATE_EUR,644.87,KZT per EUR,nbk,2026-11-25,level,2026-11-25
@@ -93340,6 +93446,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-11-01,KZ,national,monthly,DEPOSITS_TOTAL,44679044.0,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-11-01,KZ,national,monthly,DEPOSIT_RATE,14.8,%,nbk,2026-11-25,level,2026-11-25
 2025-11-01,EA,national,monthly,EA_HICP_YOY,2.1,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2025-11-01,KZ,national,monthly,EXCHANGE_RATE_AVG,522.72,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2025-11-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,74.59471867007673,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2025-11-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,602.7544223131395,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
 2025-11-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,6.5509847350697825,KZT per 1 RUB,nbk,2026-11-25,level,2026-11-25
@@ -93671,6 +93778,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-01,KZ,national,monthly,DEPOSIT_RATE,14.7,%,nbk,2026-11-25,level,2026-11-25
 2025-12-01,EA,national,monthly,EA_HICP_YOY,2.0,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2025-12-01,KZ,national,daily,EXCHANGE_RATE,512.53,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2025-12-01,KZ,national,monthly,EXCHANGE_RATE_AVG,511.46,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2025-12-01,KZ,national,daily,EXCHANGE_RATE_CNY,72.44,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2025-12-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,72.60645569620253,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2025-12-01,KZ,national,daily,EXCHANGE_RATE_EUR,592.43,KZT per EUR,nbk,2026-11-25,level,2026-11-25
@@ -94211,6 +94319,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,quarterly,EMPLOYED_QUARTERLY,9392025.0,persons,bns,2026-11-25,level,2026-11-25
 2026-01-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,15.518529,percent,nbk,2026-11-25,level,2026-11-25
 2026-01-01,KZ,national,daily,EXCHANGE_RATE,505.53,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2026-01-01,KZ,national,monthly,EXCHANGE_RATE_AVG,507.64,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2026-01-01,KZ,national,daily,EXCHANGE_RATE_CNY,72.33,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2026-01-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,72.1207843137255,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2026-01-01,KZ,national,daily,EXCHANGE_RATE_EUR,593.44,KZT per EUR,nbk,2026-11-25,level,2026-11-25
@@ -94653,6 +94762,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-02-01,KZ,national,monthly,DEPOSITS_TOTAL,46163278.0,million KZT,nbk,2026-11-25,level,2026-11-25
 2026-02-01,KZ,national,monthly,DEPOSIT_RATE,15.1,%,nbk,2026-11-25,level,2026-11-25
 2026-02-01,EA,national,monthly,EA_HICP_YOY,1.9,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2026-02-01,KZ,national,monthly,EXCHANGE_RATE_AVG,495.89,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2026-02-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,72.15193004063345,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2026-02-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,586.2227253958952,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
 2026-02-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,6.427722712187114,KZT per 1 RUB,nbk,2026-11-25,level,2026-11-25
@@ -94986,6 +95096,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-01,KZ,national,monthly,DEPOSITS_TOTAL,46179214.0,million KZT,nbk,2026-11-25,level,2026-11-25
 2026-03-01,KZ,national,monthly,DEPOSIT_RATE,15.0,%,nbk,2026-11-25,level,2026-11-25
 2026-03-01,EA,national,monthly,EA_HICP_YOY,2.6,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2026-03-01,KZ,national,monthly,EXCHANGE_RATE_AVG,489.31,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2026-03-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,72.7264496124031,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2026-03-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,564.675228343441,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
 2026-03-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,5.9527340049196615,KZT per 1 RUB,nbk,2026-11-25,level,2026-11-25
@@ -95368,6 +95479,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-01,KZ,national,quarterly,EMPLOYED_QUARTERLY,9399907.0,persons,bns,2026-11-25,level,2026-11-25
 2026-04-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,15.786082,percent,nbk,2026-11-25,level,2026-11-25
 2026-04-01,KZ,national,daily,EXCHANGE_RATE,478.77,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2026-04-01,KZ,national,monthly,EXCHANGE_RATE_AVG,469.15,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2026-04-01,KZ,national,daily,EXCHANGE_RATE_CNY,69.31,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2026-04-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,69.29591089108911,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2026-04-01,KZ,national,daily,EXCHANGE_RATE_EUR,548.62,KZT per EUR,nbk,2026-11-25,level,2026-11-25
@@ -95805,6 +95917,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-01,KZ,national,monthly,DEPOSIT_RATE,14.8,%,nbk,2026-11-25,level,2026-11-25
 2026-05-01,EA,national,monthly,EA_HICP_YOY,3.2,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2026-05-01,KZ,national,daily,EXCHANGE_RATE,462.91,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2026-05-01,KZ,national,monthly,EXCHANGE_RATE_AVG,469.52,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2026-05-01,KZ,national,daily,EXCHANGE_RATE_CNY,67.82,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2026-05-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,67.70560153815815,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2026-05-01,KZ,national,daily,EXCHANGE_RATE_EUR,542.16,KZT per EUR,nbk,2026-11-25,level,2026-11-25
@@ -96165,6 +96278,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-01,KZ,national,monthly,DEPOSIT_RATE,14.7,%,nbk,2026-11-25,level,2026-11-25
 2026-06-01,EA,national,monthly,EA_HICP_YOY,2.8,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2026-06-01,KZ,national,daily,EXCHANGE_RATE,485.95,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2026-06-01,KZ,national,monthly,EXCHANGE_RATE_AVG,487.85,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2026-06-01,KZ,national,daily,EXCHANGE_RATE_CNY,71.81,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2026-06-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,71.76220675944334,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2026-06-01,KZ,national,daily,EXCHANGE_RATE_EUR,565.74,KZT per EUR,nbk,2026-11-25,level,2026-11-25
@@ -96585,6 +96699,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-01,KZ,national,quarterly,EMPLOYED_QUARTERLY,9403394.0,persons,bns,2026-11-25,level,2026-11-25
 2026-07-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,16.614375,percent,nbk,2026-11-25,level,2026-11-25
 2026-07-01,KZ,national,daily,EXCHANGE_RATE,480.72,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2026-07-01,KZ,national,monthly,EXCHANGE_RATE_AVG,472.13,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2026-07-01,KZ,national,daily,EXCHANGE_RATE_CNY,70.85,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2026-07-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,70.84557080799306,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2026-07-01,KZ,national,daily,EXCHANGE_RATE_EUR,548.07,KZT per EUR,nbk,2026-11-25,level,2026-11-25
@@ -97048,6 +97163,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-08-01,KZ,national,monthly,DEPOSITS_TOTAL,50902136.0,million KZT,nbk,2026-11-25,level,2026-11-25
 2026-08-01,KZ,national,monthly,DEPOSIT_RATE,14.6,%,nbk,2026-11-25,level,2026-11-25
 2026-08-01,EA,national,monthly,EA_HICP_YOY,3.2,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
+2026-08-01,KZ,national,monthly,EXCHANGE_RATE_AVG,464.55,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2026-08-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,70.2015921563845,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2026-08-01,KZ,national,monthly,EXCHANGE_RATE_EUR_OTC,537.5748335460373,KZT per 1 EUR,nbk,2026-11-25,level,2026-11-25
 2026-08-01,KZ,national,monthly,EXCHANGE_RATE_RUB_OTC,5.4733127000653585,KZT per 1 RUB,nbk,2026-11-25,level,2026-11-25
@@ -97418,6 +97534,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-09-01,KZ,national,monthly,DEPOSIT_RATE,14.7,%,nbk,2026-11-25,level,2026-11-25
 2026-09-01,EA,national,monthly,EA_HICP_YOY,3.8,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2026-09-01,KZ,national,daily,EXCHANGE_RATE,462.31,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2026-09-01,KZ,national,monthly,EXCHANGE_RATE_AVG,449.75,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2026-09-01,KZ,national,daily,EXCHANGE_RATE_CNY,68.8,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2026-09-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,68.80233070866142,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2026-09-01,KZ,national,daily,EXCHANGE_RATE_EUR,536.09,KZT per EUR,nbk,2026-11-25,level,2026-11-25
@@ -97785,6 +97902,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-10-01,EA,national,monthly,EA_HICP_YOY,4.0,"% change, same month previous year",ecb,2026-11-25,level,2026-11-25
 2026-10-01,KZ,national,quarterly,ENTERPRISE_DEBT_BURDEN,16.143018,percent,nbk,2026-11-25,level,2026-11-25
 2026-10-01,KZ,national,daily,EXCHANGE_RATE,440.86,KZT per 1 USD,nbk,2026-11-25,level,2026-11-25
+2026-10-01,KZ,national,monthly,EXCHANGE_RATE_AVG,450.62,KZT per 1 USD,nbk,2026-11-26,level,2026-11-26
 2026-10-01,KZ,national,daily,EXCHANGE_RATE_CNY,65.76,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2026-10-01,KZ,national,monthly,EXCHANGE_RATE_CNY_KASE,65.56936406863838,KZT per CNY,nbk,2026-11-25,level,2026-11-25
 2026-10-01,KZ,national,daily,EXCHANGE_RATE_EUR,500.77,KZT per EUR,nbk,2026-11-25,level,2026-11-25
