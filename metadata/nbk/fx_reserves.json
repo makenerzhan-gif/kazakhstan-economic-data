@@ -12,7 +12,7 @@
   "methodology": "USD million. Gross reserves (monetary gold + FX assets), no breakdown by component. 1995-02 .. 2017-12 from NBK's site table (data/reference/nbk_reserves_history.csv, whole USD million), equal to the API rounded on all shared months.",
   "publication_date": null,
   "last_update_date": "2026-11-26",
-  "download_date": "2026-11-25",
+  "download_date": "2026-11-26",
   "period_start": "1995-02-01",
   "period_end": "2026-10-01",
   "next_update_date": null,
