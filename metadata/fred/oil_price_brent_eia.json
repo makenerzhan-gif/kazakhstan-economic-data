@@ -1,0 +1,21 @@
+{
+  "source": "fred",
+  "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILBRENTEU",
+  "dataset_id": "FRED/DCOILBRENTEU",
+  "indicator_id": "OIL_PRICE_BRENT_EIA",
+  "indicator_name": "Crude oil, Brent spot FOB Europe (EIA), monthly average",
+  "description": "Цена нефти Brent, спот (EIA), среднее за месяц",
+  "frequency": "monthly",
+  "unit": "USD per barrel",
+  "currency": "",
+  "geography": "WLD",
+  "methodology": "USD per barrel, Europe Brent spot price FOB (EIA), monthly average of trading days. FRED series DCOILBRENTEU.",
+  "publication_date": null,
+  "last_update_date": "2026-11-26",
+  "download_date": "2026-11-26",
+  "period_start": "1987-05-01",
+  "period_end": "2026-10-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

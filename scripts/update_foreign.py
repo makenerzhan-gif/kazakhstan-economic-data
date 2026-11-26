@@ -29,6 +29,7 @@ FETCHERS = {
     "US_TREASURY_10Y": foreign_fetchers.fetch_us_treasury_10y,
     "US_CPI": foreign_fetchers.fetch_us_cpi,
     "US_GDP_REAL": foreign_fetchers.fetch_us_gdp_real,
+    "OIL_PRICE_BRENT_EIA": foreign_fetchers.fetch_oil_price_brent_eia,
     "VIX": foreign_fetchers.fetch_vix,
     "USD_BROAD_INDEX": foreign_fetchers.fetch_usd_broad_index,
     "USD_EME_INDEX": foreign_fetchers.fetch_usd_eme_index,

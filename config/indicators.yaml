@@ -6593,6 +6593,19 @@ indicators:
     observation_type: period_total
     observation_evidence: "FRED GDPC1 — поток за квартал в годовом выражении"
 
+  - id: OIL_PRICE_BRENT_EIA
+    name_ru: "Цена нефти Brent, спот (EIA), среднее за месяц"
+    name_en: "Crude oil, Brent spot FOB Europe (EIA), monthly average"
+    agency: fred
+    frequency: monthly
+    unit: "USD per barrel"
+    category: international
+    country: WLD
+    source_status: confirmed
+    observation_type: period_average
+    observation_evidence: "FRED DCOILBRENTEU — дневной спот EIA, среднее за месяц, расчёт репозитория"
+    source_note: "Added 2026-11-26 for kz-model-suite (panel concept brent, until then KZ_Macro_DB OIL_BRENT from the same FRED series). Differs from the World Bank Pink Sheet OIL_PRICE_BRENT (median 0.4 %, up to 27 % in 2020-04)."
+
   - id: VIX
     name_ru: "Индекс волатильности VIX (CBOE), среднее за месяц"
     name_en: "CBOE Volatility Index (VIX), monthly average"

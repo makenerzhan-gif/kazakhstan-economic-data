@@ -250,6 +250,8 @@ FRED_SERIES = {
                                           "(rebased at comprehensive revisions)."),
     # Global financial conditions (added 2026-11-10): daily or weekly at FRED, stored as the mean of
     # the month's observations; the current, incomplete month is left out.
+    "OIL_PRICE_BRENT_EIA": ("DCOILBRENTEU", "monthly_mean", "USD per barrel, Europe Brent spot price FOB (EIA), "
+                                                         "monthly average of trading days."),
     "VIX": ("VIXCLS", "monthly_mean", "Index, CBOE Volatility Index (VIX), close, monthly average of trading days."),
     "USD_BROAD_INDEX": ("DTWEXBGS", "monthly_mean", "Index Jan 2006 = 100, Federal Reserve nominal broad U.S. dollar "
                                                     "index (goods and services), monthly average; a rise = stronger dollar."),
@@ -313,6 +315,10 @@ def fetch_us_cpi() -> tuple[list[dict], dict]:
 
 def fetch_us_gdp_real() -> tuple[list[dict], dict]:
     return _fetch_fred("US_GDP_REAL")
+
+
+def fetch_oil_price_brent_eia() -> tuple[list[dict], dict]:
+    return _fetch_fred("OIL_PRICE_BRENT_EIA")
 
 
 def fetch_vix() -> tuple[list[dict], dict]:
