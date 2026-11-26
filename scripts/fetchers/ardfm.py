@@ -58,10 +58,11 @@ import requests
 from pypdf import PdfReader
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from lib import raw_store, validation  # noqa: E402
+from lib import periods, raw_store, validation  # noqa: E402
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; KZEconDataPipeline/1.0; +https://github.com/)"}
 SOURCE = "ardfm"
+PROCESSED_ROOT = Path(__file__).resolve().parents[2] / "data" / "processed" / SOURCE
 GOV_KZ_BASE = "https://www.gov.kz"
 LISTING_URL = f"{GOV_KZ_BASE}/api/v1/public/content-manager/documents"
 BANKING_TITLE_FILTER = "Текущее состояние банковского сектора"
@@ -242,6 +243,15 @@ def _column_dates(table: str, indicator_id: str) -> list[tuple[int, int]]:
             break
     return found
 
+def _date_basis(indicator_id: str) -> str | None:
+    import yaml
+    path = Path(__file__).resolve().parents[2] / "config" / "indicators.yaml"
+    for ind in yaml.safe_load(path.read_text(encoding="utf-8"))["indicators"]:
+        if ind["id"] == indicator_id:
+            return ind.get("date_basis")
+    return None
+
+
 def _fetch_banking_series(table_no: int, label: str, expect: int, value_index: int,
                           indicator_id: str, note: str, unit: str,
                           date_index: int | None = None,
@@ -253,8 +263,7 @@ def _fetch_banking_series(table_no: int, label: str, expect: int, value_index: i
     the table's own header dates that column belongs to; when None the
     document's reporting date is used (tables that print a single column).
     """
-    processed = (Path(__file__).resolve().parents[2] / "data" / "processed" / SOURCE
-                 / f"{indicator_id.lower()}.csv")
+    processed = PROCESSED_ROOT / f"{indicator_id.lower()}.csv"
     existing: dict[str, float] = {}
     if processed.exists():
         import csv as _csv
@@ -264,6 +273,14 @@ def _fetch_banking_series(table_no: int, label: str, expect: int, value_index: i
                     existing[row["date"]] = float(row["value"])
                 except (KeyError, TypeError, ValueError):
                     continue
+
+    # update_ardfm.py relabels the returned dates with the indicator's date_basis (a bulletin «на
+    # 01.07.2026» -> June). The stored history already carries the covered period, so it goes back
+    # to the bulletin's dating here; merged unshifted, it was shifted again on every run and each
+    # run added a month at the front (BANK_NET_INCOME grew from 6 to 66 rows of the same 795.9
+    # between 2026-09-26 and 2026-11-25, and every month after April took the next month's value).
+    if _date_basis(indicator_id) == periods.NEXT_PERIOD_START:
+        existing = {periods.shift_forward_one_period(d, "monthly"): v for d, v in existing.items()}
 
     fetched: dict[str, float] = {}
     inspected = 0
