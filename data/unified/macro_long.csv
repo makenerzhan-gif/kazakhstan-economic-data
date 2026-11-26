@@ -74534,7 +74534,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-04-30,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,1410464.82,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2021-04-30,KZ,national,daily,SWAP_1D,8.103099138840543,% per annum,kase,2026-11-25,level,2026-11-25
 2021-04-30,KZ,national,daily,TONIA,8.38,% per annum,kase,2026-11-25,level,2026-11-25
-2021-05-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2021-05-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,7642994.718,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-05-01,KZ,national,monthly,BANK_LOANS_STB_FX,1787988.279,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-05-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,7459091.667,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -74544,8 +74543,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-05-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,12909825.281,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-05-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,2192261.104,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-05-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,15102086.385000002,million KZT,nbk,2026-11-25,level,2026-11-25
-2021-05-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2021-05-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2021-05-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.6,index,nbk,2026-11-25,level,2026-11-25
 2021-05-01,BLR,national,monthly,BY_CPI_YOY,109.4,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2021-05-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,508258.431,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -74821,7 +74818,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-05-31,KZ,national,irregular,STATE_NON_OIL_DEFICIT_YTD,-2783109.983926,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2021-05-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,1661764.82,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2021-05-31,KZ,national,daily,TONIA,8.11,% per annum,kase,2026-11-25,level,2026-11-25
-2021-06-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2021-06-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,7951378.735,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-06-01,KZ,national,monthly,BANK_LOANS_STB_FX,2013094.225,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-06-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,7689215.439,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -74831,9 +74827,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-06-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,13412794.291,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-06-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,2227799.883,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-06-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,15640594.173999999,million KZT,nbk,2026-11-25,level,2026-11-25
-2021-06-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2021-06-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2021-06-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2021-06-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.8,index,nbk,2026-11-25,level,2026-11-25
 2021-06-01,BLR,national,monthly,BY_CPI_YOY,109.9,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2021-06-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,546168.812,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -75134,7 +75127,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-06-30,KZ,national,daily,SWAP_1D,8.169434451327433,% per annum,kase,2026-11-25,level,2026-11-25
 2021-06-30,KZ,national,daily,TONIA,8.44,% per annum,kase,2026-11-25,level,2026-11-25
 2021-07-01,KZ,national,quarterly,AVG_WAGE_1T_QUARTERLY,243667.0,KZT,bns,2026-11-25,level,2026-11-25
-2021-07-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2021-07-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,7728432.359,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-07-01,KZ,national,monthly,BANK_LOANS_STB_FX,1928775.097,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-07-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,7993088.313,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -75144,11 +75136,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-07-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,13457869.444,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-07-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,2263651.228,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-07-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,15721520.671999998,million KZT,nbk,2026-11-25,level,2026-11-25
-2021-07-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2021-07-01,KZ,national,quarterly,BANK_ROA,4.11,%,nbk,2026-11-25,level,2026-11-25
-2021-07-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
 2021-07-01,KZ,national,quarterly,BANK_ROE,29.9,%,nbk,2026-11-25,level,2026-11-25
-2021-07-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2021-07-01,KZ,national,quarterly,BOP_GOODS_BALANCE,5111.522633,million USD,nbk,2026-11-25,level,2026-11-25
 2021-07-01,KZ,national,quarterly,BOP_GOODS_EXPORTS,16202.737166290006,USD million,nbk,2026-11-26,level,2026-11-26
 2021-07-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,-0.375566,% of GDP,nbk,2026-11-25,level,2026-11-25
@@ -75548,7 +75537,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-07-31,KZ,national,irregular,STATE_NET_BUDGET_LENDING_YTD,184982.76247232,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2021-07-31,KZ,national,irregular,STATE_NON_OIL_DEFICIT_YTD,-4691238.356448,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2021-07-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,2605764.82,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2021-08-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2021-08-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,7738408.285,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-08-01,KZ,national,monthly,BANK_LOANS_STB_FX,1909281.6789999998,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-08-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,8278059.647000001,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -75558,9 +75546,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-08-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,13737721.378,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-08-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,2278746.554,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-08-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,16016467.932,million KZT,nbk,2026-11-25,level,2026-11-25
-2021-08-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2021-08-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2021-08-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2021-08-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.4,index,nbk,2026-11-25,level,2026-11-25
 2021-08-01,BLR,national,monthly,BY_CPI_YOY,109.8,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2021-08-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,591110.202,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -75850,7 +75835,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-08-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,3001271.42,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2021-08-31,KZ,national,daily,SWAP_1D,9.047037535115894,% per annum,kase,2026-11-25,level,2026-11-25
 2021-08-31,KZ,national,daily,TONIA,9.31,% per annum,kase,2026-11-25,level,2026-11-25
-2021-09-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2021-09-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,7838124.921,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-09-01,KZ,national,monthly,BANK_LOANS_STB_FX,1895838.646,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-09-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,8618333.352999998,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -75860,9 +75844,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-09-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,14167735.521,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-09-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,2288722.753,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-09-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,16456458.273999998,million KZT,nbk,2026-11-25,level,2026-11-25
-2021-09-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2021-09-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2021-09-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2021-09-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.8,index,nbk,2026-11-25,level,2026-11-25
 2021-09-01,BLR,national,monthly,BY_CPI_YOY,110.2,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2021-09-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,604554.82,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -76173,7 +76154,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-09-30,KZ,national,daily,SWAP_1D,9.076008808275818,% per annum,kase,2026-11-25,level,2026-11-25
 2021-09-30,KZ,national,daily,TONIA,8.98,% per annum,kase,2026-11-25,level,2026-11-25
 2021-10-01,KZ,national,quarterly,AVG_WAGE_1T_QUARTERLY,275580.0,KZT,bns,2026-11-25,level,2026-11-25
-2021-10-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2021-10-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,8019941.166000001,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-10-01,KZ,national,monthly,BANK_LOANS_STB_FX,1934426.786,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-10-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,8944012.697999999,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -76183,11 +76163,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-10-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,14623944.782,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-10-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,2340009.082,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-10-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,16963953.863999996,million KZT,nbk,2026-11-25,level,2026-11-25
-2021-10-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2021-10-01,KZ,national,quarterly,BANK_ROA,4.23,%,nbk,2026-11-25,level,2026-11-25
-2021-10-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
 2021-10-01,KZ,national,quarterly,BANK_ROE,30.65,%,nbk,2026-11-25,level,2026-11-25
-2021-10-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2021-10-01,KZ,national,quarterly,BOP_GOODS_BALANCE,7549.247832,million USD,nbk,2026-11-25,level,2026-11-25
 2021-10-01,KZ,national,quarterly,BOP_GOODS_EXPORTS,19336.218850319998,USD million,nbk,2026-11-26,level,2026-11-26
 2021-10-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,5.291228,% of GDP,nbk,2026-11-25,level,2026-11-25
@@ -76594,7 +76571,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-10-31,KZ,national,irregular,STATE_NET_BUDGET_LENDING_YTD,338661.75230788,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2021-10-31,KZ,national,irregular,STATE_NON_OIL_DEFICIT_YTD,-6580753.142746,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2021-10-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,3821471.42,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2021-11-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2021-11-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,7945751.811,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-11-01,KZ,national,monthly,BANK_LOANS_STB_FX,1791105.933,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-11-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,9256066.892000003,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -76604,9 +76580,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-11-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,14846226.103,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-11-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,2355592.6,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-11-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,17201818.703,million KZT,nbk,2026-11-25,level,2026-11-25
-2021-11-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2021-11-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2021-11-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2021-11-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.8,index,nbk,2026-11-25,level,2026-11-25
 2021-11-01,BLR,national,monthly,BY_CPI_YOY,110.3,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2021-11-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,611333.477,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -76904,7 +76877,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-11-30,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,4131471.42,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2021-11-30,KZ,national,daily,SWAP_1D,11.359922432007641,% per annum,kase,2026-11-25,level,2026-11-25
 2021-11-30,KZ,national,daily,TONIA,10.57,% per annum,kase,2026-11-25,level,2026-11-25
-2021-12-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2021-12-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,8224522.67698643,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-12-01,KZ,national,monthly,BANK_LOANS_STB_FX,1861714.9838917102,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-12-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,9613713.8910626,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -76914,9 +76886,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-12-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,15435218.876555162,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-12-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,2403017.6904021366,million KZT,nbk,2026-11-25,level,2026-11-25
 2021-12-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,17838236.568049032,million KZT,nbk,2026-11-25,level,2026-11-25
-2021-12-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2021-12-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2021-12-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2021-12-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.3,index,nbk,2026-11-25,level,2026-11-25
 2021-12-01,BLR,national,monthly,BY_CPI_YOY,110.0,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2021-12-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,642230.527,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -77385,7 +77354,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-12-31,KZ,national,annual,WORKERS_USING_COMPUTERS,1300433.0,persons,bns,2026-11-25,level,2026-11-25
 2021-12-31,KZ,national,annual,WORKERS_USING_INTERNET,1090655.0,persons,bns,2026-11-25,level,2026-11-25
 2022-01-01,KZ,national,quarterly,AVG_WAGE_1T_QUARTERLY,285433.0,KZT,bns,2026-11-25,level,2026-11-25
-2022-01-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2022-01-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,8460104.441362165,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-01-01,KZ,national,monthly,BANK_LOANS_STB_FX,1909497.0907166896,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-01-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,10037548.192136724,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -77395,11 +77363,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-01-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,16030490.39900402,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-01-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,2467162.234494845,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-01-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,18497652.633498922,million KZT,nbk,2026-11-25,level,2026-11-25
-2022-01-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2022-01-01,KZ,national,quarterly,BANK_ROA,4.33,%,nbk,2026-11-25,level,2026-11-25
-2022-01-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
 2022-01-01,KZ,national,quarterly,BANK_ROE,31.32,%,nbk,2026-11-25,level,2026-11-25
-2022-01-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2022-01-01,KZ,national,quarterly,BOP_GOODS_BALANCE,12147.66415,million USD,nbk,2026-11-25,level,2026-11-25
 2022-01-01,KZ,national,quarterly,BOP_GOODS_EXPORTS,21943.709806389725,USD million,nbk,2026-11-26,level,2026-11-26
 2022-01-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,8.126961,% of GDP,nbk,2026-11-25,level,2026-11-25
@@ -77794,7 +77759,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-01-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,302200.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2022-01-31,KZ,national,daily,SWAP_1D,10.77620882883261,% per annum,kase,2026-11-25,level,2026-11-25
 2022-01-31,KZ,national,daily,TONIA,11.02,% per annum,kase,2026-11-25,level,2026-11-25
-2022-02-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2022-02-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,8414322.852020279,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-02-01,KZ,national,monthly,BANK_LOANS_STB_FX,1796865.9123645106,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-02-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,10088480.224032307,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -77804,9 +77768,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-02-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,15625705.6230532,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-02-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,2877097.452999385,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-02-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,18502803.17605069,million KZT,nbk,2026-11-25,level,2026-11-25
-2022-02-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2022-02-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2022-02-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2022-02-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.2,index,nbk,2026-11-25,level,2026-11-25
 2022-02-01,BLR,national,monthly,BY_CPI_YOY,109.99,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2022-02-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,580878.423,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -78097,7 +78058,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-02-28,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,565700.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2022-02-28,KZ,national,daily,SWAP_1D,15.465804522430485,% per annum,kase,2026-11-25,level,2026-11-25
 2022-02-28,KZ,national,daily,TONIA,14.47,% per annum,kase,2026-11-25,level,2026-11-25
-2022-03-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2022-03-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,8793525.162037317,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-03-01,KZ,national,monthly,BANK_LOANS_STB_FX,2029374.6726919,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-03-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,10312078.434471436,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -78107,9 +78067,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-03-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,15941674.151651444,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-03-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3163929.4448573105,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-03-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,19105603.596508753,million KZT,nbk,2026-11-25,level,2026-11-25
-2022-03-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2022-03-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2022-03-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2022-03-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,48.2,index,nbk,2026-11-25,level,2026-11-25
 2022-03-01,BLR,national,monthly,BY_CPI_YOY,115.9,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2022-03-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,658883.45,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -78418,7 +78375,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-03-31,KZ,national,daily,SWAP_1D,14.878985915594852,% per annum,kase,2026-11-25,level,2026-11-25
 2022-03-31,KZ,national,daily,TONIA,13.7,% per annum,kase,2026-11-25,level,2026-11-25
 2022-04-01,KZ,national,quarterly,AVG_WAGE_1T_QUARTERLY,312011.0,KZT,bns,2026-11-25,level,2026-11-25
-2022-04-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2022-04-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,8783034.300072595,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-04-01,KZ,national,monthly,BANK_LOANS_STB_FX,1867455.4411948891,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-04-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,10442453.210863221,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -78428,11 +78384,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-04-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,15971936.77020185,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-04-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3253550.740733961,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-04-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,19225487.510935817,million KZT,nbk,2026-11-25,level,2026-11-25
-2022-04-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2022-04-01,KZ,national,quarterly,BANK_ROA,2.4,%,nbk,2026-11-25,level,2026-11-25
-2022-04-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
 2022-04-01,KZ,national,quarterly,BANK_ROE,15.55,%,nbk,2026-11-25,level,2026-11-25
-2022-04-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2022-04-01,KZ,national,quarterly,BOP_GOODS_BALANCE,8812.823967,million USD,nbk,2026-11-25,level,2026-11-25
 2022-04-01,KZ,national,quarterly,BOP_GOODS_EXPORTS,21117.968165655682,USD million,nbk,2026-11-26,level,2026-11-26
 2022-04-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,1.548226,% of GDP,nbk,2026-11-25,level,2026-11-25
@@ -78847,7 +78800,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-04-30,KZ,national,irregular,STATE_NET_BUDGET_LENDING_YTD,196283.00439713,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2022-04-30,KZ,national,irregular,STATE_NON_OIL_DEFICIT_YTD,-1870023.77319556,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2022-04-30,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,1495700.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2022-05-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2022-05-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,8744065.179088341,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-05-01,KZ,national,monthly,BANK_LOANS_STB_FX,1761974.8500148489,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-05-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,10655467.270343231,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -78857,9 +78809,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-05-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,16047381.349385442,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-05-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3352151.10004613,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-05-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,19399532.449431576,million KZT,nbk,2026-11-25,level,2026-11-25
-2022-05-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2022-05-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2022-05-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2022-05-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.1,index,nbk,2026-11-25,level,2026-11-25
 2022-05-01,BLR,national,monthly,BY_CPI_YOY,117.0,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2022-05-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,716664.535,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -79153,7 +79102,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-05-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,1865700.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2022-05-31,KZ,national,daily,SWAP_1D,15.82314435764772,% per annum,kase,2026-11-25,level,2026-11-25
 2022-05-31,KZ,national,daily,TONIA,14.89,% per annum,kase,2026-11-25,level,2026-11-25
-2022-06-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2022-06-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,8633050.39573248,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-06-01,KZ,national,monthly,BANK_LOANS_STB_FX,1614561.8293493807,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-06-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,10888319.314274454,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -79163,9 +79111,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-06-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,16140450.197159426,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-06-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3380919.512847509,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-06-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,19521369.710006934,million KZT,nbk,2026-11-25,level,2026-11-25
-2022-06-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2022-06-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2022-06-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2022-06-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,48.6,index,nbk,2026-11-25,level,2026-11-25
 2022-06-01,BLR,national,monthly,BY_CPI_YOY,117.55,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2022-06-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,745611.922,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -79476,7 +79421,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-06-30,KZ,national,daily,SWAP_1D,14.475720866968325,% per annum,kase,2026-11-25,level,2026-11-25
 2022-06-30,KZ,national,daily,TONIA,13.39,% per annum,kase,2026-11-25,level,2026-11-25
 2022-07-01,KZ,national,quarterly,AVG_WAGE_1T_QUARTERLY,299782.0,KZT,bns,2026-11-25,level,2026-11-25
-2022-07-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2022-07-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,8841591.030048946,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-07-01,KZ,national,monthly,BANK_LOANS_STB_FX,1804867.9393206902,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-07-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,11209211.543008031,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -79486,11 +79430,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-07-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,16599820.738997232,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-07-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3450981.834059672,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-07-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,20050802.573056906,million KZT,nbk,2026-11-25,level,2026-11-25
-2022-07-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2022-07-01,KZ,national,quarterly,BANK_ROA,3.59,%,nbk,2026-11-25,level,2026-11-25
-2022-07-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
 2022-07-01,KZ,national,quarterly,BANK_ROE,25.74,%,nbk,2026-11-25,level,2026-11-25
-2022-07-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2022-07-01,KZ,national,quarterly,BOP_GOODS_BALANCE,7887.212171,million USD,nbk,2026-11-25,level,2026-11-25
 2022-07-01,KZ,national,quarterly,BOP_GOODS_EXPORTS,21363.163136269333,USD million,nbk,2026-11-26,level,2026-11-26
 2022-07-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,-4.500662,% of GDP,nbk,2026-11-25,level,2026-11-25
@@ -79906,7 +79847,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-07-31,KZ,national,irregular,STATE_NET_BUDGET_LENDING_YTD,275464.46122758,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2022-07-31,KZ,national,irregular,STATE_NON_OIL_DEFICIT_YTD,-4498310.32216048,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2022-07-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,2960700.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2022-08-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2022-08-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,8768084.601999778,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-08-01,KZ,national,monthly,BANK_LOANS_STB_FX,1737839.5663778693,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-08-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,11594062.504207658,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -79916,9 +79856,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-08-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,16992968.517937634,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-08-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3369178.5882698023,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-08-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,20362147.106207438,million KZT,nbk,2026-11-25,level,2026-11-25
-2022-08-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2022-08-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2022-08-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2022-08-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,48.4,index,nbk,2026-11-25,level,2026-11-25
 2022-08-01,BLR,national,monthly,BY_CPI_YOY,117.9,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2022-08-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,788129.278,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -80227,7 +80164,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-08-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,3345100.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2022-08-31,KZ,national,daily,SWAP_1D,16.085464331203607,% per annum,kase,2026-11-25,level,2026-11-25
 2022-08-31,KZ,national,daily,TONIA,15.13,% per annum,kase,2026-11-25,level,2026-11-25
-2022-09-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2022-09-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,8761918.749436755,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-09-01,KZ,national,monthly,BANK_LOANS_STB_FX,1695205.7027160102,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-09-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,11919415.351000251,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -80237,9 +80173,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-09-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,17294139.436863344,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-09-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3387194.663573664,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-09-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,20681334.100437008,million KZT,nbk,2026-11-25,level,2026-11-25
-2022-09-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2022-09-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2022-09-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2022-09-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,48.6,index,nbk,2026-11-25,level,2026-11-25
 2022-09-01,BLR,national,monthly,BY_CPI_YOY,117.4,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2022-09-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,790539.051,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -80551,7 +80484,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-09-30,KZ,national,daily,SWAP_1D,15.815463326221389,% per annum,kase,2026-11-25,level,2026-11-25
 2022-09-30,KZ,national,daily,TONIA,14.68,% per annum,kase,2026-11-25,level,2026-11-25
 2022-10-01,KZ,national,quarterly,AVG_WAGE_1T_QUARTERLY,338715.0,KZT,bns,2026-11-25,level,2026-11-25
-2022-10-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2022-10-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,8903379.262146464,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-10-01,KZ,national,monthly,BANK_LOANS_STB_FX,1768959.0805741712,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-10-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,12197818.461381178,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -80561,11 +80493,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-10-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,17571979.03613883,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-10-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3529218.687388827,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-10-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,21101197.723527677,million KZT,nbk,2026-11-25,level,2026-11-25
-2022-10-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2022-10-01,KZ,national,quarterly,BANK_ROA,4.2,%,nbk,2026-11-25,level,2026-11-25
-2022-10-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
 2022-10-01,KZ,national,quarterly,BANK_ROE,30.72,%,nbk,2026-11-25,level,2026-11-25
-2022-10-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2022-10-01,KZ,national,quarterly,BOP_GOODS_BALANCE,6149.454116,million USD,nbk,2026-11-25,level,2026-11-25
 2022-10-01,KZ,national,quarterly,BOP_GOODS_EXPORTS,21205.577791755906,USD million,nbk,2026-11-26,level,2026-11-26
 2022-10-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,0.434229,% of GDP,nbk,2026-11-25,level,2026-11-25
@@ -80975,7 +80904,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-10-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,3976600.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2022-10-31,KZ,national,daily,SWAP_1D,16.755612648106904,% per annum,kase,2026-11-25,level,2026-11-25
 2022-10-31,KZ,national,daily,TONIA,15.41,% per annum,kase,2026-11-25,level,2026-11-25
-2022-11-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2022-11-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,9003585.104824077,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-11-01,KZ,national,monthly,BANK_LOANS_STB_FX,1757276.03485176,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-11-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,12477414.54758871,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -80985,9 +80913,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-11-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,17846501.555249523,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-11-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3634498.097163295,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-11-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,21480999.652412802,million KZT,nbk,2026-11-25,level,2026-11-25
-2022-11-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2022-11-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2022-11-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2022-11-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.1,index,nbk,2026-11-25,level,2026-11-25
 2022-11-01,BLR,national,monthly,BY_CPI_YOY,113.3,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2022-11-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,790377.017,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -81290,7 +81215,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-11-30,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,4129600.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2022-11-30,KZ,national,daily,SWAP_1D,16.898273402554604,% per annum,kase,2026-11-25,level,2026-11-25
 2022-11-30,KZ,national,daily,TONIA,16.92,% per annum,kase,2026-11-25,level,2026-11-25
-2022-12-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2022-12-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,9266498.920020169,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-12-01,KZ,national,monthly,BANK_LOANS_STB_FX,1801291.712952011,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-12-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,12947014.93769951,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -81300,9 +81224,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-12-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,18514802.342151508,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-12-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3698711.5155681632,million KZT,nbk,2026-11-25,level,2026-11-25
 2022-12-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,22213513.857719637,million KZT,nbk,2026-11-25,level,2026-11-25
-2022-12-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2022-12-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2022-12-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2022-12-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.0,index,nbk,2026-11-25,level,2026-11-25
 2022-12-01,BLR,national,monthly,BY_CPI_YOY,112.8,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2022-12-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,858781.423,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -81783,7 +81704,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-12-31,KZ,national,annual,WORKERS_USING_COMPUTERS,1262585.0,persons,bns,2026-11-25,level,2026-11-25
 2022-12-31,KZ,national,annual,WORKERS_USING_INTERNET,1110667.0,persons,bns,2026-11-25,level,2026-11-25
 2023-01-01,KZ,national,quarterly,AVG_WAGE_1T_QUARTERLY,340556.0,KZT,bns,2026-11-25,level,2026-11-25
-2023-01-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2023-01-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,9637517.866170907,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-01-01,KZ,national,monthly,BANK_LOANS_STB_FX,1851109.6654382295,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-01-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,13174363.842936894,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -81793,11 +81713,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-01-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,18843508.712375447,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-01-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3968372.9967323537,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-01-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,22811881.709107738,million KZT,nbk,2026-11-25,level,2026-11-25
-2023-01-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2023-01-01,KZ,national,quarterly,BANK_ROA,5.08,%,nbk,2026-11-25,level,2026-11-25
-2023-01-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
 2023-01-01,KZ,national,quarterly,BANK_ROE,37.38,%,nbk,2026-11-25,level,2026-11-25
-2023-01-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2023-01-01,KZ,national,quarterly,BOP_GOODS_BALANCE,5232.056879,million USD,nbk,2026-11-25,level,2026-11-25
 2023-01-01,KZ,national,quarterly,BOP_GOODS_EXPORTS,19163.22954327999,USD million,nbk,2026-11-26,level,2026-11-26
 2023-01-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,3.383904,% of GDP,nbk,2026-11-25,level,2026-11-25
@@ -82242,7 +82159,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-01-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,235220.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2023-01-31,KZ,national,daily,SWAP_1D,16.177526843867657,% per annum,kase,2026-11-25,level,2026-11-25
 2023-01-31,KZ,national,daily,TONIA,16.16,% per annum,kase,2026-11-25,level,2026-11-25
-2023-02-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2023-02-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,9510468.443066439,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-02-01,KZ,national,monthly,BANK_LOANS_STB_FX,1822359.073098231,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-02-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,13263668.248380044,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -82252,9 +82168,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-02-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,18846065.05964119,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-02-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3928071.631805295,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-02-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,22774136.691446528,million KZT,nbk,2026-11-25,level,2026-11-25
-2023-02-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2023-02-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2023-02-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2023-02-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.6,index,nbk,2026-11-25,level,2026-11-25
 2023-02-01,BLR,national,monthly,BY_CPI_YOY,111.7,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2023-02-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,774035.107,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -82563,7 +82476,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-02-28,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,508220.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2023-02-28,KZ,national,daily,SWAP_1D,17.583859933321,% per annum,kase,2026-11-25,level,2026-11-25
 2023-02-28,KZ,national,daily,TONIA,17.53,% per annum,kase,2026-11-25,level,2026-11-25
-2023-03-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2023-03-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,9519127.129481705,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-03-01,KZ,national,monthly,BANK_LOANS_STB_FX,1732557.2547527202,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-03-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,13379147.831582358,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -82573,9 +82485,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-03-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,18958716.928949967,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-03-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3939558.0321141123,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-03-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,22898274.961064067,million KZT,nbk,2026-11-25,level,2026-11-25
-2023-03-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2023-03-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2023-03-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2023-03-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.7,index,nbk,2026-11-25,level,2026-11-25
 2023-03-01,BLR,national,monthly,BY_CPI_YOY,106.0,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2023-03-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,896571.76,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -82905,7 +82814,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-03-31,KZ,national,daily,SWAP_1D,15.50370232598106,% per annum,kase,2026-11-25,level,2026-11-25
 2023-03-31,KZ,national,daily,TONIA,17.11,% per annum,kase,2026-11-25,level,2026-11-25
 2023-04-01,KZ,national,quarterly,AVG_WAGE_1T_QUARTERLY,365502.0,KZT,bns,2026-11-25,level,2026-11-25
-2023-04-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2023-04-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,9593710.24695794,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-04-01,KZ,national,monthly,BANK_LOANS_STB_FX,1689269.0274781298,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-04-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,13562355.10501636,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -82915,11 +82823,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-04-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,19426605.08196145,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-04-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3729460.2700128653,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-04-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,23156065.351974275,million KZT,nbk,2026-11-25,level,2026-11-25
-2023-04-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2023-04-01,KZ,national,quarterly,BANK_ROA,5.19,%,nbk,2026-11-25,level,2026-11-25
-2023-04-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
 2023-04-01,KZ,national,quarterly,BANK_ROE,37.96,%,nbk,2026-11-25,level,2026-11-25
-2023-04-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2023-04-01,KZ,national,quarterly,BOP_GOODS_BALANCE,4358.66879,million USD,nbk,2026-11-25,level,2026-11-25
 2023-04-01,KZ,national,quarterly,BOP_GOODS_EXPORTS,19882.933722609996,USD million,nbk,2026-11-26,level,2026-11-26
 2023-04-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,2.963561,% of GDP,nbk,2026-11-25,level,2026-11-25
@@ -83359,7 +83264,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-04-30,KZ,national,irregular,STATE_NET_BUDGET_LENDING_YTD,191720.65508061,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2023-04-30,KZ,national,irregular,STATE_NON_OIL_DEFICIT_YTD,-2411424.20524264,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2023-04-30,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,1374820.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2023-05-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2023-05-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,9921073.489789184,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-05-01,KZ,national,monthly,BANK_LOANS_STB_FX,1711745.1363239905,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-05-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,13821885.874301303,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -83369,9 +83273,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-05-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,20100089.152577884,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-05-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3642870.211512629,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-05-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,23742959.364090566,million KZT,nbk,2026-11-25,level,2026-11-25
-2023-05-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2023-05-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2023-05-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2023-05-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.1,index,nbk,2026-11-25,level,2026-11-25
 2023-05-01,BLR,national,monthly,BY_CPI_YOY,103.7,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2023-05-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,983905.447,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -83693,7 +83594,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-05-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,1865520.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2023-05-31,KZ,national,daily,SWAP_1D,16.682089528497016,% per annum,kase,2026-11-25,level,2026-11-25
 2023-05-31,KZ,national,daily,TONIA,17.59,% per annum,kase,2026-11-25,level,2026-11-25
-2023-06-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2023-06-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,10016476.099060021,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-06-01,KZ,national,monthly,BANK_LOANS_STB_FX,1684297.0731597985,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-06-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,14098566.596791849,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -83703,9 +83603,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-06-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,20625100.24013603,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-06-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3489942.455715828,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-06-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,24115042.69585187,million KZT,nbk,2026-11-25,level,2026-11-25
-2023-06-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2023-06-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2023-06-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2023-06-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.5,index,nbk,2026-11-25,level,2026-11-25
 2023-06-01,BLR,national,monthly,BY_CPI_YOY,102.9,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2023-06-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,972099.956,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -84033,7 +83930,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-06-30,KZ,national,daily,SWAP_1D,16.90699046448154,% per annum,kase,2026-11-25,level,2026-11-25
 2023-06-30,KZ,national,daily,TONIA,17.61,% per annum,kase,2026-11-25,level,2026-11-25
 2023-07-01,KZ,national,quarterly,AVG_WAGE_1T_QUARTERLY,350542.0,KZT,bns,2026-11-25,level,2026-11-25
-2023-07-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2023-07-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,10027097.99044785,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-07-01,KZ,national,monthly,BANK_LOANS_STB_FX,1692023.8595836896,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-07-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,14375059.173471529,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -84043,11 +83939,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-07-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,21075109.404716644,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-07-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3327047.7592027383,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-07-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,24402157.163919408,million KZT,nbk,2026-11-25,level,2026-11-25
-2023-07-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2023-07-01,KZ,national,quarterly,BANK_ROA,5.16,%,nbk,2026-11-25,level,2026-11-25
-2023-07-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
 2023-07-01,KZ,national,quarterly,BANK_ROE,36.84,%,nbk,2026-11-25,level,2026-11-25
-2023-07-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2023-07-01,KZ,national,quarterly,BOP_GOODS_BALANCE,5301.656297,million USD,nbk,2026-11-25,level,2026-11-25
 2023-07-01,KZ,national,quarterly,BOP_GOODS_EXPORTS,20465.56762261999,USD million,nbk,2026-11-26,level,2026-11-26
 2023-07-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,5.875824,% of GDP,nbk,2026-11-25,level,2026-11-25
@@ -84474,7 +84367,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-07-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,2428520.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2023-07-31,KZ,national,daily,SWAP_1D,14.554402995076865,% per annum,kase,2026-11-25,level,2026-11-25
 2023-07-31,KZ,national,daily,TONIA,17.0,% per annum,kase,2026-11-25,level,2026-11-25
-2023-08-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2023-08-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,9919285.996318819,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-08-01,KZ,national,monthly,BANK_LOANS_STB_FX,1654111.0190179695,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-08-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,14939316.162945464,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -84484,9 +84376,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-08-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,21560746.262435794,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-08-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3297855.8968284875,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-08-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,24858602.15926433,million KZT,nbk,2026-11-25,level,2026-11-25
-2023-08-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2023-08-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2023-08-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2023-08-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.7,index,nbk,2026-11-25,level,2026-11-25
 2023-08-01,BLR,national,monthly,BY_CPI_YOY,102.3,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2023-08-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,1005746.999,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -84748,7 +84637,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-08-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,2878520.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2023-08-31,KZ,national,daily,SWAP_1D,12.084263921278428,% per annum,kase,2026-11-25,level,2026-11-25
 2023-08-31,KZ,national,daily,TONIA,17.2,% per annum,kase,2026-11-25,level,2026-11-25
-2023-09-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2023-09-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,10102973.808082059,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-09-01,KZ,national,monthly,BANK_LOANS_STB_FX,1759304.7299207994,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-09-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,15326728.81534502,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -84758,9 +84646,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-09-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,22389288.464060936,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-09-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3040414.1593661243,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-09-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,25429702.623426996,million KZT,nbk,2026-11-25,level,2026-11-25
-2023-09-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2023-09-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2023-09-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2023-09-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.3,index,nbk,2026-11-25,level,2026-11-25
 2023-09-01,BLR,national,monthly,BY_CPI_YOY,102.0,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2023-09-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,996276.014,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -85092,7 +84977,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-09-30,KZ,national,irregular,STATE_NON_OIL_DEFICIT_YTD,-6641792.27166675,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2023-09-30,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,3317420.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2023-10-01,KZ,national,quarterly,AVG_WAGE_1T_QUARTERLY,393605.0,KZT,bns,2026-11-25,level,2026-11-25
-2023-10-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2023-10-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,10273448.761415882,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-10-01,KZ,national,monthly,BANK_LOANS_STB_FX,1762735.3978516005,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-10-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,15618103.111897882,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -85102,11 +84986,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-10-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,22929716.40814909,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-10-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,2961835.4651647303,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-10-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,25891551.87331384,million KZT,nbk,2026-11-25,level,2026-11-25
-2023-10-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2023-10-01,KZ,national,quarterly,BANK_ROA,5.21,%,nbk,2026-11-25,level,2026-11-25
-2023-10-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
 2023-10-01,KZ,national,quarterly,BANK_ROE,36.7,%,nbk,2026-11-25,level,2026-11-25
-2023-10-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2023-10-01,KZ,national,quarterly,BOP_GOODS_BALANCE,5274.630569,million USD,nbk,2026-11-25,level,2026-11-25
 2023-10-01,KZ,national,quarterly,BOP_GOODS_EXPORTS,20704.49299336,USD million,nbk,2026-11-26,level,2026-11-26
 2023-10-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,-1.113539,% of GDP,nbk,2026-11-25,level,2026-11-25
@@ -85553,7 +85434,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-10-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,3687220.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2023-10-31,KZ,national,daily,SWAP_1D,13.262814342874915,% per annum,kase,2026-11-25,level,2026-11-25
 2023-10-31,KZ,national,daily,TONIA,16.79,% per annum,kase,2026-11-25,level,2026-11-25
-2023-11-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2023-11-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,10402940.95214143,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-11-01,KZ,national,monthly,BANK_LOANS_STB_FX,1761107.7630056997,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-11-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,15888289.93114138,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -85563,9 +85443,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-11-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,23321789.325849313,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-11-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,2969441.5574334315,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-11-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,26291230.883282654,million KZT,nbk,2026-11-25,level,2026-11-25
-2023-11-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2023-11-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2023-11-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2023-11-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.0,index,nbk,2026-11-25,level,2026-11-25
 2023-11-01,BLR,national,monthly,BY_CPI_YOY,105.4,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2023-11-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,999058.005,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -85894,7 +85771,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-11-30,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,3924520.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2023-11-30,KZ,national,daily,SWAP_1D,13.336261835258345,% per annum,kase,2026-11-25,level,2026-11-25
 2023-11-30,KZ,national,daily,TONIA,16.56,% per annum,kase,2026-11-25,level,2026-11-25
-2023-12-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2023-12-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,10533938.680460628,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-12-01,KZ,national,monthly,BANK_LOANS_STB_FX,1800235.2370649104,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-12-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,16341167.129510235,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -85904,9 +85780,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,23919147.9863008,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-12-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,2955957.8236701195,million KZT,nbk,2026-11-25,level,2026-11-25
 2023-12-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,26875105.80997093,million KZT,nbk,2026-11-25,level,2026-11-25
-2023-12-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2023-12-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2023-12-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2023-12-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.2,index,nbk,2026-11-25,level,2026-11-25
 2023-12-01,BLR,national,monthly,BY_CPI_YOY,105.8,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2023-12-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,1038285.719,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -86400,7 +86273,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-31,KZ,national,annual,WORKERS_USING_COMPUTERS,1267664.0,persons,bns,2026-11-25,level,2026-11-25
 2023-12-31,KZ,national,annual,WORKERS_USING_INTERNET,1137136.0,persons,bns,2026-11-25,level,2026-11-25
 2024-01-01,KZ,national,quarterly,AVG_WAGE_1T_QUARTERLY,382279.0,KZT,bns,2026-11-25,level,2026-11-25
-2024-01-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2024-01-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,11246658.414855046,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-01-01,KZ,national,monthly,BANK_LOANS_STB_FX,2153474.8699697694,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-01-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,16686235.336628024,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -86410,11 +86282,8 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,24694832.749043867,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-01-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3238061.00243914,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-01-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,27932893.751483027,million KZT,nbk,2026-11-25,level,2026-11-25
-2024-01-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2024-01-01,KZ,national,quarterly,BANK_ROA,4.95,%,nbk,2026-11-25,level,2026-11-25
-2024-01-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
 2024-01-01,KZ,national,quarterly,BANK_ROE,31.7,%,nbk,2026-11-25,level,2026-11-25
-2024-01-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2024-01-01,KZ,national,quarterly,BOP_GOODS_BALANCE,5716.090397,million USD,nbk,2026-11-25,level,2026-11-25
 2024-01-01,KZ,national,quarterly,BOP_GOODS_EXPORTS,18836.734201020034,USD million,nbk,2026-11-26,level,2026-11-26
 2024-01-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,1.021658,% of GDP,nbk,2026-11-25,level,2026-11-25
@@ -86867,7 +86736,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,600000.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2024-01-31,KZ,national,daily,SWAP_1D,8.843597356590932,% per annum,kase,2026-11-25,level,2026-11-25
 2024-01-31,KZ,national,daily,TONIA,14.32,% per annum,kase,2026-11-25,level,2026-11-25
-2024-02-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2024-02-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,10989120.644933023,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-02-01,KZ,national,monthly,BANK_LOANS_STB_FX,2095375.858751508,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-02-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,16871570.44263406,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -86877,9 +86745,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-02-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,24776433.213934507,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-02-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3084257.873632579,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-02-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,27860691.087567072,million KZT,nbk,2026-11-25,level,2026-11-25
-2024-02-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2024-02-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2024-02-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2024-02-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.0,index,nbk,2026-11-25,level,2026-11-25
 2024-02-01,BLR,national,monthly,BY_CPI_YOY,105.6,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2024-02-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,887237.872,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -87202,7 +87067,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-02-29,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,1000000.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2024-02-29,KZ,national,daily,SWAP_1D,11.385248992342339,% per annum,kase,2026-11-25,level,2026-11-25
 2024-02-29,KZ,national,daily,TONIA,15.03,% per annum,kase,2026-11-25,level,2026-11-25
-2024-03-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2024-03-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,11183775.557065003,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-03-01,KZ,national,monthly,BANK_LOANS_STB_FX,2158445.95873307,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-03-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,17248794.206489295,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -87212,9 +87076,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-03-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,25304292.611789092,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-03-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3128277.1517652217,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-03-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,28432569.763554327,million KZT,nbk,2026-11-25,level,2026-11-25
-2024-03-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2024-03-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2024-03-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2024-03-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.7,index,nbk,2026-11-25,level,2026-11-25
 2024-03-01,BLR,national,monthly,BY_CPI_YOY,105.6,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2024-03-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,966456.812,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -87537,7 +87398,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-03-31,KZ,national,irregular,STATE_NON_OIL_DEFICIT_YTD,-1946627.00379871,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2024-03-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,1450000.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2024-04-01,KZ,national,quarterly,AVG_WAGE_1T_QUARTERLY,403251.0,KZT,bns,2026-11-25,level,2026-11-25
-2024-04-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2024-04-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,11149363.552899526,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-04-01,KZ,national,monthly,BANK_LOANS_STB_FX,2203836.27485537,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-04-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,17542117.856999174,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -87547,9 +87407,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-04-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,25355037.86847,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-04-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3336443.5414286847,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-04-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,28691481.409898635,million KZT,nbk,2026-11-25,level,2026-11-25
-2024-04-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2024-04-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2024-04-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2024-04-01,KZ,national,quarterly,BOP_GOODS_BALANCE,5395.239702,million USD,nbk,2026-11-25,level,2026-11-25
 2024-04-01,KZ,national,quarterly,BOP_GOODS_EXPORTS,20678.24950262176,USD million,nbk,2026-11-26,level,2026-11-26
 2024-04-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,-0.289872,% of GDP,nbk,2026-11-25,level,2026-11-25
@@ -88002,7 +87859,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-04-30,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,1950000.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2024-04-30,KZ,national,daily,SWAP_1D,10.600353971872421,% per annum,kase,2026-11-25,level,2026-11-25
 2024-04-30,KZ,national,daily,TONIA,14.23,% per annum,kase,2026-11-25,level,2026-11-25
-2024-05-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2024-05-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,11350593.386842519,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-05-01,KZ,national,monthly,BANK_LOANS_STB_FX,2313188.7677605287,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-05-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,17750392.75654082,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -88012,9 +87868,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-05-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,25426277.4846471,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-05-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3674708.658736247,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-05-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,29100986.143383313,million KZT,nbk,2026-11-25,level,2026-11-25
-2024-05-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2024-05-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2024-05-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2024-05-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.7,index,nbk,2026-11-25,level,2026-11-25
 2024-05-01,BLR,national,monthly,BY_CPI_YOY,105.7,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2024-05-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,1114500.963,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -88340,7 +88193,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-05-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,2450000.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2024-05-31,KZ,national,daily,SWAP_1D,9.380153083342881,% per annum,kase,2026-11-25,level,2026-11-25
 2024-05-31,KZ,national,daily,TONIA,13.06,% per annum,kase,2026-11-25,level,2026-11-25
-2024-06-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2024-06-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,11525713.478598543,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-06-01,KZ,national,monthly,BANK_LOANS_STB_FX,2355053.43850702,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-06-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,17979968.308081534,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -88350,9 +88202,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-06-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,25561237.127908364,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-06-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,3944444.6587717244,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-06-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,29505681.78668013,million KZT,nbk,2026-11-25,level,2026-11-25
-2024-06-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2024-06-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2024-06-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2024-06-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.4,index,nbk,2026-11-25,level,2026-11-25
 2024-06-01,BLR,national,monthly,BY_CPI_YOY,105.8,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2024-06-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,1122261.813,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -88678,7 +88527,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-06-30,KZ,national,irregular,STATE_NON_OIL_DEFICIT_YTD,-4328703.41253236,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2024-06-30,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,2749000.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2024-07-01,KZ,national,quarterly,AVG_WAGE_1T_QUARTERLY,390328.0,KZT,bns,2026-11-25,level,2026-11-25
-2024-07-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2024-07-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,11755528.05928546,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-07-01,KZ,national,monthly,BANK_LOANS_STB_FX,2530261.29858868,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-07-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,18342053.56254741,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -88688,9 +88536,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-07-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,25844739.775879398,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-07-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,4252841.845953433,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-07-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,30097581.621832848,million KZT,nbk,2026-11-25,level,2026-11-25
-2024-07-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2024-07-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2024-07-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2024-07-01,KZ,national,quarterly,BOP_GOODS_BALANCE,3908.676177,million USD,nbk,2026-11-25,level,2026-11-25
 2024-07-01,KZ,national,quarterly,BOP_GOODS_EXPORTS,19707.110661332645,USD million,nbk,2026-11-26,level,2026-11-26
 2024-07-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,-0.698363,% of GDP,nbk,2026-11-25,level,2026-11-25
@@ -89146,7 +88991,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-07-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,2999000.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2024-07-31,KZ,national,daily,SWAP_1D,6.856467359212852,% per annum,kase,2026-11-25,level,2026-11-25
 2024-07-31,KZ,national,daily,TONIA,13.75,% per annum,kase,2026-11-25,level,2026-11-25
-2024-08-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2024-08-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,11778360.316744415,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-08-01,KZ,national,monthly,BANK_LOANS_STB_FX,2558125.5895850365,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-08-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,18740912.460241836,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -89156,9 +89000,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-08-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,26141700.564429883,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-08-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,4377572.212556341,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-08-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,30519272.77698624,million KZT,nbk,2026-11-25,level,2026-11-25
-2024-08-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2024-08-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2024-08-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2024-08-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.1,index,nbk,2026-11-25,level,2026-11-25
 2024-08-01,BLR,national,monthly,BY_CPI_YOY,106.06,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2024-08-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,1154588.839,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -89489,7 +89330,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-08-31,KZ,national,irregular,STATE_NET_BUDGET_LENDING_YTD,136228.73049225,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2024-08-31,KZ,national,irregular,STATE_NON_OIL_DEFICIT_YTD,-5982882.0911578,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2024-08-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,3449000.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2024-09-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2024-09-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,11981575.907573044,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-09-01,KZ,national,monthly,BANK_LOANS_STB_FX,2676690.1337544564,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-09-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,19157225.94719341,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -89499,9 +89339,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-09-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,26621095.103678238,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-09-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,4517706.751088292,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-09-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,31138801.85476642,million KZT,nbk,2026-11-25,level,2026-11-25
-2024-09-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2024-09-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2024-09-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2024-09-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.0,index,nbk,2026-11-25,level,2026-11-25
 2024-09-01,BLR,national,monthly,BY_CPI_YOY,106.0,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2024-09-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,1137006.279,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -89834,7 +89671,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-09-30,KZ,national,daily,SWAP_1D,7.210202453362347,% per annum,kase,2026-11-25,level,2026-11-25
 2024-09-30,KZ,national,daily,TONIA,13.18,% per annum,kase,2026-11-25,level,2026-11-25
 2024-10-01,KZ,national,quarterly,AVG_WAGE_1T_QUARTERLY,434982.0,KZT,bns,2026-11-25,level,2026-11-25
-2024-10-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2024-10-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,12076306.123863623,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-10-01,KZ,national,monthly,BANK_LOANS_STB_FX,2741299.676766424,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-10-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,19451217.22081389,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -89844,9 +89680,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-10-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,26889185.201121356,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-10-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,4638338.14355615,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-10-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,31527523.34467761,million KZT,nbk,2026-11-25,level,2026-11-25
-2024-10-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2024-10-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2024-10-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2024-10-01,KZ,national,quarterly,BOP_GOODS_BALANCE,2437.075141,million USD,nbk,2026-11-25,level,2026-11-25
 2024-10-01,KZ,national,quarterly,BOP_GOODS_EXPORTS,19030.324322606753,USD million,nbk,2026-11-26,level,2026-11-26
 2024-10-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,0.917813,% of GDP,nbk,2026-11-25,level,2026-11-25
@@ -90304,7 +90137,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-10-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,4659000.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2024-10-31,KZ,national,daily,SWAP_1D,9.43189852843014,% per annum,kase,2026-11-25,level,2026-11-25
 2024-10-31,KZ,national,daily,TONIA,13.67,% per annum,kase,2026-11-25,level,2026-11-25
-2024-11-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2024-11-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,12116866.419671338,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-11-01,KZ,national,monthly,BANK_LOANS_STB_FX,2785422.4133450314,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-11-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,19806337.204585742,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -90314,9 +90146,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-11-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,27246463.7574862,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-11-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,4676739.8667707825,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-11-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,31923203.624256957,million KZT,nbk,2026-11-25,level,2026-11-25
-2024-11-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2024-11-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2024-11-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2024-11-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.6,index,nbk,2026-11-25,level,2026-11-25
 2024-11-01,BLR,national,monthly,BY_CPI_YOY,105.5,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2024-11-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,1118455.846,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -90640,7 +90469,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-11-30,KZ,national,irregular,STATE_NET_BUDGET_LENDING_YTD,94184.94653203,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2024-11-30,KZ,national,irregular,STATE_NON_OIL_DEFICIT_YTD,-8670285.18609804,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2024-11-30,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,5294000.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2024-12-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2024-12-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,12598401.2129572,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-12-01,KZ,national,monthly,BANK_LOANS_STB_FX,2921927.25512003,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-12-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,20322781.7192699,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -90650,9 +90478,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,27896644.5919067,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-12-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,5024538.34032039,million KZT,nbk,2026-11-25,level,2026-11-25
 2024-12-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,32921182.9322271,million KZT,nbk,2026-11-25,level,2026-11-25
-2024-12-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2024-12-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2024-12-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2024-12-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.8,index,nbk,2026-11-25,level,2026-11-25
 2024-12-01,BLR,national,monthly,BY_CPI_YOY,105.2,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2024-12-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,1174732.746,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -91161,7 +90986,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-31,KZ,national,annual,WORKERS_USING_COMPUTERS,1343420.0,persons,bns,2026-11-25,level,2026-11-25
 2024-12-31,KZ,national,annual,WORKERS_USING_INTERNET,1209844.0,persons,bns,2026-11-25,level,2026-11-25
 2025-01-01,KZ,national,quarterly,AVG_WAGE_1T_QUARTERLY,423133.0,KZT,bns,2026-11-25,level,2026-11-25
-2025-01-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2025-01-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,13083450.3545831,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-01-01,KZ,national,monthly,BANK_LOANS_STB_FX,2954786.14758335,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-01-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,20677225.1279391,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -91171,9 +90995,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,28519238.3748061,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-01-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,5241437.10771615,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-01-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,33760675.4825222,million KZT,nbk,2026-11-25,level,2026-11-25
-2025-01-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2025-01-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2025-01-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2025-01-01,KZ,national,quarterly,BOP_GOODS_BALANCE,4569.833797,million USD,nbk,2026-11-25,level,2026-11-25
 2025-01-01,KZ,national,quarterly,BOP_GOODS_EXPORTS,18354.741910534925,USD million,nbk,2026-11-26,level,2026-11-26
 2025-01-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,2.214093,% of GDP,nbk,2026-11-25,level,2026-11-25
@@ -91625,7 +91446,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,550000.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2025-01-31,KZ,national,daily,SWAP_1D,10.759439553294225,% per annum,kase,2026-11-25,level,2026-11-25
 2025-01-31,KZ,national,daily,TONIA,14.58,% per annum,kase,2026-11-25,level,2026-11-25
-2025-02-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2025-02-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,12690588.2143853,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-02-01,KZ,national,monthly,BANK_LOANS_STB_FX,2776117.26225336,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-02-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,20797793.327289,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -91635,9 +91455,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-02-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,28455930.9915224,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-02-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,5032450.55015192,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-02-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,33488381.5416743,million KZT,nbk,2026-11-25,level,2026-11-25
-2025-02-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2025-02-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2025-02-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2025-02-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.2,index,nbk,2026-11-25,level,2026-11-25
 2025-02-01,BLR,national,monthly,BY_CPI_YOY,105.6,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2025-02-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,1009097.138,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -91960,7 +91777,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-02-28,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,1000000.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2025-02-28,KZ,national,daily,SWAP_1D,9.928259338392786,% per annum,kase,2026-11-25,level,2026-11-25
 2025-02-28,KZ,national,daily,TONIA,14.71,% per annum,kase,2026-11-25,level,2026-11-25
-2025-03-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2025-03-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,12721734.2108867,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-03-01,KZ,national,monthly,BANK_LOANS_STB_FX,2664916.63103772,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-03-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,21127418.404684,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -91970,9 +91786,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-03-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,28877464.0653889,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-03-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,4971688.55018172,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-03-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,33849152.6155706,million KZT,nbk,2026-11-25,level,2026-11-25
-2025-03-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2025-03-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2025-03-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2025-03-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.7,index,nbk,2026-11-25,level,2026-11-25
 2025-03-01,BLR,national,monthly,BY_CPI_YOY,105.9,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2025-03-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,1104072.755,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -92316,7 +92129,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-03-31,KZ,national,daily,SWAP_1D,11.946603504418812,% per annum,kase,2026-11-25,level,2026-11-25
 2025-03-31,KZ,national,daily,TONIA,16.66,% per annum,kase,2026-11-25,level,2026-11-25
 2025-04-01,KZ,national,quarterly,AVG_WAGE_1T_QUARTERLY,448620.0,KZT,bns,2026-11-25,level,2026-11-25
-2025-04-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2025-04-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,12946577.1287727,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-04-01,KZ,national,monthly,BANK_LOANS_STB_FX,2722049.2664675,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-04-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,21398057.8448947,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -92326,9 +92138,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-04-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,29313975.7750855,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-04-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,5030659.19858206,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-04-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,34344634.9736675,million KZT,nbk,2026-11-25,level,2026-11-25
-2025-04-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2025-04-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2025-04-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2025-04-01,KZ,national,quarterly,BOP_GOODS_BALANCE,3121.213096,million USD,nbk,2026-11-25,level,2026-11-25
 2025-04-01,KZ,national,quarterly,BOP_GOODS_EXPORTS,19797.95097716361,USD million,nbk,2026-11-26,level,2026-11-26
 2025-04-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,2.858408,% of GDP,nbk,2026-11-25,level,2026-11-25
@@ -92783,7 +92592,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-04-30,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,2000000.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2025-04-30,KZ,national,daily,SWAP_1D,12.02255636449727,% per annum,kase,2026-11-25,level,2026-11-25
 2025-04-30,KZ,national,daily,TONIA,15.54,% per annum,kase,2026-11-25,level,2026-11-25
-2025-05-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2025-05-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,13318652.1262423,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-05-01,KZ,national,monthly,BANK_LOANS_STB_FX,2735743.3233988,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-05-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,21719235.7798965,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -92793,9 +92601,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-05-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,29933492.3869147,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-05-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,5104395.51922407,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-05-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,35037887.9061388,million KZT,nbk,2026-11-25,level,2026-11-25
-2025-05-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2025-05-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2025-05-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2025-05-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,51.4,index,nbk,2026-11-25,level,2026-11-25
 2025-05-01,BLR,national,monthly,BY_CPI_YOY,107.1,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2025-05-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,1247342.532,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -93121,7 +92926,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-05-31,KZ,national,irregular,STATE_NET_BUDGET_LENDING_YTD,102865.79322238,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2025-05-31,KZ,national,irregular,STATE_NON_OIL_DEFICIT_YTD,-3382183.40802223,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2025-05-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,2620000.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2025-06-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2025-06-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,13392089.391635,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-06-01,KZ,national,monthly,BANK_LOANS_STB_FX,2742758.52761365,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-06-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,22104388.5200725,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -93131,9 +92935,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-06-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,30386706.5951636,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-06-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,5109771.31654382,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-06-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,35496477.9117076,million KZT,nbk,2026-11-25,level,2026-11-25
-2025-06-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2025-06-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2025-06-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2025-06-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.6,index,nbk,2026-11-25,level,2026-11-25
 2025-06-01,BLR,national,monthly,BY_CPI_YOY,107.3,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2025-06-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,1192125.958,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -93481,7 +93282,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-06-30,KZ,national,daily,SWAP_1D,10.23187250393335,% per annum,kase,2026-11-25,level,2026-11-25
 2025-06-30,KZ,national,daily,TONIA,15.5,% per annum,kase,2026-11-25,level,2026-11-25
 2025-07-01,KZ,national,quarterly,AVG_WAGE_1T_QUARTERLY,429368.0,KZT,bns,2026-11-25,level,2026-11-25
-2025-07-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2025-07-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,13748664.2960865,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-07-01,KZ,national,monthly,BANK_LOANS_STB_FX,2918244.27911811,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-07-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,22565854.6152685,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -93491,9 +93291,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,31044217.2563894,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-07-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,5270301.65496559,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-07-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,36314518.9113551,million KZT,nbk,2026-11-25,level,2026-11-25
-2025-07-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2025-07-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2025-07-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2025-07-01,KZ,national,quarterly,BOP_GOODS_BALANCE,3012.588013,million USD,nbk,2026-11-25,level,2026-11-25
 2025-07-01,KZ,national,quarterly,BOP_GOODS_EXPORTS,20242.519550392866,USD million,nbk,2026-11-26,level,2026-11-26
 2025-07-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,2.629723,% of GDP,nbk,2026-11-25,level,2026-11-25
@@ -93964,7 +93761,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,3475000.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2025-07-31,KZ,national,daily,SWAP_1D,10.561267988790439,% per annum,kase,2026-11-25,level,2026-11-25
 2025-07-31,KZ,national,daily,TONIA,15.57,% per annum,kase,2026-11-25,level,2026-11-25
-2025-08-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2025-08-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,14125894.2542308,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-08-01,KZ,national,monthly,BANK_LOANS_STB_FX,3164318.54518829,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-08-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,22997336.6824891,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -93974,9 +93770,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-08-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,31805788.5024158,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-08-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,5317442.43430404,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-08-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,37123230.9367199,million KZT,nbk,2026-11-25,level,2026-11-25
-2025-08-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2025-08-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2025-08-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2025-08-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.9,index,nbk,2026-11-25,level,2026-11-25
 2025-08-01,BLR,national,monthly,BY_CPI_YOY,107.2,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2025-08-01,KZ,national,monthly,CASHLESS_PAYMENTS_COUNT,1224322.93,thousand transactions,nbk,2026-11-25,level,2026-11-25
@@ -94316,7 +94109,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-08-31,KZ,national,irregular,STATE_NET_BUDGET_LENDING_YTD,202593.98617975,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2025-08-31,KZ,national,irregular,STATE_NON_OIL_DEFICIT_YTD,-6394843.28512963,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2025-08-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,3830000.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2025-09-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2025-09-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,14318807.0721115,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-09-01,KZ,national,monthly,BANK_LOANS_STB_FX,3198807.62988183,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-09-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,23713108.6685876,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -94326,9 +94118,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-09-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,32731780.6054906,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-09-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,5300135.13520852,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-09-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,38031915.7406991,million KZT,nbk,2026-11-25,level,2026-11-25
-2025-09-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2025-09-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2025-09-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2025-09-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.8,index,nbk,2026-11-25,level,2026-11-25
 2025-09-01,BLR,national,monthly,BY_CPI_YOY,107.1,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2025-09-01,KZ,national,monthly,CHROMIUM_PRICE,8893.475452636363,USD per tonne,imf,2026-11-25,level,2026-11-25
@@ -94676,7 +94465,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-09-30,KZ,national,daily,SWAP_1D,11.072159655523915,% per annum,kase,2026-11-25,level,2026-11-25
 2025-09-30,KZ,national,daily,TONIA,15.7,% per annum,kase,2026-11-25,level,2026-11-25
 2025-10-01,KZ,national,quarterly,AVG_WAGE_1T_QUARTERLY,473158.0,KZT,bns,2026-11-25,level,2026-11-25
-2025-10-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2025-10-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,14671180.4344779,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-10-01,KZ,national,monthly,BANK_LOANS_STB_FX,3401106.73058025,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-10-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,24028635.5164943,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -94686,9 +94474,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,33334307.0732132,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-10-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,5365508.87775902,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-10-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,38699815.9509721,million KZT,nbk,2026-11-25,level,2026-11-25
-2025-10-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2025-10-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2025-10-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2025-10-01,KZ,national,quarterly,BOP_GOODS_BALANCE,-314.65411,million USD,nbk,2026-11-25,level,2026-11-25
 2025-10-01,KZ,national,quarterly,BOP_GOODS_EXPORTS,18855.651914245445,USD million,nbk,2026-11-26,level,2026-11-26
 2025-10-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,0.398537,% of GDP,nbk,2026-11-25,level,2026-11-25
@@ -95146,7 +94931,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,4540000.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2025-10-31,KZ,national,daily,SWAP_1D,9.778478873527895,% per annum,kase,2026-11-25,level,2026-11-25
 2025-10-31,KZ,national,daily,TONIA,17.33,% per annum,kase,2026-11-25,level,2026-11-25
-2025-11-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2025-11-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,14872163.1907797,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-11-01,KZ,national,monthly,BANK_LOANS_STB_FX,3600094.89601079,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-11-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,24273099.892505,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -95156,9 +94940,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-11-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,33617577.8386239,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-11-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,5527685.24466079,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-11-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,39145263.0832848,million KZT,nbk,2026-11-25,level,2026-11-25
-2025-11-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2025-11-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2025-11-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2025-11-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,50.3,index,nbk,2026-11-25,level,2026-11-25
 2025-11-01,BLR,national,monthly,BY_CPI_YOY,107.0,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2025-11-01,KZ,national,monthly,CHROMIUM_PRICE,11336.4490275,USD per tonne,imf,2026-11-25,level,2026-11-25
@@ -95479,7 +95260,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-11-30,KZ,national,irregular,STATE_NET_BUDGET_LENDING_YTD,280505.95981457,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2025-11-30,KZ,national,irregular,STATE_NON_OIL_DEFICIT_YTD,-9269989.67502493,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2025-11-30,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,4895000.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2025-12-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2025-12-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,14848960.5340077,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-12-01,KZ,national,monthly,BANK_LOANS_STB_FX,3439750.86782434,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-12-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,24574267.3540886,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -95489,9 +95269,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,33850916.6384207,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-12-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,5572311.24967562,million KZT,nbk,2026-11-25,level,2026-11-25
 2025-12-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,39423227.8880964,million KZT,nbk,2026-11-25,level,2026-11-25
-2025-12-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2025-12-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2025-12-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2025-12-01,KZ,national,irregular,BASE_RATE,18.0,% p.a.,nbk,2026-11-25,level,2026-11-25
 2025-12-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.9,index,nbk,2026-11-25,level,2026-11-25
 2025-12-01,BLR,national,monthly,BY_CPI_YOY,106.8,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
@@ -96002,7 +95779,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,quarterly,AVG_WAGE_MANUFACTURING,508854.0,KZT,bns,2026-11-25,level,2026-11-25
 2026-01-01,KZ,national,quarterly,AVG_WAGE_MINING,1020632.0,KZT,bns,2026-11-25,level,2026-11-25
 2026-01-01,KZ,national,quarterly,AVG_WAGE_QUARTERLY,445068.0,KZT,bns,2026-11-25,level,2026-11-25
-2026-01-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-01-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,15439646.6215637,million KZT,nbk,2026-11-25,level,2026-11-25
 2026-01-01,KZ,national,monthly,BANK_LOANS_STB_FX,3735975.48505956,million KZT,nbk,2026-11-25,level,2026-11-25
 2026-01-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,24772267.7337391,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -96012,9 +95788,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,34486864.8258312,million KZT,nbk,2026-11-25,level,2026-11-25
 2026-01-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,5725049.52947158,million KZT,nbk,2026-11-25,level,2026-11-25
 2026-01-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,40211914.3553026,million KZT,nbk,2026-11-25,level,2026-11-25
-2026-01-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2026-01-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2026-01-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2026-01-01,KZ,national,quarterly,BOP_GOODS_BALANCE,4883.924663,million USD,nbk,2026-11-25,level,2026-11-25
 2026-01-01,KZ,national,quarterly,BOP_GOODS_EXPORTS,20241.160864536985,USD million,nbk,2026-11-26,level,2026-11-26
 2026-01-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,4.011331,% of GDP,nbk,2026-11-25,level,2026-11-25
@@ -96476,7 +96249,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-31,KZ,national,irregular,STATE_NET_BUDGET_LENDING_YTD,-3860.91629305,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2026-01-31,KZ,national,irregular,STATE_NON_OIL_DEFICIT_YTD,88489.87013678,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2026-01-31,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,230000.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2026-02-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-02-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,15180022.2217132,million KZT,nbk,2026-11-25,level,2026-11-25
 2026-02-01,KZ,national,monthly,BANK_LOANS_STB_FX,3737351.1042485,million KZT,nbk,2026-11-25,level,2026-11-25
 2026-02-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,24810865.2059996,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -96486,9 +96258,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-02-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,34473978.4082897,million KZT,nbk,2026-11-25,level,2026-11-25
 2026-02-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,5516909.0194232,million KZT,nbk,2026-11-25,level,2026-11-25
 2026-02-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,39990887.4277129,million KZT,nbk,2026-11-25,level,2026-11-25
-2026-02-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2026-02-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2026-02-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2026-02-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.6,index,nbk,2026-11-25,level,2026-11-25
 2026-02-01,BLR,national,monthly,BY_CPI_YOY,105.6,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2026-02-01,KZ,national,monthly,CHROMIUM_PRICE,10398.7643645,USD per tonne,imf,2026-11-25,level,2026-11-25
@@ -96813,7 +96582,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-02-28,KZ,national,irregular,STATE_NET_BUDGET_LENDING_YTD,-10995.26456827,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2026-02-28,KZ,national,irregular,STATE_NON_OIL_DEFICIT_YTD,-138938.66905932,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
 2026-02-28,KZ,national,irregular,STATE_TRANSFERS_RECEIVED_YTD,460000.0,million KZT,minfin,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2026-03-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-03-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,15226825.2664073,million KZT,nbk,2026-11-25,level,2026-11-25
 2026-03-01,KZ,national,monthly,BANK_LOANS_STB_FX,3684859.66710524,million KZT,nbk,2026-11-25,level,2026-11-25
 2026-03-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,24935748.5131421,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -96823,9 +96591,6 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,34623415.4491918,million KZT,nbk,2026-11-25,level,2026-11-25
 2026-03-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,5539158.33035755,million KZT,nbk,2026-11-25,level,2026-11-25
 2026-03-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,40162573.7795494,million KZT,nbk,2026-11-25,level,2026-11-25
-2026-03-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2026-03-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2026-03-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
 2026-03-01,KZ,national,monthly,BUSINESS_ACTIVITY_INDEX,49.5,index,nbk,2026-11-25,level,2026-11-25
 2026-03-01,BLR,national,monthly,BY_CPI_YOY,105.4,"index, same month previous year = 100",eec,2026-11-25,level,2026-11-25
 2026-03-01,KZ,national,monthly,CHROMIUM_PRICE,10541.86409,USD per tonne,imf,2026-11-25,level,2026-11-25
@@ -97170,7 +96935,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-31,KZ,national,daily,SWAP_1D,14.903771570692857,% per annum,kase,2026-11-25,level,2026-11-25
 2026-03-31,KZ,national,daily,TONIA,18.25,% per annum,kase,2026-11-25,level,2026-11-25
 2026-04-01,KZ,national,quarterly,AVG_WAGE_1T_QUARTERLY,486388.0,KZT,bns,2026-11-25,level,2026-11-25
-2026-04-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
+2026-04-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20367.4,billion KZT,ardfm,2026-11-26,level,2026-11-26
 2026-04-01,KZ,national,monthly,BANK_LOANS_STB_BUSINESS,15279573.7379978,million KZT,nbk,2026-11-25,level,2026-11-25
 2026-04-01,KZ,national,monthly,BANK_LOANS_STB_FX,3670351.92456194,million KZT,nbk,2026-11-25,level,2026-11-25
 2026-04-01,KZ,national,monthly,BANK_LOANS_STB_HOUSEHOLDS,25067303.9369476,million KZT,nbk,2026-11-25,level,2026-11-25
@@ -97180,9 +96945,9 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-01,KZ,national,monthly,BANK_LOANS_STB_LONG_TERM,34768615.2444716,million KZT,nbk,2026-11-25,level,2026-11-25
 2026-04-01,KZ,national,monthly,BANK_LOANS_STB_SHORT_TERM,5578262.43047379,million KZT,nbk,2026-11-25,level,2026-11-25
 2026-04-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,40346877.6749453,million KZT,nbk,2026-11-25,level,2026-11-25
-2026-04-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
-2026-04-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-25,level,2026-11-25
-2026-04-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-25,level,2026-11-25
+2026-04-01,KZ,national,monthly,BANK_NET_INCOME,795.9,billion KZT,ardfm,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
+2026-04-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.71,%,ardfm,2026-11-26,level,2026-11-26
+2026-04-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.85,%,ardfm,2026-11-26,level,2026-11-26
 2026-04-01,KZ,national,quarterly,BOP_GOODS_BALANCE,11278.217894,million USD,nbk,2026-11-25,level,2026-11-25
 2026-04-01,KZ,national,quarterly,BOP_GOODS_EXPORTS,28263.394311505173,USD million,nbk,2026-11-26,level,2026-11-26
 2026-04-01,KZ,national,quarterly,BOP_OVERALL_BALANCE_GDP_SHARE,0.580275,% of GDP,nbk,2026-11-25,level,2026-11-25
@@ -97622,7 +97387,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-01,KZ,national,monthly,BANK_DEPOSITS_LEGAL_ENTITIES,19581.9,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-05-01,KZ,national,monthly,BANK_DEPOSITS_TO_GDP,29.4,%,ardfm,2026-11-25,level,2026-11-25
 2026-05-01,KZ,national,monthly,BANK_LIABILITIES_TOTAL,60354.8,billion KZT,ardfm,2026-11-25,level,2026-11-25
-2026-05-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20996.0,billion KZT,ardfm,2026-11-25,level,2026-11-25
+2026-05-01,KZ,national,monthly,BANK_LIQUID_ASSETS,20996.0,billion KZT,ardfm,2026-11-26,level,2026-11-26
 2026-05-01,KZ,national,monthly,BANK_LOANS_CORPORATE,6136.5,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-05-01,KZ,national,monthly,BANK_LOANS_RETAIL,25305.6,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-05-01,KZ,national,monthly,BANK_LOANS_SME,12025.7,billion KZT,ardfm,2026-11-25,level,2026-11-25
@@ -97637,15 +97402,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,40653844.3074419,million KZT,nbk,2026-11-25,level,2026-11-25
 2026-05-01,KZ,national,monthly,BANK_LOANS_TOTAL,43783.0,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-05-01,KZ,national,monthly,BANK_LOANS_TO_GDP,26.7,%,ardfm,2026-11-25,level,2026-11-25
-2026-05-01,KZ,national,monthly,BANK_NET_INCOME,1035.7,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
+2026-05-01,KZ,national,monthly,BANK_NET_INCOME,1035.7,billion KZT,ardfm,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2026-05-01,KZ,national,monthly,BANK_NPL_90_AMOUNT,1808.3,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-05-01,KZ,national,monthly,BANK_NPL_90_CORPORATE_SHARE,2.5,%,ardfm,2026-11-25,level,2026-11-25
 2026-05-01,KZ,national,monthly,BANK_NPL_90_RETAIL_SHARE,4.8,%,ardfm,2026-11-25,level,2026-11-25
 2026-05-01,KZ,national,monthly,BANK_NPL_90_SHARE,4.13,%,ardfm,2026-11-25,level,2026-11-25
 2026-05-01,KZ,national,monthly,BANK_NPL_90_SME_SHARE,3.7,%,ardfm,2026-11-25,level,2026-11-25
 2026-05-01,KZ,national,monthly,BANK_PROVISIONS_IFRS,2077.0,billion KZT,ardfm,2026-11-25,level,2026-11-25
-2026-05-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.58,%,ardfm,2026-11-25,level,2026-11-25
-2026-05-01,KZ,national,monthly,BANK_ROE_MONTHLY,23.81,%,ardfm,2026-11-25,level,2026-11-25
+2026-05-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.58,%,ardfm,2026-11-26,level,2026-11-26
+2026-05-01,KZ,national,monthly,BANK_ROE_MONTHLY,23.81,%,ardfm,2026-11-26,level,2026-11-26
 2026-05-01,KZ,national,monthly,BANK_SHARE_CAPITAL,1544.5,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-05-01,KZ,national,monthly,BANK_TOP5_ASSETS_SHARE,69.0,%,ardfm,2026-11-25,level,2026-11-25
 2026-05-01,KZ,national,monthly,BANK_TOP5_DEPOSITS_SHARE,72.7,%,ardfm,2026-11-25,level,2026-11-25
@@ -97986,7 +97751,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-01,KZ,national,monthly,BANK_DEPOSITS_LEGAL_ENTITIES,19634.2,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-06-01,KZ,national,monthly,BANK_DEPOSITS_TO_GDP,29.9,%,ardfm,2026-11-25,level,2026-11-25
 2026-06-01,KZ,national,monthly,BANK_LIABILITIES_TOTAL,61924.5,billion KZT,ardfm,2026-11-25,level,2026-11-25
-2026-06-01,KZ,national,monthly,BANK_LIQUID_ASSETS,23189.4,billion KZT,ardfm,2026-11-25,level,2026-11-25
+2026-06-01,KZ,national,monthly,BANK_LIQUID_ASSETS,21945.4,billion KZT,ardfm,2026-11-26,level,2026-11-26
 2026-06-01,KZ,national,monthly,BANK_LOANS_CORPORATE,6472.8,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-06-01,KZ,national,monthly,BANK_LOANS_RETAIL,25480.1,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-06-01,KZ,national,monthly,BANK_LOANS_SME,12081.1,billion KZT,ardfm,2026-11-25,level,2026-11-25
@@ -98001,15 +97766,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,41278614.0932576,million KZT,nbk,2026-11-25,level,2026-11-25
 2026-06-01,KZ,national,monthly,BANK_LOANS_TOTAL,44356.3,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-06-01,KZ,national,monthly,BANK_LOANS_TO_GDP,27.1,%,ardfm,2026-11-25,level,2026-11-25
-2026-06-01,KZ,national,monthly,BANK_NET_INCOME,1396.5,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
+2026-06-01,KZ,national,monthly,BANK_NET_INCOME,1195.6,billion KZT,ardfm,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2026-06-01,KZ,national,monthly,BANK_NPL_90_AMOUNT,1859.7,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-06-01,KZ,national,monthly,BANK_NPL_90_CORPORATE_SHARE,2.4,%,ardfm,2026-11-25,level,2026-11-25
 2026-06-01,KZ,national,monthly,BANK_NPL_90_RETAIL_SHARE,4.9,%,ardfm,2026-11-25,level,2026-11-25
 2026-06-01,KZ,national,monthly,BANK_NPL_90_SHARE,4.19,%,ardfm,2026-11-25,level,2026-11-25
 2026-06-01,KZ,national,monthly,BANK_NPL_90_SME_SHARE,3.8,%,ardfm,2026-11-25,level,2026-11-25
 2026-06-01,KZ,national,monthly,BANK_PROVISIONS_IFRS,2081.0,billion KZT,ardfm,2026-11-25,level,2026-11-25
-2026-06-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.5,%,ardfm,2026-11-25,level,2026-11-25
-2026-06-01,KZ,national,monthly,BANK_ROE_MONTHLY,23.2,%,ardfm,2026-11-25,level,2026-11-25
+2026-06-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.65,%,ardfm,2026-11-26,level,2026-11-26
+2026-06-01,KZ,national,monthly,BANK_ROE_MONTHLY,24.14,%,ardfm,2026-11-26,level,2026-11-26
 2026-06-01,KZ,national,monthly,BANK_SHARE_CAPITAL,1544.5,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-06-01,KZ,national,monthly,BANK_TOP5_ASSETS_SHARE,69.1,%,ardfm,2026-11-25,level,2026-11-25
 2026-06-01,KZ,national,monthly,BANK_TOP5_DEPOSITS_SHARE,72.5,%,ardfm,2026-11-25,level,2026-11-25
@@ -98396,7 +98161,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-01,KZ,national,monthly,BANK_DEPOSITS_LEGAL_ENTITIES,20579.9,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-07-01,KZ,national,monthly,BANK_DEPOSITS_TO_GDP,31.0,%,ardfm,2026-11-25,level,2026-11-25
 2026-07-01,KZ,national,monthly,BANK_LIABILITIES_TOTAL,63037.1,billion KZT,ardfm,2026-11-25,level,2026-11-25
-2026-07-01,KZ,national,monthly,BANK_LIQUID_ASSETS,23157.7,billion KZT,ardfm,2026-11-25,level,2026-11-25
+2026-07-01,KZ,national,monthly,BANK_LIQUID_ASSETS,23189.4,billion KZT,ardfm,2026-11-26,level,2026-11-26
 2026-07-01,KZ,national,monthly,BANK_LOANS_CORPORATE,6428.2,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-07-01,KZ,national,monthly,BANK_LOANS_RETAIL,25848.9,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-07-01,KZ,national,monthly,BANK_LOANS_SME,12172.8,billion KZT,ardfm,2026-11-25,level,2026-11-25
@@ -98411,15 +98176,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,41949068.8021693,million KZT,nbk,2026-11-25,level,2026-11-25
 2026-07-01,KZ,national,monthly,BANK_LOANS_TOTAL,44754.2,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-07-01,KZ,national,monthly,BANK_LOANS_TO_GDP,27.3,%,ardfm,2026-11-25,level,2026-11-25
-2026-07-01,KZ,national,monthly,BANK_NET_INCOME,1609.9,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
+2026-07-01,KZ,national,monthly,BANK_NET_INCOME,1396.5,billion KZT,ardfm,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2026-07-01,KZ,national,monthly,BANK_NPL_90_AMOUNT,1845.7,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-07-01,KZ,national,monthly,BANK_NPL_90_CORPORATE_SHARE,2.0,%,ardfm,2026-11-25,level,2026-11-25
 2026-07-01,KZ,national,monthly,BANK_NPL_90_RETAIL_SHARE,4.8,%,ardfm,2026-11-25,level,2026-11-25
 2026-07-01,KZ,national,monthly,BANK_NPL_90_SHARE,4.12,%,ardfm,2026-11-25,level,2026-11-25
 2026-07-01,KZ,national,monthly,BANK_NPL_90_SME_SHARE,3.9,%,ardfm,2026-11-25,level,2026-11-25
 2026-07-01,KZ,national,monthly,BANK_PROVISIONS_IFRS,2079.6,billion KZT,ardfm,2026-11-25,level,2026-11-25
-2026-07-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.5,%,ardfm,2026-11-25,level,2026-11-25
-2026-07-01,KZ,national,monthly,BANK_ROE_MONTHLY,22.9,%,ardfm,2026-11-25,level,2026-11-25
+2026-07-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.5,%,ardfm,2026-11-26,level,2026-11-26
+2026-07-01,KZ,national,monthly,BANK_ROE_MONTHLY,23.2,%,ardfm,2026-11-26,level,2026-11-26
 2026-07-01,KZ,national,monthly,BANK_SHARE_CAPITAL,1600.6,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-07-01,KZ,national,monthly,BANK_TOP5_ASSETS_SHARE,69.2,%,ardfm,2026-11-25,level,2026-11-25
 2026-07-01,KZ,national,monthly,BANK_TOP5_DEPOSITS_SHARE,72.7,%,ardfm,2026-11-25,level,2026-11-25
@@ -98881,7 +98646,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-08-01,KZ,national,monthly,BANK_DEPOSITS_LEGAL_ENTITIES,21139.1,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-08-01,KZ,national,monthly,BANK_DEPOSITS_TO_GDP,30.5,%,ardfm,2026-11-25,level,2026-11-25
 2026-08-01,KZ,national,monthly,BANK_LIABILITIES_TOTAL,64244.5,billion KZT,ardfm,2026-11-25,level,2026-11-25
-2026-08-01,KZ,national,monthly,BANK_LIQUID_ASSETS,22919.5,billion KZT,ardfm,2026-11-25,level,2026-11-25
+2026-08-01,KZ,national,monthly,BANK_LIQUID_ASSETS,23157.7,billion KZT,ardfm,2026-11-26,level,2026-11-26
 2026-08-01,KZ,national,monthly,BANK_LOANS_CORPORATE,6350.0,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-08-01,KZ,national,monthly,BANK_LOANS_RETAIL,26149.6,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-08-01,KZ,national,monthly,BANK_LOANS_SME,12149.5,billion KZT,ardfm,2026-11-25,level,2026-11-25
@@ -98896,15 +98661,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-08-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,42129987.4764284,million KZT,nbk,2026-11-25,level,2026-11-25
 2026-08-01,KZ,national,monthly,BANK_LOANS_TOTAL,44991.7,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-08-01,KZ,national,monthly,BANK_LOANS_TO_GDP,26.6,%,ardfm,2026-11-25,level,2026-11-25
-2026-08-01,KZ,national,monthly,BANK_NET_INCOME,1811.7,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
+2026-08-01,KZ,national,monthly,BANK_NET_INCOME,1609.9,billion KZT,ardfm,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2026-08-01,KZ,national,monthly,BANK_NPL_90_AMOUNT,1851.8,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-08-01,KZ,national,monthly,BANK_NPL_90_CORPORATE_SHARE,2.1,%,ardfm,2026-11-25,level,2026-11-25
 2026-08-01,KZ,national,monthly,BANK_NPL_90_RETAIL_SHARE,4.7,%,ardfm,2026-11-25,level,2026-11-25
 2026-08-01,KZ,national,monthly,BANK_NPL_90_SHARE,4.12,%,ardfm,2026-11-25,level,2026-11-25
 2026-08-01,KZ,national,monthly,BANK_NPL_90_SME_SHARE,4.1,%,ardfm,2026-11-25,level,2026-11-25
 2026-08-01,KZ,national,monthly,BANK_PROVISIONS_IFRS,2085.7,billion KZT,ardfm,2026-11-25,level,2026-11-25
-2026-08-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.5,%,ardfm,2026-11-25,level,2026-11-25
-2026-08-01,KZ,national,monthly,BANK_ROE_MONTHLY,22.7,%,ardfm,2026-11-25,level,2026-11-25
+2026-08-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.5,%,ardfm,2026-11-26,level,2026-11-26
+2026-08-01,KZ,national,monthly,BANK_ROE_MONTHLY,22.9,%,ardfm,2026-11-26,level,2026-11-26
 2026-08-01,KZ,national,monthly,BANK_SHARE_CAPITAL,1599.8,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-08-01,KZ,national,monthly,BANK_TOP5_ASSETS_SHARE,69.4,%,ardfm,2026-11-25,level,2026-11-25
 2026-08-01,KZ,national,monthly,BANK_TOP5_DEPOSITS_SHARE,73.0,%,ardfm,2026-11-25,level,2026-11-25
@@ -99254,7 +99019,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-09-01,KZ,national,monthly,BANK_DEPOSITS_LEGAL_ENTITIES,20337.0,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-09-01,KZ,national,monthly,BANK_DEPOSITS_TO_GDP,30.1,%,ardfm,2026-11-25,level,2026-11-25
 2026-09-01,KZ,national,monthly,BANK_LIABILITIES_TOTAL,64373.1,billion KZT,ardfm,2026-11-25,level,2026-11-25
-2026-09-01,KZ,national,monthly,BANK_LIQUID_ASSETS,22919.5,billion KZT,ardfm,2026-11-25,level,2026-11-25
+2026-09-01,KZ,national,monthly,BANK_LIQUID_ASSETS,22919.5,billion KZT,ardfm,2026-11-26,level,2026-11-26
 2026-09-01,KZ,national,monthly,BANK_LOANS_CORPORATE,6587.8,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-09-01,KZ,national,monthly,BANK_LOANS_RETAIL,26471.8,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-09-01,KZ,national,monthly,BANK_LOANS_SME,12853.2,billion KZT,ardfm,2026-11-25,level,2026-11-25
@@ -99269,15 +99034,15 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-09-01,KZ,national,monthly,BANK_LOANS_STB_TOTAL,42825457.4564898,million KZT,nbk,2026-11-25,level,2026-11-25
 2026-09-01,KZ,national,monthly,BANK_LOANS_TOTAL,46273.9,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-09-01,KZ,national,monthly,BANK_LOANS_TO_GDP,27.3,%,ardfm,2026-11-25,level,2026-11-25
-2026-09-01,KZ,national,monthly,BANK_NET_INCOME,1811.7,billion KZT,ardfm,2026-11-25,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-25
+2026-09-01,KZ,national,monthly,BANK_NET_INCOME,1811.7,billion KZT,ardfm,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2026-09-01,KZ,national,monthly,BANK_NPL_90_AMOUNT,1856.7,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-09-01,KZ,national,monthly,BANK_NPL_90_CORPORATE_SHARE,1.9,%,ardfm,2026-11-25,level,2026-11-25
 2026-09-01,KZ,national,monthly,BANK_NPL_90_RETAIL_SHARE,4.6,%,ardfm,2026-11-25,level,2026-11-25
 2026-09-01,KZ,national,monthly,BANK_NPL_90_SHARE,4.01,%,ardfm,2026-11-25,level,2026-11-25
 2026-09-01,KZ,national,monthly,BANK_NPL_90_SME_SHARE,4.0,%,ardfm,2026-11-25,level,2026-11-25
 2026-09-01,KZ,national,monthly,BANK_PROVISIONS_IFRS,2102.5,billion KZT,ardfm,2026-11-25,level,2026-11-25
-2026-09-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.5,%,ardfm,2026-11-25,level,2026-11-25
-2026-09-01,KZ,national,monthly,BANK_ROE_MONTHLY,22.7,%,ardfm,2026-11-25,level,2026-11-25
+2026-09-01,KZ,national,monthly,BANK_ROA_MONTHLY,3.5,%,ardfm,2026-11-26,level,2026-11-26
+2026-09-01,KZ,national,monthly,BANK_ROE_MONTHLY,22.7,%,ardfm,2026-11-26,level,2026-11-26
 2026-09-01,KZ,national,monthly,BANK_SHARE_CAPITAL,1599.8,billion KZT,ardfm,2026-11-25,level,2026-11-25
 2026-09-01,KZ,national,monthly,BANK_TOP5_ASSETS_SHARE,69.7,%,ardfm,2026-11-25,level,2026-11-25
 2026-09-01,KZ,national,monthly,BANK_TOP5_DEPOSITS_SHARE,73.0,%,ardfm,2026-11-25,level,2026-11-25

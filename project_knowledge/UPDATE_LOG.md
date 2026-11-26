@@ -1,24 +1,7 @@
 # Update Log
 
-Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-10-16 — balance of payments from NBK form 481, with 324 filling in (user: «почему упал прогон»)» are in docs/UPDATE_LOG_ARCHIVE.md in the
+Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-10-19 — the IIP comparison with the IMF allows the revision window (user: «почему упал прогнон»)» are in docs/UPDATE_LOG_ARCHIVE.md in the
 repository (not synced into the Claude Project). When this file grows past ~60 KB, move the oldest entries there.
-
-## 2026-10-19 — the IIP comparison with the IMF allows the revision window (user: «почему упал прогнон»)
-
-The runs of 2026-10-18 and 10-19 committed nothing: test_imf_net_iip_is_nbks_one_day_earlier
-failed. The IMF's quarterly IIP for Kazakhstan was updated on 2026-10-18: it now runs to end-2026-Q2
-and revises net IIP from end-2024-Q1 on (-12 to -36 mln USD through end-2025-Q3; end-2025 -35 639.2
-against the NBK's -34 458.7, end-2026-Q1 -39 373.9 against -38 741.7). NBK open-data formId=309, the
-source of IIP_NET/IIP_ASSETS/IIP_LIABILITIES, had not changed: it still ends with the 1 April 2026
-position and carries none of the revision. The test demanded equality on every
-shared quarter. Like the two current-account comparisons fixed on 2026-10-13 and 10-16, it now
-demands it on the settled quarters, those before the last three years of the shared range (8
-quarters 2021-2022 today; the NBK series starts in 2021), and tolerates differences inside them.
-The old test fails on the refreshed IMF series exactly as in CI; the new one passes on it and on
-main's data. NBK's own workbook of 30.09.2026
-(nationalbank.kz/file/download/136322) has the IMF's figures (end-2025 -35 639.21, end-2026-Q1
--39 373.94); forms 309, 320 and 321 all still end at 1 April 2026 without the revision, so
-config/source_issues.yaml registers nbk_iip_forms_stale_2024_2026 (IIP_NET, IIP_ASSETS, IIP_LIABILITIES).
 
 ## 2026-10-19 — comparisons between publications no longer block the daily commit (user: «ок, 2»)
 
@@ -627,3 +610,29 @@ part has the sign of the year's USD/KZT change (+6.8 %, −1.6 %, +15.4 %, −4.
 opening assets times that change (2024: 29 854 bn × 15.4 % ≈ 4 598 bn against 4 664; 2025: 34 730 bn × −4.0 % ≈
 −1 393 bn against −1 403). The existing 15 National Fund series are unchanged (all 106 reports parse, 0 values
 differ).
+## 2026-11-26 — ARDFM banking series: a date shift applied on every run (BANK_NET_INCOME, BANK_ROA_MONTHLY, BANK_ROE_MONTHLY, BANK_LIQUID_ASSETS)
+
+Found by a pipeline check. The four series carry `date_basis: next_period_start` (a bulletin «на 01.07.2026» is
+June); `update_ardfm.py` shifts the fetched dates back one month. `_fetch_banking_series` merges the stored history
+into the fresh records before that shift, so the history -- already in covered-period dating -- was shifted again
+on every run (the case `lib/periods.apply_date_basis` warns about). Each run added a month at the front with the
+earliest value and moved every later value one month back: BANK_NET_INCOME grew from 6 rows on 2026-09-26 to 66
+on 2026-11-25, 60 of them 795.9 (May 2021 to April 2026), and every month from June carried the next month's
+figure; the June edition (net income 1 195.6, ROE 24.14, liquid assets 21 945.4) had dropped out.
+
+Fix: the stored history goes back to the bulletin's dating before the merge (`periods.shift_forward_one_period`,
+`ardfm._date_basis`); three consecutive runs now give the same file (test). The four series are rebuilt from the
+six bulletins as of 01.05 … 01.10.2026 (gov.kz documents 1025628, 1044228, 1055812, 1097084, 1097515, 1102005):
+
+| 2026 | Net income, bn KZT (YTD) | ROA, % | ROE, % | Highly liquid assets, bn KZT |
+|---|---|---|---|---|
+| April | 795.9 | 3.71 | 24.85 | 20 367.4 |
+| May | 1 035.7 | 3.58 | 23.81 | 20 996.0 |
+| June | 1 195.6 | 3.65 | 24.14 | 21 945.4 |
+| July | 1 396.5 | 3.50 | 23.20 | 23 189.4 |
+| August | 1 609.9 | 3.50 | 22.90 | 23 157.7 |
+| September | 1 811.7 | 3.50 | 22.70 | 22 919.5 |
+
+The other ARDFM series take their date from the table's own column and have no date_basis; the 30 NBK series
+with `next_period_start` do not merge stored history. No model_data variable uses these four series. The entries
+in metadata/revisions for them from 2026-11-14 on record the drift, not source revisions.

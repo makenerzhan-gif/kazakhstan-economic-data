@@ -111,6 +111,25 @@ def shift_back_one_period(iso_date: str, frequency: str) -> str:
     return f"{y:04d}-{m:02d}-01"
 
 
+def shift_forward_one_period(iso_date: str, frequency: str) -> str:
+    """The inverse of shift_back_one_period: the start of the NEXT period (monthly, quarterly). For a
+    fetcher that merges its stored history into fresh records before apply_date_basis runs: the
+    stored dates already carry the covered period and must go back to the source's dating first."""
+    if frequency not in NORMALISED_FREQUENCIES:
+        return iso_date
+    try:
+        y, m, _ = (int(p) for p in str(iso_date).split("-"))
+    except ValueError:
+        return iso_date
+    step = 1 if frequency == "monthly" else 3
+    if frequency == "quarterly":
+        m = QUARTER_FIRST_MONTH[m]
+    m += step
+    if m > 12:
+        y, m = y + 1, m - 12
+    return f"{y:04d}-{m:02d}-01"
+
+
 def apply_date_basis(records: list[dict], frequency: str, date_basis: str | None) -> list[dict]:
     """Relabel a source's dates to the period the observation covers.
 
