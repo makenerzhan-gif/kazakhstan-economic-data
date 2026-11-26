@@ -30,12 +30,24 @@ def test_derive_filters_item_and_region_and_scales_units():
     assert [(r["date"], r["value"]) for r in update_derived.derive(ind, DIMS_ROWS)] == [("2024-12-31", 9214184.0), ("2025-12-31", 9320639.0)]
 
 
+def test_derive_minus_subtracts_items_on_the_same_date_and_drops_dates_without_them():
+    rows = [
+        {"date": "2025-01-01", "region": "national", "item_code": "GDP", "value": "100.5"},
+        {"date": "2025-01-01", "region": "national", "item_code": "B", "value": "20.2"},
+        {"date": "2025-04-01", "region": "national", "item_code": "GDP", "value": "110.0"},
+        {"date": "2025-01-01", "region": "AKM", "item_code": "B", "value": "5.0"},
+    ]
+    ind = {"id": "X", "frequency": "quarterly", "derived_from": {"dataset": "D", "item": "GDP", "minus": "B", "region": "national"}}
+    assert [(r["date"], r["value"]) for r in update_derived.derive(ind, rows)] == [("2025-01-01", 80.3)]
+
+
 def test_every_derived_indicator_points_at_a_real_dataset_and_has_no_fetcher_of_its_own():
     dims_ids = set(update_dims.DATASETS)
     derived = update_derived.derived_indicators()
     assert {i["id"] for i in derived} == {"IND_PROD", "IND_PROD_MINING", "IND_PROD_MANUFACTURING", "IND_PROD_ELECTRICITY", "INVESTMENT",
                                           "EXPORTS", "OIL_EXPORTS_VALUE", "OIL_EXPORTS_VOLUME", "POPULATION_BNS", "POPULATION_BOY_BNS", "EMPLOYED_TOTAL", "ELECTRICITY_PRODUCTION",
-                                          "GDP_NOMINAL"}
+                                          "GDP_NOMINAL", "GDP_REAL_SA", "GDP_EX_MINING_REAL_SA", "CONSUMPTION_HH_REAL_SA",
+                                          "GFCF_REAL_SA", "EXPORTS_GS_REAL_SA", "IMPORTS_GS_REAL_SA"}
     for i in derived:
         spec = i["derived_from"]
         assert spec["dataset"] in dims_ids, i["id"]

@@ -43,13 +43,27 @@ def derive(ind: dict, dims_records: list[dict]) -> list[dict]:
     # Decimal, not float: 16804418.1 * 1e6 in floats is 16804418100000.002, and that noise
     # was being logged as a "revision" of GDP_NOMINAL and stored in ELECTRICITY_PRODUCTION.
     scale = Decimal(str(spec.get("scale", 1)))
+    # `minus`: an item (or list of items) of the same dataset subtracted on the same date and region,
+    # e.g. GDP minus section B for GDP excluding mining. A date where any subtrahend is missing is dropped.
+    minus = spec.get("minus") or []
+    minus = [minus] if isinstance(minus, str) else list(minus)
+    sub = {}
+    for r in dims_records:
+        if r["item_code"] in minus and (r.get("region") or dims.NATIONAL) == region and r.get("value") not in (None, ""):
+            sub.setdefault(r["date"], {})[r["item_code"]] = Decimal(str(r["value"]))
     out = []
     for r in dims_records:
         if r["item_code"] != spec["item"] or (r.get("region") or dims.NATIONAL) != region:
             continue
         if r.get("value") in (None, ""):
             continue
-        out.append({"date": r["date"], "value": float(Decimal(str(r["value"])) * scale), "transformation": r.get("transformation") or "level"})
+        v = Decimal(str(r["value"]))
+        if minus:
+            parts = sub.get(r["date"], {})
+            if any(m not in parts for m in minus):
+                continue
+            v -= sum(parts[m] for m in minus)
+        out.append({"date": r["date"], "value": float(v * scale), "transformation": r.get("transformation") or "level"})
     out.sort(key=lambda r: r["date"])
     return out
 
@@ -106,7 +120,7 @@ def run(run_logger: pipeline_logging.RunLogger) -> None:
         metadata.DatasetMetadata(
             source=agency,
             source_url=src_meta.get("source_url", ""),
-            dataset_id=f"{dataset}[{spec['item']}]" + ("" if spec.get("region", dims.NATIONAL) == dims.NATIONAL else f"@{spec['region']}"),
+            dataset_id=f"{dataset}[{spec['item']}" + "".join(f"-{m}" for m in ([spec["minus"]] if isinstance(spec.get("minus"), str) else spec.get("minus") or [])) + "]" +("" if spec.get("region", dims.NATIONAL) == dims.NATIONAL else f"@{spec['region']}"),
             indicator_id=indicator_id,
             indicator_name=ind["name_en"],
             description=ind["name_ru"],
@@ -115,6 +129,7 @@ def run(run_logger: pipeline_logging.RunLogger) -> None:
             currency="KZT" if "KZT" in ind["unit"] else ("USD" if "USD" in ind["unit"] else ""),
             geography=src_meta.get("geography", "Kazakhstan (national)"),
             methodology=f"Derived from the item-level dataset {dataset}, item {spec['item']}"
+                        + (f" minus {spec['minus']}" if spec.get("minus") else "")
                         + (f", scale {spec['scale']}" if spec.get("scale") not in (None, 1, 1.0) else "")
                         + f". {src_meta.get('methodology', '')}".rstrip(),
             publication_date=src_meta.get("publication_date"),

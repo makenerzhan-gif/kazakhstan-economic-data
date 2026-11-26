@@ -41,6 +41,90 @@ indicators:
     derived_from: {dataset: GVA_NOMINAL_BY_SECTION_QUARTERLY, item: GDP, region: national, scale: 1000000}
     derived_note: "the «ВВП» row of table 4439's xlsx export (million KZT, year-to-date) x 1e6; equal to the JSON cube's national slice on all 66 quarters 2010 Q1 - 2026 H1 within the table's rounding to 0.1 million KZT (checked 2026-09-23; only 2010 Q2 differed, by 48 795 KZT, where the cube carried unrounded tenge), one download instead of two"
 
+  # ---- quarterly real national accounts, 2010 prices, seasonally adjusted by BNS (added 2026-11-26) ----
+  # Model inputs (kz-model-suite panel: gdp_r_sa, gdp_xb_r_sa, cons_r_sa, gfcf_r_sa, x_r_sa, m_r_sa), until now read from
+  # KZ_Macro_DB. Same BNS elements 283161/283162, sheet 6, already parsed by update_dims.py; checked 2026-11-26 against the
+  # KZ_Macro_DB values in the panel on all 66 quarters 2010Q1-2026Q2: max relative difference 4e-6 (rounding).
+  # GDP is taken from the expenditure table, as in the panel: BNS adjusts the two tables separately, and their SA GDP
+  # differ by up to 0.73 % (2010Q1-2026Q2); GDP excluding mining is built from the production table (GDP minus section B).
+  - id: GDP_REAL_SA
+    name_ru: "ВВП в ценах 2010 г., с исключением сезонного фактора (метод конечного использования)"
+    name_en: "Real GDP, 2010 prices, seasonally adjusted (expenditure table)"
+    agency: bns
+    frequency: quarterly
+    unit: "million KZT, average 2010 prices, seasonally adjusted"
+    category: national_accounts
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "лист 6 элемента 283161: дискретный квартал, с исключением сезонного и календарного факторов"
+    derived_from: {dataset: QNA_GDP_EXPENDITURE_SA_CONSTANT_2010, item: GDP, region: national}
+    derived_note: "row «ВВП» of sheet 6, element 283161; equals KZ_Macro_DB NA_GDP_R10_SA (max abs 43 million KZT, 2010Q1-2026Q2). The production table's SA GDP (283162) differs by up to 0.73 %."
+
+  - id: GDP_EX_MINING_REAL_SA
+    name_ru: "ВВП без горнодобывающей промышленности в ценах 2010 г., с исключением сезонного фактора"
+    name_en: "GDP excluding mining (section B), 2010 prices, seasonally adjusted"
+    agency: bns
+    frequency: quarterly
+    unit: "million KZT, average 2010 prices, seasonally adjusted"
+    category: national_accounts
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "лист 6 элемента 283162: дискретный квартал, с исключением сезонного и календарного факторов"
+    derived_from: {dataset: QNA_GVA_BY_SECTION_SA_CONSTANT_2010, item: GDP, minus: B, region: national}
+    derived_note: "rows «ВВП» minus «B Горнодобывающая промышленность» of sheet 6, element 283162 -- a proxy of non-oil GDP, not the BNS non-oil GDP; the difference of two separately adjusted rows is not itself a published SA series. Equals KZ_Macro_DB NA_GDP_XB_R10_SA (max abs 5 million KZT)."
+
+  - id: CONSUMPTION_HH_REAL_SA
+    name_ru: "Потребление домашних хозяйств в ценах 2010 г., с исключением сезонного фактора"
+    name_en: "Household final consumption, 2010 prices, seasonally adjusted"
+    agency: bns
+    frequency: quarterly
+    unit: "million KZT, average 2010 prices, seasonally adjusted"
+    category: national_accounts
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "лист 6 элемента 283161: дискретный квартал, с исключением сезонного и календарного факторов"
+    derived_from: {dataset: QNA_GDP_EXPENDITURE_SA_CONSTANT_2010, item: HOUSEHOLDS, region: national}
+    derived_note: "row «домашних хозяйств» of sheet 6, element 283161; equals KZ_Macro_DB NA_C_HH_R10_SA (max abs 5 million KZT)."
+
+  - id: GFCF_REAL_SA
+    name_ru: "Валовое накопление основного капитала в ценах 2010 г., с исключением сезонного фактора"
+    name_en: "Gross fixed capital formation, 2010 prices, seasonally adjusted"
+    agency: bns
+    frequency: quarterly
+    unit: "million KZT, average 2010 prices, seasonally adjusted"
+    category: national_accounts
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "лист 6 элемента 283161: дискретный квартал, с исключением сезонного и календарного факторов"
+    derived_from: {dataset: QNA_GDP_EXPENDITURE_SA_CONSTANT_2010, item: GFCF, region: national}
+    derived_note: "row «валовое накопление основного капитала» of sheet 6, element 283161; equals KZ_Macro_DB NA_GFCF_R10_SA (max abs 5 million KZT)."
+
+  - id: EXPORTS_GS_REAL_SA
+    name_ru: "Экспорт товаров и услуг в ценах 2010 г., с исключением сезонного фактора"
+    name_en: "Exports of goods and services, 2010 prices, seasonally adjusted"
+    agency: bns
+    frequency: quarterly
+    unit: "million KZT, average 2010 prices, seasonally adjusted"
+    category: national_accounts
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "лист 6 элемента 283161: дискретный квартал, с исключением сезонного и календарного факторов"
+    derived_from: {dataset: QNA_GDP_EXPENDITURE_SA_CONSTANT_2010, item: EXPORTS, region: national}
+    derived_note: "row «экспорт товаров и услуг» of sheet 6, element 283161 (national accounts, not the customs EXPORTS); equals KZ_Macro_DB NA_X_R10_SA (max abs 5 million KZT)."
+
+  - id: IMPORTS_GS_REAL_SA
+    name_ru: "Импорт товаров и услуг в ценах 2010 г., с исключением сезонного фактора"
+    name_en: "Imports of goods and services, 2010 prices, seasonally adjusted"
+    agency: bns
+    frequency: quarterly
+    unit: "million KZT, average 2010 prices, seasonally adjusted"
+    category: national_accounts
+    source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "лист 6 элемента 283161: дискретный квартал, с исключением сезонного и календарного факторов"
+    derived_from: {dataset: QNA_GDP_EXPENDITURE_SA_CONSTANT_2010, item: IMPORTS, region: national}
+    derived_note: "row «импорт товаров и услуг» of sheet 6, element 283161; equals KZ_Macro_DB NA_M_R10_SA (max abs 5 million KZT)."
+
   - id: IND_PROD
     name_ru: "Индекс промышленного производства"
     name_en: "Industrial Production Index"
