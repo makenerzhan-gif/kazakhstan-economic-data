@@ -1,56 +1,7 @@
 # Update Log
 
-Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-10-19 — the IIP comparison with the IMF allows the revision window (user: «почему упал прогнон»)» are in docs/UPDATE_LOG_ARCHIVE.md in the
+Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-10-29 — quarterly national accounts for 2026 Q2: not yet published; BNS withdrew its production release (scheduled check from «Сделай все три пункта», point 3)» are in docs/UPDATE_LOG_ARCHIVE.md in the
 repository (not synced into the Claude Project). When this file grows past ~60 KB, move the oldest entries there.
-
-## 2026-10-19 — comparisons between publications no longer block the daily commit (user: «ок, 2»)
-
-Five daily runs between 2026-10-13 and 10-19 committed nothing for the same reason: a test comparing
-two publications failed because one had taken up the NBK's revision of 30.09.2026 and the other had
-not yet (the WEO against NBK form 324, form 481 against 324, the IMF's quarterly IIP against NBK form
-309). Each was a true statement about the sources, not a fault in the pipeline, yet it withheld
-every series for the day. Tests that compare two publications revising on their own schedules are now
-marked `cross_source` (tests/conftest.py registers the marker): the current account against the WEO
-and against the IMF's quarterly BOP, net IIP against the IMF, WDI GDP against the WEO, NBK ROA/ROE and
-capital adequacy against the IMF FSIs and the FSIs' coverage, the BNS CPI publication against the
-Taldau series, and loans to business by creditor against form 445's series. The STB loan test was
-split: its components-add-up-to-the-total part still blocks; the match with form 445's household
-loans is cross-source. update_all.run_tests runs the two groups apart (pytest -m "not cross_source",
-then -m cross_source): only the first decides the commit; each failure of the second is a GitHub
-Actions warning, a job-summary line and a section of the update report («Cross-source checks failed:
-N»), with pytest's message in full (COLUMNS=400). Checked on the real data with one settled IIP
-quarter set wrong: 816 blocking tests pass, the IIP comparison fails and is reported as
-`AssertionError: ['2021-04-01']`. 17 of 833 test cases are cross-source.
-
-## 2026-10-20 — the resource-use check pinned on a final print (user: «прогон опять упал»)
-
-The 2026-10-20 run committed nothing: test_resource_use_data_matches_the_publication (blocking: it
-checks the parse of one BNS publication, not a comparison of two) expected coal exports January–July
-2026 of 17 833.073 kt and found 17 771.911. BNS published the January–August 2026 edition of
-«Ресурсы и использование…» (bns_resource_use_202608_2026-10-20.xlsx); like every monthly edition it
-carries the cumulative figures for t, t-1 and t-12, and its «январь-июль 2026г.» column revises
-January–July: coal exports -61.2 kt, coal resources 63 474.693 -> 63 475.592, wheat exports
-4 947 050.527 -> 4 947 361.027 t. RESOURCE_USE_YTD keeps the latest print by design, so the data was
-right and the test's assumption was not. It now pins January–July 2025 (coal production 63 330.303,
-coal exports 16 428.615 kt, wheat exports 4 384 954.666 t), printed for the last time in the
-«январь-июль 2025г.» column of the January–July 2026 edition and absent from the August one. The old
-test fails on the refreshed dataset exactly as in CI; the new one passes on it and on main's data.
-
-## 2026-10-29 — quarterly national accounts for 2026 Q2: not yet published; BNS withdrew its production release (scheduled check from «Сделай все три пункта», point 3)
-
-The expenditure QNA (element 283161, the source of model_data's gdp, gdp_sa, gdp_nsa) was due on 28.10.2026;
-on 29.10.2026 09:30 UTC its file is still the one of 28.07.2026, ending at 2026 Q1. The production QNA (283162)
-carried 2026 Q1-Q2 from 16-17.10.2026 and was replaced on 20.10.2026 by a file ending at 2025 Q4, so the run of
-2026-10-21 dropped 2026 from the seven QNA_GVA_* datasets (1 716 -> 1 664 records each for the level tables).
-The withdrawn release had GDP Q2 2026 at 113.8 % of Q2 2025 in 2010 prices, H1 109.5 %, seasonally adjusted
-Q2/Q1 +7.6 %; BNS's cumulative table 4439/4440 has GDP Q1 103.0 %, H1 104.1 %, Q2 alone 105.2 %
-(GVA_VOLUME_INDEX_BY_SECTION_DISCRETE). Nominal Q2 growth agrees (+18.9 % QNA, +20.1 % table 4439); the
-release's implied deflator, about 104.5 %, does not fit CPI 110.4 % or industrial producer prices 111-117 % y/y,
-so the 13.8 % was most likely a deflation error, and the withdrawal is consistent with that. The income QNA
-(283160, nominal only) keeps Q2 2026 from 16.10.2026: GDP 43 553.8 bn KZT, in line with the 2025 gap between the
-QNA quarters and table 4439's. Registered as source issue qna_production_2026_withdrawn (caveat); the
-GVA_VOLUME_INDEX_BY_SECTION_DISCRETE note now states the QNA's status. No data or model_data change: the
-expenditure QNA has no Q2 to add. The check is re-armed.
 
 ## 2026-11-06 — quarterly national accounts for 2026 Q2 (expenditure, published 04.11.2026); «2025*» parse fix (scheduled check from «Сделай все три пункта», point 3)
 
@@ -636,3 +587,54 @@ six bulletins as of 01.05 … 01.10.2026 (gov.kz documents 1025628, 1044228, 105
 The other ARDFM series take their date from the table's own column and have no date_basis; the 30 NBK series
 with `next_period_start` do not merge stored history. No model_data variable uses these four series. The entries
 in metadata/revisions for them from 2026-11-14 on record the drift, not source revisions.
+## 2026-11-27 — Pipeline housekeeping: false revisions, history guard, shorter report, manifests, X-13 across a hole, IND_PROD_YTD_YOY
+
+Ten of the twelve points of the 2026-11-26 review; no stored value of an existing series changes except the
+seasonally adjusted tax receipts (below).
+
+1. **False revisions.** `lib/revisions.changed`: two missing values are the same value. `detect_revisions` (scalar
+   and item-level) compared `float(old) != float(new)`, and NaN != NaN, so every run wrote about 3 500 "revisions"
+   NaN -> NaN for TARIFF_DECISIONS. `metadata/revisions/tariff_decisions_revisions.jsonl` held 175 970 lines
+   (37 MB), every one of them NaN -> NaN; the file is removed.
+2. **History guard** (`lib/history_guard.py`). After a run every changed processed file is compared with the
+   committed one: first observation moved into the past, observations inserted inside the stored span or removed
+   (scalar series; start and removals for item-level files), a run of identical values inside the old span longer
+   than any before. Replayed on the eight latest runs it reports the ARDFM shift on each of the seven before
+   the fix (four series, «start moved back» by a month each run), nothing on the run after it, and on
+   2026-11-25 the history load of NON_OIL_BUDGET_DEFICIT. The findings are a section of the run report and open the run's issue
+   (`run_issue.py`); they never block a run.
+3. **Revisions in the run report** (`lib/run_report.py`): each series revised on the run's date -- observations,
+   periods, largest relative change -- with the series revised on five or more earlier dates collapsed into one
+   line. On 2026-11-25: 25 series, 7 seldom revised (US_NFCI 645 observations, CIS_POPULATION 17, the four ARDFM
+   series, NON_OIL_BUDGET_DEFICIT 2021).
+4. **Warnings in the run report.** The report of 2026-11-26 was 1.6 MB with 12 442 warning lines. It now prints
+   only warnings the previous run did not raise and counts the rest by kind; the set of known warnings is
+   `metadata/known_warnings.txt` (one hash per source/dataset/text), written by each committed run. The first
+   run without the file records the baseline. The per-dataset cap of 30 warnings in item-level datasets now
+   keeps the newest by date rather than the first 30 series.
+5. **Download manifests.** `raw_store.write_download_manifest` keeps two manifests for an answer that does not
+   change (first seen, latest download) instead of one per run; `dedup_raw.py --manifests` applied the same rule
+   to the archive: 57 619 manifests -> 11 351 (46 268 removed, each identical to both neighbours apart from
+   `downloaded_at`). `imf_dims.last_download` reads the date of the latest manifest as before.
+6. **Schedule**: cron `37 5 * * 3,6` instead of `0 6 * * 3,6` (the November runs started 8-10 hours after the
+   round hour). **Actions**: checkout v5, setup-python v6, upload-artifact v6, cache v5 (Node 24).
+7. **Seasonal adjustment across a hole** (`x13.longest_run(max_gap)`, `x13.adjust(max_gap)`, spec key
+   `x13: {max_gap: n}`): a hole of up to n periods is passed to X-13 as missing observations and every output is
+   NaN there again. Set for `tax_revenue` (April 2026 is missing in the source): `tax_revenue_sa` now runs
+   2018-01..2026-09 with April and May 2026 missing, instead of stopping at 2026-03; model (0 1 1)(0 1 1),
+   M7 0.21, Q 0.35. The 2018-2026-03 values move by 0.6 % in the median (4.4 % at most) because the span and the
+   chosen ARIMA model changed.
+8. **IND_PROD_YTD_YOY** -- industrial production, January to the month on a year earlier (Taldau 701625,
+   period 8), 154 observations 2014-01..2026-10 (October 103.5). `tests/test_ind_prod_consistency.py`
+   (cross_source): January equals the monthly y/y in all 13 years; the cumulative index is within 0.5 point of
+   the mean of the months except 2017-04..08 (April +4.3) and 2026-02..05 (February -1.4) -- recorded in
+   `config/source_issues.yaml` (`ind_prod_ytd_2017`, `ind_prod_mom_not_revised`).
+9. **observation_type** for three of the nine indicators without one: IMF_PPP_EXCHANGE_RATE (period_ratio: equals
+   IMF_NOMINAL_GDP / IMF_GDP_PPP in all 40 years to 0.001 %), ECOMMERCE_SERVICES_VALUE (period_total),
+   COMPUTERS_INTERNET_CONNECTED (point_in_time). The Taldau passports of the other six (read 2026-11-27:
+   TOURISM_EMPLOYMENT, ORGANIZATIONS_USING_COMPUTERS, WORKERS_USING_COMPUTERS, WORKERS_USING_INTERNET,
+   HOSPITAL_BEDS, ICT_SPECIALISTS) do not say whether the count is at a date or an average over the year; they
+   stay unclassified rather than guessed.
+
+Not done here: rewriting the repository history (needs the owner's decision) and branch protection for `main`
+(a repository setting). Tests: 989.

@@ -74,7 +74,7 @@ monthly:
   - {name: freight, source: {series: FREIGHT_TURNOVER_MONTHLY}, ops: [decumulate_ytd], sa: log, note: "Freight turnover, million tonne-km, own month from YTD."}
   - {name: exports_usd, source: {series: EXPORTS}, sa: log, note: "Goods exports, thousand USD (BNS), from 2015."}
   - {name: imports_usd, source: {series: IMPORTS}, sa: log, note: "Goods imports, thousand USD (BNS)."}
-  - {name: tax_revenue, source: {series: STATE_TAX_REVENUE_YTD}, ops: [decumulate_ytd], sa: log, note: "State budget tax receipts, million KZT, own month from YTD (2018 on). 2026-04 missing in the source, so 2026-04 and 2026-05 are missing here."}
+  - {name: tax_revenue, source: {series: STATE_TAX_REVENUE_YTD}, ops: [decumulate_ytd], sa: log, x13: {max_gap: 2}, note: "State budget tax receipts, million KZT, own month from YTD (2018 on). 2026-04 missing in the source, so 2026-04 and 2026-05 are missing here; the seasonal adjustment runs across that hole (x13 max_gap) and is missing in those two months too."}
   # ---------------------------------------------------------------- money and rates
   - {name: base_rate, source: {series: BASE_RATE}, to_monthly: mean, kind: rate, sa: none, note: "NBK base rate, monthly mean of the daily step function (from 2015-08)."}
   - {name: tonia, source: {series: TONIA}, to_monthly: mean, kind: rate, sa: none}

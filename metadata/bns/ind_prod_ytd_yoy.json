@@ -1,0 +1,21 @@
+{
+  "source": "bns",
+  "source_url": "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData",
+  "dataset_id": "taldau-index-701625",
+  "indicator_id": "IND_PROD_YTD_YOY",
+  "indicator_name": "Industrial Production Index, January to month over the same period of previous year",
+  "description": "Индекс промышленного производства, январь–месяц к январю–месяцу прошлого года",
+  "frequency": "monthly",
+  "unit": "index (same period previous year = 100)",
+  "currency": "",
+  "geography": "Kazakhstan (national)",
+  "methodology": "Index, January to the month against the same months of the previous year = 100 («месяц с накоплением»): industrial production, national, from 2014-01 (Taldau index 701625, period 8). Dated by the last month of the period.",
+  "publication_date": null,
+  "last_update_date": "2026-11-27",
+  "download_date": "2026-11-27",
+  "period_start": "2014-01-01",
+  "period_end": "2026-10-01",
+  "next_update_date": null,
+  "transformation": "level",
+  "revision_status": "original"
+}

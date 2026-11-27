@@ -27,3 +27,16 @@ def test_detect_revisions_ignores_new_period():
     new = [{"date": "2026-01-01", "value": 100.0}, {"date": "2026-02-01", "value": 110.0}]
     revs = revisions.detect_revisions("GDP_REAL", "bns", old, new, date(2026, 8, 30))
     assert revs == []
+
+
+def test_two_missing_values_are_not_a_revision():
+    """NaN != NaN: TARIFF_DECISIONS wrote ~3 500 NaN -> NaN "revisions" on every run until 2026-11-27."""
+    nan = float("nan")
+    old = [{"date": "2026-01-01", "value": nan}, {"date": "2026-02-01", "value": "nan"}, {"date": "2026-03-01", "value": nan}]
+    new = [{"date": "2026-01-01", "value": nan}, {"date": "2026-02-01", "value": nan}, {"date": "2026-03-01", "value": 5.0}]
+    revs = revisions.detect_revisions("X", "bns", old, new, date(2026, 11, 27))
+    assert [r.period for r in revs] == ["2026-03-01"]            # a value where none was is a change
+    from lib import dims
+    rows = lambda v: [{"date": "2026-01-01", "region": "national", "item_code": "A", "value": v}]   # noqa: E731
+    assert dims.detect_revisions("D", "krem", rows(nan), rows(nan), date(2026, 11, 27)) == []
+    assert len(dims.detect_revisions("D", "krem", rows(1.0), rows(2.0), date(2026, 11, 27))) == 1

@@ -103,3 +103,33 @@ def test_latest_raw_file_is_never_a_manifest(isolated_raw_root):
     path = raw_store.save_raw_bytes("wits", "EXPORTS", date(2026, 9, 25), "json", b"{}")
     raw_store.write_download_manifest("wits", "EXPORTS", date(2026, 9, 25), {"raw_file": path.name})
     assert raw_store.latest_raw_file("wits", "EXPORTS") == path
+
+
+def test_an_unchanged_answer_keeps_two_manifests_not_one_per_run(isolated_raw_root):
+    """First seen and latest download; the 57 619 manifests of 2026-11-27 were one per indicator per run."""
+    info = lambda day: {"downloaded_at": f"{day}T06:00:00", "source_url": "https://x", "raw_file": "a.json"}   # noqa: E731
+    for day in (1, 2, 3, 4):
+        raw_store.write_download_manifest("bns", "CPI", date(2026, 11, day), info(f"2026-11-0{day}"))
+    names = [p.name for p in raw_store.indicator_manifests("bns", "CPI")]
+    assert names == ["bns_cpi_2026-11-01.manifest.json", "bns_cpi_2026-11-04.manifest.json"]
+    # a changed answer starts a new pair; the old pair stays
+    raw_store.write_download_manifest("bns", "CPI", date(2026, 11, 5), {**info("2026-11-05"), "raw_file": "b.json"})
+    raw_store.write_download_manifest("bns", "CPI", date(2026, 11, 6), {**info("2026-11-06"), "raw_file": "b.json"})
+    raw_store.write_download_manifest("bns", "CPI", date(2026, 11, 7), {**info("2026-11-07"), "raw_file": "b.json"})
+    assert [p.name[8:18] for p in raw_store.indicator_manifests("bns", "CPI")] == ["2026-11-01", "2026-11-04", "2026-11-05", "2026-11-07"]
+    # the manifests of an indicator whose id starts the same are not touched or counted
+    raw_store.write_download_manifest("bns", "CPI_YOY", date(2026, 11, 7), info("2026-11-07"))
+    assert len(raw_store.indicator_manifests("bns", "CPI")) == 4
+
+
+def test_collapse_manifests_keeps_the_ends_of_every_run_of_identical_answers(isolated_raw_root):
+    import json
+    folder = isolated_raw_root / "nbk"
+    folder.mkdir()
+    bodies = ["a", "a", "a", "a", "b", "a", "a"]
+    for i, b in enumerate(bodies, start=1):
+        (folder / f"nbk_m2_2026-10-{i:02d}.manifest.json").write_text(json.dumps({"downloaded_at": str(i), "raw_file": b}))
+    assert len(raw_store.collapse_manifests("nbk", "M2", dry_run=True)) == 2
+    removed = raw_store.collapse_manifests("nbk", "M2")
+    assert [p.name[7:17] for p in removed] == ["2026-10-02", "2026-10-03"]
+    assert len(raw_store.indicator_manifests("nbk", "M2")) == 5

@@ -162,10 +162,12 @@ def seasonal_adjust(s: pd.Series, period: int, mode: str, robust: bool = True, m
                     x13_opts: dict | None = None, info: dict | None = None) -> pd.Series:
     """Seasonally adjusted `s` on its longest gap-free run (>= MIN_SA_YEARS years); NaN
     elsewhere, empty when no run is long enough. mode: log | additive | auto (auto: X-13's
-    AICC test; STL treats it as log for a positive series). method: x13 | stl. `info`, when
+    AICC test; STL treats it as log for a positive series). method: x13 | stl. `x13: {max_gap: n}`
+    lets the run cross holes of up to n periods (they stay NaN in the result). `info`, when
     given, receives what was done (method, span, and X-13's model and diagnostics)."""
     info = {} if info is None else info
-    x = x13.longest_run(s, period)
+    max_gap = int((x13_opts or {}).get("max_gap", 0)) if method == "x13" else 0
+    x = x13.longest_run(s, period, max_gap)
     if len(x) < MIN_SA_YEARS * period:
         info.update(method="none", reason=f"longest gap-free run {len(x)} < {MIN_SA_YEARS * period}")
         return pd.Series(dtype=float)
@@ -177,7 +179,7 @@ def seasonal_adjust(s: pd.Series, period: int, mode: str, robust: bool = True, m
             res = x13.adjust(x, period, transform=transform, method=opts.get("method", "x11"),
                              calendar=opts.get("calendar", "kz"),
                              outliers=tuple(opts.get("outliers", ("ao", "ls", "tc"))),
-                             title=str(s.name or "series"), binary=opts.get("binary"))
+                             title=str(s.name or "series"), binary=opts.get("binary"), max_gap=max_gap)
         except x13.X13Unavailable:
             raise
         except x13.X13Error as e:

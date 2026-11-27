@@ -310,14 +310,31 @@ def calendar_regressors(period: int) -> pd.DataFrame:
 
 
 # ---------------------------------------------------------------- series helpers
-def longest_run(s: pd.Series, period: int) -> pd.Series:
-    """The longest stretch without a missing period (the latest one on a tie)."""
+MISSING = -99999.0     # X-13's default missing value code (series spec, `missingcode`)
+
+
+def longest_run(s: pd.Series, period: int, max_gap: int = 0) -> pd.Series:
+    """The longest stretch without a missing period (the latest one on a tie). With `max_gap`
+    a hole of up to that many periods inside the stretch does not end it: the stretch then
+    carries NaN there, which X-13 takes as missing observations (`adjust(max_gap=...)`)."""
     s = s.dropna().sort_index()
     if s.empty:
         return s
     step = 12 // period
     full = s.reindex(pd.date_range(s.index.min(), s.index.max(), freq=f"{step}MS"))
-    ok = full.notna().to_numpy()
+    ok = full.notna().to_numpy().copy()
+    if max_gap:
+        i = 0
+        while i < len(ok):                       # holes of <= max_gap between two observations count as present
+            if not ok[i]:
+                j = i
+                while j < len(ok) and not ok[j]:
+                    j += 1
+                if j - i <= max_gap:
+                    ok[i:j] = True
+                i = j
+            else:
+                i += 1
     best, cur_start, best_len = (0, 0), None, 0
     for i, v in enumerate(ok):
         if v and cur_start is None:
@@ -345,7 +362,9 @@ TABLES = {"x11": ("d10", "d11", "d12", "d13", "d16"), "seats": ("s10", "s11", "s
 def build_spec(s: pd.Series, period: int, *, title: str = "series", transform: str = "auto",
                method: str = "x11", calendar: str = "kz", outliers: tuple[str, ...] = ("ao", "ls", "tc"),
                regressor_file: str = "kzcal.dat") -> str:
-    """The .spc text for a gap-free series `s` (DatetimeIndex at period starts)."""
+    """The .spc text for a series `s` (DatetimeIndex at period starts, no period skipped). NaN is
+    written as X-13's missing value code: the regARIMA model estimates the observation (an
+    additive outlier at that date) so that the filters can run; `adjust` blanks it again."""
     if transform not in ("auto", "log", "none"):
         raise X13Error(f"transform={transform!r}: auto | log | none")
     if method not in TABLES:
@@ -353,7 +372,7 @@ def build_spec(s: pd.Series, period: int, *, title: str = "series", transform: s
     if calendar not in ("kz", "builtin", "none"):
         raise X13Error(f"calendar={calendar!r}: kz | builtin | none")
     title = re.sub(r"[^A-Za-z0-9 _.,()-]", "_", title)[:70]
-    data = "\n".join(_fmt(v) for v in s.values)
+    data = "\n".join(_fmt(MISSING if v != v else v) for v in s.values)
     lines = [
         "series {",
         f'  title = "{title}"',
@@ -488,18 +507,23 @@ def _kept_calendar(udg: dict, calendar: str) -> list[str]:
 
 def adjust(s: pd.Series, period: int, *, transform: str = "auto", method: str = "x11",
            calendar: str = "kz", outliers: tuple[str, ...] = ("ao", "ls", "tc"),
-           title: str | None = None, binary: Path | None = None, timeout: int = 120) -> X13Result:
+           title: str | None = None, binary: Path | None = None, timeout: int = 120,
+           max_gap: int = 0) -> X13Result:
     """Seasonally adjust `s` (monthly or quarterly, dated at period starts) with X-13.
 
     Runs on the longest gap-free run; fewer than MIN_YEARS years there is an X13Error.
+    `max_gap` > 0 lets that run cross holes of up to max_gap periods (a month the source never
+    published): X-13 estimates them to run its filters, and every output is NaN there again --
+    no value is invented for a period without an observation.
     `transform`: auto (AICC chooses log or none) | log | none. `method`: x11 | seats.
     `calendar`: kz (Kazakhstan working days + Kurban Ait, AICC-tested) | builtin (X-13 td) |
     none. Raises X13Unavailable when no binary is found (it never downloads by itself --
     call ensure_binary() first for that)."""
     if period not in (4, 12):
         raise X13Error(f"period={period}: only monthly (12) and quarterly (4) series")
-    x = longest_run(s, period)
-    dropped = int(s.dropna().shape[0] - x.shape[0])
+    x = longest_run(s, period, max_gap)
+    holes = x.index[x.isna()]
+    dropped = int(s.dropna().shape[0] - x.dropna().shape[0])
     name = title or str(s.name or "series")
     if len(x) < MIN_YEARS * period:
         raise X13Error(f"{name}: longest gap-free run is {len(x)} periods, X-13 needs {MIN_YEARS * period} "
@@ -534,6 +558,7 @@ def adjust(s: pd.Series, period: int, *, transform: str = "auto", method: str = 
                            + (" | ".join(e.strip() for e in errors) or text)[:1500])
         udg = parse_udg((t / "s.udg").read_text(errors="replace")) if (t / "s.udg").exists() else {}
         tabs = [_read_table(t / f"s.{k}", period) for k in TABLES[method]]
+    tabs = [t_.where(~t_.index.isin(holes)) for t_ in tabs]
     seasonal, sa, trend, irr, adj = tabs
     if transform == "auto":
         tr = "log" if udg.get("aictrans", "").lower().startswith("log") else "none"

@@ -47543,6 +47543,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-01-01,KZ,national,quarterly,IMPORTS_GS_REAL_SA,2229114.596815287,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-26,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2014-01-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,83.6,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2014-01-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,100.8,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2014-01-01,KZ,national,monthly,IND_PROD_YTD_YOY,100.8,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2014-01-01,KGZ,national,monthly,KG_CPI_YOY,103.6,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2014-01-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-13.4427,% per annum,derived,2026-11-26,level,2026-11-26
 2014-01-01,KZ,national,monthly,KZT_USD_RATE_DIFF_ON,1.5405,percentage points,derived,2026-11-26,level,2026-11-26
@@ -47777,6 +47778,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-02-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,1634026.0,million KZT,nbk,2026-11-26,level,2026-11-26
 2014-02-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,99.3,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2014-02-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,99.4,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2014-02-01,KZ,national,monthly,IND_PROD_YTD_YOY,100.1,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2014-02-01,KGZ,national,monthly,KG_CPI_YOY,104.0,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2014-02-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-198.9711,% per annum,derived,2026-11-26,level,2026-11-26
 2014-02-01,KZ,national,monthly,KZT_USD_RATE_DIFF_ON,3.0595,percentage points,derived,2026-11-26,level,2026-11-26
@@ -47994,6 +47996,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-03-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,1673297.0,million KZT,nbk,2026-11-26,level,2026-11-26
 2014-03-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,116.2,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2014-03-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,99.0,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2014-03-01,KZ,national,monthly,IND_PROD_YTD_YOY,99.7,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2014-03-01,KGZ,national,monthly,KG_CPI_YOY,106.3,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2014-03-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,33.5848,% per annum,derived,2026-11-26,level,2026-11-26
 2014-03-01,KZ,national,monthly,KZT_USD_RATE_DIFF_ON,20.3424,percentage points,derived,2026-11-26,level,2026-11-26
@@ -48271,6 +48274,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-04-01,KZ,national,quarterly,IMPORTS_GS_REAL_SA,2464945.7210569847,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-26,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2014-04-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,98.3,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2014-04-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,100.6,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2014-04-01,KZ,national,monthly,IND_PROD_YTD_YOY,99.9,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2014-04-01,KGZ,national,monthly,KG_CPI_YOY,107.5,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2014-04-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,0.5223,% per annum,derived,2026-11-26,level,2026-11-26
 2014-04-01,KZ,national,monthly,KZT_USD_RATE_DIFF_ON,0.5882,percentage points,derived,2026-11-26,level,2026-11-26
@@ -48515,6 +48519,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-05-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,1722552.0,million KZT,nbk,2026-11-26,level,2026-11-26
 2014-05-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,98.3,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2014-05-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.0,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2014-05-01,KZ,national,monthly,IND_PROD_YTD_YOY,100.1,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2014-05-01,KGZ,national,monthly,KG_CPI_YOY,108.1,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2014-05-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-8.9573,% per annum,derived,2026-11-26,level,2026-11-26
 2014-05-01,KZ,national,monthly,KZT_USD_RATE_DIFF_ON,0.5626,percentage points,derived,2026-11-26,level,2026-11-26
@@ -48736,6 +48741,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-06-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,1847931.0,million KZT,nbk,2026-11-26,level,2026-11-26
 2014-06-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,97.3,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2014-06-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,97.1,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2014-06-01,KZ,national,monthly,IND_PROD_YTD_YOY,99.6,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2014-06-01,KGZ,national,monthly,KG_CPI_YOY,108.5,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2014-06-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,0.5979,% per annum,derived,2026-11-26,level,2026-11-26
 2014-06-01,KZ,national,monthly,KZT_USD_RATE_DIFF_ON,0.6633,percentage points,derived,2026-11-26,level,2026-11-26
@@ -49032,6 +49038,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-07-01,KZ,national,quarterly,IMPORTS_GS_REAL_SA,2447744.91120984,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-26,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2014-07-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,99.6,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2014-07-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,100.1,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2014-07-01,KZ,national,monthly,IND_PROD_YTD_YOY,99.7,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2014-07-01,KGZ,national,monthly,KG_CPI_YOY,107.8,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2014-07-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,1.2351,% per annum,derived,2026-11-26,level,2026-11-26
 2014-07-01,KZ,national,monthly,KZT_USD_RATE_DIFF_ON,1.3659,percentage points,derived,2026-11-26,level,2026-11-26
@@ -49299,6 +49306,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-08-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2023751.0,million KZT,nbk,2026-11-26,level,2026-11-26
 2014-08-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,107.0,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2014-08-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.3,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2014-08-01,KZ,national,monthly,IND_PROD_YTD_YOY,99.9,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2014-08-01,KGZ,national,monthly,KG_CPI_YOY,107.5,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2014-08-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,12.2405,% per annum,derived,2026-11-26,level,2026-11-26
 2014-08-01,KZ,national,monthly,KZT_USD_RATE_DIFF_ON,2.1948,percentage points,derived,2026-11-26,level,2026-11-26
@@ -49543,6 +49551,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-09-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2077700.0,million KZT,nbk,2026-11-26,level,2026-11-26
 2014-09-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,93.1,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2014-09-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,99.3,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2014-09-01,KZ,national,monthly,IND_PROD_YTD_YOY,99.8,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2014-09-01,KGZ,national,monthly,KG_CPI_YOY,107.4,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2014-09-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,1.1614,% per annum,derived,2026-11-26,level,2026-11-26
 2014-09-01,KZ,national,monthly,KZT_USD_RATE_DIFF_ON,0.5019,percentage points,derived,2026-11-26,level,2026-11-26
@@ -49845,6 +49854,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-10-01,KZ,national,quarterly,IMPORTS_GS_REAL_SA,2291574.454399106,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-26,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2014-10-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,109.1,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2014-10-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,98.4,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2014-10-01,KZ,national,monthly,IND_PROD_YTD_YOY,99.7,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2014-10-01,KGZ,national,monthly,KG_CPI_YOY,108.9,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2014-10-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,12.769,% per annum,derived,2026-11-26,level,2026-11-26
 2014-10-01,KZ,national,monthly,KZT_USD_RATE_DIFF_ON,5.9548,percentage points,derived,2026-11-26,level,2026-11-26
@@ -50112,6 +50122,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-11-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2263669.0,million KZT,nbk,2026-11-26,level,2026-11-26
 2014-11-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,105.1,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2014-11-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,103.6,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2014-11-01,KZ,national,monthly,IND_PROD_YTD_YOY,100.1,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2014-11-01,KGZ,national,monthly,KG_CPI_YOY,110.2,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2014-11-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,6.083,% per annum,derived,2026-11-26,level,2026-11-26
 2014-11-01,KZ,national,monthly,KZT_USD_RATE_DIFF_ON,6.083,percentage points,derived,2026-11-26,level,2026-11-26
@@ -50350,6 +50361,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2014-12-01,KZ,national,monthly,GOV_SECURITIES_MEUKAM,2249569.0,million KZT,nbk,2026-11-26,level,2026-11-26
 2014-12-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,98.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2014-12-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.9,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2014-12-01,KZ,national,monthly,IND_PROD_YTD_YOY,100.2,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2014-12-01,KGZ,national,monthly,KG_CPI_YOY,110.5,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2014-12-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,31.5767,% per annum,derived,2026-11-26,level,2026-11-26
 2014-12-01,KZ,national,monthly,KZT_USD_RATE_DIFF_ON,41.356,percentage points,derived,2026-11-26,level,2026-11-26
@@ -50799,6 +50811,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-01-01,KZ,national,quarterly,IMPORTS_GS_REAL_SA,2201210.2984323334,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-26,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2015-01-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,81.3,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2015-01-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,99.2,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2015-01-01,KZ,national,monthly,IND_PROD_YTD_YOY,99.2,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2015-01-01,KGZ,national,monthly,KG_CPI_YOY,111.6,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2015-01-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,1.1468,% per annum,derived,2026-11-26,level,2026-11-26
 2015-01-01,KZ,national,monthly,KZT_USD_RATE_DIFF_ON,14.8874,percentage points,derived,2026-11-26,level,2026-11-26
@@ -51059,6 +51072,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-02-01,KZ,national,monthly,IMPORTS,2221314.526789998,thousand USD,bns,2026-11-26,level,2026-11-26
 2015-02-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,101.7,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2015-02-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.6,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2015-02-01,KZ,national,monthly,IND_PROD_YTD_YOY,100.4,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2015-02-01,KGZ,national,monthly,KG_CPI_YOY,111.0,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2015-02-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,10.8918,% per annum,derived,2026-11-26,level,2026-11-26
 2015-02-01,KZ,national,monthly,KZT_USD_RATE_DIFF_ON,14.789,percentage points,derived,2026-11-26,level,2026-11-26
@@ -51304,6 +51318,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-03-01,KZ,national,monthly,IMPORTS,2346762.2080100025,thousand USD,bns,2026-11-26,level,2026-11-26
 2015-03-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,115.5,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2015-03-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,100.9,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2015-03-01,KZ,national,monthly,IND_PROD_YTD_YOY,100.6,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2015-03-01,KGZ,national,monthly,KG_CPI_YOY,108.5,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2015-03-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,10.2366,% per annum,derived,2026-11-26,level,2026-11-26
 2015-03-01,KZ,national,monthly,KZT_USD_RATE_DIFF_ON,14.1211,percentage points,derived,2026-11-26,level,2026-11-26
@@ -51617,6 +51632,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-04-01,KZ,national,quarterly,IMPORTS_GS_REAL_SA,1958132.4376870485,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-26,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2015-04-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,97.0,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2015-04-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,99.6,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2015-04-01,KZ,national,monthly,IND_PROD_YTD_YOY,100.3,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2015-04-01,KGZ,national,monthly,KG_CPI_YOY,107.9,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2015-04-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,8.5122,% per annum,derived,2026-11-26,level,2026-11-26
 2015-04-01,KZ,national,monthly,KZT_USD_RATE_DIFF_ON,9.4814,percentage points,derived,2026-11-26,level,2026-11-26
@@ -51894,6 +51910,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-05-01,KZ,national,monthly,IMPORTS,2751962.1860600007,thousand USD,bns,2026-11-26,level,2026-11-26
 2015-05-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,99.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2015-05-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.1,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2015-05-01,KZ,national,monthly,IND_PROD_YTD_YOY,100.5,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2015-05-01,KGZ,national,monthly,KG_CPI_YOY,106.0,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2015-05-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,11.04,% per annum,derived,2026-11-26,level,2026-11-26
 2015-05-01,KZ,national,monthly,KZT_USD_RATE_DIFF_ON,11.04,percentage points,derived,2026-11-26,level,2026-11-26
@@ -52139,6 +52156,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-06-01,KZ,national,monthly,IMPORTS,2859176.8309599953,thousand USD,bns,2026-11-26,level,2026-11-26
 2015-06-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,97.5,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2015-06-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.3,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2015-06-01,KZ,national,monthly,IND_PROD_YTD_YOY,100.6,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2015-06-01,KGZ,national,monthly,KG_CPI_YOY,104.5,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2015-06-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,0.0507,% per annum,derived,2026-11-26,level,2026-11-26
 2015-06-01,KZ,national,monthly,KZT_USD_RATE_DIFF_ON,2.6314,percentage points,derived,2026-11-26,level,2026-11-26
@@ -52456,6 +52474,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-07-01,KZ,national,quarterly,IMPORTS_GS_REAL_SA,2024388.526001501,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-26,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2015-07-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,96.2,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2015-07-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,97.9,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2015-07-01,KZ,national,monthly,IND_PROD_YTD_YOY,100.2,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2015-07-01,KGZ,national,monthly,KG_CPI_YOY,105.0,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2015-07-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-5.3208,% per annum,derived,2026-11-26,level,2026-11-26
 2015-07-01,KZ,national,monthly,KZT_USD_RATE_DIFF_ON,2.7082,percentage points,derived,2026-11-26,level,2026-11-26
@@ -52734,6 +52753,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-08-01,KZ,national,monthly,IMPORTS,2689848.4905000115,thousand USD,bns,2026-11-26,level,2026-11-26
 2015-08-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,102.3,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2015-08-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,93.6,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2015-08-01,KZ,national,monthly,IND_PROD_YTD_YOY,99.4,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2015-08-01,KGZ,national,monthly,KG_CPI_YOY,105.8,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2015-08-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-276.3767,% per annum,derived,2026-11-26,level,2026-11-26
 2015-08-01,KZ,national,monthly,KZT_USD_RATE_DIFF_ON,8.418,percentage points,derived,2026-11-26,level,2026-11-26
@@ -52991,6 +53011,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-09-01,KZ,national,monthly,IMPORTS,2365451.1133499998,thousand USD,bns,2026-11-26,level,2026-11-26
 2015-09-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,95.3,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2015-09-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,95.8,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2015-09-01,KZ,national,monthly,IND_PROD_YTD_YOY,99.0,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2015-09-01,KGZ,national,monthly,KG_CPI_YOY,106.4,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2015-09-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-141.7368,% per annum,derived,2026-11-26,level,2026-11-26
 2015-09-01,KZ,national,monthly,KZT_USD_RATE_DIFF_ON,13.1367,percentage points,derived,2026-11-26,level,2026-11-26
@@ -53306,6 +53327,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-10-01,KZ,national,quarterly,IMPORTS_GS_REAL_SA,2290321.500268298,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-26,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2015-10-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,109.4,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2015-10-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,96.1,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2015-10-01,KZ,national,monthly,IND_PROD_YTD_YOY,98.7,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2015-10-01,KGZ,national,monthly,KG_CPI_YOY,104.9,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2015-10-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-22.0174,% per annum,derived,2026-11-26,level,2026-11-26
 2015-10-01,KZ,national,monthly,KZT_USD_RATE_DIFF_ON,16.4568,percentage points,derived,2026-11-26,level,2026-11-26
@@ -53579,6 +53601,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-11-01,KZ,national,monthly,IMPORTS,2295502.07321998,thousand USD,bns,2026-11-26,level,2026-11-26
 2015-11-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,105.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2015-11-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,96.7,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2015-11-01,KZ,national,monthly,IND_PROD_YTD_YOY,98.5,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2015-11-01,KGZ,national,monthly,KG_CPI_YOY,103.8,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2015-11-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-91.3356,% per annum,derived,2026-11-26,level,2026-11-26
 2015-11-01,KZ,national,monthly,KZT_USD_RATE_DIFF_ON,23.3062,percentage points,derived,2026-11-26,level,2026-11-26
@@ -53831,6 +53854,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2015-12-01,KZ,national,monthly,IMPORTS,2319829.458339994,thousand USD,bns,2026-11-26,level,2026-11-26
 2015-12-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,99.6,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2015-12-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,97.5,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2015-12-01,KZ,national,monthly,IND_PROD_YTD_YOY,98.4,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2015-12-01,KGZ,national,monthly,KG_CPI_YOY,103.4,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2015-12-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-47.7274,% per annum,derived,2026-11-26,level,2026-11-26
 2015-12-01,KZ,national,monthly,KZT_USD_RATE_DIFF_ON,72.1365,percentage points,derived,2026-11-26,level,2026-11-26
@@ -54282,6 +54306,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-01-01,KZ,national,quarterly,IMPORTS_GS_REAL_SA,2394481.940112282,"million KZT, average 2010 prices, seasonally adjusted",bns,2026-11-26,"seasonally and calendar adjusted, average 2010 prices, discrete quarter, as published; quarterly national accounts vintage -- see metadata",2026-11-26
 2016-01-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,82.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2016-01-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,99.3,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2016-01-01,KZ,national,monthly,IND_PROD_YTD_YOY,99.3,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2016-01-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.8,%,nbk,2026-11-26,level,2026-11-26
 2016-01-01,KGZ,national,monthly,KG_CPI_YOY,101.8,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2016-01-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-63.1791,% per annum,derived,2026-11-26,level,2026-11-26
@@ -54545,6 +54570,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-02-01,KZ,national,monthly,IMPORTS,1667811.2613899899,thousand USD,bns,2026-11-26,level,2026-11-26
 2016-02-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,102.6,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2016-02-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,100.1,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2016-02-01,KZ,national,monthly,IND_PROD_YTD_YOY,99.7,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2016-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.9,%,nbk,2026-11-26,level,2026-11-26
 2016-02-01,KGZ,national,monthly,KG_CPI_YOY,101.3,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2016-02-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,88.0776,% per annum,derived,2026-11-26,level,2026-11-26
@@ -54801,6 +54827,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-03-01,KZ,national,monthly,IMPORTS,1965626.756440006,thousand USD,bns,2026-11-26,level,2026-11-26
 2016-03-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,113.3,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2016-03-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,98.2,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2016-03-01,KZ,national,monthly,IND_PROD_YTD_YOY,99.2,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2016-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,10.0,%,nbk,2026-11-26,level,2026-11-26
 2016-03-01,KGZ,national,monthly,KG_CPI_YOY,100.5,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2016-03-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,38.055,% per annum,derived,2026-11-26,level,2026-11-26
@@ -55125,6 +55152,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-04-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,59.928699,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2016-04-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,95.7,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2016-04-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,96.9,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2016-04-01,KZ,national,monthly,IND_PROD_YTD_YOY,98.6,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2016-04-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.2,%,nbk,2026-11-26,level,2026-11-26
 2016-04-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,43.368984,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2016-04-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,51.604278,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -55408,6 +55436,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-05-01,KZ,national,monthly,IMPORTS,2076344.5661099916,thousand USD,bns,2026-11-26,level,2026-11-26
 2016-05-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,97.5,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2016-05-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,94.7,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2016-05-01,KZ,national,monthly,IND_PROD_YTD_YOY,97.8,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2016-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.4,%,nbk,2026-11-26,level,2026-11-26
 2016-05-01,KGZ,national,monthly,KG_CPI_YOY,100.3,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2016-05-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-8.9681,% per annum,derived,2026-11-26,level,2026-11-26
@@ -55667,6 +55696,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-06-01,KZ,national,monthly,IMPORTS,1995452.9955600034,thousand USD,bns,2026-11-26,level,2026-11-26
 2016-06-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,102.0,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2016-06-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,100.1,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2016-06-01,KZ,national,monthly,IND_PROD_YTD_YOY,98.4,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2016-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.1,%,nbk,2026-11-26,level,2026-11-26
 2016-06-01,KGZ,national,monthly,KG_CPI_YOY,101.3,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2016-06-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,6.021,% per annum,derived,2026-11-26,level,2026-11-26
@@ -55995,6 +56025,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-07-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,58.927938,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2016-07-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,95.0,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2016-07-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,100.1,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2016-07-01,KZ,national,monthly,IND_PROD_YTD_YOY,98.6,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2016-07-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.7,%,nbk,2026-11-26,level,2026-11-26
 2016-07-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,50.106496,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2016-07-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,52.058928,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -56279,6 +56310,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-08-01,KZ,national,monthly,IMPORTS,2328838.3055299926,thousand USD,bns,2026-11-26,level,2026-11-26
 2016-08-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,94.5,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2016-08-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,92.5,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2016-08-01,KZ,national,monthly,IND_PROD_YTD_YOY,97.7,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2016-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.6,%,nbk,2026-11-26,level,2026-11-26
 2016-08-01,KGZ,national,monthly,KG_CPI_YOY,100.5,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2016-08-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,59.5276,% per annum,derived,2026-11-26,level,2026-11-26
@@ -56550,6 +56582,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-09-01,KZ,national,monthly,IMPORTS,2259676.559680007,thousand USD,bns,2026-11-26,level,2026-11-26
 2016-09-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,104.5,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2016-09-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,100.1,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2016-09-01,KZ,national,monthly,IND_PROD_YTD_YOY,98.0,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2016-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.0,%,nbk,2026-11-26,level,2026-11-26
 2016-09-01,KGZ,national,monthly,KG_CPI_YOY,99.7,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2016-09-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,26.1816,% per annum,derived,2026-11-26,level,2026-11-26
@@ -56870,6 +56903,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-10-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,57.697765,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2016-10-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,107.9,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2016-10-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.2,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2016-10-01,KZ,national,monthly,IND_PROD_YTD_YOY,98.3,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2016-10-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.2,%,nbk,2026-11-26,level,2026-11-26
 2016-10-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,50.94005,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2016-10-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,48.545584,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -57159,6 +57193,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-11-01,KZ,national,monthly,IMPORTS,2403541.6999100116,thousand USD,bns,2026-11-26,level,2026-11-26
 2016-11-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,104.0,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2016-11-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.1,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2016-11-01,KZ,national,monthly,IND_PROD_YTD_YOY,98.6,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2016-11-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.4,%,nbk,2026-11-26,level,2026-11-26
 2016-11-01,KGZ,national,monthly,KG_CPI_YOY,99.5,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2016-11-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-13.0926,% per annum,derived,2026-11-26,level,2026-11-26
@@ -57421,6 +57456,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2016-12-01,KZ,national,monthly,IMPORTS,2584479.249779991,thousand USD,bns,2026-11-26,level,2026-11-26
 2016-12-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,105.3,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2016-12-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.8,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2016-12-01,KZ,national,monthly,IND_PROD_YTD_YOY,98.9,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2016-12-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.5,%,nbk,2026-11-26,level,2026-11-26
 2016-12-01,KGZ,national,monthly,KG_CPI_YOY,99.5,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2016-12-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,35.8562,% per annum,derived,2026-11-26,level,2026-11-26
@@ -57889,6 +57925,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-01-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,58.879493,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2017-01-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,85.4,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2017-01-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,104.9,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2017-01-01,KZ,national,monthly,IND_PROD_YTD_YOY,104.9,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2017-01-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.1,%,nbk,2026-11-26,level,2026-11-26
 2017-01-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,48.537703,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2017-01-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,47.163495,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -58176,6 +58213,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-02-01,KZ,national,monthly,IMPORTS,1908408.3931999954,thousand USD,bns,2026-11-26,level,2026-11-26
 2017-02-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,101.7,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2017-02-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,104.0,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2017-02-01,KZ,national,monthly,IND_PROD_YTD_YOY,104.5,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2017-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.1,%,nbk,2026-11-26,level,2026-11-26
 2017-02-01,KGZ,national,monthly,KG_CPI_YOY,101.3,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2017-02-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,62.0551,% per annum,derived,2026-11-26,level,2026-11-26
@@ -58420,6 +58458,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-03-01,KZ,national,monthly,IMPORTS,2230191.6694800067,thousand USD,bns,2026-11-26,level,2026-11-26
 2017-03-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,117.9,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2017-03-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,108.3,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2017-03-01,KZ,national,monthly,IND_PROD_YTD_YOY,105.8,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2017-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.7,%,nbk,2026-11-26,level,2026-11-26
 2017-03-01,KGZ,national,monthly,KG_CPI_YOY,102.8,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2017-03-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,0.5869,% per annum,derived,2026-11-26,level,2026-11-26
@@ -58729,6 +58768,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-04-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,57.473684,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2017-04-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,98.0,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2017-04-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,114.9,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2017-04-01,KZ,national,monthly,IND_PROD_YTD_YOY,112.3,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2017-04-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.0,%,nbk,2026-11-26,level,2026-11-26
 2017-04-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,47.298246,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2017-04-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,52.280702,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -59006,6 +59046,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-05-01,KZ,national,monthly,IMPORTS,2715327.237809992,thousand USD,bns,2026-11-26,level,2026-11-26
 2017-05-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,97.3,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2017-05-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,110.7,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2017-05-01,KZ,national,monthly,IND_PROD_YTD_YOY,107.8,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2017-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.6,%,nbk,2026-11-26,level,2026-11-26
 2017-05-01,KGZ,national,monthly,KG_CPI_YOY,103.8,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2017-05-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,19.4252,% per annum,derived,2026-11-26,level,2026-11-26
@@ -59269,6 +59310,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-06-01,KZ,national,monthly,IMPORTS,2665401.92213999,thousand USD,bns,2026-11-26,level,2026-11-26
 2017-06-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,101.1,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2017-06-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,107.5,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2017-06-01,KZ,national,monthly,IND_PROD_YTD_YOY,107.8,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2017-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.7,%,nbk,2026-11-26,level,2026-11-26
 2017-06-01,KGZ,national,monthly,KG_CPI_YOY,104.1,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2017-06-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-30.2559,% per annum,derived,2026-11-26,level,2026-11-26
@@ -59592,6 +59634,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-07-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,56.644691,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2017-07-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,95.3,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2017-07-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,107.4,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2017-07-01,KZ,national,monthly,IND_PROD_YTD_YOY,107.7,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2017-07-01,KZ,national,monthly,INFLATION_EXPECTATIONS,10.0,%,nbk,2026-11-26,level,2026-11-26
 2017-07-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,52.706454,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2017-07-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,52.099237,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -59879,6 +59922,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-08-01,KZ,national,monthly,IMPORTS,2493069.3586199973,thousand USD,bns,2026-11-26,level,2026-11-26
 2017-08-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,100.3,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2017-08-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,114.4,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2017-08-01,KZ,national,monthly,IND_PROD_YTD_YOY,108.5,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2017-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.3,%,nbk,2026-11-26,level,2026-11-26
 2017-08-01,KGZ,national,monthly,KG_CPI_YOY,103.8,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2017-08-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-20.6161,% per annum,derived,2026-11-26,level,2026-11-26
@@ -60151,6 +60195,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-09-01,KZ,national,monthly,IMPORTS,2559470.2938600145,thousand USD,bns,2026-11-26,level,2026-11-26
 2017-09-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,97.4,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2017-09-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,106.9,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2017-09-01,KZ,national,monthly,IND_PROD_YTD_YOY,108.3,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2017-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.2,%,nbk,2026-11-26,level,2026-11-26
 2017-09-01,KGZ,national,monthly,KG_CPI_YOY,103.3,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2017-09-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-12.2789,% per annum,derived,2026-11-26,level,2026-11-26
@@ -60468,6 +60513,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-10-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,59.783728,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2017-10-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,103.2,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2017-10-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,100.6,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2017-10-01,KZ,national,monthly,IND_PROD_YTD_YOY,107.5,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2017-10-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.8,%,nbk,2026-11-26,level,2026-11-26
 2017-10-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,53.810505,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2017-10-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,49.004463,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -60765,6 +60811,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-11-01,KZ,national,monthly,IMPORTS,2738877.6525599984,thousand USD,bns,2026-11-26,level,2026-11-26
 2017-11-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,110.3,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2017-11-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,105.0,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2017-11-01,KZ,national,monthly,IND_PROD_YTD_YOY,107.3,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2017-11-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.4,%,nbk,2026-11-26,level,2026-11-26
 2017-11-01,KGZ,national,monthly,KG_CPI_YOY,104.0,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2017-11-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,16.8877,% per annum,derived,2026-11-26,level,2026-11-26
@@ -61030,6 +61077,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2017-12-01,KZ,national,monthly,IMPORTS,2885108.9817500114,thousand USD,bns,2026-11-26,level,2026-11-26
 2017-12-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,100.6,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2017-12-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,105.4,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2017-12-01,KZ,national,monthly,IND_PROD_YTD_YOY,107.1,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2017-12-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.0,%,nbk,2026-11-26,level,2026-11-26
 2017-12-01,KGZ,national,monthly,KG_CPI_YOY,103.7,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2017-12-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,9.105,% per annum,derived,2026-11-26,level,2026-11-26
@@ -61501,6 +61549,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-01-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,58.970438,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2018-01-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,85.3,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2018-01-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,105.2,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2018-01-01,KZ,national,monthly,IND_PROD_YTD_YOY,105.2,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2018-01-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.4,%,nbk,2026-11-26,level,2026-11-26
 2018-01-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,50.441726,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2018-01-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,48.165138,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -61806,6 +61855,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-02-01,KZ,national,monthly,IMPORTS,2360686.5346800033,thousand USD,bns,2026-11-26,level,2026-11-26
 2018-02-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,102.5,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2018-02-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,106.1,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2018-02-01,KZ,national,monthly,IND_PROD_YTD_YOY,105.6,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2018-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.4,%,nbk,2026-11-26,level,2026-11-26
 2018-02-01,KGZ,national,monthly,KG_CPI_YOY,103.5,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2018-02-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,21.3768,% per annum,derived,2026-11-26,level,2026-11-26
@@ -62072,6 +62122,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-03-01,KZ,national,monthly,IMPORTS,2855708.2481299904,thousand USD,bns,2026-11-26,level,2026-11-26
 2018-03-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,116.4,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2018-03-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,104.7,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2018-03-01,KZ,national,monthly,IND_PROD_YTD_YOY,105.3,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2018-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.4,%,nbk,2026-11-26,level,2026-11-26
 2018-03-01,KGZ,national,monthly,KG_CPI_YOY,102.7,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2018-03-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,5.7821,% per annum,derived,2026-11-26,level,2026-11-26
@@ -62403,6 +62454,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-04-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,58.308106,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2018-04-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,97.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2018-04-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,104.5,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2018-04-01,KZ,national,monthly,IND_PROD_YTD_YOY,105.1,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2018-04-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.1,%,nbk,2026-11-26,level,2026-11-26
 2018-04-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,49.075008,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2018-04-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,53.229062,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -62708,6 +62760,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-05-01,KZ,national,monthly,IMPORTS,2747018.9313399913,thousand USD,bns,2026-11-26,level,2026-11-26
 2018-05-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,97.1,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2018-05-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,106.4,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2018-05-01,KZ,national,monthly,IND_PROD_YTD_YOY,105.4,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2018-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.1,%,nbk,2026-11-26,level,2026-11-26
 2018-05-01,KGZ,national,monthly,KG_CPI_YOY,101.4,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2018-05-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-5.8903,% per annum,derived,2026-11-26,level,2026-11-26
@@ -62968,6 +63021,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-06-01,KZ,national,monthly,IMPORTS,2793651.3594999993,thousand USD,bns,2026-11-26,level,2026-11-26
 2018-06-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,99.5,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2018-06-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,104.2,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2018-06-01,KZ,national,monthly,IND_PROD_YTD_YOY,105.2,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2018-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.7,%,nbk,2026-11-26,level,2026-11-26
 2018-06-01,KGZ,national,monthly,KG_CPI_YOY,100.8,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2018-06-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-31.6981,% per annum,derived,2026-11-26,level,2026-11-26
@@ -63299,6 +63353,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-07-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,58.491492,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2018-07-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,97.0,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2018-07-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,104.4,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2018-07-01,KZ,national,monthly,IND_PROD_YTD_YOY,105.1,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2018-07-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.2,%,nbk,2026-11-26,level,2026-11-26
 2018-07-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,54.30301,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2018-07-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,53.419503,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -63608,6 +63663,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-08-01,KZ,national,monthly,IMPORTS,2989494.706140006,thousand USD,bns,2026-11-26,level,2026-11-26
 2018-08-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,96.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2018-08-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.9,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2018-08-01,KZ,national,monthly,IND_PROD_YTD_YOY,104.7,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2018-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.6,%,nbk,2026-11-26,level,2026-11-26
 2018-08-01,KGZ,national,monthly,KG_CPI_YOY,100.9,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2018-08-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-48.7302,% per annum,derived,2026-11-26,level,2026-11-26
@@ -63886,6 +63942,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-09-01,KZ,national,monthly,IMPORTS,2926561.398250001,thousand USD,bns,2026-11-26,level,2026-11-26
 2018-09-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,100.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2018-09-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,105.5,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2018-09-01,KZ,national,monthly,IND_PROD_YTD_YOY,104.8,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2018-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.4,%,nbk,2026-11-26,level,2026-11-26
 2018-09-01,KGZ,national,monthly,KG_CPI_YOY,101.2,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2018-09-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,11.8148,% per annum,derived,2026-11-26,level,2026-11-26
@@ -64222,6 +64279,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-10-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,59.210526,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2018-10-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,102.9,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2018-10-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,104.2,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2018-10-01,KZ,national,monthly,IND_PROD_YTD_YOY,104.7,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2018-10-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.7,%,nbk,2026-11-26,level,2026-11-26
 2018-10-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,53.193196,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2018-10-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,50.401155,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -64536,6 +64594,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-11-01,KZ,national,monthly,IMPORTS,2926140.2582500023,thousand USD,bns,2026-11-26,level,2026-11-26
 2018-11-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,103.6,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2018-11-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,102.3,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2018-11-01,KZ,national,monthly,IND_PROD_YTD_YOY,104.5,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2018-11-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.7,%,nbk,2026-11-26,level,2026-11-26
 2018-11-01,KGZ,national,monthly,KG_CPI_YOY,100.5,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2018-11-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-2.782,% per annum,derived,2026-11-26,level,2026-11-26
@@ -64794,6 +64853,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2018-12-01,KZ,national,monthly,IMPORTS,2893545.017659996,thousand USD,bns,2026-11-26,level,2026-11-26
 2018-12-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,103.0,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2018-12-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,100.1,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2018-12-01,KZ,national,monthly,IND_PROD_YTD_YOY,104.1,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2018-12-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.8,%,nbk,2026-11-26,level,2026-11-26
 2018-12-01,KGZ,national,monthly,KG_CPI_YOY,100.5,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2018-12-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-34.9637,% per annum,derived,2026-11-26,level,2026-11-26
@@ -65282,6 +65342,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-01-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,60.666667,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2019-01-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,86.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2019-01-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.9,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2019-01-01,KZ,national,monthly,IND_PROD_YTD_YOY,101.9,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2019-01-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.7,%,nbk,2026-11-26,level,2026-11-26
 2019-01-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,50.68254,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2019-01-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,48.285714,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -65588,6 +65649,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-02-01,KZ,national,monthly,IMPORTS,2237181.494299993,thousand USD,bns,2026-11-26,level,2026-11-26
 2019-02-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,101.0,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2019-02-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,103.5,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2019-02-01,KZ,national,monthly,IND_PROD_YTD_YOY,102.7,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2019-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.8,%,nbk,2026-11-26,level,2026-11-26
 2019-02-01,KGZ,national,monthly,KG_CPI_YOY,99.3,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2019-02-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,16.1529,% per annum,derived,2026-11-26,level,2026-11-26
@@ -65850,6 +65912,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-03-01,KZ,national,monthly,IMPORTS,2656784.9518100014,thousand USD,bns,2026-11-26,level,2026-11-26
 2019-03-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,108.1,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2019-03-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,104.2,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2019-03-01,KZ,national,monthly,IND_PROD_YTD_YOY,103.2,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2019-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.6,%,nbk,2026-11-26,level,2026-11-26
 2019-03-01,KGZ,national,monthly,KG_CPI_YOY,99.3,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2019-03-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-3.0476,% per annum,derived,2026-11-26,level,2026-11-26
@@ -66183,6 +66246,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-04-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,59.075235,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2019-04-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,95.6,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2019-04-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.9,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2019-04-01,KZ,national,monthly,IND_PROD_YTD_YOY,102.9,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2019-04-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.4,%,nbk,2026-11-26,level,2026-11-26
 2019-04-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,49.357367,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2019-04-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,54.827586,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -66495,6 +66559,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-05-01,KZ,national,monthly,IMPORTS,3652883.612699984,thousand USD,bns,2026-11-26,level,2026-11-26
 2019-05-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,99.9,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2019-05-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,98.4,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2019-05-01,KZ,national,monthly,IND_PROD_YTD_YOY,102.0,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2019-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.5,%,nbk,2026-11-26,level,2026-11-26
 2019-05-01,KGZ,national,monthly,KG_CPI_YOY,100.1,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2019-05-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,7.4567,% per annum,derived,2026-11-26,level,2026-11-26
@@ -66769,6 +66834,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-06-01,KZ,national,monthly,IMPORTS,3412558.2263800087,thousand USD,bns,2026-11-26,level,2026-11-26
 2019-06-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,106.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2019-06-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,105.9,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2019-06-01,KZ,national,monthly,IND_PROD_YTD_YOY,102.6,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2019-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.2,%,nbk,2026-11-26,level,2026-11-26
 2019-06-01,KGZ,national,monthly,KG_CPI_YOY,100.9,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2019-06-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,10.7148,% per annum,derived,2026-11-26,level,2026-11-26
@@ -67106,6 +67172,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-07-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,59.356543,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2019-07-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,102.5,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2019-07-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,103.2,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2019-07-01,KZ,national,monthly,IND_PROD_YTD_YOY,102.7,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2019-07-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.2,%,nbk,2026-11-26,level,2026-11-26
 2019-07-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,54.553932,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2019-07-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,53.745726,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -67423,6 +67490,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-08-01,KZ,national,monthly,IMPORTS,3864188.604280005,thousand USD,bns,2026-11-26,level,2026-11-26
 2019-08-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,100.3,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2019-08-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,106.9,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2019-08-01,KZ,national,monthly,IND_PROD_YTD_YOY,103.2,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2019-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.0,%,nbk,2026-11-26,level,2026-11-26
 2019-08-01,KGZ,national,monthly,KG_CPI_YOY,102.0,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2019-08-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-2.512,% per annum,derived,2026-11-26,level,2026-11-26
@@ -67702,6 +67770,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-09-01,KZ,national,monthly,IMPORTS,3593427.611209968,thousand USD,bns,2026-11-26,level,2026-11-26
 2019-09-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,97.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2019-09-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,103.7,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2019-09-01,KZ,national,monthly,IND_PROD_YTD_YOY,103.3,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2019-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,10.0,%,nbk,2026-11-26,level,2026-11-26
 2019-09-01,KGZ,national,monthly,KG_CPI_YOY,102.3,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2019-09-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,6.2593,% per annum,derived,2026-11-26,level,2026-11-26
@@ -68054,6 +68123,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-10-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,58.03021,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2019-10-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,104.6,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2019-10-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,105.4,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2019-10-01,KZ,national,monthly,IND_PROD_YTD_YOY,103.5,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2019-10-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.8,%,nbk,2026-11-26,level,2026-11-26
 2019-10-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,54.608508,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2019-10-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,49.892109,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -68369,6 +68439,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-11-01,KZ,national,monthly,IMPORTS,3210404.670110012,thousand USD,bns,2026-11-26,level,2026-11-26
 2019-11-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,101.6,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2019-11-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,104.8,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2019-11-01,KZ,national,monthly,IND_PROD_YTD_YOY,103.6,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2019-11-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.8,%,nbk,2026-11-26,level,2026-11-26
 2019-11-01,KGZ,national,monthly,KG_CPI_YOY,102.8,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2019-11-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,14.3019,% per annum,derived,2026-11-26,level,2026-11-26
@@ -68649,6 +68720,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2019-12-01,KZ,national,monthly,IMPORTS,3525114.554460005,thousand USD,bns,2026-11-26,level,2026-11-26
 2019-12-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,103.4,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2019-12-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,106.4,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2019-12-01,KZ,national,monthly,IND_PROD_YTD_YOY,103.8,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2019-12-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.9,%,nbk,2026-11-26,level,2026-11-26
 2019-12-01,KGZ,national,monthly,KG_CPI_YOY,103.1,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2019-12-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,23.3853,% per annum,derived,2026-11-26,level,2026-11-26
@@ -69175,6 +69247,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-01-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,57.945499,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2020-01-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,88.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2020-01-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,104.1,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2020-01-01,KZ,national,monthly,IND_PROD_YTD_YOY,104.1,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2020-01-01,KZ,national,monthly,INFLATION_EXPECTATIONS,8.9,%,nbk,2026-11-26,level,2026-11-26
 2020-01-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,50.780772,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2020-01-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,48.98959,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -69494,6 +69567,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-02-01,KZ,national,monthly,IMPORTS,2435884.0662899823,thousand USD,bns,2026-11-26,level,2026-11-26
 2020-02-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,103.7,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2020-02-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,107.5,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2020-02-01,KZ,national,monthly,IND_PROD_YTD_YOY,105.8,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2020-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.3,%,nbk,2026-11-26,level,2026-11-26
 2020-02-01,KGZ,national,monthly,KG_CPI_YOY,104.1,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2020-02-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,4.6253,% per annum,derived,2026-11-26,level,2026-11-26
@@ -69783,6 +69857,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-03-01,KZ,national,monthly,IMPORTS,2632829.9327600026,thousand USD,bns,2026-11-26,level,2026-11-26
 2020-03-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,105.0,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2020-03-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,105.9,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2020-03-01,KZ,national,monthly,IND_PROD_YTD_YOY,105.8,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2020-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.8,%,nbk,2026-11-26,level,2026-11-26
 2020-03-01,KGZ,national,monthly,KG_CPI_YOY,105.9,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2020-03-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-186.6962,% per annum,derived,2026-11-26,level,2026-11-26
@@ -70152,6 +70227,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-04-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,61.414392,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2020-04-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,94.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2020-04-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,106.2,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2020-04-01,KZ,national,monthly,IND_PROD_YTD_YOY,105.9,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2020-04-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.3,%,nbk,2026-11-26,level,2026-11-26
 2020-04-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,45.037221,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2020-04-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,47.239454,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -70460,6 +70536,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-05-01,KZ,national,monthly,IMPORTS,3021255.371709976,thousand USD,bns,2026-11-26,level,2026-11-26
 2020-05-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,94.1,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2020-05-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,100.5,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2020-05-01,KZ,national,monthly,IND_PROD_YTD_YOY,104.8,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2020-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.3,%,nbk,2026-11-26,level,2026-11-26
 2020-05-01,KGZ,national,monthly,KG_CPI_YOY,107.2,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2020-05-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,56.4463,% per annum,derived,2026-11-26,level,2026-11-26
@@ -70745,6 +70822,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-06-01,KZ,national,monthly,IMPORTS,3810652.8988500205,thousand USD,bns,2026-11-26,level,2026-11-26
 2020-06-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,101.9,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2020-06-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,94.4,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2020-06-01,KZ,national,monthly,IND_PROD_YTD_YOY,103.1,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2020-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,8.8,%,nbk,2026-11-26,level,2026-11-26
 2020-06-01,KGZ,national,monthly,KG_CPI_YOY,105.8,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2020-06-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,34.012,% per annum,derived,2026-11-26,level,2026-11-26
@@ -71119,6 +71197,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-07-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,58.389674,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2020-07-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,97.2,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2020-07-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,90.4,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2020-07-01,KZ,national,monthly,IND_PROD_YTD_YOY,101.3,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2020-07-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.5,%,nbk,2026-11-26,level,2026-11-26
 2020-07-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,48.063921,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2020-07-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,49.738783,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -71450,6 +71529,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-08-01,KZ,national,monthly,IMPORTS,3790530.8692399994,thousand USD,bns,2026-11-26,level,2026-11-26
 2020-08-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,104.5,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2020-08-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,94.4,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2020-08-01,KZ,national,monthly,IND_PROD_YTD_YOY,100.4,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2020-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.9,%,nbk,2026-11-26,level,2026-11-26
 2020-08-01,KGZ,national,monthly,KG_CPI_YOY,105.0,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2020-08-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,2.6648,% per annum,derived,2026-11-26,level,2026-11-26
@@ -71747,6 +71827,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-09-01,KZ,national,monthly,IMPORTS,3828536.147390007,thousand USD,bns,2026-11-26,level,2026-11-26
 2020-09-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,100.3,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2020-09-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,96.5,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2020-09-01,KZ,national,monthly,IND_PROD_YTD_YOY,100.0,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2020-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.3,%,nbk,2026-11-26,level,2026-11-26
 2020-09-01,KGZ,national,monthly,KG_CPI_YOY,105.4,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2020-09-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-18.1055,% per annum,derived,2026-11-26,level,2026-11-26
@@ -72119,6 +72200,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-10-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,58.379121,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2020-10-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,102.7,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2020-10-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,93.8,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2020-10-01,KZ,national,monthly,IND_PROD_YTD_YOY,99.4,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2020-10-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.9,%,nbk,2026-11-26,level,2026-11-26
 2020-10-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,51.190476,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2020-10-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,48.336386,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -72444,6 +72526,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-11-01,KZ,national,monthly,IMPORTS,3027403.9550800105,thousand USD,bns,2026-11-26,level,2026-11-26
 2020-11-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,103.2,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2020-11-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,97.1,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2020-11-01,KZ,national,monthly,IND_PROD_YTD_YOY,99.2,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2020-11-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.6,%,nbk,2026-11-26,level,2026-11-26
 2020-11-01,KGZ,national,monthly,KG_CPI_YOY,108.2,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2020-11-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,32.2187,% per annum,derived,2026-11-26,level,2026-11-26
@@ -72736,6 +72819,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2020-12-01,KZ,national,monthly,IMPORTS,3582678.383110009,thousand USD,bns,2026-11-26,level,2026-11-26
 2020-12-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,105.7,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2020-12-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,100.3,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2020-12-01,KZ,national,monthly,IND_PROD_YTD_YOY,99.3,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2020-12-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.3,%,nbk,2026-11-26,level,2026-11-26
 2020-12-01,KGZ,national,monthly,KG_CPI_YOY,109.7,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2020-12-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,17.2777,% per annum,derived,2026-11-26,level,2026-11-26
@@ -73275,6 +73359,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-01-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,59.218132,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2021-01-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,82.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2021-01-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,95.9,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2021-01-01,KZ,national,monthly,IND_PROD_YTD_YOY,95.9,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2021-01-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.7,%,nbk,2026-11-26,level,2026-11-26
 2021-01-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,49.117737,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2021-01-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,49.148159,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -73593,6 +73678,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-02-01,KZ,national,monthly,IMPORTS,2738416.7823100123,thousand USD,bns,2026-11-26,level,2026-11-26
 2021-02-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,102.9,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2021-02-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,100.2,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2021-02-01,KZ,national,monthly,IND_PROD_YTD_YOY,98.1,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2021-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.5,%,nbk,2026-11-26,level,2026-11-26
 2021-02-01,KGZ,national,monthly,KG_CPI_YOY,110.6,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2021-02-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,33.3995,% per annum,derived,2026-11-26,level,2026-11-26
@@ -73878,6 +73964,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-03-01,KZ,national,monthly,IMPORTS,3299169.286769997,thousand USD,bns,2026-11-26,level,2026-11-26
 2021-03-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,106.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2021-03-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,104.0,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2021-03-01,KZ,national,monthly,IND_PROD_YTD_YOY,100.1,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2021-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.4,%,nbk,2026-11-26,level,2026-11-26
 2021-03-01,KGZ,national,monthly,KG_CPI_YOY,110.2,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2021-03-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-18.2688,% per annum,derived,2026-11-26,level,2026-11-26
@@ -74256,6 +74343,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-04-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,60.645064,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2021-04-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,96.7,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2021-04-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,103.0,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2021-04-01,KZ,national,monthly,IND_PROD_YTD_YOY,100.8,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2021-04-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.7,%,nbk,2026-11-26,level,2026-11-26
 2021-04-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,48.924894,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2021-04-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,52.241066,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -74584,6 +74672,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-05-01,KZ,national,monthly,IMPORTS,3368204.774560019,thousand USD,bns,2026-11-26,level,2026-11-26
 2021-05-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,97.4,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2021-05-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,103.6,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2021-05-01,KZ,national,monthly,IND_PROD_YTD_YOY,101.4,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2021-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.3,%,nbk,2026-11-26,level,2026-11-26
 2021-05-01,KGZ,national,monthly,KG_CPI_YOY,110.9,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2021-05-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,7.6365,% per annum,derived,2026-11-26,level,2026-11-26
@@ -74872,6 +74961,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-06-01,KZ,national,monthly,IMPORTS,3643202.346359988,thousand USD,bns,2026-11-26,level,2026-11-26
 2021-06-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,100.2,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2021-06-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.7,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2021-06-01,KZ,national,monthly,IND_PROD_YTD_YOY,101.5,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2021-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.6,%,nbk,2026-11-26,level,2026-11-26
 2021-06-01,KGZ,national,monthly,KG_CPI_YOY,114.2,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2021-06-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,8.5699,% per annum,derived,2026-11-26,level,2026-11-26
@@ -75259,6 +75349,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-07-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,60.51042,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2021-07-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,99.0,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2021-07-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,108.2,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2021-07-01,KZ,national,monthly,IND_PROD_YTD_YOY,102.5,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2021-07-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.4,%,nbk,2026-11-26,level,2026-11-26
 2021-07-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,52.94473,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2021-07-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,52.778617,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -75587,6 +75678,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-08-01,KZ,national,monthly,IMPORTS,3680160.0819100025,thousand USD,bns,2026-11-26,level,2026-11-26
 2021-08-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,100.5,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2021-08-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.9,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2021-08-01,KZ,national,monthly,IND_PROD_YTD_YOY,102.4,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2021-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.0,%,nbk,2026-11-26,level,2026-11-26
 2021-08-01,KGZ,national,monthly,KG_CPI_YOY,114.0,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2021-08-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,5.4505,% per annum,derived,2026-11-26,level,2026-11-26
@@ -75889,6 +75981,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-09-01,KZ,national,monthly,IMPORTS,3742270.395630013,thousand USD,bns,2026-11-26,level,2026-11-26
 2021-09-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,102.3,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2021-09-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,104.7,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2021-09-01,KZ,national,monthly,IND_PROD_YTD_YOY,102.7,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2021-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.5,%,nbk,2026-11-26,level,2026-11-26
 2021-09-01,KGZ,national,monthly,KG_CPI_YOY,113.5,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2021-09-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,9.0369,% per annum,derived,2026-11-26,level,2026-11-26
@@ -76286,6 +76379,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-10-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,61.244738,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2021-10-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,105.0,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2021-10-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,104.2,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2021-10-01,KZ,national,monthly,IND_PROD_YTD_YOY,102.9,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2021-10-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.8,%,nbk,2026-11-26,level,2026-11-26
 2021-10-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,53.27721,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2021-10-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,50.676488,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -76625,6 +76719,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-11-01,KZ,national,monthly,IMPORTS,3750256.82710999,thousand USD,bns,2026-11-26,level,2026-11-26
 2021-11-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,106.1,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2021-11-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,106.8,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2021-11-01,KZ,national,monthly,IND_PROD_YTD_YOY,103.3,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2021-11-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.3,%,nbk,2026-11-26,level,2026-11-26
 2021-11-01,KGZ,national,monthly,KG_CPI_YOY,112.3,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2021-11-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-7.9141,% per annum,derived,2026-11-26,level,2026-11-26
@@ -76931,6 +77026,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2021-12-01,KZ,national,monthly,IMPORTS,4320583.010900013,thousand USD,bns,2026-11-26,level,2026-11-26
 2021-12-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,110.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2021-12-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,108.9,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2021-12-01,KZ,national,monthly,IND_PROD_YTD_YOY,103.8,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2021-12-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.6,%,nbk,2026-11-26,level,2026-11-26
 2021-12-01,KGZ,national,monthly,KG_CPI_YOY,111.2,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2021-12-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,16.1591,% per annum,derived,2026-11-26,level,2026-11-26
@@ -77479,6 +77575,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-01-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,60.306031,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2022-01-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,81.1,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2022-01-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,102.9,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2022-01-01,KZ,national,monthly,IND_PROD_YTD_YOY,102.9,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2022-01-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,51.785179,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2022-01-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,49.339934,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2022-01-01,KGZ,national,monthly,KG_CPI_YOY,111.2,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
@@ -77813,6 +77910,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-02-01,KZ,national,monthly,IMPORTS,3427054.6767900023,thousand USD,bns,2026-11-26,level,2026-11-26
 2022-02-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,101.3,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2022-02-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,106.5,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2022-02-01,KZ,national,monthly,IND_PROD_YTD_YOY,104.7,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2022-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.6,%,nbk,2026-11-26,level,2026-11-26
 2022-02-01,KGZ,national,monthly,KG_CPI_YOY,110.829,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2022-02-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-77.6965,% per annum,derived,2026-11-26,level,2026-11-26
@@ -78112,6 +78210,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-03-01,KZ,national,monthly,IMPORTS,3579233.161579986,thousand USD,bns,2026-11-26,level,2026-11-26
 2022-03-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,107.9,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2022-03-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,108.1,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2022-03-01,KZ,national,monthly,IND_PROD_YTD_YOY,105.8,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2022-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,18.2,%,nbk,2026-11-26,level,2026-11-26
 2022-03-01,KGZ,national,monthly,KG_CPI_YOY,113.2,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2022-03-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,36.9278,% per annum,derived,2026-11-26,level,2026-11-26
@@ -78507,6 +78606,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-04-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,64.142172,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2022-04-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,92.0,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2022-04-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.2,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2022-04-01,KZ,national,monthly,IND_PROD_YTD_YOY,104.7,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2022-04-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.2,%,nbk,2026-11-26,level,2026-11-26
 2022-04-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,49.925015,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2022-04-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,52.114577,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -78850,6 +78950,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-05-01,KZ,national,monthly,IMPORTS,4038740.3137599938,thousand USD,bns,2026-11-26,level,2026-11-26
 2022-05-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,103.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2022-05-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,103.1,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2022-05-01,KZ,national,monthly,IND_PROD_YTD_YOY,104.4,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2022-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.8,%,nbk,2026-11-26,level,2026-11-26
 2022-05-01,KGZ,national,monthly,KG_CPI_YOY,114.0,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2022-05-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,71.4468,% per annum,derived,2026-11-26,level,2026-11-26
@@ -79156,6 +79257,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-06-01,KZ,national,monthly,IMPORTS,4564945.071579966,thousand USD,bns,2026-11-26,level,2026-11-26
 2022-06-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,93.2,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2022-06-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,98.7,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2022-06-01,KZ,national,monthly,IND_PROD_YTD_YOY,103.5,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2022-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.9,%,nbk,2026-11-26,level,2026-11-26
 2022-06-01,KGZ,national,monthly,KG_CPI_YOY,113.069,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2022-06-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-89.0973,% per annum,derived,2026-11-26,level,2026-11-26
@@ -79554,6 +79656,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-07-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,64.691801,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2022-07-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,101.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2022-07-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,97.6,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2022-07-01,KZ,national,monthly,IND_PROD_YTD_YOY,102.7,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2022-07-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.5,%,nbk,2026-11-26,level,2026-11-26
 2022-07-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,53.919808,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2022-07-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,52.139437,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -79901,6 +80004,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-08-01,KZ,national,monthly,IMPORTS,4736798.689709967,thousand USD,bns,2026-11-26,level,2026-11-26
 2022-08-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,99.6,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2022-08-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.4,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2022-08-01,KZ,national,monthly,IND_PROD_YTD_YOY,102.5,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2022-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.5,%,nbk,2026-11-26,level,2026-11-26
 2022-08-01,KGZ,national,monthly,KG_CPI_YOY,115.6,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2022-08-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,38.5779,% per annum,derived,2026-11-26,level,2026-11-26
@@ -80218,6 +80322,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-09-01,KZ,national,monthly,IMPORTS,4532374.791740003,thousand USD,bns,2026-11-26,level,2026-11-26
 2022-09-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,99.4,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2022-09-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,98.7,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2022-09-01,KZ,national,monthly,IND_PROD_YTD_YOY,102.1,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2022-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.9,%,nbk,2026-11-26,level,2026-11-26
 2022-09-01,KGZ,national,monthly,KG_CPI_YOY,115.5,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2022-09-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,-10.4679,% per annum,derived,2026-11-26,level,2026-11-26
@@ -80610,6 +80715,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-10-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,62.529976,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2022-10-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,103.7,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2022-10-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,94.7,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2022-10-01,KZ,national,monthly,IND_PROD_YTD_YOY,101.4,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2022-10-01,KZ,national,monthly,INFLATION_EXPECTATIONS,18.3,%,nbk,2026-11-26,level,2026-11-26
 2022-10-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,55.050959,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2022-10-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,50.479616,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -80958,6 +81064,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-11-01,KZ,national,monthly,IMPORTS,5072426.983400006,thousand USD,bns,2026-11-26,level,2026-11-26
 2022-11-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,110.2,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2022-11-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.1,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2022-11-01,KZ,national,monthly,IND_PROD_YTD_YOY,101.4,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2022-11-01,KZ,national,monthly,INFLATION_EXPECTATIONS,18.2,%,nbk,2026-11-26,level,2026-11-26
 2022-11-01,KGZ,national,monthly,KG_CPI_YOY,115.0,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2022-11-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,7.9916,% per annum,derived,2026-11-26,level,2026-11-26
@@ -81276,6 +81383,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2022-12-01,KZ,national,monthly,IMPORTS,5554024.0278199995,thousand USD,bns,2026-11-26,level,2026-11-26
 2022-12-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,105.3,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2022-12-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,97.2,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2022-12-01,KZ,national,monthly,IND_PROD_YTD_YOY,101.1,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2022-12-01,KZ,national,monthly,INFLATION_EXPECTATIONS,21.3,%,nbk,2026-11-26,level,2026-11-26
 2022-12-01,KGZ,national,monthly,KG_CPI_YOY,114.7,"index, same month previous year = 100",eec,2026-11-26,level,2026-11-26
 2022-12-01,KZ,national,monthly,KZT_CARRY_EXCESS_RETURN,31.4079,% per annum,derived,2026-11-26,level,2026-11-26
@@ -81854,6 +81962,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-01-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,61.600238,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2023-01-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,86.9,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2023-01-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.4,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2023-01-01,KZ,national,monthly,IND_PROD_YTD_YOY,101.4,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2023-01-01,KZ,national,monthly,INFLATION_EXPECTATIONS,17.3,%,nbk,2026-11-26,level,2026-11-26
 2023-01-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,77958.268,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2023-01-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,32646.904,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -82228,6 +82337,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-02-01,KZ,national,monthly,IMPORTS,4591872.621629999,thousand USD,bns,2026-11-26,level,2026-11-26
 2023-02-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,101.3,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2023-02-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.7,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2023-02-01,KZ,national,monthly,IND_PROD_YTD_YOY,101.6,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2023-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.2,%,nbk,2026-11-26,level,2026-11-26
 2023-02-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,118423.413,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2023-02-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,68691.002,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -82545,6 +82655,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-03-01,KZ,national,monthly,IMPORTS,5415336.152409995,thousand USD,bns,2026-11-26,level,2026-11-26
 2023-03-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,111.1,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2023-03-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,105.2,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2023-03-01,KZ,national,monthly,IND_PROD_YTD_YOY,102.8,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2023-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.5,%,nbk,2026-11-26,level,2026-11-26
 2023-03-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,160450.274,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2023-03-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,97783.749,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -82964,6 +83075,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-04-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,60.371471,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2023-04-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,92.5,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2023-04-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,105.7,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2023-04-01,KZ,national,monthly,IND_PROD_YTD_YOY,103.5,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2023-04-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.7,%,nbk,2026-11-26,level,2026-11-26
 2023-04-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,207765.537,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2023-04-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,133282.214,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -83333,6 +83445,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-05-01,KZ,national,monthly,IMPORTS,5420413.836950004,thousand USD,bns,2026-11-26,level,2026-11-26
 2023-05-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,96.2,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2023-05-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,98.1,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2023-05-01,KZ,national,monthly,IND_PROD_YTD_YOY,102.4,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2023-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,17.0,%,nbk,2026-11-26,level,2026-11-26
 2023-05-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,243470.659,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2023-05-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,173143.221,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -83663,6 +83776,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-06-01,KZ,national,monthly,IMPORTS,5149226.001070001,thousand USD,bns,2026-11-26,level,2026-11-26
 2023-06-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,104.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2023-06-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,110.5,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2023-06-01,KZ,national,monthly,IND_PROD_YTD_YOY,103.8,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2023-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,17.2,%,nbk,2026-11-26,level,2026-11-26
 2023-06-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,302456.225,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2023-06-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,213082.685,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -84076,6 +84190,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-07-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,58.64069,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2023-07-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,94.7,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2023-07-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,102.7,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2023-07-01,KZ,national,monthly,IND_PROD_YTD_YOY,103.6,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2023-07-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.9,%,nbk,2026-11-26,level,2026-11-26
 2023-07-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,341979.447,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2023-07-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,261221.026,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -84432,6 +84547,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-08-01,KZ,national,monthly,IMPORTS,5108872.958460003,thousand USD,bns,2026-11-26,level,2026-11-26
 2023-08-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,101.9,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2023-08-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,105.4,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2023-08-01,KZ,national,monthly,IND_PROD_YTD_YOY,103.8,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2023-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.4,%,nbk,2026-11-26,level,2026-11-26
 2023-08-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,384148.277,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2023-08-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,305351.976,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -84706,6 +84822,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-09-01,KZ,national,monthly,IMPORTS,4725258.53292,thousand USD,bns,2026-11-26,level,2026-11-26
 2023-09-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,103.1,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2023-09-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,109.4,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2023-09-01,KZ,national,monthly,IND_PROD_YTD_YOY,104.4,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2023-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,17.0,%,nbk,2026-11-26,level,2026-11-26
 2023-09-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,421781.599,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2023-09-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,346197.664,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -85124,6 +85241,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-10-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,58.805218,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2023-10-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,101.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2023-10-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,107.4,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2023-10-01,KZ,national,monthly,IND_PROD_YTD_YOY,104.7,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2023-10-01,KZ,national,monthly,INFLATION_EXPECTATIONS,18.0,%,nbk,2026-11-26,level,2026-11-26
 2023-10-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,458288.094,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2023-10-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,389225.698,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -85503,6 +85621,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-11-01,KZ,national,monthly,IMPORTS,5120196.54518,thousand USD,bns,2026-11-26,level,2026-11-26
 2023-11-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,103.7,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2023-11-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,100.9,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2023-11-01,KZ,national,monthly,IND_PROD_YTD_YOY,104.3,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2023-11-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.8,%,nbk,2026-11-26,level,2026-11-26
 2023-11-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,496371.081,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2023-11-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,437764.843,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -85840,6 +85959,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2023-12-01,KZ,national,monthly,IMPORTS,5213096.903370003,thousand USD,bns,2026-11-26,level,2026-11-26
 2023-12-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,107.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2023-12-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,103.6,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2023-12-01,KZ,national,monthly,IND_PROD_YTD_YOY,104.3,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2023-12-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.4,%,nbk,2026-11-26,level,2026-11-26
 2023-12-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,553191.013,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2023-12-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,502731.559,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -86427,6 +86547,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-01-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,58.874778,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2024-01-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,86.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2024-01-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,103.4,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2024-01-01,KZ,national,monthly,IND_PROD_YTD_YOY,103.4,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2024-01-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.4,%,nbk,2026-11-26,level,2026-11-26
 2024-01-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,85783.675,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2024-01-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,51543.463,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -86805,6 +86926,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-02-01,KZ,national,monthly,IMPORTS,4102634.6040099906,thousand USD,bns,2026-11-26,level,2026-11-26
 2024-02-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,103.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2024-02-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,105.7,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2024-02-01,KZ,national,monthly,IND_PROD_YTD_YOY,104.6,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2024-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.6,%,nbk,2026-11-26,level,2026-11-26
 2024-02-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,128290.972,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2024-02-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,105802.624,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -87136,6 +87258,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-03-01,KZ,national,monthly,IMPORTS,4608521.934100003,thousand USD,bns,2026-11-26,level,2026-11-26
 2024-03-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,108.2,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2024-03-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,103.0,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2024-03-01,KZ,national,monthly,IND_PROD_YTD_YOY,103.8,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2024-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.2,%,nbk,2026-11-26,level,2026-11-26
 2024-03-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,172731.451,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2024-03-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,158205.581,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -87550,6 +87673,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-04-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,57.821724,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2024-04-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,96.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2024-04-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.4,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2024-04-01,KZ,national,monthly,IND_PROD_YTD_YOY,103.2,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2024-04-01,KZ,national,monthly,INFLATION_EXPECTATIONS,16.1,%,nbk,2026-11-26,level,2026-11-26
 2024-04-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,213618.125,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2024-04-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,231739.204,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -87928,6 +88052,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-05-01,KZ,national,monthly,IMPORTS,5175212.541670006,thousand USD,bns,2026-11-26,level,2026-11-26
 2024-05-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,97.7,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2024-05-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,102.1,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2024-05-01,KZ,national,monthly,IND_PROD_YTD_YOY,103.0,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2024-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.7,%,nbk,2026-11-26,level,2026-11-26
 2024-05-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,250151.963,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2024-05-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,307060.839,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -88258,6 +88383,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-06-01,KZ,national,monthly,IMPORTS,4950400.068619998,thousand USD,bns,2026-11-26,level,2026-11-26
 2024-06-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,102.5,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2024-06-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.7,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2024-06-01,KZ,national,monthly,IND_PROD_YTD_YOY,102.8,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2024-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.3,%,nbk,2026-11-26,level,2026-11-26
 2024-06-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,295711.578,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2024-06-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,378374.216,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -88678,6 +88804,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-07-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,58.58571,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2024-07-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,98.9,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2024-07-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,103.5,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2024-07-01,KZ,national,monthly,IND_PROD_YTD_YOY,102.9,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2024-07-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.4,%,nbk,2026-11-26,level,2026-11-26
 2024-07-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,345836.559,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2024-07-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,480043.779,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -89060,6 +89187,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-08-01,KZ,national,monthly,IMPORTS,5245461.333669998,thousand USD,bns,2026-11-26,level,2026-11-26
 2024-08-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,100.1,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2024-08-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,103.8,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2024-08-01,KZ,national,monthly,IND_PROD_YTD_YOY,103.0,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2024-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.1,%,nbk,2026-11-26,level,2026-11-26
 2024-08-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,389268.479,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2024-08-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,582671.247,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -89395,6 +89523,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-09-01,KZ,national,monthly,IMPORTS,4939879.5775399925,thousand USD,bns,2026-11-26,level,2026-11-26
 2024-09-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,102.4,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2024-09-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,103.5,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2024-09-01,KZ,national,monthly,IND_PROD_YTD_YOY,103.1,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2024-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.1,%,nbk,2026-11-26,level,2026-11-26
 2024-09-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,425808.399,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2024-09-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,672205.289,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -89822,6 +89951,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-10-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,57.942974,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2024-10-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,97.5,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2024-10-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,98.0,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2024-10-01,KZ,national,monthly,IND_PROD_YTD_YOY,102.6,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2024-10-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.5,%,nbk,2026-11-26,level,2026-11-26
 2024-10-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,464775.809,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2024-10-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,767338.435,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -90206,6 +90336,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-11-01,KZ,national,monthly,IMPORTS,5252876.853300056,thousand USD,bns,2026-11-26,level,2026-11-26
 2024-11-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,108.9,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2024-11-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,103.7,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2024-11-01,KZ,national,monthly,IND_PROD_YTD_YOY,102.7,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2024-11-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.1,%,nbk,2026-11-26,level,2026-11-26
 2024-11-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,506444.956,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2024-11-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,856059.891,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -90534,6 +90665,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2024-12-01,KZ,national,monthly,IMPORTS,5727049.585379954,thousand USD,bns,2026-11-26,level,2026-11-26
 2024-12-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,107.9,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2024-12-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,103.8,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2024-12-01,KZ,national,monthly,IND_PROD_YTD_YOY,102.8,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2024-12-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.6,%,nbk,2026-11-26,level,2026-11-26
 2024-12-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,565148.456,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2024-12-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,974278.598,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -91138,6 +91270,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-01-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,60.298811,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2025-01-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,86.2,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2025-01-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,102.3,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2025-01-01,KZ,national,monthly,IND_PROD_YTD_YOY,102.3,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2025-01-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.4,%,nbk,2026-11-26,level,2026-11-26
 2025-01-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,52.523934,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2025-01-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,50.78329,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -91512,6 +91645,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-02-01,KZ,national,monthly,IMPORTS,4450593.607579998,thousand USD,bns,2026-11-26,level,2026-11-26
 2025-02-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,110.5,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2025-02-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,109.4,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2025-02-01,KZ,national,monthly,IND_PROD_YTD_YOY,105.9,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2025-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.7,%,nbk,2026-11-26,level,2026-11-26
 2025-02-01,KZ,national,monthly,KASE_CNY_VOLUME,635543238.0,CNY,nbk,2026-11-26,level,2026-11-26
 2025-02-01,KZ,national,monthly,KASE_EUR_VOLUME,149081157.0,EUR,nbk,2026-11-26,level,2026-11-26
@@ -91843,6 +91977,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-03-01,KZ,national,monthly,IMPORTS,4709147.182030002,thousand USD,bns,2026-11-26,level,2026-11-26
 2025-03-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,106.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2025-03-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,108.5,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2025-03-01,KZ,national,monthly,IND_PROD_YTD_YOY,106.7,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2025-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.6,%,nbk,2026-11-26,level,2026-11-26
 2025-03-01,KZ,national,monthly,KASE_CNY_VOLUME,645563100.0,CNY,nbk,2026-11-26,level,2026-11-26
 2025-03-01,KZ,national,monthly,KASE_EUR_VOLUME,46255660.0,EUR,nbk,2026-11-26,level,2026-11-26
@@ -92281,6 +92416,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-04-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,60.115942,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2025-04-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,97.3,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2025-04-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,106.2,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2025-04-01,KZ,national,monthly,IND_PROD_YTD_YOY,106.6,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2025-04-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.2,%,nbk,2026-11-26,level,2026-11-26
 2025-04-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,52.318841,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2025-04-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,53.73913,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -92662,6 +92798,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-05-01,KZ,national,monthly,IMPORTS,5417192.442700004,thousand USD,bns,2026-11-26,level,2026-11-26
 2025-05-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,98.9,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2025-05-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,105.8,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2025-05-01,KZ,national,monthly,IND_PROD_YTD_YOY,106.4,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2025-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.1,%,nbk,2026-11-26,level,2026-11-26
 2025-05-01,KZ,national,monthly,KASE_CNY_VOLUME,760677000.0,CNY,nbk,2026-11-26,level,2026-11-26
 2025-05-01,KZ,national,monthly,KASE_EUR_VOLUME,35860459.0,EUR,nbk,2026-11-26,level,2026-11-26
@@ -92992,6 +93129,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-06-01,KZ,national,monthly,IMPORTS,5462042.798370001,thousand USD,bns,2026-11-26,level,2026-11-26
 2025-06-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,102.7,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2025-06-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,107.2,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2025-06-01,KZ,national,monthly,IND_PROD_YTD_YOY,106.5,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2025-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.6,%,nbk,2026-11-26,level,2026-11-26
 2025-06-01,KZ,national,monthly,KASE_CNY_VOLUME,1388679877.0,CNY,nbk,2026-11-26,level,2026-11-26
 2025-06-01,KZ,national,monthly,KASE_EUR_VOLUME,30062975.0,EUR,nbk,2026-11-26,level,2026-11-26
@@ -93434,6 +93572,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-07-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,59.83203,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2025-07-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,96.6,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2025-07-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,108.9,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2025-07-01,KZ,national,monthly,IND_PROD_YTD_YOY,106.9,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2025-07-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.2,%,nbk,2026-11-26,level,2026-11-26
 2025-07-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,54.546771,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2025-07-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,52.896032,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -93831,6 +93970,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-08-01,KZ,national,monthly,IMPORTS,5381113.225620001,thousand USD,bns,2026-11-26,level,2026-11-26
 2025-08-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,103.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2025-08-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,112.8,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2025-08-01,KZ,national,monthly,IND_PROD_YTD_YOY,107.6,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2025-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.6,%,nbk,2026-11-26,level,2026-11-26
 2025-08-01,KZ,national,monthly,KASE_CNY_VOLUME,1882207702.0,CNY,nbk,2026-11-26,level,2026-11-26
 2025-08-01,KZ,national,monthly,KASE_EUR_VOLUME,38050555.0,EUR,nbk,2026-11-26,level,2026-11-26
@@ -94175,6 +94315,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-09-01,KZ,national,monthly,IMPORTS,5779957.384110003,thousand USD,bns,2026-11-26,level,2026-11-26
 2025-09-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,97.1,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2025-09-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,105.2,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2025-09-01,KZ,national,monthly,IND_PROD_YTD_YOY,107.4,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2025-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.2,%,nbk,2026-11-26,level,2026-11-26
 2025-09-01,KZ,national,monthly,KASE_CNY_VOLUME,1833832741.0,CNY,nbk,2026-11-26,level,2026-11-26
 2025-09-01,KZ,national,monthly,KASE_EUR_VOLUME,46051625.0,EUR,nbk,2026-11-26,level,2026-11-26
@@ -94613,6 +94754,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-10-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,59.847614,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2025-10-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,99.4,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2025-10-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,107.1,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2025-10-01,KZ,national,monthly,IND_PROD_YTD_YOY,107.3,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2025-10-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.6,%,nbk,2026-11-26,level,2026-11-26
 2025-10-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,54.298447,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2025-10-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,51.092582,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
@@ -94993,6 +95135,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-11-01,KZ,national,monthly,IMPORTS,5881063.739770008,thousand USD,bns,2026-11-26,level,2026-11-26
 2025-11-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,107.3,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2025-11-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,108.2,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2025-11-01,KZ,national,monthly,IND_PROD_YTD_YOY,107.4,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2025-11-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.6,%,nbk,2026-11-26,level,2026-11-26
 2025-11-01,KZ,national,monthly,KASE_CNY_VOLUME,1697196914.0,CNY,nbk,2026-11-26,level,2026-11-26
 2025-11-01,KZ,national,monthly,KASE_EUR_VOLUME,51285585.0,EUR,nbk,2026-11-26,level,2026-11-26
@@ -95327,6 +95470,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2025-12-01,KZ,national,monthly,IMPORTS,7115016.38019,thousand USD,bns,2026-11-26,level,2026-11-26
 2025-12-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,110.4,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2025-12-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,108.1,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2025-12-01,KZ,national,monthly,IND_PROD_YTD_YOY,107.5,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2025-12-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.7,%,nbk,2026-11-26,level,2026-11-26
 2025-12-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,685712.614,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2025-12-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,1065144.803,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -95928,6 +96072,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-01-01,KZ,national,quarterly,IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX,61.519678,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2026-01-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,78.5,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2026-01-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,93.4,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2026-01-01,KZ,national,monthly,IND_PROD_YTD_YOY,93.4,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2026-01-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.2,%,nbk,2026-11-26,level,2026-11-26
 2026-01-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,65238.985,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2026-01-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,82855.48,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -96311,6 +96456,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-02-01,KZ,national,monthly,IMPORTS,4985924.129210006,thousand USD,bns,2026-11-26,level,2026-11-26
 2026-02-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,124.5,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2026-02-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,103.2,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2026-02-01,KZ,national,monthly,IND_PROD_YTD_YOY,96.9,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2026-02-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.7,%,nbk,2026-11-26,level,2026-11-26
 2026-02-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,108381.06,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2026-02-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,159541.754,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -96644,6 +96790,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-03-01,KZ,national,monthly,IMPORTS,5298906.176619998,thousand USD,bns,2026-11-26,level,2026-11-26
 2026-03-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,116.2,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2026-03-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,104.3,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2026-03-01,KZ,national,monthly,IND_PROD_YTD_YOY,99.3,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2026-03-01,KZ,national,monthly,INFLATION_EXPECTATIONS,14.6,%,nbk,2026-11-26,level,2026-11-26
 2026-03-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,169656.553,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2026-03-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,240772.281,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -97093,6 +97240,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-04-01,KZ,national,monthly,INDUSTRIAL_OUTPUT,6513070.117,million KZT,bns,2026-11-26,level,2026-11-26
 2026-04-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,107.2,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2026-04-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,109.6,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2026-04-01,KZ,national,monthly,IND_PROD_YTD_YOY,101.9,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2026-04-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.4,%,nbk,2026-11-26,level,2026-11-26
 2026-04-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,227726.191,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2026-04-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,345627.144,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -97482,6 +97630,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-05-01,KZ,national,monthly,INDUSTRIAL_PRODUCTION_INDEX,104.7,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
 2026-05-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,109.0,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2026-05-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,104.7,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2026-05-01,KZ,national,monthly,IND_PROD_YTD_YOY,102.5,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2026-05-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.7,%,nbk,2026-11-26,level,2026-11-26
 2026-05-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,278228.595,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2026-05-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,433074.004,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -97848,6 +97997,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-06-01,KZ,national,monthly,INDUSTRIAL_PRODUCTION_INDEX,108.2,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
 2026-06-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,112.9,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2026-06-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,108.2,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2026-06-01,KZ,national,monthly,IND_PROD_YTD_YOY,103.5,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2026-06-01,KZ,national,monthly,INFLATION_EXPECTATIONS,13.4,%,nbk,2026-11-26,level,2026-11-26
 2026-06-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,341927.311,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2026-06-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,584071.888,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -98316,6 +98466,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-07-01,KZ,national,monthly,INDUSTRIAL_PRODUCTION_INDEX,100.1,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
 2026-07-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,93.9,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2026-07-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,100.1,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2026-07-01,KZ,national,monthly,IND_PROD_YTD_YOY,103.0,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2026-07-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.1,%,nbk,2026-11-26,level,2026-11-26
 2026-07-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,387941.481,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2026-07-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,740362.524,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -98737,6 +98888,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-08-01,KZ,national,monthly,INDUSTRIAL_PRODUCTION_INDEX,101.0,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
 2026-08-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,114.0,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2026-08-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,101.0,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2026-08-01,KZ,national,monthly,IND_PROD_YTD_YOY,102.8,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2026-08-01,KZ,national,monthly,INFLATION_EXPECTATIONS,12.1,%,nbk,2026-11-26,level,2026-11-26
 2026-08-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,435797.249,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2026-08-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,913326.979,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -99113,6 +99265,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-09-01,KZ,national,monthly,INDUSTRIAL_PRODUCTION_INDEX,103.6,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
 2026-09-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,102.9,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2026-09-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,103.6,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2026-09-01,KZ,national,monthly,IND_PROD_YTD_YOY,102.9,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2026-09-01,KZ,national,monthly,INFLATION_EXPECTATIONS,11.8,%,nbk,2026-11-26,level,2026-11-26
 2026-09-01,KZ,national,monthly,INSURANCE_PREMIUMS_GENERAL,481314.306,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
 2026-09-01,KZ,national,monthly,INSURANCE_PREMIUMS_LIFE,1097620.831,"million KZT, year-to-date cumulative",nbk,2026-11-26,"level (year-to-date cumulative, as published -- not decumulated to discrete months)",2026-11-26
@@ -99493,6 +99646,7 @@ date,country,region,frequency,variable,value,unit,source,source_version,transfor
 2026-10-01,KZ,national,monthly,INDUSTRIAL_PRODUCTION_INDEX,109.5,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
 2026-10-01,KZ,national,monthly,IND_PROD_MONTHLY_MOM,125.8,"index, previous month = 100",bns,2026-11-26,level,2026-11-26
 2026-10-01,KZ,national,monthly,IND_PROD_MONTHLY_YOY,109.5,"index, same month previous year = 100",bns,2026-11-26,level,2026-11-26
+2026-10-01,KZ,national,monthly,IND_PROD_YTD_YOY,103.5,index (same period previous year = 100),bns,2026-11-27,level,2026-11-27
 2026-10-01,KZ,national,monthly,INFLATION_EXPECTATIONS,9.8,%,nbk,2026-11-26,level,2026-11-26
 2026-10-01,KZ,national,quarterly,INVENTORIES_DIFFUSION_INDEX,53.772523,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26
 2026-10-01,KZ,national,quarterly,INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX,51.295045,"diffusion index (0-100, 50=neutral)",nbk,2026-11-26,level,2026-11-26

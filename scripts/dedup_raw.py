@@ -13,6 +13,7 @@ manifest of the removed file is pointed at the survivor (`raw_file`).
     python scripts/dedup_raw.py --repair-manifests  # re-point manifests left naming a file an earlier dedup removed
     python scripts/dedup_raw.py --nbk-forms         # NBK form downloads equal in canonical form (below)
     python scripts/dedup_raw.py --wits              # WITS answers equal apart from their time stamp (below)
+    python scripts/dedup_raw.py --manifests         # manifests repeating both neighbours (raw_store.collapse_manifests)
 
 --nbk-forms compares the paginated NBK open-data form downloads (data/raw/nbk, the pages
 archived by fetchers.nbk._fetch_nbk_form_paginated) by their CANONICAL form (lib/nbk_pages):
@@ -42,7 +43,7 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from lib import nbk_pages  # noqa: E402
+from lib import nbk_pages, raw_store  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 RAW = REPO_ROOT / "data" / "raw"
@@ -207,8 +208,20 @@ def main(argv: list[str] | None = None) -> int:
                     help="NBK form downloads with equal canonical content instead of byte-identical files (see above)")
     ap.add_argument("--wits", action="store_true",
                     help="WITS answers equal apart from header.prepared instead of byte-identical files (see above)")
+    ap.add_argument("--manifests", action="store_true",
+                    help="download manifests equal to both neighbours apart from downloaded_at: the first and "
+                         "the last of every run of identical answers stay")
     args = ap.parse_args(argv)
     today = date.today().isoformat()
+    if args.manifests:
+        pairs = set()
+        for folder in (f for f in RAW.iterdir() if f.is_dir()):
+            stem = re.compile(rf"{re.escape(folder.name)}_(.+)_\d{{4}}-\d{{2}}-\d{{2}}\.manifest\.json")
+            pairs |= {(folder.name, m[1]) for p in folder.glob("*.manifest.json") if (m := stem.fullmatch(p.name))}
+        n = sum(len(raw_store.collapse_manifests(a, i, dry_run=args.dry_run)) for a, i in sorted(pairs))
+        print(f"dedup_raw --manifests{' (dry run)' if args.dry_run else ''}: {len(pairs)} indicators, "
+              f"{n} manifests {'would be ' if args.dry_run else ''}removed")
+        return 0
     if args.repair_manifests:
         n = repair_manifests(today, dry_run=args.dry_run)
         print(f"dedup_raw --repair-manifests{' (dry run)' if args.dry_run else ''}: {n} manifests {'would be ' if args.dry_run else ''}re-pointed")

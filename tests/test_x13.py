@@ -240,3 +240,30 @@ def test_x13_errors_carry_the_program_message():
     s = _m(np.linspace(100, 200, 96) * (1 + 0.1 * np.sin(np.arange(96))))   # no noise at all
     with pytest.raises(x13.X13Error, match="ERROR"):
         x13.adjust(s, 12, calendar="none")
+
+
+def test_longest_run_may_cross_a_short_hole():
+    idx = pd.date_range("2018-01-01", periods=40, freq="MS")
+    s = pd.Series(range(1, 41), index=idx, dtype=float)
+    s.iloc[[30, 31]] = np.nan          # two months the source never published
+    s.iloc[[10, 11, 12]] = np.nan      # a longer hole still ends a run
+    assert len(x13.longest_run(s, 12)) == 17 and x13.longest_run(s, 12).index[0] == idx[13]
+    run = x13.longest_run(s, 12, max_gap=2)
+    assert (run.index[0], run.index[-1], len(run), int(run.isna().sum())) == (idx[13], idx[39], 27, 2)
+    assert "-99999.0" in x13.build_spec(run, 12, calendar="none")
+
+
+@needs_x13
+def test_a_hole_is_adjusted_across_and_stays_missing():
+    """tax_revenue: April 2026 is missing in the source, so the adjusted series stopped at March."""
+    n = 120
+    rng = np.random.default_rng(3)
+    s = _m(100 * np.exp(0.01 * np.arange(n)) * (1 + 0.05 * np.cos(2 * np.pi * np.arange(n) / 12))
+           * np.exp(rng.normal(0, 0.004, n)), start="2010-01-01")
+    holes = s.index[[100, 101]]
+    s.loc[holes] = np.nan
+    assert x13.adjust(s, 12, transform="log", calendar="none").span[1] == s.index[99].strftime("%Y-%m")
+    res = x13.adjust(s, 12, transform="log", calendar="none", max_gap=2)
+    assert res.span == (s.index[0].strftime("%Y-%m"), s.index[-1].strftime("%Y-%m")) and res.dropped == 0
+    assert res.sa.loc[holes].isna().all() and res.seasonal.loc[holes].isna().all()
+    assert res.sa.drop(holes).notna().all() and len(res.sa) == 120
