@@ -53,7 +53,15 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          sudo apt-get install -y -q p7zip-full p7zip-rar unar unrar poppler-utils > /dev/null
+          # One package at a time: on 2026-11-27 the runner image had no p7zip-rar and one
+          # missing name failed the whole install. The script tries 7z, unar and unrar in
+          # turn, so an unpacker may be absent; pdftotext (poppler-utils) may not.
+          sudo apt-get update -q > /dev/null
+          for pkg in p7zip-full 7zip p7zip-rar 7zip-rar unar unrar poppler-utils; do
+            sudo apt-get install -y -q "$pkg" > /dev/null 2>&1 || echo "::notice::apt: $pkg not installed"
+          done
+          command -v pdftotext
+          command -v 7z || command -v unar || command -v unrar
 
       - name: Bulletin cache
         uses: actions/cache@v5
