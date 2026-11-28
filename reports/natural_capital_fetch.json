@@ -1,42 +1,42 @@
 {
- "started_utc": "2026-11-07T15:36:28.728614+00:00",
+ "started_utc": "2026-11-28T03:16:31.945744+00:00",
  "bns": {
   "listings": [
    {
     "url": "https://stat.gov.kz/ru/industries/environment/stat-speu/publications/",
     "ok": true,
     "new_ids": 0,
-    "bytes": 50256
+    "bytes": 50260
    },
    {
     "url": "https://stat.gov.kz/ru/industries/environment/stat-speu/spreadsheets/",
     "ok": true,
     "new_ids": 6,
-    "bytes": 56802
+    "bytes": 56806
    },
    {
     "url": "https://stat.gov.kz/ru/industries/environment/stat-speu/spreadsheets/?PAGEN_1=2",
     "ok": true,
     "new_ids": 0,
-    "bytes": 56832
+    "bytes": 56836
    },
    {
     "url": "https://stat.gov.kz/ru/industries/environment/stat-speu/",
     "ok": true,
     "new_ids": 6,
-    "bytes": 55909
+    "bytes": 55913
    },
    {
     "url": "https://stat.gov.kz/ru/industries/environment/stat-speu/?PAGEN_1=2",
     "ok": true,
     "new_ids": 0,
-    "bytes": 55929
+    "bytes": 55933
    },
    {
     "url": "https://stat.gov.kz/en/industries/environment/stat-speu/publications/",
     "ok": true,
     "new_ids": 0,
-    "bytes": 48347
+    "bytes": 48351
    }
   ],
   "ids_found": {
@@ -110,7 +110,7 @@
     "bytes": 701372,
     "sha256": "6f0719024437f7efc555b72ad2a1535578c5fdd568eb2b9f4850ccfd59ef6cfa",
     "pages": 3,
-    "first_page": "Счет минеральных и энергетических ресурсов Республики Казахстан Дата опубликования: Дата следующего опубликования: 1. Ключевые моменты 2. Основные результаты 3. Глоссарий 4. Методологические пояснения 5. Ссылки на связанные публикации 6. Полезные ссылки 1. Ключевые моменты 28 718,5 млн . тонн запасы"
+    "first_page": "Счет минеральных и энергетических ресурсов Республики Казахстан Дата опубликования: Дата следующего опубликования: 1. Ключевые моменты 2. Основные результаты 3. Глоссарий 4. Методологические пояснения 5. Ссылки на связанные публикации 6. Полезные ссылки 1. Ключевые моменты 28 718,5 млн. тонн запасы "
    },
    {
     "element_id": "509550",
@@ -218,7 +218,7 @@
    327,
    328
   ],
-  "extract_lines": 2091
+  "extract_lines": 2092
  },
  "http_errors": [
   {
@@ -246,5 +246,5 @@
    "error": "HTTPSConnectionPool(host='www.oecdnea.org', port=443): Max retries exceeded with url: /upload/docs/application/pdf/2026-09/uranium_2026_-_resources_production_and_demand.pdf (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch"
   }
  ],
- "finished_utc": "2026-11-07T15:37:56.809520+00:00"
+ "finished_utc": "2026-11-28T03:17:55.567547+00:00"
 }

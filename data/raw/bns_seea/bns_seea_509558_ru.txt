@@ -11,11 +11,11 @@ Next publication date: 18.06.2026
  
 1. Key indicators 
  
-28 718,5 million tonnes  
+28 718,5 million tonnes 
 Coal reserves (at the end of 2024) 
-2 850,2 million tonnes  
+2 850,2 million tonnes 
 Oil reserves (at the end of 2024) 
-1 303,5 billion m³  
+1 303,5 billion m³ 
 Natural gas reserves (at the end of 
 2024) 
  
@@ -23,10 +23,10 @@ Natural gas reserves (at the end of
  
 The Asset Account for Mineral and Energy Resources provides information on resource reserves and 
 changes in reserves between reporting periods. The publication presents data on the main types of Kazakhstan's 
-mineral and energy resources, including coal, oil, natural gas, iron ore, gold, and others.  
-At the end of 2024, coal reserves amounted to 28718 ,5 million tonnes, oil reserves to 2850 ,2 million tonnes, 
-natural gas reserves to 1303 ,5 billion m³, and iron ore reserves to 12463 ,0 million tonnes . During the year, coal 
-extraction amounted to 90 ,2 million tonnes, oil extraction to 78 ,1 million tonnes, natural gas extraction to 34 ,4 
+mineral and energy resources, including coal, oil, natural gas, iron ore, gold, and others. 
+At the end of 2024, coal reserves amounted to 28718,5 million tonnes, oil reserves to 2850,2 million tonnes, 
+natural gas reserves to 1303,5 billion m³, and iron ore reserves to 12463,0 million tonnes. During the year, coal 
+extraction amounted to 90,2 million tonnes, oil extraction to 78,1 million tonnes, natural gas extraction to 34,4 
 billion m³, and iron ore extraction to 29,8 million tonnes. 
  
 Changes in Coal, Oil and Gas Reserves in 2024 
@@ -60,9 +60,9 @@ Asset account for mineral and energy resources
 Stocks of mineral and energy resources — the quantity of mineral and energy resources contained in 
 deposits and recorded at a specific date. 
 Discoveries of new stocks — the identification and recording of new deposits or additional quantities of 
-resources associated with known deposits of classified categories.  
+resources associated with known deposits of classified categories. 
 Reappraisal of stocks — changes in previously recorded stock volumes resulting from уточнение 
-geological information, changes in extraction technologies, economic conditions, or resource prices.  
+geological information, changes in extraction technologies, economic conditions, or resource prices. 
 92,1
 73,9
 40,9
@@ -85,13 +85,13 @@ Coal (million tonnes) Oil (million tonnes) Iron ore (million tonnes) Gas (billio
 
 ===== page 3 =====
 Extraction (removals) — the quantity of mineral and energy resources actually extracted from deposits, 
-excluding overburden removal and prior to any processing or beneficiation.  
+excluding overburden removal and prior to any processing or beneficiation. 
 Overburden removal — activities involving the removal of soil, rock, and other materials that obstruct 
 access to mineral resources. 
 Catastrophic losses — losses of resources due to accidents, fires, collapses, or other extraordinary events 
 that result in the loss of the possibility of further extraction. 
 Reclassification of resources — changes in the category or class of deposits resulting from new geological 
-information, economic conditions, or decisions by government authorities.  
+information, economic conditions, or decisions by government authorities. 
 Mineral and energy resources — natural resources of a mineral and energy nature, including oil, natural gas, 
 coal, ores, and other mineral resources. 
  
@@ -101,12 +101,12 @@ Asset accounts for mineral and energy resources in physical terms reflect the st
 the beginning and at the end of the reporting period, as well as the changes that occurred during the reporting 
 period. 
 Resource accounting is carried out by types of mineral and energy resources in natural units of 
-measurement, including tonnes , cubic meters, barrels, and other units depending on the type of resource. To 
-ensure data comparability, a single unit of measurement is applied for each type of resource.  
+measurement, including tonnes, cubic meters, barrels, and other units depending on the type of resource. To 
+ensure data comparability, a single unit of measurement is applied for each type of resource. 
 Resource stocks are classified into the following categories: commercially recoverable resources, 
 potentially commercially recoverable resources, as well as non-commercial and other known deposits. 
 Changes in resource stocks during the reporting period may be associated with discoveries of new stocks, 
-reappraisals, extraction, catastrophic losses, and reclassification of deposits.  
+reappraisals, extraction, catastrophic losses, and reclassification of deposits. 
 These accounts are used to assess the sustainability of the resource base, analyze the depletion of natural 
 capital, prepare national wealth statistics, and compile indicators linking the extractive sector with the environment 
 and the economy. 
