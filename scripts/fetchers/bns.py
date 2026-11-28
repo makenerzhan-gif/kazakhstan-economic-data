@@ -3257,11 +3257,88 @@ def _labour_identity(ws, value: float, indicator_id: str, eid: int) -> None:
         )
 
 
+# The wage publication «с учетом малых предприятий» carries one quarter and BNS keeps one
+# edition on its page: until 2026-11-28 the fourteen series read from it were a single point
+# (2026 Q1). Taldau holds the same indicators as series -- the wage from 2016 Q1, the real wage
+# index from 2018 Q1 -- in two segments (to 2020 without the ownership dictionary, from 2021
+# with it); 2026 Q1 there equals the publication (445 068). The Taldau history is laid UNDER
+# what the publication gives, so a quarter printed in an edition is never replaced.
+WAGE_TALDAU = {
+    3: ("18935547", "1", (("68,859,2813,59", "741880,741885,3629946,741907"),
+                                             ("68,859,2813", "741880,741885,3629946"))),
+    7: ("19786379", "7", (("68,859,2813,59,848", "741880,741885,3629946,741907,2695732"),
+                                            ("68,859,2813,848", "741880,741885,3629946,2695732"))),
+}
+WAGE_TALDAU_ALL, WAGE_TALDAU_INDUSTRY = "741885", "741340"     # activity dictionary: «Всего», «Промышленность»
+_WAGE_TALDAU_CACHE: dict[int, dict[str, dict[str, float]]] = {}
+
+
+def _taldau_quarters(node: dict) -> dict[str, float]:
+    out = {}
+    for key, value in node.items():
+        if not (isinstance(key, str) and len(key) == 7 and key[0] == "y" and key[1:].isdigit()):
+            continue
+        month, year = int(key[1:3]), int(key[3:])
+        try:
+            v = float(str(value).replace(",", ".").replace(" ", ""))
+        except (TypeError, ValueError):
+            continue
+        if month in (3, 6, 9, 12):
+            out[f"{year:04d}-{QUARTER_START[month // 3]}"] = v
+    return out
+
+
+def _taldau_wage_tables(value_index: int) -> dict[str, dict[str, float]]:
+    """{activity name: {quarter start: value}} for the wage (value_index 3) or the real wage
+    index (7), whole country, both Taldau segments. One download per process."""
+    if value_index in _WAGE_TALDAU_CACHE:
+        return _WAGE_TALDAU_CACHE[value_index]
+    index_id, measure, segments = WAGE_TALDAU[value_index]
+    tables: dict[str, dict[str, float]] = {}
+    for dics, terms in segments:
+        for parent in (WAGE_TALDAU_ALL, WAGE_TALDAU_INDUSTRY):
+            body = {"p_parent_id": parent, "p_index_id": index_id, "p_keyword": "", "p_period_id": "5",
+                    "p_measure_id": measure, "p_term_id": parent,
+                    # the children of a node are served only when the node itself is the activity term
+                    "p_terms": terms.replace(WAGE_TALDAU_ALL, parent), "p_dicIds": dics, "idx": "1",
+                    "filter": '[{"property":null,"value":null}]', "id": ""}
+            resp = requests.post(TALDAU_TREE_DATA_URL, data=body,
+                                 headers={**HEADERS, "X-Requested-With": "XMLHttpRequest"}, timeout=60)
+            resp.raise_for_status()
+            for node in resp.json():
+                name = " ".join(str(node.get("text") or "").split())
+                tables.setdefault(name, {}).update(_taldau_quarters(node))
+        body = {**body, "p_parent_id": "", "p_term_id": NATIONAL_TERM_ID, "p_terms": terms, "idx": "0"}
+        resp = requests.post(TALDAU_TREE_DATA_URL, data=body,
+                             headers={**HEADERS, "X-Requested-With": "XMLHttpRequest"}, timeout=60)
+        resp.raise_for_status()
+        root = next((n for n in resp.json() if str(n.get("id")) == NATIONAL_TERM_ID), None)
+        if root:
+            tables.setdefault("Всего", {}).update(_taldau_quarters(root))
+    _WAGE_TALDAU_CACHE[value_index] = tables
+    return tables
+
+
+def _with_taldau_wage_history(result: tuple[list[dict], dict], row_marker: str, value_index: int) -> tuple[list[dict], dict]:
+    """The publication's records with the Taldau history under them. A Taldau outage, or a
+    quarter where the two disagree, changes nothing that the publication gave."""
+    records, manifest = result
+    try:
+        history = _taldau_wage_tables(value_index).get(" ".join(row_marker.split()), {})
+    except Exception as exc:  # noqa: BLE001 -- the history is an addition, never a reason to fail the series
+        return records, {**manifest, "taldau_history": f"not read: {type(exc).__name__}"}
+    merged = {**history, **{r["date"]: r["value"] for r in records}}
+    index_id = WAGE_TALDAU[value_index][0]
+    return ([{"date": d, "value": v} for d, v in sorted(merged.items())],
+            {**manifest, "taldau_history": f"Taldau index {index_id}, quarters {min(history)}..{max(history)}" if history else "none",
+             "note": manifest.get("note", "") + f" History before the stored editions: Taldau index {index_id} (quarterly)."})
+
+
 def _fetch_wage_row(value_index: int, indicator_id: str, note: str,
                     unit: str) -> tuple[list[dict], dict]:
-    return _fetch_quarterly_publication_row(
+    return _with_taldau_wage_history(_fetch_quarterly_publication_row(
         WAGES_PAGE_URL, "1", WAGES_SHEET_TITLE, "Всего", value_index, True,
-        indicator_id, note, unit)
+        indicator_id, note, unit), "Всего", value_index)
 
 
 def fetch_labor_force() -> tuple[list[dict], dict]:
@@ -3827,9 +3904,9 @@ WAGE_COL_REAL_YOY = 7       # индекс реальной заработной
 
 def _fetch_sector_wage(sector: str, value_index: int, indicator_id: str, note: str,
                        unit: str) -> tuple[list[dict], dict]:
-    return _fetch_quarterly_publication_row(
+    return _with_taldau_wage_history(_fetch_quarterly_publication_row(
         WAGES_PAGE_URL, "1", WAGES_SHEET_TITLE, WAGE_SECTOR_ROWS[sector],
-        value_index, True, indicator_id, note, unit)
+        value_index, True, indicator_id, note, unit), WAGE_SECTOR_ROWS[sector], value_index)
 
 
 def fetch_avg_wage_mining() -> tuple[list[dict], dict]:

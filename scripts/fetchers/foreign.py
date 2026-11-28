@@ -423,9 +423,14 @@ ECB_SERIES = {
     "EA_HICP_YOY": ("HICP/M.U2.N.000000.4D0.ANR", "monthly",
                     "Percent change on the same month of the previous year, euro area HICP (changing composition), "
                     "from 1991."),
-    "EA_GDP_REAL": ("MNA/Q.Y.I9.W2.S1.S1.B.B1GQ._Z._Z._Z.EUR.LR.N", "quarterly",
-                    "Million euro, chain-linked volumes (reference year 2015), seasonally and calendar adjusted, "
-                    "euro area 20 (fixed composition), from 1995-Q1."),
+    # I10 = euro area 21 (fixed composition as of 2026-01-01, with Bulgaria). The ECB stopped
+    # updating I9 (euro area 20) at 2026-Q1; the series read here until 2026-11-28 ended there
+    # while I10 ran to 2026-Q3. The whole history is the 21-country aggregate, reference year 2020.
+    "EA_GDP_REAL": ("MNA/Q.Y.I10.W2.S1.S1.B.B1GQ._Z._Z._Z.EUR.LR.N", "quarterly",
+                    "Million euro, chain-linked volumes (reference year 2020), seasonally and calendar adjusted, "
+                    "euro area 21 (fixed composition as of 2026-01-01), from 1995-Q1. Until 2026-11-28 this was "
+                    "the euro area 20 series (I9, reference year 2015), which the ECB ended at 2026-Q1; the level "
+                    "of every quarter changed with the switch (0.2-1.1 % higher), growth rates by under 0.1 pt."),
     "EA_DEPOSIT_RATE": ("FM/B.U2.EUR.4F.KR.DFR.LEV", "irregular",
                         "Percent per annum, ECB deposit facility rate, one row per change (effective date), from "
                         "1999-01-01."),
