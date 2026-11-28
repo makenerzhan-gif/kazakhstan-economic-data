@@ -66,3 +66,5 @@
 {"indicator_id": "NEER_IMPORT_WEIGHTED", "period": "2026-11-01 NEER_TOTAL", "old_value": 104.2752, "new_value": 104.0242, "detected_date": "2026-11-25", "source": "derived", "reason": "not stated by source"}
 {"indicator_id": "NEER_IMPORT_WEIGHTED", "period": "2026-11-01 NEER_CONSUMER", "old_value": 108.5649, "new_value": 108.4825, "detected_date": "2026-11-26", "source": "derived", "reason": "not stated by source"}
 {"indicator_id": "NEER_IMPORT_WEIGHTED", "period": "2026-11-01 NEER_TOTAL", "old_value": 104.0242, "new_value": 103.9408, "detected_date": "2026-11-26", "source": "derived", "reason": "not stated by source"}
+{"indicator_id": "NEER_IMPORT_WEIGHTED", "period": "2026-11-01 NEER_CONSUMER", "old_value": 108.4825, "new_value": 108.3924, "detected_date": "2026-11-28", "source": "derived", "reason": "not stated by source"}
+{"indicator_id": "NEER_IMPORT_WEIGHTED", "period": "2026-11-01 NEER_TOTAL", "old_value": 103.9408, "new_value": 103.851, "detected_date": "2026-11-28", "source": "derived", "reason": "not stated by source"}

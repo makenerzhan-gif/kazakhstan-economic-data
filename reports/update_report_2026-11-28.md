@@ -1,0 +1,1416 @@
+# Update report — 2026-11-28
+
+Run timestamp: 2026-11-28T03:17:40.908256
+Unified dataset updated: True
+Tests passed: True
+Cross-source checks failed: 0
+
+## Failed this run — previous data kept
+
+- **nbk/BASE_RATE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data/base-rate?from=2000-01-01&to=2027-11-28 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2f8942f0>, 'Connection to data.nationalbank.kz timed out. (c
+- **nbk/FX_RESERVES**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=34&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d2da4e0>, 'Connection to data.nationalbank.kz timed out. (connect tim
+- **nbk/NATIONAL_FUND_ASSETS**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=34&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d2db650>, 'Connection to data.nationalbank.kz timed out. (connect tim
+- **nbk/REER**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=299&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d2d9f70>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/NEER**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=299&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d2db200>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXTERNAL_DEBT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=353&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d2f1100>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/LENDING_RATE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=27&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d2f0980>, 'Connection to data.nationalbank.kz timed out. (connect tim
+- **nbk/LOAN_RATE_ISSUED_LEGAL_KZT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=486&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0cb2c0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/LOAN_RATE_ISSUED_INDIVIDUAL_KZT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=486&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0c82f0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/NATIONAL_FUND_TRANSFERS**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=470&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0cb740>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/KASE_USD_VOLUME**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=35&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d030cb0>, 'Connection to data.nationalbank.kz timed out. (connect tim
+- **nbk/REMITTANCES_SENT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=408&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d030f20>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/REMITTANCES_RECEIVED**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=408&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0c8c80>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/INFLATION_EXPECTATIONS**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=305&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0c8ce0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/BUSINESS_ACTIVITY_INDEX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=339&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0c8560>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/NON_CASH_PAYMENTS_SHARE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=303&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0c9f40>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/CAPITAL_ADEQUACY_RATIO**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=314&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0313d0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/NPL_RATIO**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=314&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d032390>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/LOANS_TO_ECONOMY**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=314&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0312b0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/FDI_NET_INFLOW**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=337&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0c8ad0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/GOV_SECURITIES_MEUKAM**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=430&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0c8f20>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/IIP_NET**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=309&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0c8470>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/IIP_ASSETS**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=309&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d031700>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/IIP_LIABILITIES**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=309&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0301d0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/CURRENT_ACCOUNT_BALANCE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=324&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0314c0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/BOP_GOODS_BALANCE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=324&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd45790>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/BOP_SERVICES_BALANCE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=324&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd46360>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/BOP_PRIMARY_INCOME**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=324&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd473b0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/BOP_SECONDARY_INCOME**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=324&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd475f0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXCHANGE_RATE_CNY_KASE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=35&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a70b0>, 'Connection to data.nationalbank.kz timed out. (connect tim
+- **nbk/KASE_CNY_VOLUME**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=35&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d6936b0>, 'Connection to data.nationalbank.kz timed out. (connect tim
+- **nbk/KASE_EUR_VOLUME**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=35&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd462a0>, 'Connection to data.nationalbank.kz timed out. (connect tim
+- **nbk/KASE_RUB_VOLUME**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=35&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd457f0>, 'Connection to data.nationalbank.kz timed out. (connect tim
+- **nbk/PAYMENTS_TOTAL_COUNT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=418&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd44410>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/PAYMENT_CARDS_COUNT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=418&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a5100>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/CASHLESS_PAYMENTS_COUNT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=418&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a5280>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/CASH_WITHDRAWALS_COUNT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=418&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd44b30>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/REMITTANCES_SENT_COUNT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=412&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd44b60>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/REMITTANCES_RECEIVED_COUNT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=412&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd477d0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/BANK_ROA**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=314&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd458b0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/BANK_ROE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=314&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a43b0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/PENSION_FUND_ASSETS**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=25&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a4260>, 'Connection to data.nationalbank.kz timed out. (connect tim
+- **nbk/INSURANCE_PREMIUMS_GENERAL**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=132&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d6903e0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/INSURANCE_PREMIUMS_LIFE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=132&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd464e0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/PENSION_PAYMENTS**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=29&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd457f0>, 'Connection to data.nationalbank.kz timed out. (connect tim
+- **nbk/RESERVES_IMPORT_COVER**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=469&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd45220>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/PRODUCTION_VOLUME_DIFFUSION_INDEX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=365&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a6420>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/PRODUCTION_EXPECTATIONS_DIFFUSION_INDEX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=365&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a4470>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/DEMAND_DIFFUSION_INDEX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=366&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd47230>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/DEMAND_EXPECTATIONS_DIFFUSION_INDEX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=366&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd44410>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/LOAN_RATE_ACCEPTABLE_KZT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=347&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd461b0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/LOAN_RATE_ACCEPTABLE_FX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=347&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd476b0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/LOAN_TERM_ACCEPTABLE_KZT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=347&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a5b80>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/LOAN_TERM_ACCEPTABLE_FX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=347&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a60f0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/INVENTORIES_DIFFUSION_INDEX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=362&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d692690>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=362&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd47080>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/IMPORT_PRICE_DIFFUSION_INDEX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=363&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd457f0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=363&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd45220>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/RAW_MATERIALS_PRICE_DIFFUSION_INDEX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=364&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a7800>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=364&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a4410>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/CAPACITY_UTILIZATION**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=369&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a74d0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/FINISHED_GOODS_PRICE_DIFFUSION_INDEX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=387&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd46ea0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/FINISHED_GOODS_PRICE_EXPECTATIONS_DIFFUSION_INDEX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=387&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd47b30>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/OVERDUE_ACCOUNTS_PAYABLE_SHARE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=378&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd45070>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/OVERDUE_ACCOUNTS_RECEIVABLE_SHARE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=378&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a5430>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/OVERDUE_BANK_LOANS_SHARE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=378&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a4cb0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/ENTERPRISE_DEBT_BURDEN**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=392&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a50d0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXPORTERS_SHARE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=368&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd45b80>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/IMPORTERS_SHARE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=368&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd47950>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/PAYMENTS_TOTAL_VALUE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=419&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd45220>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/CASHLESS_PAYMENTS_VALUE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=419&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a7560>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/CASH_WITHDRAWALS_VALUE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=419&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a66c0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/PAYMENT_CARDS_VALUE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=419&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a5520>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/HOUSEHOLD_DEPOSITS_FIXED_TERM_KZT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=261&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd46ea0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/HOUSEHOLD_DEPOSITS_FIXED_TERM_FX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=261&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd46780>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/HOUSEHOLD_DEPOSITS_DEMAND_KZT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=261&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d6936b0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/HOUSEHOLD_DEPOSITS_DEMAND_FX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=261&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a4c80>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/HOUSEHOLD_DEPOSITS_SAVING_KZT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=261&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a5370>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/HOUSEHOLD_DEPOSITS_SAVING_FX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=261&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2ce3e180>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/LOANS_BUSINESS_KZT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a7cb0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/LOANS_BUSINESS_FX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d693c80>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/LOANS_INDIVIDUALS_KZT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd46150>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/LOANS_INDIVIDUALS_FX**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd44680>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/LOANS_MICROFINANCE_INDIVIDUALS**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12d640>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/LOANS_MICROFINANCE_BUSINESS**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12f9e0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXTERNAL_DEBT_LONG_TERM**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=340&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12c560>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXTERNAL_DEBT_SHORT_TERM**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=340&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12c5c0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/PRIVATE_EXTERNAL_DEBT_INTERCOMPANY**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=340&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12e000>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/PRIVATE_EXTERNAL_DEBT_BANKS_OTHER_LT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=340&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12f380>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/GOLD_BULLION_SALES**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=476&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12e420>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/REMITTANCES_SENT_USD**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=411&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12cf80>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/REMITTANCES_SENT_KZT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=411&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12f590>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/REMITTANCES_SENT_RUB**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=411&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12c740>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/REMITTANCES_RECEIVED_USD**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=411&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cef9160>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/REMITTANCES_RECEIVED_KZT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=411&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12e600>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/REMITTANCES_RECEIVED_RUB**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=411&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12d3d0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXTERNAL_DEBT_GOV_LOANS_LT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=293&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12ffb0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXTERNAL_DEBT_BANKS_LOANS_LT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=293&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12ef00>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXTERNAL_DEBT_BANKS_SECURITIES_LT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=293&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12df40>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXTERNAL_DEBT_OTHER_SECURITIES_LT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=293&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cef9820>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/GOV_SECURITIES_SECONDARY_NBK_NOTES**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=16&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12f380>, 'Connection to data.nationalbank.kz timed out. (connect tim
+- **nbk/EXCHANGE_RATE_EUR_OTC**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=41&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12c4d0>, 'Connection to data.nationalbank.kz timed out. (connect tim
+- **nbk/EXCHANGE_RATE_RUB_OTC**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=41&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12d7c0>, 'Connection to data.nationalbank.kz timed out. (connect tim
+- **nbk/EXCHANGE_RATE_USD_OTC**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=41&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12df10>, 'Connection to data.nationalbank.kz timed out. (connect tim
+- **nbk/FX_OTC_VOLUME_USD**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=41&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12d4c0>, 'Connection to data.nationalbank.kz timed out. (connect tim
+- **nbk/FX_OTC_VOLUME_EUR**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=41&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cefae10>, 'Connection to data.nationalbank.kz timed out. (connect tim
+- **nbk/FX_OTC_VOLUME_RUB**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=41&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12dfa0>, 'Connection to data.nationalbank.kz timed out. (connect tim
+- **nbk/OFC_NET_FOREIGN_ASSETS**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=26&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12cfe0>, 'Connection to data.nationalbank.kz timed out. (connect tim
+- **nbk/OFC_CLAIMS_ON_NONRESIDENTS**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=26&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12c6b0>, 'Connection to data.nationalbank.kz timed out. (connect tim
+- **nbk/OFC_LIABILITIES_TO_NONRESIDENTS**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=26&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12e690>, 'Connection to data.nationalbank.kz timed out. (connect tim
+- **nbk/OFC_CLAIMS_ON_BANKING_SYSTEM**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=26&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12e870>, 'Connection to data.nationalbank.kz timed out. (connect tim
+- **nbk/EXTERNAL_DEBT_GENERAL_GOVERNMENT**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=349&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cefb380>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXTERNAL_DEBT_CENTRAL_BANK**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=349&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12e2a0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXTERNAL_DEBT_BANKS**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=349&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12d9d0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXTERNAL_DEBT_OTHER_SECTORS**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=349&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12f530>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXTERNAL_DEBT_EX_INTERCOMPANY**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=349&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12e540>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXTERNAL_DEBT_PUBLIC_SECTOR**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=350&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12c350>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXTERNAL_DEBT_STATE_CONTROLLED**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=350&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cefa2d0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXTERNAL_DEBT_STATE_CONTROLLED_GUARANTEED**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=350&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12fbc0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXTERNAL_DEBT_PRIVATE_SECTOR**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=350&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12ef30>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXTERNAL_DEBT_GOV_GUARANTEED**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=350&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12f290>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXTERNAL_DEBT_LOANS**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=351&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12d700>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXTERNAL_DEBT_DEBT_SECURITIES**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=351&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12fda0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXTERNAL_DEBT_TRADE_CREDITS**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=351&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cef96a0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXTERNAL_DEBT_CURRENCY_DEPOSITS**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=351&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12e870>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXTERNAL_DEBT_SDR**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=351&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12ec60>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXTERNAL_DEBT_OTHER_LIABILITIES**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=351&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12d6d0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXTERNAL_DEBT_DUE_WITHIN_YEAR**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=348&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12d550>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/RESERVES_AND_NATIONAL_FUND**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=485&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cefbc80>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/RESERVES_AND_NF_IMPORT_COVER**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=485&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cefbb60>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/RESERVES_AND_NF_GDP_SHARE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=485&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12fe30>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/NATIONAL_FUND_GDP_SHARE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=485&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12eb10>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/RESERVE_ASSETS_GDP_SHARE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=485&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12dc70>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/FINANCIAL_ACCOUNT_BALANCE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=485&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12df40>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/BOP_OVERALL_BALANCE_GDP_SHARE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=485&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cefb140>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/INFLATION_TARGET**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data/indicators?from=2000-01-01&to=2026-11-28 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cef8860>, 'Connection to data.nationalbank.kz timed out. (
+- **nbk/RER_USD**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=299&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12e780>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/RER_RUB**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=299&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12e690>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/RER_EUR**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=299&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12ecc0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/RER_CNY**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=299&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12ef30>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/REER_EX_OIL**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=299&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12c740>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/NEER_EX_OIL**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=299&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cef81d0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/CAPACITY_UTILIZATION_BY_SECTOR**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=369&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd47d70>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/EXTERNAL_DEBT_SERVICE_SCHEDULE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=346&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cf92cc0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/LOANS_BY_CREDITOR_TYPE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d5a6ba0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/NATIONAL_FUND_DOMESTIC_OPERATIONS**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=470&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d5a5490>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/NBK_MONETARY_SURVEY**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=50&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d5a4bf0>, 'Connection to data.nationalbank.kz timed out. (connect tim
+- **nbk/FINISHED_GOODS_PRICE_EXPECTATIONS_BY_SECTOR**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=387&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2ce4f7a0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/FINISHED_GOODS_PRICE_BY_SECTOR**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=387&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d5a77a0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/RAW_MATERIALS_PRICE_EXPECTATIONS_BY_SECTOR**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=364&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d5a68d0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/IMPORT_PRICE_EXPECTATIONS_BY_SECTOR**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=363&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d5a7fb0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/DEMAND_EXPECTATIONS_BY_SECTOR**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=366&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cf4f1a0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/PRICE_FACTORS_BY_SECTOR**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=384&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cf4cc20>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/PENSION_FUND_FLOWS_YTD**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=25&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b33fe6cc0>, 'Connection to data.nationalbank.kz timed out. (connect tim
+- **nbk/FDI_GROSS_INFLOW_BY_INDUSTRY**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=286&page=0&pageSize=5000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b34797290>, 'Connection to data.nationalbank.kz timed out. (connect t
+- **nbk/FDI_GROSS_INFLOW_BY_COUNTRY**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=287&page=0&pageSize=5000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b05128470>, 'Connection to data.nationalbank.kz timed out. (connect t
+- **nbk/LOANS_ISSUED_BY_INDUSTRY**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=493&page=0&pageSize=5000&startDate=2026-05-01 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cffdca0>, 'Connection to data.nationalbank.kz 
+- **nbk/LOANS_ISSUED_BY_PURPOSE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=493&page=0&pageSize=5000&startDate=2026-05-01 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2515bf80>, 'Connection to data.nationalbank.kz 
+- **nbk/LOANS_STOCK_BY_INDUSTRY**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=488&page=0&pageSize=5000&startDate=2026-05-01 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d21a0c0>, 'Connection to data.nationalbank.kz 
+- **nbk/LOANS_STOCK_BY_PURPOSE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=488&page=0&pageSize=5000&startDate=2026-05-01 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d10d160>, 'Connection to data.nationalbank.kz 
+- **nbk/LOAN_PORTFOLIO_QUALITY**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=47&page=0&pageSize=5000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b0a6e1af0>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/GOV_SECURITIES_OUTSTANDING_BY_TYPE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=430&page=0&pageSize=5000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d2c03e0>, 'Connection to data.nationalbank.kz timed out. (connect t
+- **nbk/LOAN_RATES_BY_PURPOSE**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=27&page=0&pageSize=5000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b08f99d90>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/LOAN_RATES_BY_MATURITY**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=486&page=0&pageSize=5000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b08f98ec0>, 'Connection to data.nationalbank.kz timed out. (connect t
+- **nbk/GOV_SECURITIES_PRIMARY_AUCTIONS**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=17&page=0&pageSize=5000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b08f9b110>, 'Connection to data.nationalbank.kz timed out. (connect ti
+- **nbk/GOV_SECURITIES_SECONDARY_MARKET**: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=16&page=0&pageSize=5000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b07755c70>, 'Connection to data.nationalbank.kz timed out. (connect ti
+
+## Series with no new observations for longer than their frequency allows
+
+The source answered, but its newest observation is old: it may have stopped publishing, moved, or the fetcher reads a superseded document. Fix the fetcher, or say why in config/indicators.yaml or config/dims.yaml (`stale_ok: "reason"`, or a `lifecycle`; scripts/lib/staleness.py).
+
+- **bns/AVG_WAGE_QUARTERLY** (quarterly): last observation 2026-01-01, 331 days ago
+- **bns/REAL_WAGE_INDEX_QUARTERLY** (quarterly): last observation 2026-01-01, 331 days ago
+- **bns/AVG_WAGE_MINING** (quarterly): last observation 2026-01-01, 331 days ago
+- **bns/REAL_WAGE_INDEX_MINING** (quarterly): last observation 2026-01-01, 331 days ago
+- **bns/AVG_WAGE_MANUFACTURING** (quarterly): last observation 2026-01-01, 331 days ago
+- **bns/REAL_WAGE_INDEX_MANUFACTURING** (quarterly): last observation 2026-01-01, 331 days ago
+- **bns/AVG_WAGE_AGRICULTURE** (quarterly): last observation 2026-01-01, 331 days ago
+- **bns/REAL_WAGE_INDEX_AGRICULTURE** (quarterly): last observation 2026-01-01, 331 days ago
+- **bns/AVG_WAGE_CONSTRUCTION** (quarterly): last observation 2026-01-01, 331 days ago
+- **bns/REAL_WAGE_INDEX_CONSTRUCTION** (quarterly): last observation 2026-01-01, 331 days ago
+- **bns/AVG_WAGE_FINANCE** (quarterly): last observation 2026-01-01, 331 days ago
+- **bns/REAL_WAGE_INDEX_FINANCE** (quarterly): last observation 2026-01-01, 331 days ago
+- **bns/AVG_WAGE_EDUCATION** (quarterly): last observation 2026-01-01, 331 days ago
+- **bns/REAL_WAGE_INDEX_EDUCATION** (quarterly): last observation 2026-01-01, 331 days ago
+- **ecb/EA_GDP_REAL** (quarterly): last observation 2026-01-01, 331 days ago
+- **derived/FOREIGN_DEMAND_YOY** (quarterly): last observation 2026-01-01, 331 days ago
+- **bns/QNA_GVA_BY_REGION_SECTION** (quarterly): last observation 2026-01-01, 331 days ago
+
+## Stopped series with a known reason
+
+- bns/PASSENGER_TURNOVER: last 2016-12-31 — superseded_not_spliceable, see PASSENGER_TURNOVER_MONTHLY
+- bns/DOCTORS_PER_10K: last 2023-12-31 — stale_source
+- bns/HOSPITAL_BEDS_PER_10K: last 2023-12-31 — stale_source
+- nbk/BANK_ROA: last 2024-01-01 — superseded, see FSI_ROA
+- nbk/BANK_ROE: last 2024-01-01 — superseded, see FSI_ROE
+- nbk/CAPITAL_ADEQUACY_RATIO: last 2024-04-01 — superseded, see FSI_CAPITAL_ADEQUACY
+- nbk/NPL_RATIO: last 2024-04-01 — superseded_not_spliceable, see BANK_NPL_90_SHARE
+- nbk/LOANS_TO_ECONOMY: last 2024-04-01 — superseded_not_spliceable, see BANK_LOANS_TOTAL
+- minfin/NBK_DEBT: last 2025-10-01 — Zero at 2025-07-01 and 2025-10-01; from 2026-01-01 the Statistical Bulletin (табл 22 кв, row 2) leaves the cell blank, and the sheet's identity closes with it at zero. The blank is not written as a number.
+- bns/RETAIL_TRADE_INDEX_FOOD_MONTHLY: last 2026-04-01 — Taldau index 702041's monthly slice ends 2026-04 (117.41) and has not been loaded since (checked 2026-11-13); the BNS trade bulletin gives food / non-food only year-to-date (January-October 2026: 111.9 / 100.9).
+- bns/RETAIL_TRADE_INDEX_NONFOOD_MONTHLY: last 2026-04-01 — Taldau index 702041's monthly slice ends 2026-04 (100.20) and has not been loaded since (checked 2026-11-13); the BNS trade bulletin gives food / non-food only year-to-date.
+- minfin/NF_OIL_CIT_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_EXCESS_PROFIT_TAX_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_BONUSES_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_MET_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_RENT_TAX_EXPORT_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_PSA_SHARE_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_PSA_ADDITIONAL_PAYMENT_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_OIL_DIRECT_TAXES_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_OIL_OTHER_RECEIPTS_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_OIL_RECEIPTS_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_PRIVATIZATION_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_INVESTMENT_INCOME_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_GUARANTEED_TRANSFER_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_TARGETED_TRANSFERS_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- minfin/NF_TRANSFERS_YTD: last 2026-06-01 — Minfin has posted no «Отчёт о поступлениях и использовании Национального фонда» after the edition «на 1 июля 2026» (doc 1066025, posted 2026-09-14); the editions for 1 May and 1 June 2026 were never posted either (checke
+- bns/GDP_EXPENDITURE_NOMINAL_1993_2006: last 2006-12-31 — Historical by design: the sheet closes in 2006; GDP_EXPENDITURE_NOMINAL continues it from 2007.
+- bns/GDP_VOLUME_INDEX_AGGREGATES: last 2009-12-31 — Historical by design: hand-kept 1991-2009, fills GDP_REAL before 2000.
+- bns/GDP_DEFLATOR_AGGREGATES: last 2009-12-31 — Historical by design: hand-kept 1991-2009, fills GDP_DEFLATOR before 2000.
+- bns/GDP_PRODUCTION_AGGREGATES: last 2009-12-31 — Historical by design: 1993-2009, fills GDP_INCOME_METHOD before 2000.
+- minfin/BUDGET_EXPENDITURE_ECONOMIC_2005_2012_YTD: last 2012-12-01 — Historical by design: the classification of 2005-2012; BUDGET_EXPENDITURE_ECONOMIC_YTD continues from 2013.
+- bns/IMPORT_PRICE_INDEX_YOY_BY_HS_SECTION: last 2019-12-01 — Historical by design: the Taldau segment with the y/y basis covers 2016-01 to 2019-12; IMPORT_PRICE_INDEX_BY_HS_SECTION continues from 2020.
+- bns/EMPLOYED_BY_SECTION_LONG: last 2019-12-31 — Historical by design: the Taldau segment on ОКЭД-2 stops in 2019; EMPLOYED_BY_SECTION continues.
+- wits/WITS_KZ_EXPORTS_BY_PARTNER: last 2023-12-31 — WITS serves Kazakhstan's partner data to 2023 (download of 2026-11-18); the BNS series KZ_EXPORTS_BY_PARTNER is current.
+- wits/WITS_KZ_IMPORTS_BY_PARTNER: last 2023-12-31 — WITS serves Kazakhstan's partner data to 2023 (download of 2026-11-18); the BNS series KZ_IMPORTS_BY_PARTNER is current.
+- wits/KZ_TARIFF_AVERAGES: last 2023-12-31 — WITS TradeStats-Tariff serves Kazakhstan to 2023 (download of 2026-11-18).
+- wits/KZ_TARIFF_APPLIED_BY_PARTNER: last 2023-12-31 — WITS TradeStats-Tariff serves Kazakhstan to 2023 (download of 2026-11-18).
+- imf/IMF_GFS_OPERATIONS_KZT: last 2023-12-31 — The IMF GFS dataflow serves Kazakhstan to 2023 (download of 2026-11-18).
+- imf/IMF_GFS_OPERATIONS_PCT_GDP: last 2023-12-31 — The IMF GFS dataflow serves Kazakhstan to 2023 (download of 2026-11-18).
+- imf/IMF_GFS_COFOG_KZT: last 2023-12-31 — The IMF GFS dataflow serves Kazakhstan to 2023 (download of 2026-11-18).
+- imf/IMF_GFS_COFOG_PCT_GDP: last 2023-12-31 — The IMF GFS dataflow serves Kazakhstan to 2023 (download of 2026-11-18).
+- imf/IMF_GFS_BALANCE_SHEET_KZT: last 2023-12-31 — The IMF GFS dataflow serves Kazakhstan to 2023 (download of 2026-11-18).
+- imf/IMF_GFS_BALANCE_SHEET_PCT_GDP: last 2023-12-31 — The IMF GFS dataflow serves Kazakhstan to 2023 (download of 2026-11-18).
+- imf/IMF_FSI_HOUSEHOLDS: last 2024-03-31 — The IMF FSI dataflow for households stops at 2024 Q1 (download of 2026-11-18).
+- imf/IMF_QGFS_KZT: last 2025-10-01 — The IMF QGFS dataflow serves Kazakhstan to 2025 Q4 (download of 2026-11-18); dated at the quarter's start.
+- bns/INDUSTRY_SHIPMENTS_BY_REGION_MONTHLY: last 2026-06-01 — Taldau index 701622 has no month after 2026-06 (checked 2026-11-22: its only segment, region dictionary 68, ends there; the other regional industry indices 701592 and 701608 run to 2026-09 and 2026-10). Remove when it re
+- bns/FUEL_PRICES_BY_CITY: last 2026-06-01 — Taldau index 703115 has no month after 2026-06 (checked 2026-11-22: its only segment, dictionaries 67+82, ends there). Petrol and diesel price indices continue in the CPI detail (cpi_detail_mom). Remove when it resumes.
+
+## Revisions of stored history
+
+20 series changed values that were already stored (82 observations; metadata/revisions/).
+
+### Seldom revised (fewer than 5 earlier dates): 2
+
+- **OUTPUT_GAP**: 2 observations, 2020-01-01..2024-01-01, largest change 0.0119%; revised on 4 earlier dates
+- **EA_HICP_YOY**: 1 observations, 1997-01-01..1997-01-01, largest change 4.76%; revised on 0 earlier dates
+
+### Revised routinely: 18
+
+EXCHANGE_RATES_OFFICIAL_MONTHLY (18), KASE_INDICES (12), NBK_OPEN_POSITION (11), EUROBOND_PRICE_BY_ISSUE (8), EUROBOND_YTM_BY_ISSUE (7), EUROBOND_SPREAD_BY_ISSUE (5), YIELD_CURVE_SPREADS (5), NBK_DEPOSIT_AUCTIONS (2), NEER_IMPORT_WEIGHTED (2), GS_YIELD_10Y (1), GS_YIELD_1Y (1), GS_YIELD_2Y (1), GS_YIELD_3M (1), GS_YIELD_5Y (1), GS_YIELD_6M (1), KZ_EUROBOND_SPREAD (1), KZ_EUROBOND_YIELD (1), MONETARY_CONDITIONS (1)
+
+## Warnings
+
+11278 in all: jump 9921, gap 1078, not listed 156, other 66, not re-downloaded 57. Only those not raised by the previous run are printed (metadata/known_warnings.txt); the full text of every warning is in logs/ of the run's artifact.
+
+No record of earlier runs: this run is the baseline, nothing is printed as new.
+
+## Per-dataset results
+
+- **bns/GDP_REAL** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/CPI** — fetch+validate+process: ok (downloaded=430, processed=430, warnings=3)
+- **bns/UNEMPLOYMENT** — fetch+validate+process: ok (downloaded=103, processed=103)
+- **bns/IMPORTS** — fetch+validate+process: ok (downloaded=141, processed=141)
+- **bns/GDP_PER_CAPITA** — fetch+validate+process: ok (downloaded=25, processed=25)
+- **bns/GDP_DEFLATOR** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/GFCF** — fetch+validate+process: ok (downloaded=22, processed=22, warnings=3)
+- **bns/GFCF_VOLUME_INDEX** — fetch+validate+process: ok (downloaded=22, processed=22, warnings=1)
+- **bns/NET_EXPORTS** — fetch+validate+process: ok (downloaded=22, processed=22, warnings=14)
+- **bns/HOUSEHOLD_CONSUMPTION** — fetch+validate+process: ok (downloaded=22, processed=22, warnings=2)
+- **bns/COMPENSATION_EMPLOYEES** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/AVG_WAGE** — fetch+validate+process: ok (downloaded=14, processed=14)
+- **bns/GDP_INCOME_METHOD** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/GROSS_OUTPUT** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/TAXES_ON_PRODUCTS** — fetch+validate+process: ok (downloaded=26, processed=26, warnings=3)
+- **bns/NET_TAXES_ON_PRODUCTS** — fetch+validate+process: ok (downloaded=26, processed=26, warnings=2)
+- **bns/SUBSIDIES** — fetch+validate+process: ok (downloaded=26, processed=26, warnings=6)
+- **bns/INTERMEDIATE_CONSUMPTION** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/GROSS_ACCUMULATION** — fetch+validate+process: ok (downloaded=22, processed=22, warnings=4)
+- **bns/IMPORT_VOLUME_INDEX** — fetch+validate+process: ok (downloaded=22, processed=22, warnings=1)
+- **bns/EXPORT_VOLUME_INDEX** — fetch+validate+process: ok (downloaded=22, processed=22, warnings=1)
+- **bns/TOTAL_CONSUMPTION_EXPENDITURE** — fetch+validate+process: ok (downloaded=22, processed=22, warnings=2)
+- **bns/CAPITAL_CONSUMPTION** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/RETAIL_TRADE** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/CONSTRUCTION** — fetch+validate+process: ok (downloaded=10, processed=10)
+- **bns/REAL_WAGE_INDEX** — fetch+validate+process: ok (downloaded=12, processed=12, warnings=1)
+- **bns/BIRTHS_TOTAL** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/DEATHS_TOTAL** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/HOUSING_COMMISSIONED** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **bns/PPI** — fetch+validate+process: ok (downloaded=15, processed=15)
+- **bns/WHOLESALE_TRADE** — fetch+validate+process: ok (downloaded=25, processed=25, warnings=1)
+- **bns/RETAIL_TRADE_VOLUME_INDEX** — fetch+validate+process: ok (downloaded=7, processed=7)
+- **bns/EMISSIONS** — fetch+validate+process: ok (downloaded=13, processed=13)
+- **bns/FREIGHT_TURNOVER** — fetch+validate+process: ok (downloaded=9, processed=9)
+- **bns/PASSENGER_TURNOVER** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **bns/AGRICULTURE_OUTPUT** — fetch+validate+process: ok (downloaded=16, processed=16)
+- **bns/PER_CAPITA_INCOME** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/REAL_INCOME_INDEX** — fetch+validate+process: ok (downloaded=25, processed=25)
+- **bns/TELECOM_SERVICES** — fetch+validate+process: ok (downloaded=9, processed=9)
+- **bns/DOCTORS_TOTAL** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **bns/ENERGY_INTENSITY** — fetch+validate+process: ok (downloaded=11, processed=11)
+- **bns/ENERGY_CONSUMPTION** — fetch+validate+process: ok (downloaded=11, processed=11)
+- **bns/FINAL_ENERGY_CONSUMPTION** — fetch+validate+process: ok (downloaded=35, processed=35)
+- **bns/RENEWABLE_ENERGY_SHARE** — fetch+validate+process: ok (downloaded=5, processed=5)
+- **bns/POVERTY_HEADCOUNT** — fetch+validate+process: ok (downloaded=15, processed=15, warnings=1)
+- **bns/MIGRATION_ARRIVALS** — fetch+validate+process: ok (downloaded=26, processed=26, warnings=1)
+- **bns/MIGRATION_DEPARTURES** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/LABOR_PRODUCTIVITY** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/TOURISM_VALUE_ADDED** — fetch+validate+process: ok (downloaded=13, processed=13, warnings=7)
+- **bns/TOURISM_GDP_SHARE** — fetch+validate+process: ok (downloaded=13, processed=13, warnings=3)
+- **bns/TOURISM_EMPLOYMENT** — fetch+validate+process: ok (downloaded=13, processed=13, warnings=3)
+- **bns/TOURISM_EMPLOYMENT_SHARE** — fetch+validate+process: ok (downloaded=11, processed=11, warnings=2)
+- **bns/TOURISM_INBOUND_CONSUMPTION** — fetch+validate+process: ok (downloaded=13, processed=13, warnings=8)
+- **bns/TOURISM_OUTBOUND_CONSUMPTION** — fetch+validate+process: ok (downloaded=13, processed=13, warnings=8)
+- **bns/TOURISM_INBOUND_TRIPS** — fetch+validate+process: ok (downloaded=4, processed=4, warnings=3)
+- **bns/TOURISM_DOMESTIC_TRIPS** — fetch+validate+process: ok (downloaded=4, processed=4, warnings=2)
+- **bns/TOURISM_OUTBOUND_TRIPS** — fetch+validate+process: ok (downloaded=4, processed=4, warnings=2)
+- **bns/TOURISM_INBOUND_NIGHTS** — fetch+validate+process: ok (downloaded=4, processed=4, warnings=3)
+- **bns/LIFE_EXPECTANCY** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/CRUDE_BIRTH_RATE** — fetch+validate+process: ok (downloaded=24, processed=24, warnings=1)
+- **bns/TOTAL_FERTILITY_RATE** — fetch+validate+process: ok (downloaded=8, processed=8)
+- **bns/CRUDE_DEATH_RATE** — fetch+validate+process: ok (downloaded=24, processed=24, warnings=1)
+- **bns/INFANT_MORTALITY_RATE** — fetch+validate+process: ok (downloaded=24, processed=24, warnings=1)
+- **bns/UNDER5_MORTALITY_RATE** — fetch+validate+process: ok (downloaded=13, processed=13)
+- **bns/STILLBIRTH_RATE** — fetch+validate+process: ok (downloaded=17, processed=17)
+- **bns/INNOVATION_EXPENDITURE** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **bns/ORGANIZATIONS_USING_COMPUTERS** — fetch+validate+process: ok (downloaded=21, processed=21, warnings=1)
+- **bns/COMPUTERS_IN_ORGANIZATIONS** — fetch+validate+process: ok (downloaded=22, processed=22, warnings=1)
+- **bns/COMPUTERS_INTERNET_CONNECTED** — fetch+validate+process: ok (downloaded=22, processed=22, warnings=2)
+- **bns/WORKERS_USING_COMPUTERS** — fetch+validate+process: ok (downloaded=20, processed=20, warnings=2)
+- **bns/WORKERS_USING_INTERNET** — fetch+validate+process: ok (downloaded=20, processed=20, warnings=2)
+- **bns/ECOMMERCE_RETAIL_ORDERS** — fetch+validate+process: ok (downloaded=4, processed=4, warnings=1)
+- **bns/ECOMMERCE_SERVICES_VALUE** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **bns/DOCTORS_PER_10K** — fetch+validate+process: ok (downloaded=10, processed=10)
+- **bns/HOSPITAL_BEDS** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **bns/HOSPITAL_BEDS_PER_10K** — fetch+validate+process: ok (downloaded=10, processed=10)
+- **bns/SME_GDP_SHARE** — fetch+validate+process: ok (downloaded=21, processed=21, warnings=2)
+- **bns/SMALL_BUSINESS_GDP_SHARE** — fetch+validate+process: ok (downloaded=21, processed=21, warnings=1)
+- **bns/MEDIUM_BUSINESS_GDP_SHARE** — fetch+validate+process: ok (downloaded=21, processed=21, warnings=1)
+- **bns/SMALL_BUSINESS_VALUE_ADDED** — fetch+validate+process: ok (downloaded=21, processed=21, warnings=1)
+- **bns/MEDIUM_BUSINESS_VALUE_ADDED** — fetch+validate+process: ok (downloaded=21, processed=21, warnings=2)
+- **bns/HOUSING_INVESTMENT** — fetch+validate+process: ok (downloaded=13, processed=13)
+- **bns/ICT_SPECIALISTS** — fetch+validate+process: ok (downloaded=10, processed=10)
+- **bns/GRADUATES_HIRED** — fetch+validate+process: ok (downloaded=25, processed=25, warnings=2)
+- **bns/OIL_PRODUCTION** — fetch+validate+process: ok (downloaded=13, processed=13, warnings=1)
+- **bns/INDUSTRIAL_OUTPUT** — fetch+validate+process: ok (downloaded=7, processed=7)
+- **bns/INDUSTRIAL_PRODUCTION_INDEX** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **bns/MINING_OUTPUT** — fetch+validate+process: ok (downloaded=7, processed=7)
+- **bns/MANUFACTURING_OUTPUT** — fetch+validate+process: ok (downloaded=7, processed=7)
+- **bns/INVESTMENT_FIXED_CAPITAL** — fetch+validate+process: ok (downloaded=8, processed=8, warnings=2)
+- **bns/INVESTMENT_INDEX** — fetch+validate+process: ok (downloaded=8, processed=8)
+- **bns/RETAIL_TRADE_MONTHLY** — fetch+validate+process: ok (downloaded=7, processed=7)
+- **bns/WHOLESALE_TRADE_MONTHLY** — fetch+validate+process: ok (downloaded=7, processed=7)
+- **bns/RETAIL_TRADE_INDEX_MONTHLY** — fetch+validate+process: ok (downloaded=129, processed=129, warnings=1)
+- **bns/RETAIL_TRADE_INDEX_FOOD_MONTHLY** — fetch+validate+process: ok (downloaded=123, processed=123, warnings=1)
+- **bns/RETAIL_TRADE_INDEX_NONFOOD_MONTHLY** — fetch+validate+process: ok (downloaded=123, processed=123, warnings=4)
+- **bns/RETAIL_TRADE_INDEX_YTD** — fetch+validate+process: ok (downloaded=123, processed=123, warnings=2)
+- **bns/WHOLESALE_TRADE_INDEX_MONTHLY** — fetch+validate+process: ok (downloaded=7, processed=7)
+- **bns/CONSTRUCTION_OUTPUT** — fetch+validate+process: ok (downloaded=7, processed=7, warnings=3)
+- **bns/CONSTRUCTION_INDEX** — fetch+validate+process: ok (downloaded=7, processed=7)
+- **bns/LABOR_FORCE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **bns/LABOR_FORCE_PARTICIPATION_RATE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **bns/EMPLOYED_QUARTERLY** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **bns/UNEMPLOYED_PERSONS** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **bns/YOUTH_UNEMPLOYMENT_RATE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **bns/LONG_TERM_UNEMPLOYMENT_RATE** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **bns/AVG_WAGE_QUARTERLY** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/REAL_WAGE_INDEX_QUARTERLY** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/FREIGHT_TURNOVER_MONTHLY** — fetch+validate+process: ok (downloaded=6, processed=6, warnings=1)
+- **bns/PASSENGER_TURNOVER_MONTHLY** — fetch+validate+process: ok (downloaded=70, processed=70, warnings=1)
+- **bns/FREIGHT_CARRIED** — fetch+validate+process: ok (downloaded=6, processed=6, warnings=1)
+- **bns/PASSENGERS_CARRIED** — fetch+validate+process: ok (downloaded=6, processed=6, warnings=1)
+- **bns/GINI_COEFFICIENT** — fetch+validate+process: ok (downloaded=58, processed=58, warnings=2)
+- **bns/DECILE_INCOME_RATIO** — fetch+validate+process: ok (downloaded=16, processed=16)
+- **bns/POVERTY_DEPTH** — fetch+validate+process: ok (downloaded=16, processed=16)
+- **bns/POVERTY_SEVERITY** — fetch+validate+process: ok (downloaded=16, processed=16, warnings=1)
+- **bns/CORE_CPI_YOY_EX3** — fetch+validate+process: ok (downloaded=189, processed=189)
+- **bns/CORE_CPI_MOM_EX3** — fetch+validate+process: ok (downloaded=189, processed=189)
+- **bns/CORE_CPI_YOY_EX7** — fetch+validate+process: ok (downloaded=45, processed=45)
+- **bns/CORE_CPI_MOM_EX7** — fetch+validate+process: ok (downloaded=45, processed=45)
+- **bns/AVG_WAGE_MINING** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/REAL_WAGE_INDEX_MINING** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/AVG_WAGE_MANUFACTURING** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/REAL_WAGE_INDEX_MANUFACTURING** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/AVG_WAGE_AGRICULTURE** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/REAL_WAGE_INDEX_AGRICULTURE** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/AVG_WAGE_CONSTRUCTION** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/REAL_WAGE_INDEX_CONSTRUCTION** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/AVG_WAGE_FINANCE** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/REAL_WAGE_INDEX_FINANCE** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/AVG_WAGE_EDUCATION** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/REAL_WAGE_INDEX_EDUCATION** — fetch+validate+process: ok (downloaded=1, processed=1)
+- **bns/EXPORT_PRICE_INDEX** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **bns/IMPORT_PRICE_INDEX** — fetch+validate+process: ok (downloaded=4, processed=4)
+- **bns/CPI_YOY** — fetch+validate+process: ok (downloaded=394, processed=394)
+- **bns/CPI_YTD** — fetch+validate+process: ok (downloaded=430, processed=430, warnings=5)
+- **bns/CPI_FOOD** — fetch+validate+process: ok (downloaded=430, processed=430, warnings=2)
+- **bns/CPI_FOOD_YOY** — fetch+validate+process: ok (downloaded=394, processed=394)
+- **bns/CPI_NONFOOD** — fetch+validate+process: ok (downloaded=430, processed=430, warnings=2)
+- **bns/CPI_NONFOOD_YOY** — fetch+validate+process: ok (downloaded=394, processed=394)
+- **bns/CPI_SERVICES** — fetch+validate+process: ok (downloaded=430, processed=430, warnings=3)
+- **bns/CPI_SERVICES_YOY** — fetch+validate+process: ok (downloaded=394, processed=394)
+- **bns/CPI_UTILITIES** — fetch+validate+process: ok (downloaded=190, processed=190)
+- **bns/CPI_UTILITIES_YOY** — fetch+validate+process: ok (downloaded=190, processed=190)
+- **bns/CPI_REGULATED_UTILITIES** — fetch+validate+process: ok (downloaded=190, processed=190)
+- **bns/CPI_REGULATED_UTILITIES_YOY** — fetch+validate+process: ok (downloaded=190, processed=190)
+- **bns/PPI_MONTHLY** — fetch+validate+process: ok (downloaded=190, processed=190)
+- **bns/PPI_YOY_MONTHLY** — fetch+validate+process: ok (downloaded=190, processed=190)
+- **bns/IND_PROD_MONTHLY_YOY** — fetch+validate+process: ok (downloaded=154, processed=154)
+- **bns/IND_PROD_MONTHLY_MOM** — fetch+validate+process: ok (downloaded=154, processed=154, warnings=1)
+- **bns/IND_PROD_YTD_YOY** — fetch+validate+process: ok (downloaded=154, processed=154)
+- **bns/AVG_WAGE_1T_QUARTERLY** — fetch+validate+process: ok (downloaded=46, processed=46)
+- **bns/FIXED_ASSETS_GROSS** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/FIXED_ASSETS_GROSS_START** — fetch+validate+process: ok (downloaded=26, processed=26, warnings=1)
+- **bns/FIXED_ASSETS_NET** — fetch+validate+process: ok (downloaded=26, processed=26, warnings=1)
+- **bns/FIXED_ASSETS_COMMISSIONED** — fetch+validate+process: ok (downloaded=26, processed=26, warnings=1)
+- **bns/FIXED_ASSETS_DEPRECIATION** — fetch+validate+process: ok (downloaded=26, processed=26, warnings=2)
+- **bns/FIXED_ASSETS_WEAR** — fetch+validate+process: ok (downloaded=26, processed=26)
+- **bns/FIXED_ASSETS_RENEWAL** — fetch+validate+process: ok (downloaded=26, processed=26, warnings=1)
+- **bns/HOURS_WORKED** — fetch+validate+process: ok (downloaded=22, processed=22, warnings=1)
+- **bns/HOURS_WORKED_QUARTERLY** — fetch+validate+process: ok (downloaded=42, processed=42)
+- **bns/HOURS_PER_EMPLOYEE** — fetch+validate+process: ok (downloaded=13, processed=13)
+- **bns/GINI_COEFFICIENT_ANNUAL** — fetch+validate+process: ok (downloaded=25, processed=25)
+- **bns/DECILE_INCOME_RATIO_ANNUAL** — fetch+validate+process: ok (downloaded=15, processed=15)
+- **nbk/BASE_RATE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data/base-rate?from=2000-01-01&to=2027-11-28 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2f8942f0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXCHANGE_RATE** — fetch+validate+process: ok (downloaded=8578, processed=8578, warnings=3)
+- **nbk/EXCHANGE_RATE_AVG** — fetch+validate+process: ok (downloaded=118, processed=118)
+- **nbk/EXCHANGE_RATE_EUR** — fetch+validate+process: ok (downloaded=7241, processed=7241, warnings=3)
+- **nbk/EXCHANGE_RATE_CNY** — fetch+validate+process: ok (downloaded=7996, processed=7996, warnings=4)
+- **nbk/EXCHANGE_RATE_RUB** — fetch+validate+process: ok (downloaded=8578, processed=8578, warnings=3)
+- **nbk/M2** — fetch+validate+process: ok (downloaded=394, processed=394, warnings=2)
+- **nbk/M3** — fetch+validate+process: ok (downloaded=394, processed=394, warnings=2)
+- **nbk/MONETARY_BASE** — fetch+validate+process: ok (downloaded=394, processed=394, warnings=1)
+- **nbk/M0** — fetch+validate+process: ok (downloaded=394, processed=394)
+- **nbk/M1** — fetch+validate+process: ok (downloaded=394, processed=394, warnings=2)
+- **nbk/FX_RESERVES** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=34&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d2da4e0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/NATIONAL_FUND_ASSETS** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=34&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d2db650>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/REER** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=299&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d2d9f70>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/NEER** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=299&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d2db200>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/DEPOSITS_TOTAL** — fetch+validate+process: ok (downloaded=394, processed=394, warnings=2)
+- **nbk/EXTERNAL_DEBT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=353&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d2f1100>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/LENDING_RATE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=27&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d2f0980>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/DEPOSIT_RATE** — fetch+validate+process: ok (downloaded=359, processed=359, warnings=8)
+- **nbk/LOAN_RATE_ISSUED_LEGAL_KZT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=486&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0cb2c0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/LOAN_RATE_ISSUED_INDIVIDUAL_KZT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=486&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0c82f0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/NATIONAL_FUND_TRANSFERS** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=470&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0cb740>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/KASE_USD_VOLUME** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=35&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d030cb0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/REMITTANCES_SENT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=408&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d030f20>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/REMITTANCES_RECEIVED** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=408&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0c8c80>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/INFLATION_EXPECTATIONS** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=305&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0c8ce0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/BUSINESS_ACTIVITY_INDEX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=339&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0c8560>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/NON_CASH_PAYMENTS_SHARE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=303&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0c9f40>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/CAPITAL_ADEQUACY_RATIO** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=314&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0313d0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/NPL_RATIO** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=314&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d032390>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/LOANS_TO_ECONOMY** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=314&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0312b0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/FDI_NET_INFLOW** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=337&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0c8ad0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/GOV_SECURITIES_MEUKAM** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=430&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0c8f20>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/IIP_NET** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=309&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0c8470>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/IIP_ASSETS** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=309&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d031700>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/IIP_LIABILITIES** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=309&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0301d0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/CURRENT_ACCOUNT_BALANCE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=324&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d0314c0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/BOP_GOODS_EXPORTS** — fetch+validate+process: ok (downloaded=106, processed=106)
+- **nbk/BOP_SERVICES_EXPORTS** — fetch+validate+process: ok (downloaded=106, processed=106)
+- **nbk/IIP_PORTFOLIO_LIABILITIES** — fetch+validate+process: ok (downloaded=103, processed=103, warnings=3)
+- **nbk/M3_OTHER_FX_DEPOSITS_HOUSEHOLDS** — fetch+validate+process: ok (downloaded=382, processed=382, warnings=1)
+- **nbk/M3_OTHER_FX_DEPOSITS_NONBANK** — fetch+validate+process: ok (downloaded=382, processed=382, warnings=7)
+- **nbk/BOP_GOODS_BALANCE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=324&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd45790>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/BOP_SERVICES_BALANCE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=324&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd46360>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/BOP_PRIMARY_INCOME** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=324&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd473b0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/BOP_SECONDARY_INCOME** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=324&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd475f0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXCHANGE_RATE_CNY_KASE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=35&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a70b0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/KASE_CNY_VOLUME** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=35&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d6936b0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/KASE_EUR_VOLUME** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=35&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd462a0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/KASE_RUB_VOLUME** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=35&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd457f0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/PAYMENTS_TOTAL_COUNT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=418&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd44410>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/PAYMENT_CARDS_COUNT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=418&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a5100>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/CASHLESS_PAYMENTS_COUNT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=418&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a5280>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/CASH_WITHDRAWALS_COUNT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=418&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd44b30>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/REMITTANCES_SENT_COUNT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=412&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd44b60>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/REMITTANCES_RECEIVED_COUNT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=412&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd477d0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/BANK_ROA** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=314&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd458b0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/BANK_ROE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=314&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a43b0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/PENSION_FUND_ASSETS** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=25&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a4260>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/INSURANCE_PREMIUMS_GENERAL** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=132&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d6903e0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/INSURANCE_PREMIUMS_LIFE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=132&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd464e0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/PENSION_PAYMENTS** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=29&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd457f0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/RESERVES_IMPORT_COVER** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=469&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd45220>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/PRODUCTION_VOLUME_DIFFUSION_INDEX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=365&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a6420>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/PRODUCTION_EXPECTATIONS_DIFFUSION_INDEX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=365&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a4470>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/DEMAND_DIFFUSION_INDEX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=366&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd47230>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/DEMAND_EXPECTATIONS_DIFFUSION_INDEX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=366&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd44410>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/LOAN_RATE_ACCEPTABLE_KZT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=347&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd461b0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/LOAN_RATE_ACCEPTABLE_FX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=347&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd476b0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/LOAN_TERM_ACCEPTABLE_KZT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=347&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a5b80>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/LOAN_TERM_ACCEPTABLE_FX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=347&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a60f0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/INVENTORIES_DIFFUSION_INDEX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=362&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d692690>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/INVENTORIES_EXPECTATIONS_DIFFUSION_INDEX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=362&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd47080>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/IMPORT_PRICE_DIFFUSION_INDEX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=363&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd457f0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/IMPORT_PRICE_EXPECTATIONS_DIFFUSION_INDEX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=363&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd45220>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/RAW_MATERIALS_PRICE_DIFFUSION_INDEX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=364&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a7800>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/RAW_MATERIALS_PRICE_EXPECTATIONS_DIFFUSION_INDEX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=364&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a4410>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/CAPACITY_UTILIZATION** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=369&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a74d0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/FINISHED_GOODS_PRICE_DIFFUSION_INDEX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=387&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd46ea0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/FINISHED_GOODS_PRICE_EXPECTATIONS_DIFFUSION_INDEX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=387&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd47b30>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/OVERDUE_ACCOUNTS_PAYABLE_SHARE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=378&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd45070>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/OVERDUE_ACCOUNTS_RECEIVABLE_SHARE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=378&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a5430>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/OVERDUE_BANK_LOANS_SHARE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=378&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a4cb0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/ENTERPRISE_DEBT_BURDEN** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=392&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a50d0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXPORTERS_SHARE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=368&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd45b80>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/IMPORTERS_SHARE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=368&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd47950>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/PAYMENTS_TOTAL_VALUE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=419&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd45220>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/CASHLESS_PAYMENTS_VALUE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=419&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a7560>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/CASH_WITHDRAWALS_VALUE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=419&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a66c0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/PAYMENT_CARDS_VALUE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=419&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a5520>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/HOUSEHOLD_DEPOSITS_FIXED_TERM_KZT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=261&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd46ea0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/HOUSEHOLD_DEPOSITS_FIXED_TERM_FX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=261&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd46780>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/HOUSEHOLD_DEPOSITS_DEMAND_KZT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=261&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d6936b0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/HOUSEHOLD_DEPOSITS_DEMAND_FX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=261&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a4c80>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/HOUSEHOLD_DEPOSITS_SAVING_KZT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=261&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a5370>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/HOUSEHOLD_DEPOSITS_SAVING_FX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=261&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2ce3e180>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/LOANS_BUSINESS_KZT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b341a7cb0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/LOANS_BUSINESS_FX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d693c80>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/LOANS_INDIVIDUALS_KZT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd46150>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/LOANS_INDIVIDUALS_FX** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd44680>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/BANK_LOANS_STB_TOTAL** — fetch+validate+process: ok (downloaded=370, processed=370)
+- **nbk/BANK_LOANS_STB_KZT** — fetch+validate+process: ok (downloaded=370, processed=370)
+- **nbk/BANK_LOANS_STB_FX** — fetch+validate+process: ok (downloaded=370, processed=370)
+- **nbk/BANK_LOANS_STB_SHORT_TERM** — fetch+validate+process: ok (downloaded=370, processed=370, warnings=2)
+- **nbk/BANK_LOANS_STB_LONG_TERM** — fetch+validate+process: ok (downloaded=370, processed=370, warnings=1)
+- **nbk/BANK_LOANS_STB_LEGAL_ENTITIES** — fetch+validate+process: ok (downloaded=370, processed=370)
+- **nbk/BANK_LOANS_STB_INDIVIDUALS** — fetch+validate+process: ok (downloaded=370, processed=370)
+- **nbk/BANK_LOANS_STB_BUSINESS** — fetch+validate+process: ok (downloaded=286, processed=286)
+- **nbk/BANK_LOANS_STB_HOUSEHOLDS** — fetch+validate+process: ok (downloaded=286, processed=286)
+- **nbk/LOANS_MICROFINANCE_INDIVIDUALS** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12d640>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/LOANS_MICROFINANCE_BUSINESS** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12f9e0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXTERNAL_DEBT_LONG_TERM** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=340&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12c560>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXTERNAL_DEBT_SHORT_TERM** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=340&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12c5c0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/PRIVATE_EXTERNAL_DEBT_INTERCOMPANY** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=340&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12e000>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/PRIVATE_EXTERNAL_DEBT_BANKS_OTHER_LT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=340&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12f380>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/GOLD_BULLION_SALES** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=476&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12e420>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/REMITTANCES_SENT_USD** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=411&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12cf80>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/REMITTANCES_SENT_KZT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=411&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12f590>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/REMITTANCES_SENT_RUB** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=411&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12c740>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/REMITTANCES_RECEIVED_USD** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=411&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cef9160>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/REMITTANCES_RECEIVED_KZT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=411&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12e600>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/REMITTANCES_RECEIVED_RUB** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=411&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12d3d0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXTERNAL_DEBT_GOV_LOANS_LT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=293&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12ffb0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXTERNAL_DEBT_BANKS_LOANS_LT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=293&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12ef00>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXTERNAL_DEBT_BANKS_SECURITIES_LT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=293&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12df40>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXTERNAL_DEBT_OTHER_SECURITIES_LT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=293&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cef9820>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/GOV_SECURITIES_SECONDARY_NBK_NOTES** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=16&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12f380>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXCHANGE_RATE_EUR_OTC** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=41&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12c4d0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXCHANGE_RATE_RUB_OTC** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=41&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12d7c0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXCHANGE_RATE_USD_OTC** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=41&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12df10>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/FX_OTC_VOLUME_USD** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=41&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12d4c0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/FX_OTC_VOLUME_EUR** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=41&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cefae10>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/FX_OTC_VOLUME_RUB** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=41&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12dfa0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/OFC_NET_FOREIGN_ASSETS** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=26&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12cfe0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/OFC_CLAIMS_ON_NONRESIDENTS** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=26&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12c6b0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/OFC_LIABILITIES_TO_NONRESIDENTS** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=26&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12e690>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/OFC_CLAIMS_ON_BANKING_SYSTEM** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=26&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12e870>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXTERNAL_DEBT_GENERAL_GOVERNMENT** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=349&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cefb380>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXTERNAL_DEBT_CENTRAL_BANK** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=349&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12e2a0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXTERNAL_DEBT_BANKS** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=349&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12d9d0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXTERNAL_DEBT_OTHER_SECTORS** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=349&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12f530>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXTERNAL_DEBT_EX_INTERCOMPANY** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=349&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12e540>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXTERNAL_DEBT_PUBLIC_SECTOR** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=350&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12c350>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXTERNAL_DEBT_STATE_CONTROLLED** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=350&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cefa2d0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXTERNAL_DEBT_STATE_CONTROLLED_GUARANTEED** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=350&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12fbc0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXTERNAL_DEBT_PRIVATE_SECTOR** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=350&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12ef30>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXTERNAL_DEBT_GOV_GUARANTEED** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=350&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12f290>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXTERNAL_DEBT_LOANS** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=351&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12d700>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXTERNAL_DEBT_DEBT_SECURITIES** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=351&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12fda0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXTERNAL_DEBT_TRADE_CREDITS** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=351&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cef96a0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXTERNAL_DEBT_CURRENCY_DEPOSITS** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=351&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12e870>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXTERNAL_DEBT_SDR** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=351&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12ec60>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXTERNAL_DEBT_OTHER_LIABILITIES** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=351&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12d6d0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/EXTERNAL_DEBT_DUE_WITHIN_YEAR** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=348&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12d550>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/RESERVES_AND_NATIONAL_FUND** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=485&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cefbc80>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/RESERVES_AND_NF_IMPORT_COVER** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=485&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cefbb60>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/RESERVES_AND_NF_GDP_SHARE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=485&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12fe30>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/NATIONAL_FUND_GDP_SHARE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=485&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12eb10>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/RESERVE_ASSETS_GDP_SHARE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=485&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12dc70>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/FINANCIAL_ACCOUNT_BALANCE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=485&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12df40>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/BOP_OVERALL_BALANCE_GDP_SHARE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=485&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cefb140>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/INFLATION_TARGET** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data/indicators?from=2000-01-01&to=2026-11-28 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cef8860>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/RER_USD** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=299&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12e780>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/RER_RUB** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=299&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12e690>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/RER_EUR** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=299&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12ecc0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/RER_CNY** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=299&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12ef30>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/REER_EX_OIL** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=299&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d12c740>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/NEER_EX_OIL** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=299&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cef81d0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **minfin/GOV_REVENUE** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **minfin/GOV_EXPENDITURE** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **minfin/GOV_DEBT** — fetch+validate+process: ok (downloaded=25, processed=25, warnings=6)
+- **minfin/GOV_HEALTH_SPENDING** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **minfin/GOV_EDUCATION_SPENDING** — fetch+validate+process: ok (downloaded=12, processed=12, warnings=1)
+- **minfin/GOV_SOCIAL_SPENDING** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **minfin/TAX_REVENUE** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **minfin/CORPORATE_TAX** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **minfin/VAT_REVENUE** — fetch+validate+process: ok (downloaded=12, processed=12, warnings=2)
+- **minfin/GOV_DEFENSE_SPENDING** — fetch+validate+process: ok (downloaded=12, processed=12, warnings=1)
+- **minfin/GOV_GENERAL_SERVICES_SPENDING** — fetch+validate+process: ok (downloaded=12, processed=12, warnings=2)
+- **minfin/GOV_TRANSPORT_SPENDING** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **minfin/GOV_DEBT_SERVICING** — fetch+validate+process: ok (downloaded=12, processed=12, warnings=1)
+- **minfin/NET_BUDGET_LENDING** — fetch+validate+process: ok (downloaded=12, processed=12, warnings=5)
+- **minfin/BUDGET_DEFICIT** — fetch+validate+process: ok (downloaded=12, processed=12, warnings=3)
+- **minfin/NON_OIL_BUDGET_DEFICIT** — fetch+validate+process: ok (downloaded=12, processed=12, warnings=1)
+- **minfin/EXCISE_TAX_REVENUE** — fetch+validate+process: ok (downloaded=12, processed=12)
+- **minfin/GOV_DEBT_DOMESTIC** — fetch+validate+process: ok (downloaded=19, processed=19, warnings=3)
+- **minfin/GOV_DEBT_EXTERNAL** — fetch+validate+process: ok (downloaded=19, processed=19, warnings=3)
+- **minfin/GG_TAXES** — fetch+validate+process: ok (downloaded=25, processed=25, warnings=1)
+- **minfin/GG_SOCIAL_CONTRIBUTIONS** — fetch+validate+process: ok (downloaded=25, processed=25, warnings=10)
+- **minfin/GG_CASH_SURPLUS_DEFICIT** — fetch+validate+process: ok (downloaded=25, processed=25, warnings=22)
+- **minfin/GG_INTEREST** — fetch+validate+process: ok (downloaded=25, processed=25, warnings=12)
+- **minfin/STATE_TAX_REVENUE_YTD** — fetch+validate+process: ok (downloaded=106, processed=106, warnings=33)
+- **minfin/STATE_CIT_YTD** — fetch+validate+process: ok (downloaded=106, processed=106, warnings=29)
+- **minfin/STATE_PIT_YTD** — fetch+validate+process: ok (downloaded=106, processed=106, warnings=7)
+- **minfin/STATE_SOCIAL_TAX_YTD** — fetch+validate+process: ok (downloaded=106, processed=106, warnings=8)
+- **minfin/STATE_VAT_YTD** — fetch+validate+process: ok (downloaded=106, processed=106, warnings=79)
+- **minfin/STATE_EXCISE_YTD** — fetch+validate+process: ok (downloaded=106, processed=106, warnings=11)
+- **minfin/CUSTOMS_DUTIES** — fetch+validate+process: ok (downloaded=160, processed=160, warnings=37)
+- **minfin/GOV_WAGES_EXPENDITURE** — fetch+validate+process: ok (downloaded=159, processed=159, warnings=18)
+- **minfin/GOV_CAPITAL_EXPENDITURE** — fetch+validate+process: ok (downloaded=159, processed=159, warnings=66)
+- **minfin/GOV_PENSIONS_EXPENDITURE** — fetch+validate+process: ok (downloaded=159, processed=159, warnings=5)
+- **minfin/GOV_SUBSIDIES_EXPENDITURE** — fetch+validate+process: ok (downloaded=145, processed=145, warnings=92)
+- **minfin/SUBVENTIONS_REPUBLICAN** — fetch+validate+process: ok (downloaded=5, processed=5, warnings=1)
+- **minfin/LOCAL_GOV_WAGES_EXPENDITURE** — fetch+validate+process: ok (downloaded=138, processed=138, warnings=26)
+- **minfin/LOCAL_GOV_CAPITAL_EXPENDITURE** — fetch+validate+process: ok (downloaded=138, processed=138, warnings=51)
+- **minfin/LOCAL_GOV_SUBSIDIES_EXPENDITURE** — fetch+validate+process: ok (downloaded=138, processed=138, warnings=37)
+- **minfin/NATIONAL_FUND_STABILIZATION_PORTFOLIO** — fetch+validate+process: ok (downloaded=7, processed=7)
+- **minfin/NATIONAL_FUND_SAVINGS_PORTFOLIO** — fetch+validate+process: ok (downloaded=7, processed=7)
+- **minfin/NATIONAL_FUND_SAVINGS_BONDS** — fetch+validate+process: ok (downloaded=7, processed=7)
+- **minfin/NATIONAL_FUND_EQUITIES** — fetch+validate+process: ok (downloaded=7, processed=7)
+- **minfin/NATIONAL_FUND_GOLD** — fetch+validate+process: ok (downloaded=7, processed=7)
+- **minfin/GOV_ACCOUNTS_PAYABLE** — fetch+validate+process: ok (downloaded=9, processed=9, warnings=4)
+- **minfin/GOV_ACCOUNTS_RECEIVABLE** — fetch+validate+process: ok (downloaded=11, processed=11, warnings=2)
+- **minfin/GOV_FINANCIAL_ASSETS_SOLD** — fetch+validate+process: ok (downloaded=16, processed=16, warnings=13)
+- **minfin/GOV_AUDIT_VIOLATIONS_AMOUNT** — fetch+validate+process: ok (downloaded=14, processed=14, warnings=9)
+- **minfin/TAX_ARREARS_TOTAL** — fetch+validate+process: ok (downloaded=8, processed=8, warnings=1)
+- **minfin/PENSION_CONTRIBUTIONS_RECEIVED** — fetch+validate+process: ok (downloaded=3, processed=3)
+- **minfin/PENSION_CONTRIBUTIONS_ARREARS** — fetch+validate+process: ok (downloaded=3, processed=3, warnings=1)
+- **minfin/GOV_PROCUREMENT_TOTAL_VALUE** — fetch+validate+process: ok (downloaded=2, processed=2)
+- **minfin/INDIVIDUAL_INCOME_TAX** — fetch+validate+process: ok (downloaded=10, processed=10)
+- **minfin/STATE_BUDGET_REVENUE** — fetch+validate+process: ok (downloaded=18, processed=18)
+- **minfin/STATE_BUDGET_EXPENDITURE** — fetch+validate+process: ok (downloaded=18, processed=18)
+- **minfin/STATE_BUDGET_DEFICIT** — fetch+validate+process: ok (downloaded=18, processed=18, warnings=5)
+- **minfin/STATE_BUDGET_REVENUE_PLAN** — fetch+validate+process: ok (downloaded=16, processed=16)
+- **minfin/STATE_BUDGET_TAX_REVENUE_PLAN** — fetch+validate+process: ok (downloaded=16, processed=16)
+- **minfin/STATE_BUDGET_EXPENDITURE_PLAN** — fetch+validate+process: ok (downloaded=16, processed=16)
+- **minfin/STATE_BUDGET_DEFICIT_PLAN** — fetch+validate+process: ok (downloaded=16, processed=16)
+- **minfin/REPUBLICAN_BUDGET_REVENUE_PLAN** — fetch+validate+process: ok (downloaded=16, processed=16)
+- **minfin/REPUBLICAN_BUDGET_TAX_REVENUE_PLAN** — fetch+validate+process: ok (downloaded=16, processed=16)
+- **minfin/REPUBLICAN_BUDGET_EXPENDITURE_PLAN** — fetch+validate+process: ok (downloaded=16, processed=16)
+- **minfin/REPUBLICAN_BUDGET_DEFICIT_PLAN** — fetch+validate+process: ok (downloaded=16, processed=16)
+- **minfin/STATE_BUDGET_REVENUE_YTD** — fetch+validate+process: ok (downloaded=168, processed=168, warnings=33)
+- **minfin/STATE_BUDGET_EXPENDITURE_YTD** — fetch+validate+process: ok (downloaded=168, processed=168, warnings=24)
+- **minfin/STATE_BUDGET_DEFICIT_YTD** — fetch+validate+process: ok (downloaded=168, processed=168, warnings=137)
+- **minfin/STATE_NET_BUDGET_LENDING_YTD** — fetch+validate+process: ok (downloaded=166, processed=166, warnings=130)
+- **minfin/STATE_FINANCIAL_ASSETS_BALANCE_YTD** — fetch+validate+process: ok (downloaded=166, processed=166, warnings=108)
+- **minfin/STATE_TRANSFERS_RECEIVED_YTD** — fetch+validate+process: ok (downloaded=166, processed=166, warnings=69)
+- **minfin/STATE_BUDGET_REVENUE_Q** — fetch+validate+process: ok (downloaded=67, processed=67, warnings=1)
+- **minfin/STATE_BUDGET_EXPENDITURE_Q** — fetch+validate+process: ok (downloaded=67, processed=67, warnings=1)
+- **minfin/STATE_BUDGET_DEFICIT_Q** — fetch+validate+process: ok (downloaded=67, processed=67, warnings=51)
+- **minfin/PROPERTY_TAX** — fetch+validate+process: ok (downloaded=153, processed=153, warnings=118)
+- **minfin/LAND_TAX** — fetch+validate+process: ok (downloaded=153, processed=153, warnings=114)
+- **minfin/STATE_GOV_WAGES_EXPENDITURE** — fetch+validate+process: ok (downloaded=89, processed=89, warnings=20)
+- **minfin/STATE_GOV_CAPITAL_EXPENDITURE** — fetch+validate+process: ok (downloaded=89, processed=89, warnings=34)
+- **minfin/STATE_GOV_SUBSIDIES_EXPENDITURE** — fetch+validate+process: ok (downloaded=68, processed=68, warnings=31)
+- **minfin/STATE_DEBT_TOTAL** — fetch+validate+process: ok (downloaded=23, processed=23, warnings=3)
+- **minfin/GOV_DEBT_EXTERNAL_USD** — fetch+validate+process: ok (downloaded=23, processed=23, warnings=3)
+- **minfin/LOCAL_GOV_DEBT** — fetch+validate+process: ok (downloaded=23, processed=23, warnings=4)
+- **minfin/STATE_GUARANTEED_DEBT** — fetch+validate+process: ok (downloaded=23, processed=23, warnings=3)
+- **minfin/GOV_DEBT_EUROBONDS** — fetch+validate+process: ok (downloaded=23, processed=23, warnings=5)
+- **minfin/CENTRAL_GOV_DEBT** — fetch+validate+process: ok (downloaded=23, processed=23, warnings=3)
+- **minfin/CENTRAL_GOV_DEBT_EXTERNAL** — fetch+validate+process: ok (downloaded=23, processed=23, warnings=3)
+- **minfin/NBK_DEBT** — fetch+validate+process: ok (downloaded=18, processed=18, warnings=7)
+- **minfin/STATE_BUDGET_DEBT_SERVICING** — fetch+validate+process: ok (downloaded=8, processed=8)
+- **minfin/LOCAL_BUDGET_REVENUE** — fetch+validate+process: ok (downloaded=10, processed=10)
+- **minfin/LOCAL_BUDGET_EXPENDITURE** — fetch+validate+process: ok (downloaded=10, processed=10)
+- **minfin/LOCAL_BUDGET_TAX_REVENUE** — fetch+validate+process: ok (downloaded=10, processed=10)
+- **minfin/LOCAL_BUDGET_TRANSFERS** — fetch+validate+process: ok (downloaded=8, processed=8)
+- **minfin/LOCAL_EDUCATION_EXPENDITURE** — fetch+validate+process: ok (downloaded=10, processed=10)
+- **minfin/LOCAL_HOUSING_UTILITIES_EXPENDITURE** — fetch+validate+process: ok (downloaded=10, processed=10, warnings=1)
+- **minfin/BUDGET_FINANCING_TOTAL** — fetch+validate+process: ok (downloaded=15, processed=15, warnings=11)
+- **minfin/BUDGET_FINANCING_DOMESTIC** — fetch+validate+process: ok (downloaded=15, processed=15, warnings=10)
+- **minfin/BUDGET_FINANCING_EXTERNAL** — fetch+validate+process: ok (downloaded=15, processed=15, warnings=12)
+- **minfin/BUDGET_FINANCING_LONG_TERM_BONDS** — fetch+validate+process: ok (downloaded=15, processed=15, warnings=7)
+- **minfin/BUDGET_FINANCING_BANKS** — fetch+validate+process: ok (downloaded=15, processed=15, warnings=9)
+- **minfin/BUDGET_FINANCING_INTL_ORGANIZATIONS** — fetch+validate+process: ok (downloaded=15, processed=15, warnings=10)
+- **minfin/OIL_EXPORT_DUTY** — fetch+validate+process: ok (downloaded=167, processed=167, warnings=41)
+- **minfin/OIL_PRODUCTS_EXPORT_DUTY** — fetch+validate+process: ok (downloaded=163, processed=163, warnings=57)
+- **minfin/NF_OIL_CIT_YTD** — fetch+validate+process: ok (downloaded=252, processed=252, warnings=107)
+- **minfin/NF_EXCESS_PROFIT_TAX_YTD** — fetch+validate+process: ok (downloaded=230, processed=230, warnings=179)
+- **minfin/NF_BONUSES_YTD** — fetch+validate+process: ok (downloaded=235, processed=235, warnings=195)
+- **minfin/NF_MET_YTD** — fetch+validate+process: ok (downloaded=206, processed=206, warnings=185)
+- **minfin/NF_RENT_TAX_EXPORT_YTD** — fetch+validate+process: ok (downloaded=230, processed=230, warnings=199)
+- **minfin/NF_PSA_SHARE_YTD** — fetch+validate+process: ok (downloaded=252, processed=252, warnings=158)
+- **minfin/NF_PSA_ADDITIONAL_PAYMENT_YTD** — fetch+validate+process: ok (downloaded=98, processed=98, warnings=57)
+- **minfin/NF_OIL_DIRECT_TAXES_YTD** — fetch+validate+process: ok (downloaded=98, processed=98, warnings=82)
+- **minfin/NF_OIL_OTHER_RECEIPTS_YTD** — fetch+validate+process: ok (downloaded=98, processed=98, warnings=86)
+- **minfin/NF_OIL_RECEIPTS_YTD** — fetch+validate+process: ok (downloaded=98, processed=98, warnings=82)
+- **minfin/NF_PRIVATIZATION_YTD** — fetch+validate+process: ok (downloaded=98, processed=98, warnings=70)
+- **minfin/NF_INVESTMENT_INCOME_YTD** — fetch+validate+process: ok (downloaded=96, processed=96, warnings=33)
+- **minfin/NF_GUARANTEED_TRANSFER_YTD** — fetch+validate+process: ok (downloaded=98, processed=98, warnings=30)
+- **minfin/NF_TARGETED_TRANSFERS_YTD** — fetch+validate+process: ok (downloaded=98, processed=98, warnings=31)
+- **minfin/NF_TRANSFERS_YTD** — fetch+validate+process: ok (downloaded=98, processed=98, warnings=31)
+- **minfin/NF_INVESTMENT_RESULT** — fetch+validate+process: ok (downloaded=4, processed=4, warnings=2)
+- **minfin/NF_INVESTMENT_RESULT_MANAGEMENT** — fetch+validate+process: ok (downloaded=4, processed=4, warnings=2)
+- **minfin/NF_INVESTMENT_RESULT_FX** — fetch+validate+process: ok (downloaded=4, processed=4, warnings=3)
+- **minfin/STATE_NON_OIL_DEFICIT** — fetch+validate+process: ok (downloaded=13, processed=13, warnings=1)
+- **minfin/STATE_NON_OIL_DEFICIT_YTD** — fetch+validate+process: ok (downloaded=166, processed=166, warnings=90)
+- **imf/FSI_CAPITAL_ADEQUACY** — fetch+validate+process: ok (downloaded=74, processed=74, warnings=1)
+- **imf/FSI_TIER1_CAPITAL** — fetch+validate+process: ok (downloaded=74, processed=74, warnings=1)
+- **imf/FSI_NPL_RATIO** — fetch+validate+process: ok (downloaded=74, processed=74, warnings=6)
+- **imf/FSI_ROA** — fetch+validate+process: ok (downloaded=70, processed=70, warnings=15)
+- **imf/FSI_ROE** — fetch+validate+process: ok (downloaded=70, processed=70, warnings=20)
+- **imf/FSI_LIQUID_ASSETS** — fetch+validate+process: ok (downloaded=74, processed=74)
+- **imf/FSI_LIQUID_TO_SHORT_TERM_LIABILITIES** — fetch+validate+process: ok (downloaded=74, processed=74)
+- **imf/FSI_FX_LOANS_SHARE** — fetch+validate+process: ok (downloaded=74, processed=74)
+- **imf/IMF_GDP_GROWTH** — fetch+validate+process: ok (downloaded=39, processed=39, warnings=13)
+- **imf/IMF_INFLATION** — fetch+validate+process: ok (downloaded=39, processed=39, warnings=9)
+- **imf/IMF_CURRENT_ACCOUNT** — fetch+validate+process: ok (downloaded=40, processed=40, warnings=30)
+- **imf/IMF_UNEMPLOYMENT** — fetch+validate+process: ok (downloaded=38, processed=38)
+- **imf/IMF_GOV_BALANCE** — fetch+validate+process: ok (downloaded=30, processed=30, warnings=15)
+- **imf/IMF_GOV_DEBT** — fetch+validate+process: ok (downloaded=30, processed=30, warnings=3)
+- **imf/IMF_POPULATION** — fetch+validate+process: ok (downloaded=40, processed=40)
+- **imf/IMF_NOMINAL_GDP** — fetch+validate+process: ok (downloaded=40, processed=40, warnings=3)
+- **imf/IMF_NOMINAL_GDP_USD** — fetch+validate+process: ok (downloaded=40, processed=40, warnings=2)
+- **imf/IMF_GDP_PPP** — fetch+validate+process: ok (downloaded=40, processed=40)
+- **imf/IMF_INVESTMENT_RATIO** — fetch+validate+process: ok (downloaded=40, processed=40)
+- **imf/IMF_SAVINGS_RATIO** — fetch+validate+process: ok (downloaded=40, processed=40, warnings=2)
+- **imf/IMF_GOV_REVENUE_RATIO** — fetch+validate+process: ok (downloaded=38, processed=38)
+- **imf/IMF_GOV_EXPENDITURE_RATIO** — fetch+validate+process: ok (downloaded=30, processed=30)
+- **imf/IMF_EXPORT_VOLUME_GROWTH** — fetch+validate+process: ok (downloaded=39, processed=39, warnings=30)
+- **imf/IMF_IMPORT_VOLUME_GROWTH** — fetch+validate+process: ok (downloaded=39, processed=39, warnings=27)
+- **imf/IMF_CURRENT_ACCOUNT_USD** — fetch+validate+process: ok (downloaded=40, processed=40, warnings=30)
+- **imf/IMF_GDP_PER_CAPITA_PPP** — fetch+validate+process: ok (downloaded=40, processed=40)
+- **imf/IMF_GDP_WORLD_SHARE_PPP** — fetch+validate+process: ok (downloaded=40, processed=40)
+- **imf/IMF_INFLATION_EOP** — fetch+validate+process: ok (downloaded=39, processed=39, warnings=11)
+- **imf/IMF_GOV_NET_DEBT_RATIO** — fetch+validate+process: ok (downloaded=30, processed=30, warnings=10)
+- **imf/IMF_GDP_DEFLATOR_INDEX** — fetch+validate+process: ok (downloaded=40, processed=40, warnings=3)
+- **imf/IMF_REAL_GDP** — fetch+validate+process: ok (downloaded=40, processed=40)
+- **imf/IMF_GOV_EXPENDITURE** — fetch+validate+process: ok (downloaded=30, processed=30, warnings=1)
+- **imf/IMF_GOV_REVENUE** — fetch+validate+process: ok (downloaded=38, processed=38, warnings=3)
+- **imf/IMF_CPI_INDEX** — fetch+validate+process: ok (downloaded=40, processed=40, warnings=3)
+- **imf/IMF_GOV_BALANCE_LEVEL** — fetch+validate+process: ok (downloaded=30, processed=30, warnings=16)
+- **imf/IMF_PPP_EXCHANGE_RATE** — fetch+validate+process: ok (downloaded=40, processed=40, warnings=3)
+- **imf/IMF_STRUCTURAL_BALANCE** — fetch+validate+process: ok (downloaded=30, processed=30, warnings=16)
+- **imf/IMF_CPI_EOP_INDEX** — fetch+validate+process: ok (downloaded=40, processed=40, warnings=3)
+- **imf/IMF_GDP_PER_CAPITA_NATIONAL** — fetch+validate+process: ok (downloaded=40, processed=40, warnings=3)
+- **imf/OIL_PRICE** — fetch+validate+process: ok (downloaded=418, processed=418, warnings=1)
+- **imf/URANIUM_PRICE** — fetch+validate+process: ok (downloaded=418, processed=418)
+- **imf/CHROMIUM_PRICE** — fetch+validate+process: ok (downloaded=173, processed=173)
+- **imf/MANGANESE_PRICE** — fetch+validate+process: ok (downloaded=173, processed=173)
+- **imf/COMMODITY_TERMS_OF_TRADE** — fetch+validate+process: ok (downloaded=415, processed=415)
+- **imf/COMMODITY_TERMS_OF_TRADE_FIXED_WEIGHTS** — fetch+validate+process: ok (downloaded=415, processed=415)
+- **ardfm/BANK_NPL_90_SHARE** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_NPL_90_AMOUNT** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_LOANS_TOTAL** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_PROVISIONS_IFRS** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_CAPITAL_ADEQUACY_K1** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_CAPITAL_ADEQUACY_K2** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_ROA_MONTHLY** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_ROE_MONTHLY** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_NET_INCOME** — fetch+validate+process: ok (downloaded=6, processed=6, warnings=1)
+- **ardfm/BANK_ASSETS_TOTAL** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_ASSETS_GROSS** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_LIABILITIES_TOTAL** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_CLIENT_DEPOSITS** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_DEPOSITS_LEGAL_ENTITIES** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_DEPOSITS_INDIVIDUALS** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_DEPOSITS_INDIVIDUALS_FX_SHARE** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_LIQUID_ASSETS** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_ASSETS_TO_GDP** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_LOANS_TO_GDP** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_DEPOSITS_TO_GDP** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_LOANS_CORPORATE** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_NPL_90_CORPORATE_SHARE** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_LOANS_RETAIL** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_NPL_90_RETAIL_SHARE** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_LOANS_SME** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_NPL_90_SME_SHARE** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_SHARE_CAPITAL** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_TOP5_ASSETS_SHARE** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_TOP5_LOANS_SHARE** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **ardfm/BANK_TOP5_DEPOSITS_SHARE** — fetch+validate+process: ok (downloaded=6, processed=6)
+- **wb/OIL_PRICE_BRENT** — fetch+validate+process: ok (downloaded=802, processed=802, warnings=3)
+- **kase/TONIA** — fetch+validate+process: ok (downloaded=6237, processed=6237, warnings=891)
+- **kase/SWAP_1D** — fetch+validate+process: ok (downloaded=2849, processed=2849, warnings=172)
+- **kase/GS_YIELD_3M** — fetch+validate+process: ok (downloaded=85, processed=85)
+- **kase/GS_YIELD_6M** — fetch+validate+process: ok (downloaded=85, processed=85)
+- **kase/GS_YIELD_1Y** — fetch+validate+process: ok (downloaded=85, processed=85)
+- **kase/GS_YIELD_2Y** — fetch+validate+process: ok (downloaded=85, processed=85)
+- **kase/GS_YIELD_5Y** — fetch+validate+process: ok (downloaded=85, processed=85)
+- **kase/GS_YIELD_10Y** — fetch+validate+process: ok (downloaded=85, processed=85)
+- **kase/KZ_EUROBOND_YIELD** — fetch+validate+process: ok (downloaded=124, processed=124, warnings=2)
+- **kase/KZ_EUROBOND_SPREAD** — fetch+validate+process: ok (downloaded=124, processed=124, warnings=4)
+- **cbr/RU_KEY_RATE** — fetch+validate+process: ok (downloaded=66, processed=66, warnings=2)
+- **cbr/RUB_USD** — fetch+validate+process: ok (downloaded=7174, processed=7174, warnings=67)
+- **eec/RU_CPI_MOM** — fetch+validate+process: ok (downloaded=261, processed=261)
+- **eec/RU_CPI_YOY** — fetch+validate+process: ok (downloaded=261, processed=261)
+- **imf/RU_GDP_REAL** — fetch+validate+process: ok (downloaded=50, processed=50)
+- **fred/US_FED_FUNDS** — fetch+validate+process: ok (downloaded=868, processed=868, warnings=15)
+- **fred/US_TREASURY_1Y** — fetch+validate+process: ok (downloaded=883, processed=883, warnings=9)
+- **fred/US_TREASURY_2Y** — fetch+validate+process: ok (downloaded=605, processed=605, warnings=3)
+- **fred/US_TREASURY_10Y** — fetch+validate+process: ok (downloaded=883, processed=883)
+- **fred/US_CPI** — fetch+validate+process: ok (downloaded=957, processed=957, warnings=1)
+- **fred/US_GDP_REAL** — fetch+validate+process: ok (downloaded=319, processed=319)
+- **fred/OIL_PRICE_BRENT_EIA** — fetch+validate+process: ok (downloaded=474, processed=474, warnings=2)
+- **fred/VIX** — fetch+validate+process: ok (downloaded=442, processed=442, warnings=8)
+- **fred/USD_BROAD_INDEX** — fetch+validate+process: ok (downloaded=250, processed=250)
+- **fred/USD_EME_INDEX** — fetch+validate+process: ok (downloaded=250, processed=250)
+- **fred/US_BAA_SPREAD** — fetch+validate+process: ok (downloaded=490, processed=490, warnings=1)
+- **fred/US_NFCI** — fetch+validate+process: ok (downloaded=670, processed=670, warnings=104)
+- **eec/BY_CPI_YOY** — fetch+validate+process: ok (downloaded=261, processed=261)
+- **eec/KG_CPI_YOY** — fetch+validate+process: ok (downloaded=261, processed=261)
+- **imf/CN_CPI_YOY** — fetch+validate+process: ok (downloaded=394, processed=394, warnings=82)
+- **nbs/CN_GDP_REAL_YOY** — fetch+validate+process: ok (downloaded=135, processed=135)
+- **ecb/EA_HICP_YOY** — fetch+validate+process: ok (downloaded=358, processed=358, warnings=29)
+- **ecb/EA_GDP_REAL** — fetch+validate+process: ok (downloaded=125, processed=125)
+- **ecb/EA_DEPOSIT_RATE** — fetch+validate+process: ok (downloaded=69, processed=69, warnings=5)
+- **derived/FOREIGN_DEMAND_YOY** — fetch+validate+process: ok (downloaded=45, processed=45)
+- **derived/KZT_USD_RATE_DIFF_ON** — fetch+validate+process: ok (downloaded=302, processed=302, warnings=84)
+- **derived/KZT_USD_RATE_DIFF_1Y** — fetch+validate+process: ok (downloaded=84, processed=84)
+- **derived/KZT_USD_RATE_DIFF_10Y** — fetch+validate+process: ok (downloaded=84, processed=84)
+- **derived/KZT_CARRY_EXCESS_RETURN** — fetch+validate+process: ok (downloaded=301, processed=301, warnings=240)
+- **bns/GVA_NOMINAL_BY_SECTION** — fetch+validate+process: ok (downloaded=465, processed=465, warnings=9)
+- **bns/GVA_VOLUME_INDEX_BY_SECTION** — fetch+validate+process: ok (downloaded=465, processed=465)
+- **bns/GVA_DEFLATOR_BY_SECTION** — fetch+validate+process: ok (downloaded=465, processed=465, warnings=7)
+- **bns/GVA_NOMINAL_INDUSTRY_DIVISIONS** — fetch+validate+process: ok (downloaded=481, processed=481, warnings=20)
+- **bns/GDP_EXPENDITURE_NOMINAL** — fetch+validate+process: ok (downloaded=268, processed=268, warnings=28)
+- **bns/GDP_EXPENDITURE_NOMINAL_1993_2006** — fetch+validate+process: ok (downloaded=196, processed=196, warnings=31)
+- **bns/GDP_EXPENDITURE_VOLUME_INDEX** — fetch+validate+process: ok (downloaded=209, processed=209, warnings=1)
+- **bns/GDP_EXPENDITURE_DEFLATOR** — fetch+validate+process: ok (downloaded=228, processed=228, warnings=1)
+- **bns/INCOME_COMPENSATION_BY_SECTION** — fetch+validate+process: ok (downloaded=384, processed=384, warnings=5)
+- **bns/INCOME_OTHER_TAXES_BY_SECTION** — fetch+validate+process: ok (downloaded=400, processed=400, warnings=31)
+- **bns/INCOME_CFC_BY_SECTION** — fetch+validate+process: ok (downloaded=384, processed=384, warnings=14)
+- **bns/INCOME_PROFIT_BY_SECTION** — fetch+validate+process: ok (downloaded=385, processed=385, warnings=27)
+- **bns/NOE_SHARE_BY_SECTION** — fetch+validate+process: ok (downloaded=299, processed=299, warnings=31)
+- **bns/NOE_ILLEGAL_SHARE_BY_SECTION** — fetch+validate+process: ok (downloaded=299, processed=299, warnings=2)
+- **bns/GVA_STATE_BY_SECTION** — fetch+validate+process: ok (downloaded=321, processed=321, warnings=31)
+- **bns/GVA_PRIVATE_BY_SECTION** — fetch+validate+process: ok (downloaded=322, processed=322, warnings=12)
+- **bns/GVA_FOREIGN_BY_SECTION** — fetch+validate+process: ok (downloaded=307, processed=307, warnings=31)
+- **bns/GVA_NOMINAL_BY_REGION_SECTION** — fetch+validate+process: ok (downloaded=6282, processed=6282, warnings=31)
+- **bns/GVA_VOLUME_INDEX_BY_REGION_SECTION** — fetch+validate+process: ok (downloaded=3820, processed=3820, warnings=31)
+- **bns/GRP_VOLUME_INDEX_BY_REGION** — fetch+validate+process: ok (downloaded=461, processed=461)
+- **bns/POPULATION_AVG_BY_REGION** — fetch+validate+process: ok (downloaded=5706, processed=5706, warnings=10)
+- **bns/POPULATION_BOY_BY_REGION** — fetch+validate+process: ok (downloaded=5886, processed=5886, warnings=15)
+- **bns/LABOUR_FORCE_BY_REGION** — fetch+validate+process: ok (downloaded=453, processed=453)
+- **bns/EMPLOYED_BY_REGION** — fetch+validate+process: ok (downloaded=453, processed=453)
+- **bns/UNEMPLOYED_BY_REGION** — fetch+validate+process: ok (downloaded=453, processed=453)
+- **bns/EMPLOYEES_BY_REGION** — fetch+validate+process: ok (downloaded=452, processed=452)
+- **bns/SELF_EMPLOYED_BY_REGION** — fetch+validate+process: ok (downloaded=453, processed=453, warnings=3)
+- **bns/UNEMPLOYMENT_RATE_BY_REGION** — fetch+validate+process: ok (downloaded=449, processed=449)
+- **bns/EMPLOYED_AGRICULTURE_BY_REGION** — fetch+validate+process: ok (downloaded=192, processed=192, warnings=8)
+- **bns/EMPLOYED_INDUSTRY_CONSTRUCTION_BY_REGION** — fetch+validate+process: ok (downloaded=192, processed=192)
+- **bns/EMPLOYED_SERVICES_BY_REGION** — fetch+validate+process: ok (downloaded=192, processed=192)
+- **bns/EMPLOYED_BY_SECTION** — fetch+validate+process: ok (downloaded=336, processed=336)
+- **bns/INVESTMENT_BY_REGION** — fetch+validate+process: ok (downloaded=411, processed=411, warnings=31)
+- **bns/INVESTMENT_VOLUME_INDEX_BY_REGION** — fetch+validate+process: ok (downloaded=411, processed=411, warnings=19)
+- **bns/INVESTMENT_BY_SECTION** — fetch+validate+process: ok (downloaded=483, processed=483, warnings=31)
+- **bns/INVESTMENT_VOLUME_INDEX_BY_SECTION** — fetch+validate+process: ok (downloaded=462, processed=462, warnings=31)
+- **bns/PRODUCTION_NATURAL_BY_REGION** — fetch+validate+process: ok (downloaded=10221, processed=10221, warnings=31)
+- **bns/INDUSTRIAL_PRODUCTION_INDEX_BY_ACTIVITY** — fetch+validate+process: ok (downloaded=1839, processed=1839, warnings=31)
+- **bns/AGRICULTURE_VOLUME_INDEX_BY_ACTIVITY** — fetch+validate+process: ok (downloaded=629, processed=629, warnings=31)
+- **bns/GRAIN_HARVEST_BY_REGION** — fetch+validate+process: ok (downloaded=702, processed=702, warnings=31)
+- **bns/GRAIN_SOWN_AREA_BY_REGION** — fetch+validate+process: ok (downloaded=706, processed=706, warnings=31)
+- **bns/GRAIN_YIELD_BY_REGION** — fetch+validate+process: ok (downloaded=701, processed=701, warnings=31)
+- **bns/GVA_NOMINAL_BY_SECTION_QUARTERLY** — fetch+validate+process: ok (downloaded=1848, processed=1848, warnings=31)
+- **bns/GVA_VOLUME_INDEX_BY_SECTION_QUARTERLY** — fetch+validate+process: ok (downloaded=1848, processed=1848, warnings=31)
+- **bns/GVA_DEFLATOR_BY_SECTION_QUARTERLY** — fetch+validate+process: ok (downloaded=1848, processed=1848, warnings=31)
+- **bns/GVA_NOMINAL_INDUSTRY_DIVISIONS_QUARTERLY** — fetch+validate+process: ok (downloaded=1998, processed=1998, warnings=31)
+- **bns/GDP_EXPENDITURE_NOMINAL_QUARTERLY** — fetch+validate+process: ok (downloaded=1094, processed=1094, warnings=31)
+- **bns/GDP_EXPENDITURE_VOLUME_INDEX_QUARTERLY** — fetch+validate+process: ok (downloaded=858, processed=858, warnings=1)
+- **bns/GDP_EXPENDITURE_DEFLATOR_QUARTERLY** — fetch+validate+process: ok (downloaded=936, processed=936, warnings=3)
+- **bns/INCOME_COMPENSATION_BY_SECTION_QUARTERLY** — fetch+validate+process: ok (downloaded=1584, processed=1584, warnings=31)
+- **bns/INCOME_OTHER_TAXES_BY_SECTION_QUARTERLY** — fetch+validate+process: ok (downloaded=1650, processed=1650, warnings=31)
+- **bns/INCOME_CFC_BY_SECTION_QUARTERLY** — fetch+validate+process: ok (downloaded=1584, processed=1584, warnings=31)
+- **bns/INCOME_PROFIT_BY_SECTION_QUARTERLY** — fetch+validate+process: ok (downloaded=1591, processed=1591, warnings=31)
+- **bns/GVA_NOMINAL_BY_REGION_SECTION_QUARTERLY** — fetch+validate+process: ok (downloaded=25739, processed=25739, warnings=31)
+- **bns/GRP_VOLUME_INDEX_BY_REGION_QUARTERLY** — fetch+validate+process: ok (downloaded=1120, processed=1120, warnings=16)
+- **bns/EMPLOYED_BY_SECTION_QUARTERLY** — fetch+validate+process: ok (downloaded=1407, processed=1407)
+- **bns/QNA_GVA_BY_SECTION** — fetch+validate+process: ok (downloaded=1716, processed=1716, warnings=31)
+- **bns/QNA_GVA_BY_SECTION_CONSTANT_2010** — fetch+validate+process: ok (downloaded=1716, processed=1716, warnings=31)
+- **bns/QNA_GVA_VOLUME_INDEX_BY_SECTION** — fetch+validate+process: ok (downloaded=1612, processed=1612, warnings=9)
+- **bns/QNA_GVA_VOLUME_INDEX_BY_SECTION_YTD** — fetch+validate+process: ok (downloaded=1612, processed=1612)
+- **bns/QNA_GVA_DEFLATOR_BY_SECTION_YTD** — fetch+validate+process: ok (downloaded=1612, processed=1612, warnings=8)
+- **bns/QNA_GVA_BY_SECTION_SA** — fetch+validate+process: ok (downloaded=1716, processed=1716, warnings=12)
+- **bns/QNA_GVA_BY_SECTION_SA_CONSTANT_2010** — fetch+validate+process: ok (downloaded=1716, processed=1716, warnings=4)
+- **bns/QNA_GDP_EXPENDITURE** — fetch+validate+process: ok (downloaded=1056, processed=1056, warnings=31)
+- **bns/QNA_GDP_EXPENDITURE_CONSTANT_2010** — fetch+validate+process: ok (downloaded=924, processed=924, warnings=31)
+- **bns/QNA_GDP_EXPENDITURE_VOLUME_INDEX** — fetch+validate+process: ok (downloaded=868, processed=868, warnings=5)
+- **bns/QNA_GDP_EXPENDITURE_VOLUME_INDEX_YTD** — fetch+validate+process: ok (downloaded=868, processed=868, warnings=2)
+- **bns/QNA_GDP_EXPENDITURE_DEFLATOR_YTD** — fetch+validate+process: ok (downloaded=868, processed=868, warnings=1)
+- **bns/QNA_GDP_EXPENDITURE_SA** — fetch+validate+process: ok (downloaded=924, processed=924, warnings=21)
+- **bns/QNA_GDP_EXPENDITURE_SA_CONSTANT_2010** — fetch+validate+process: ok (downloaded=858, processed=858, warnings=4)
+- **bns/QNA_GDP_INCOME** — fetch+validate+process: ok (downloaded=264, processed=264, warnings=2)
+- **bns/QNA_INCOME_COMPENSATION_BY_SECTION** — fetch+validate+process: ok (downloaded=1584, processed=1584, warnings=31)
+- **bns/QNA_INCOME_OTHER_NET_TAXES_BY_SECTION** — fetch+validate+process: ok (downloaded=1584, processed=1584, warnings=31)
+- **bns/QNA_INCOME_GROSS_PROFIT_BY_SECTION** — fetch+validate+process: ok (downloaded=1584, processed=1584, warnings=31)
+- **bns/QNA_GVA_BY_REGION_SECTION** — fetch+validate+process: ok (downloaded=14616, processed=14616, warnings=32)
+- **bns/OUTPUT_BY_REGION_SECTION** — fetch+validate+process: ok (downloaded=1785, processed=1785, warnings=31)
+- **bns/PRODUCTION_ACCOUNT_BY_REGION** — fetch+validate+process: ok (downloaded=420, processed=420, warnings=17)
+- **bns/SNA_AGGREGATES** — fetch+validate+process: ok (downloaded=90, processed=90)
+- **bns/LABOUR_PRODUCTIVITY_BY_SECTION_YTD** — fetch+validate+process: ok (downloaded=1518, processed=1518, warnings=31)
+- **bns/LABOUR_PRODUCTIVITY_INDEX_BY_SECTION_YTD** — fetch+validate+process: ok (downloaded=1518, processed=1518, warnings=3)
+- **bns/LABOUR_PRODUCTIVITY_INDEX_BY_SECTION_2022_BASE** — fetch+validate+process: ok (downloaded=414, processed=414)
+- **bns/LABOUR_PRODUCTIVITY_BY_REGION_SECTION_YTD** — fetch+validate+process: ok (downloaded=24001, processed=24001, warnings=31)
+- **bns/LABOUR_PRODUCTIVITY_INDEX_BY_REGION_SECTION_YTD** — fetch+validate+process: ok (downloaded=22657, processed=22657, warnings=31)
+- **bns/LABOUR_PRODUCTIVITY_INDEX_BY_REGION_2022_BASE** — fetch+validate+process: ok (downloaded=360, processed=360)
+- **bns/OIL_GAS_SECTOR_GVA** — fetch+validate+process: ok (downloaded=484, processed=484, warnings=31)
+- **bns/OIL_GAS_SECTOR_VOLUME_INDEX** — fetch+validate+process: ok (downloaded=479, processed=479, warnings=31)
+- **bns/OIL_GAS_SECTOR_GDP_SHARE** — fetch+validate+process: ok (downloaded=477, processed=477, warnings=31)
+- **bns/KEI_MONTHLY** — fetch+validate+process: ok (downloaded=70, processed=70)
+- **bns/KEI_YTD** — fetch+validate+process: ok (downloaded=70, processed=70)
+- **bns/KEI_VOLUME_INDEX_YTD** — fetch+validate+process: ok (downloaded=70, processed=70)
+- **bns/KEI_VOLUME_INDEX_BY_REGION_YTD** — fetch+validate+process: ok (downloaded=1419, processed=1419)
+- **bns/KEI_VOLUME_INDEX_BY_REGION_ACTIVITY_YTD** — fetch+validate+process: ok (downloaded=12369, processed=12369, warnings=31)
+- **bns/GRP_NOMINAL_BY_REGION** — fetch+validate+process: ok (downloaded=594, processed=594, warnings=31)
+- **bns/GRP_NOMINAL_BY_REGION_QUARTERLY** — fetch+validate+process: ok (downloaded=1359, processed=1359, warnings=31)
+- **bns/NOE_SHARE_OF_GDP_BY_REGION** — fetch+validate+process: ok (downloaded=241, processed=241, warnings=5)
+- **bns/NOE_SHARE_OF_GRP_BY_REGION** — fetch+validate+process: ok (downloaded=228, processed=228, warnings=3)
+- **bns/NOE_SHARE_OF_GDP_BY_REGION_ACTIVITY** — fetch+validate+process: ok (downloaded=1560, processed=1560, warnings=31)
+- **bns/QUASI_STATE_GVA_BY_REGION_SECTION** — fetch+validate+process: ok (downloaded=3744, processed=3744, warnings=31)
+- **bns/QUASI_STATE_GVA_GDP_SHARE_BY_REGION** — fetch+validate+process: ok (downloaded=156, processed=156, warnings=21)
+- **bns/QUASI_STATE_PRODUCTIVITY_LARGE_BY_SECTION** — fetch+validate+process: ok (downloaded=174, processed=174, warnings=29)
+- **bns/QUASI_STATE_GVA_BY_SECTION_SMALL** — fetch+validate+process: ok (downloaded=192, processed=192, warnings=31)
+- **bns/QUASI_STATE_GVA_BY_SECTION_MEDIUM** — fetch+validate+process: ok (downloaded=192, processed=192, warnings=31)
+- **bns/QUASI_STATE_GVA_BY_SECTION_LARGE** — fetch+validate+process: ok (downloaded=192, processed=192, warnings=25)
+- **bns/GDP_COMPONENTS_BY_SECTOR_OUTPUT** — fetch+validate+process: ok (downloaded=1296, processed=1296, warnings=31)
+- **bns/GDP_COMPONENTS_BY_SECTOR_INTERMEDIATE_CONSUMPTION** — fetch+validate+process: ok (downloaded=1296, processed=1296, warnings=31)
+- **bns/GDP_COMPONENTS_BY_SECTOR_GVA** — fetch+validate+process: ok (downloaded=1345, processed=1345, warnings=31)
+- **bns/GDP_COMPONENTS_BY_SECTOR_COMPENSATION** — fetch+validate+process: ok (downloaded=1296, processed=1296, warnings=31)
+- **bns/GDP_COMPONENTS_BY_SECTOR_OTHER_TAXES** — fetch+validate+process: ok (downloaded=1296, processed=1296, warnings=31)
+- **bns/GDP_COMPONENTS_BY_SECTOR_CFC** — fetch+validate+process: ok (downloaded=1293, processed=1293, warnings=31)
+- **bns/GDP_COMPONENTS_BY_SECTOR_PROFIT** — fetch+validate+process: ok (downloaded=1297, processed=1297, warnings=31)
+- **bns/EXPORTS_VALUE_BY_COMMODITY_GROUP** — fetch: structural_change (downloaded=0, processed=0)
+  - ERROR: STRUCTURAL CHANGE DETECTED in bns/EXPORTS_VALUE_BY_COMMODITY_GROUP (element 446905)
+WHAT CHANGED: sheet '2025' row 11574: '271121*' is neither a 6-digit code nor a region
+EXPECTED: a region heading from dictionaries/regions.csv
+ACTUAL: 271121*
+ACTION REQUIRED: open the trade workbook, compare with the layout described in scripts/fetchers/bns_trade.py and fetchers/bns.py, update the parser or the dictionary, then re-run.
+- **bns/EXPORTS_VOLUME_BY_COMMODITY_GROUP** — fetch: structural_change (downloaded=0, processed=0)
+  - ERROR: STRUCTURAL CHANGE DETECTED in bns/EXPORTS_VOLUME_BY_COMMODITY_GROUP (element 446905)
+WHAT CHANGED: sheet '2025' row 11574: '271121*' is neither a 6-digit code nor a region
+EXPECTED: a region heading from dictionaries/regions.csv
+ACTUAL: 271121*
+ACTION REQUIRED: open the trade workbook, compare with the layout described in scripts/fetchers/bns_trade.py and fetchers/bns.py, update the parser or the dictionary, then re-run.
+- **bns/EXPORTS_VALUE_BY_HS_CHAPTER** — fetch: structural_change (downloaded=0, processed=0)
+  - ERROR: STRUCTURAL CHANGE DETECTED in bns/EXPORTS_VALUE_BY_HS_CHAPTER (element 446905)
+WHAT CHANGED: sheet '2025' row 11574: '271121*' is neither a 6-digit code nor a region
+EXPECTED: a region heading from dictionaries/regions.csv
+ACTUAL: 271121*
+ACTION REQUIRED: open the trade workbook, compare with the layout described in scripts/fetchers/bns_trade.py and fetchers/bns.py, update the parser or the dictionary, then re-run.
+- **bns/EXPORTS_VOLUME_BY_HS_CHAPTER** — fetch: structural_change (downloaded=0, processed=0)
+  - ERROR: STRUCTURAL CHANGE DETECTED in bns/EXPORTS_VOLUME_BY_HS_CHAPTER (element 446905)
+WHAT CHANGED: sheet '2025' row 11574: '271121*' is neither a 6-digit code nor a region
+EXPECTED: a region heading from dictionaries/regions.csv
+ACTUAL: 271121*
+ACTION REQUIRED: open the trade workbook, compare with the layout described in scripts/fetchers/bns_trade.py and fetchers/bns.py, update the parser or the dictionary, then re-run.
+- **bns/IMPORTS_VALUE_BY_HS_CHAPTER** — fetch: structural_change (downloaded=0, processed=0)
+  - ERROR: STRUCTURAL CHANGE DETECTED in bns/IMPORTS_VALUE_BY_HS_CHAPTER (element 446906)
+WHAT CHANGED: sheet 'январь-сентябрь 2026г.' row 2004: 'Ақмола' is neither a 6-digit code nor a region
+EXPECTED: a region heading from dictionaries/regions.csv
+ACTUAL: Ақмола
+ACTION REQUIRED: open the trade workbook, compare with the layout described in scripts/fetchers/bns_trade.py and fetchers/bns.py, update the parser or the dictionary, then re-run.
+- **bns/IMPORTS_VOLUME_BY_HS_CHAPTER** — fetch: structural_change (downloaded=0, processed=0)
+  - ERROR: STRUCTURAL CHANGE DETECTED in bns/IMPORTS_VOLUME_BY_HS_CHAPTER (element 446906)
+WHAT CHANGED: sheet 'январь-сентябрь 2026г.' row 2004: 'Ақмола' is neither a 6-digit code nor a region
+EXPECTED: a region heading from dictionaries/regions.csv
+ACTUAL: Ақмола
+ACTION REQUIRED: open the trade workbook, compare with the layout described in scripts/fetchers/bns_trade.py and fetchers/bns.py, update the parser or the dictionary, then re-run.
+- **bns/EXPORTS_VOLUME_BY_REGION_PRODUCT** — fetch: structural_change (downloaded=0, processed=0)
+  - ERROR: STRUCTURAL CHANGE DETECTED in bns/EXPORTS_VOLUME_BY_REGION_PRODUCT (element 446905)
+WHAT CHANGED: sheet '2025' row 11574: '271121*' is neither a 6-digit code nor a region
+EXPECTED: a region heading from dictionaries/regions.csv
+ACTUAL: 271121*
+ACTION REQUIRED: open the trade workbook, compare with the layout described in scripts/fetchers/bns_trade.py and fetchers/bns.py, update the parser or the dictionary, then re-run.
+- **bns/IMPORTS_VOLUME_BY_REGION_PRODUCT** — fetch: structural_change (downloaded=0, processed=0)
+  - ERROR: STRUCTURAL CHANGE DETECTED in bns/IMPORTS_VOLUME_BY_REGION_PRODUCT (element 446906)
+WHAT CHANGED: sheet 'январь-сентябрь 2026г.' row 2004: 'Ақмола' is neither a 6-digit code nor a region
+EXPECTED: a region heading from dictionaries/regions.csv
+ACTUAL: Ақмола
+ACTION REQUIRED: open the trade workbook, compare with the layout described in scripts/fetchers/bns_trade.py and fetchers/bns.py, update the parser or the dictionary, then re-run.
+- **bns/EXPORTS_VALUE_BY_REGION_HS_SECTION** — fetch: structural_change (downloaded=0, processed=0)
+  - ERROR: STRUCTURAL CHANGE DETECTED in bns/EXPORTS_VALUE_BY_REGION_HS_SECTION (element 446905)
+WHAT CHANGED: sheet '2025' row 11574: '271121*' is neither a 6-digit code nor a region
+EXPECTED: a region heading from dictionaries/regions.csv
+ACTUAL: 271121*
+ACTION REQUIRED: open the trade workbook, compare with the layout described in scripts/fetchers/bns_trade.py and fetchers/bns.py, update the parser or the dictionary, then re-run.
+- **bns/EXPORTS_VOLUME_BY_REGION_HS_SECTION** — fetch: structural_change (downloaded=0, processed=0)
+  - ERROR: STRUCTURAL CHANGE DETECTED in bns/EXPORTS_VOLUME_BY_REGION_HS_SECTION (element 446905)
+WHAT CHANGED: sheet '2025' row 11574: '271121*' is neither a 6-digit code nor a region
+EXPECTED: a region heading from dictionaries/regions.csv
+ACTUAL: 271121*
+ACTION REQUIRED: open the trade workbook, compare with the layout described in scripts/fetchers/bns_trade.py and fetchers/bns.py, update the parser or the dictionary, then re-run.
+- **bns/IMPORTS_VALUE_BY_REGION_HS_SECTION** — fetch: structural_change (downloaded=0, processed=0)
+  - ERROR: STRUCTURAL CHANGE DETECTED in bns/IMPORTS_VALUE_BY_REGION_HS_SECTION (element 446906)
+WHAT CHANGED: sheet 'январь-сентябрь 2026г.' row 2004: 'Ақмола' is neither a 6-digit code nor a region
+EXPECTED: a region heading from dictionaries/regions.csv
+ACTUAL: Ақмола
+ACTION REQUIRED: open the trade workbook, compare with the layout described in scripts/fetchers/bns_trade.py and fetchers/bns.py, update the parser or the dictionary, then re-run.
+- **bns/IMPORTS_VOLUME_BY_REGION_HS_SECTION** — fetch: structural_change (downloaded=0, processed=0)
+  - ERROR: STRUCTURAL CHANGE DETECTED in bns/IMPORTS_VOLUME_BY_REGION_HS_SECTION (element 446906)
+WHAT CHANGED: sheet 'январь-сентябрь 2026г.' row 2004: 'Ақмола' is neither a 6-digit code nor a region
+EXPECTED: a region heading from dictionaries/regions.csv
+ACTUAL: Ақмола
+ACTION REQUIRED: open the trade workbook, compare with the layout described in scripts/fetchers/bns_trade.py and fetchers/bns.py, update the parser or the dictionary, then re-run.
+- **bns/RESOURCE_USE_MONTHLY** — fetch+validate+process: ok (downloaded=176130, processed=176130, warnings=31)
+- **bns/RESOURCE_USE_YTD** — fetch+validate+process: ok (downloaded=177177, processed=177177, warnings=31)
+- **bns/RESOURCE_USE_ANNUAL** — fetch+validate+process: ok (downloaded=7303, processed=7303, warnings=31)
+- **bns/AGRI_BALANCE** — fetch+validate+process: ok (downloaded=998, processed=998, warnings=31)
+- **bns/ENERGY_BALANCE_TJ** — fetch+validate+process: ok (downloaded=5232, processed=5232, warnings=31)
+- **bns/ENERGY_BALANCE_NATURAL** — fetch+validate+process: ok (downloaded=5118, processed=5118, warnings=31)
+- **bns/INDUSTRY_OUTPUT_BY_REGION_MONTHLY** — fetch+validate+process: ok (downloaded=44397, processed=44397, warnings=32)
+- **bns/INDUSTRY_PRODUCTION_PHYSICAL_BY_REGION_MONTHLY** — fetch+validate+process: ok (downloaded=51036, processed=51036, warnings=32)
+- **bns/INDUSTRY_SHIPMENTS_BY_REGION_MONTHLY** — fetch+validate+process: ok (downloaded=65851, processed=65851, warnings=32)
+- **bns/REGIONAL_PRODUCT_BALANCE** — fetch+validate+process: ok (downloaded=55125, processed=55125, warnings=31)
+- **wb/WB_COMMODITY_PRICES_ANNUAL** — fetch+validate+process: ok (downloaded=4116, processed=4116, warnings=31)
+- **wb/WB_COMMODITY_INDICES_ANNUAL** — fetch+validate+process: ok (downloaded=1056, processed=1056, warnings=31)
+- **wb/WB_COMMODITY_PRICES_MONTHLY** — fetch+validate+process: ok (downloaded=50518, processed=50518, warnings=31)
+- **wb/WB_COMMODITY_INDICES_MONTHLY** — fetch+validate+process: ok (downloaded=12832, processed=12832, warnings=5)
+- **wb/WB_COMMODITY_PRICE_FORECASTS** — fetch+validate+process: ok (downloaded=138, processed=138)
+- **wb/WB_COMMODITY_INDEX_FORECASTS** — fetch+validate+process: ok (downloaded=48, processed=48)
+- **eia/EIA_STEO_PRICES** — fetch+validate+process: ok (downloaded=144, processed=144)
+- **bns/KZ_EXPORTS_BY_PARTNER** — fetch+validate+process: ok (downloaded=1169, processed=1169, warnings=31)
+- **bns/KZ_IMPORTS_BY_PARTNER** — fetch+validate+process: ok (downloaded=1169, processed=1169, warnings=31)
+- **wits/WITS_KZ_EXPORTS_BY_PARTNER** — fetch+validate+process: ok (downloaded=3331, processed=3331, warnings=31)
+- **wits/WITS_KZ_IMPORTS_BY_PARTNER** — fetch+validate+process: ok (downloaded=4621, processed=4621, warnings=31)
+- **wits/KZ_TARIFF_AVERAGES** — fetch+validate+process: ok (downloaded=65, processed=65, warnings=17)
+- **wits/KZ_TARIFF_APPLIED_BY_PARTNER** — fetch+validate+process: ok (downloaded=2758, processed=2758, warnings=31)
+- **wb/WDI_GDP_USD** — fetch+validate+process: ok (downloaded=11764, processed=11764, warnings=32)
+- **wb/WDI_GDP_CONST_USD** — fetch+validate+process: ok (downloaded=11533, processed=11533, warnings=23)
+- **wb/WDI_POPULATION** — fetch+validate+process: ok (downloaded=14292, processed=14292, warnings=1)
+- **bns/GDP_VOLUME_INDEX_AGGREGATES** — fetch+validate+process: ok (downloaded=124, processed=124, warnings=9)
+- **bns/GDP_DEFLATOR_AGGREGATES** — fetch+validate+process: ok (downloaded=124, processed=124, warnings=15)
+- **bns/GDP_PRODUCTION_AGGREGATES** — fetch+validate+process: ok (downloaded=114, processed=114, warnings=26)
+- **wb/WDI_GDP_GROWTH** — fetch+validate+process: ok (downloaded=11408, processed=11408, warnings=32)
+- **wb/WDI_CPI_INFLATION** — fetch+validate+process: ok (downloaded=9151, processed=9151, warnings=32)
+- **wb/WDI_GDP_DEFLATOR_INFLATION** — fetch+validate+process: ok (downloaded=11365, processed=11365, warnings=32)
+- **wb/WDI_GDP_PC_PPP** — fetch+validate+process: ok (downloaded=6977, processed=6977, warnings=14)
+- **wb/WDI_FX_OFFICIAL** — fetch+validate+process: ok (downloaded=12613, processed=12613, warnings=32)
+- **wb/WDI_NET_MIGRATION** — fetch+validate+process: ok (downloaded=14322, processed=14322, warnings=32)
+- **bns/FIXED_ASSETS_GROSS_BY_SECTION** — fetch+validate+process: ok (downloaded=521, processed=521, warnings=31)
+- **bns/FIXED_ASSETS_NET_BY_SECTION** — fetch+validate+process: ok (downloaded=521, processed=521, warnings=31)
+- **bns/FIXED_ASSETS_WEAR_BY_SECTION** — fetch+validate+process: ok (downloaded=481, processed=481, warnings=31)
+- **bns/FIXED_ASSETS_GROSS_BY_ASSET** — fetch+validate+process: ok (downloaded=134, processed=134, warnings=6)
+- **bns/EMPLOYED_BY_SECTION_LONG** — fetch+validate+process: ok (downloaded=407, processed=407, warnings=8)
+- **nbk/CAPACITY_UTILIZATION_BY_SECTOR** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=369&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cd47d70>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **wb/WGI_GE** — fetch+validate+process: ok (downloaded=5373, processed=5373, warnings=32)
+- **wb/WGI_RQ** — fetch+validate+process: ok (downloaded=5374, processed=5374, warnings=32)
+- **wb/WGI_RL** — fetch+validate+process: ok (downloaded=5503, processed=5503, warnings=32)
+- **wb/WGI_CC** — fetch+validate+process: ok (downloaded=5408, processed=5408, warnings=32)
+- **wb/WGI_VA** — fetch+validate+process: ok (downloaded=5488, processed=5488, warnings=32)
+- **wb/WGI_PV** — fetch+validate+process: ok (downloaded=5462, processed=5462, warnings=32)
+- **nbk/EXTERNAL_DEBT_SERVICE_SCHEDULE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=346&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cf92cc0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **bns/INCOME_SHARE_BY_DECILE** — fetch+validate+process: ok (downloaded=150, processed=150)
+- **bns/INCOME_SHARE_BY_DECILE_QUARTERLY** — fetch+validate+process: ok (downloaded=580, processed=580, warnings=20)
+- **bns/INCOME_MEAN_BY_DECILE** — fetch+validate+process: ok (downloaded=40, processed=40)
+- **bns/INCOME_MEAN_BY_DECILE_QUARTERLY** — fetch+validate+process: ok (downloaded=160, processed=160)
+- **bns/INCOME_UPPER_BOUND_BY_DECILE** — fetch+validate+process: ok (downloaded=40, processed=40, warnings=2)
+- **bns/INCOME_UPPER_BOUND_BY_DECILE_QUARTERLY** — fetch+validate+process: ok (downloaded=160, processed=160, warnings=5)
+- **bns/HH_EXPENDITURE_BOTTOM_TOP_DECILE** — fetch+validate+process: ok (downloaded=400, processed=400, warnings=31)
+- **kase/EUROBOND_PRICE_BY_ISSUE** — fetch+validate+process: ok (downloaded=631, processed=631, warnings=2)
+- **kase/EUROBOND_YTM_BY_ISSUE** — fetch+validate+process: ok (downloaded=631, processed=631, warnings=18)
+- **kase/EUROBOND_SPREAD_BY_ISSUE** — fetch+validate+process: ok (downloaded=425, processed=425, warnings=31)
+- **bns/CPI_DETAIL_MOM** — fetch+validate+process: ok (downloaded=91917, processed=91917, warnings=31)
+- **bns/CPI_DETAIL_YTD** — fetch+validate+process: ok (downloaded=92023, processed=92023, warnings=31)
+- **bns/CPI_DETAIL_YOY** — fetch+validate+process: ok (downloaded=91953, processed=91953, warnings=31)
+- **bns/CPI_DETAIL_AVG_YOY** — fetch+validate+process: ok (downloaded=91953, processed=91953, warnings=31)
+- **bns/RETAIL_PRICES_MOM** — fetch+validate+process: ok (downloaded=6762, processed=6762)
+- **bns/RETAIL_PRICES_YTD** — fetch+validate+process: ok (downloaded=6762, processed=6762, warnings=2)
+- **bns/RETAIL_PRICES_YOY** — fetch+validate+process: ok (downloaded=6762, processed=6762, warnings=1)
+- **bns/RETAIL_PRICES_AVG_YOY** — fetch+validate+process: ok (downloaded=6762, processed=6762, warnings=2)
+- **bns/CPI_CONTRIBUTION_MOM** — fetch+validate+process: ok (downloaded=3524, processed=3524, warnings=31)
+- **bns/CPI_CONTRIBUTION_YTD** — fetch+validate+process: ok (downloaded=3524, processed=3524, warnings=31)
+- **imf/IMF_BOP_QUARTERLY** — fetch+validate+process: ok (downloaded=88192, processed=88192, warnings=32)
+- **imf/IMF_BOP_ANNUAL** — fetch+validate+process: ok (downloaded=22443, processed=22443, warnings=32)
+- **imf/IMF_IIP_QUARTERLY** — fetch+validate+process: ok (downloaded=43263, processed=43263, warnings=32)
+- **imf/IMF_IIP_ANNUAL** — fetch+validate+process: ok (downloaded=10711, processed=10711, warnings=32)
+- **imf/IMF_GFS_OPERATIONS_KZT** — fetch+validate+process: ok (downloaded=26178, processed=26178, warnings=32)
+- **imf/IMF_GFS_OPERATIONS_PCT_GDP** — fetch+validate+process: ok (downloaded=26302, processed=26302, warnings=32)
+- **imf/IMF_GFS_COFOG_KZT** — fetch+validate+process: ok (downloaded=8423, processed=8423, warnings=32)
+- **imf/IMF_GFS_COFOG_PCT_GDP** — fetch+validate+process: ok (downloaded=8423, processed=8423, warnings=32)
+- **imf/IMF_GFS_BALANCE_SHEET_KZT** — fetch+validate+process: ok (downloaded=5185, processed=5185, warnings=32)
+- **imf/IMF_GFS_BALANCE_SHEET_PCT_GDP** — fetch+validate+process: ok (downloaded=5027, processed=5027, warnings=32)
+- **imf/IMF_QGFS_KZT** — fetch+validate+process: ok (downloaded=3514, processed=3514, warnings=32)
+- **wb/WDI_KAZ** — fetch+validate+process: ok (downloaded=34407, processed=34407, warnings=32)
+- **nbk/LOANS_BY_CREDITOR_TYPE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=445&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d5a6ba0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/NATIONAL_FUND_DOMESTIC_OPERATIONS** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=470&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d5a5490>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/NBK_MONETARY_SURVEY** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=50&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d5a4bf0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/NBK_SURVEY_HISTORY** — fetch+validate+process: ok (downloaded=8485, processed=8485, warnings=32)
+- **nbk/BANKS_SURVEY_HISTORY** — fetch+validate+process: ok (downloaded=9176, processed=9176, warnings=31)
+- **nbk/BANKING_SYSTEM_SURVEY_HISTORY** — fetch+validate+process: ok (downloaded=6761, processed=6761, warnings=31)
+- **nbk/OFC_SURVEY** — fetch+validate+process: ok (downloaded=2068, processed=2068, warnings=31)
+- **nbk/FINANCIAL_SECTOR_SURVEY** — fetch+validate+process: ok (downloaded=874, processed=874, warnings=31)
+- **nbk/BANKS_GOV_HOLDING_BORROWINGS** — fetch+validate+process: ok (downloaded=606, processed=606, warnings=12)
+- **damu/DAMU_SUBSIDISED_LOANS_ANNUAL** — fetch+validate+process: ok (downloaded=6667, processed=6667, warnings=32)
+- **damu/DAMU_SUBSIDISED_LOANS_MONTHLY** — fetch+validate+process: ok (downloaded=3110, processed=3110, warnings=32)
+- **nbk/INFLATION_EXPECTATIONS_SURVEY** — fetch+validate+process: ok (downloaded=22128, processed=22128, warnings=32)
+- **nbk/PROFESSIONAL_FORECASTS_SURVEY** — fetch+validate+process: ok (downloaded=740, processed=740, warnings=32)
+- **nbk/FINISHED_GOODS_PRICE_EXPECTATIONS_BY_SECTOR** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=387&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2ce4f7a0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/FINISHED_GOODS_PRICE_BY_SECTOR** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=387&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d5a77a0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/RAW_MATERIALS_PRICE_EXPECTATIONS_BY_SECTOR** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=364&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d5a68d0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/IMPORT_PRICE_EXPECTATIONS_BY_SECTOR** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=363&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d5a7fb0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/DEMAND_EXPECTATIONS_BY_SECTOR** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=366&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cf4f1a0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **nbk/PRICE_FACTORS_BY_SECTOR** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=384&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cf4cc20>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **kase/DEVELOPMENT_INSTITUTIONS_BALANCE_SHEETS** — fetch+validate+process: ok (downloaded=1964, processed=1964, warnings=32)
+- **bns/IMPORT_PRICE_INDEX_BY_HS_SECTION** — fetch+validate+process: ok (downloaded=1611, processed=1611)
+- **bns/IMPORT_PRICE_INDEX_EAEU_BY_HS_SECTION** — fetch+validate+process: ok (downloaded=1611, processed=1611)
+- **bns/IMPORT_PRICE_INDEX_NON_EAEU_BY_HS_SECTION** — fetch+validate+process: ok (downloaded=1575, processed=1575, warnings=2)
+- **bns/IMPORT_PRICE_INDEX_YOY_BY_HS_SECTION** — fetch+validate+process: ok (downloaded=960, processed=960, warnings=1)
+- **nbk/EXCHANGE_RATES_OFFICIAL_MONTHLY** — fetch+validate+process: ok (downloaded=5304, processed=5304, warnings=12)
+- **comtrade/IMPORTS_BY_PARTNER_COMTRADE** — fetch+validate+process: ok (downloaded=9319, processed=9319, warnings=31)
+- **gfss/SOCIAL_CONTRIBUTIONS_BY_REGION** — fetch+validate+process: ok (downloaded=7215, processed=7215, warnings=32)
+- **nbk/PENSION_FUND_FLOWS_YTD** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=25&page=0&pageSize=500 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b33fe6cc0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=30)'))
+- **derived/NEER_IMPORT_WEIGHTED** — fetch+validate+process: ok (downloaded=744, processed=744, warnings=1)
+- **derived/NEER_IMPORT_WEIGHTS** — fetch+validate+process: ok (downloaded=1165, processed=1165, warnings=31)
+- **minfin/REGIONAL_BUDGETS_YTD** — fetch+validate+process: ok (downloaded=82369, processed=82369, warnings=84)
+- **minfin/RB_QUASIFISCAL_YTD** — fetch+validate+process: ok (downloaded=8313, processed=8313, warnings=39)
+- **imf/IMF_WEO_WORLD** — fetch+validate+process: ok (downloaded=82757, processed=82757, warnings=32)
+- **bns/CPI_WEIGHTS** — fetch+validate+process: ok (downloaded=236, processed=236, warnings=24)
+- **derived/CPI_WEIGHTS_ESTIMATED** — fetch+validate+process: ok (downloaded=85, processed=85, warnings=5)
+- **derived/GVA_VOLUME_INDEX_BY_SECTION_DISCRETE** — fetch+validate+process: ok (downloaded=1729, processed=1729, warnings=31)
+- **krem/TARIFF_DECISIONS** — fetch+validate+process: ok (downloaded=3815, processed=3815, warnings=3)
+- **derived/TARIFF_CHANGE_MONTHS** — fetch+validate+process: ok (downloaded=305, processed=305, warnings=31)
+- **cisstat/CIS_GDP_VOLUME_INDEX** — fetch+validate+process: ok (downloaded=377, processed=377, warnings=2)
+- **cisstat/CIS_CPI** — fetch+validate+process: ok (downloaded=2789, processed=2789, warnings=32)
+- **cisstat/CIS_POPULATION** — fetch+validate+process: ok (downloaded=2814, processed=2814, warnings=13)
+- **cisstat/CIS_MIGRATION** — fetch+validate+process: ok (downloaded=3009, processed=3009, warnings=32)
+- **nbk/FDI_GROSS_INFLOW_BY_INDUSTRY** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=286&page=0&pageSize=5000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b34797290>, 'Connection to data.nationalbank.kz timed out. (connect timeout=120)'))
+- **nbk/FDI_GROSS_INFLOW_BY_COUNTRY** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=287&page=0&pageSize=5000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b05128470>, 'Connection to data.nationalbank.kz timed out. (connect timeout=120)'))
+- **nbk/LOANS_ISSUED_BY_INDUSTRY** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=493&page=0&pageSize=5000&startDate=2026-05-01 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2cffdca0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=120)'))
+- **nbk/LOANS_ISSUED_BY_PURPOSE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=493&page=0&pageSize=5000&startDate=2026-05-01 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2515bf80>, 'Connection to data.nationalbank.kz timed out. (connect timeout=120)'))
+- **bns/HOUSING_PRICE_INDEX_BY_CITY** — fetch+validate+process: ok (downloaded=17705, processed=17705, warnings=10)
+- **bns/HOUSING_PRICE_M2_BY_CITY** — fetch+validate+process: ok (downloaded=9146, processed=9146, warnings=13)
+- **bns/AGRI_PRODUCER_PRICE_INDEX_BY_REGION** — fetch+validate+process: ok (downloaded=17840, processed=17840)
+- **bns/CONSTRUCTION_PRICE_INDEX_BY_REGION** — fetch+validate+process: ok (downloaded=20766, processed=20766, warnings=31)
+- **bns/FREIGHT_TARIFF_INDEX_BY_REGION** — fetch+validate+process: ok (downloaded=6918, processed=6918, warnings=3)
+- **bns/COMMUNICATION_TARIFF_INDEX** — fetch+validate+process: ok (downloaded=6938, processed=6938)
+- **bns/LEGAL_ENTITIES_BY_REGION** — fetch+validate+process: ok (downloaded=6959, processed=6959, warnings=21)
+- **bns/WAGE_BY_REGION_QUARTERLY** — fetch+validate+process: ok (downloaded=798, processed=798)
+- **nbk/LOANS_STOCK_BY_INDUSTRY** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=488&page=0&pageSize=5000&startDate=2026-05-01 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d21a0c0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=120)'))
+- **nbk/LOANS_STOCK_BY_PURPOSE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=488&page=0&pageSize=5000&startDate=2026-05-01 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d10d160>, 'Connection to data.nationalbank.kz timed out. (connect timeout=120)'))
+- **imf/IMF_FSI_HOUSEHOLDS** — fetch+validate+process: ok (downloaded=195, processed=195)
+- **nbk/LOAN_PORTFOLIO_QUALITY** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=47&page=0&pageSize=5000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b0a6e1af0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=120)'))
+- **nbk/GOV_SECURITIES_OUTSTANDING_BY_TYPE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=430&page=0&pageSize=5000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b2d2c03e0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=120)'))
+- **mne/GOV_MACRO_FORECAST_VINTAGES** — fetch+validate+process: ok (downloaded=1248, processed=1248, warnings=6)
+- **nbk/NBK_FORECAST_ROUNDS** — fetch+validate+process: ok (downloaded=245, processed=245, warnings=3)
+- **nbk/NBK_FX_INTERVENTIONS** — fetch+validate+process: ok (downloaded=414, processed=414, warnings=31)
+- **nbk/NBK_OPEN_POSITION** — fetch+validate+process: ok (downloaded=1568, processed=1568, warnings=31)
+- **nbk/NBK_DEPOSIT_AUCTIONS** — fetch+validate+process: ok (downloaded=282, processed=282, warnings=5)
+- **nbk/LOAN_RATES_BY_PURPOSE** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=27&page=0&pageSize=5000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b08f99d90>, 'Connection to data.nationalbank.kz timed out. (connect timeout=120)'))
+- **nbk/LOAN_RATES_BY_MATURITY** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=486&page=0&pageSize=5000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b08f98ec0>, 'Connection to data.nationalbank.kz timed out. (connect timeout=120)'))
+- **nbk/GOV_SECURITIES_PRIMARY_AUCTIONS** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=17&page=0&pageSize=5000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b08f9b110>, 'Connection to data.nationalbank.kz timed out. (connect timeout=120)'))
+- **nbk/GOV_SECURITIES_SECONDARY_MARKET** — fetch: error (downloaded=0, processed=0)
+  - ERROR: HTTPSConnectionPool(host='data.nationalbank.kz', port=443): Max retries exceeded with url: /api/v1/data?formId=16&page=0&pageSize=5000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.nationalbank.kz', port=443) at 0x7e1b07755c70>, 'Connection to data.nationalbank.kz timed out. (connect timeout=120)'))
+- **bns/VACANCIES_BY_REGION_QUARTERLY** — fetch+validate+process: ok (downloaded=1779, processed=1779, warnings=31)
+- **bns/EMPLOYEE_SEPARATIONS_BY_REGION_QUARTERLY** — fetch+validate+process: ok (downloaded=798, processed=798, warnings=17)
+- **bns/REGISTERED_UNEMPLOYED_SHARE** — fetch+validate+process: ok (downloaded=119, processed=119, warnings=19)
+- **bns/REGISTERED_UNEMPLOYED** — fetch+validate+process: ok (downloaded=25, processed=25, warnings=2)
+- **bns/INVESTMENT_BY_SOURCE_BY_REGION_YTD** — fetch+validate+process: ok (downloaded=14168, processed=14168, warnings=31)
+- **bns/INVESTMENT_BY_SOURCE_BY_REGION** — fetch+validate+process: ok (downloaded=2455, processed=2455, warnings=31)
+- **kase/KASE_INDICES** — fetch+validate+process: ok (downloaded=1776, processed=1776, warnings=31)
+- **kase/KASE_CORPORATE_BOND_VOLUMES** — fetch+validate+process: ok (downloaded=282, processed=282, warnings=32)
+- **kmg/KMG_OIL_PRODUCTION_AND_TRANSPORT** — fetch+validate+process: ok (downloaded=1281, processed=1281, warnings=32)
+- **fao/FAO_FOOD_PRICE_INDEX** — fetch+validate+process: ok (downloaded=2652, processed=2652)
+- **un/UN_WPP_POPULATION** — fetch+validate+process: ok (downloaded=3575, processed=3575, warnings=32)
+- **bns/FREIGHT_BY_MODE_MONTHLY** — fetch+validate+process: ok (downloaded=1521, processed=1521, warnings=31)
+- **bns/FREIGHT_TURNOVER_BY_MODE_MONTHLY** — fetch+validate+process: ok (downloaded=1534, processed=1534, warnings=31)
+- **derived/CORE_INFLATION_MEASURES** — fetch+validate+process: ok (downloaded=3172, processed=3172, warnings=31)
+- **derived/MONETARY_CONDITIONS** — fetch+validate+process: ok (downloaded=1315, processed=1315, warnings=9)
+- **derived/OUTPUT_GAP** — fetch+validate+process: ok (downloaded=428, processed=428)
+- **derived/CREDIT_GAP** — fetch+validate+process: ok (downloaded=288, processed=288)
+- **derived/FISCAL_STANCE** — fetch+validate+process: ok (downloaded=73, processed=73)
+- **derived/YIELD_CURVE_SPREADS** — fetch+validate+process: ok (downloaded=558, processed=558, warnings=1)
+- **ratings/SOVEREIGN_RATINGS** — fetch+validate+process: ok (downloaded=2527, processed=2527, warnings=18)
+- **quasi/QUASI_STATE_DEBT_ANNUAL** — fetch+validate+process: ok (downloaded=40, processed=40, warnings=5)
+- **minfin/BUDGET_EXPENDITURE_ECONOMIC_YTD** — fetch+validate+process: ok (downloaded=34746, processed=34746, warnings=31)
+- **minfin/BUDGET_EXPENDITURE_ECONOMIC_2005_2012_YTD** — fetch+validate+process: ok (downloaded=10837, processed=10837, warnings=31)
+- **minfin/RESOURCE_PAYMENTS_YTD** — fetch+validate+process: ok (downloaded=1991, processed=1991, warnings=31)
+- **minfin/BUDGET_RECEIPTS_BY_CODE_YTD** — fetch+validate+process: ok (downloaded=117267, processed=117267, warnings=31)
+- **legal/TAX_RATES** — fetch+validate+process: ok (downloaded=4991, processed=4991, warnings=27)
+- **kgd/NF_RECEIPTS_BY_CODE_KGD_YTD** — fetch+validate+process: ok (downloaded=966, processed=966, warnings=31)
+- **legal/TAX_SCHEDULES** — fetch+validate+process: ok (downloaded=10700, processed=10700, warnings=6)
+- **bns/ENVIRONMENTAL_TAXES_BY_OKED** — fetch+validate+process: ok (downloaded=1050, processed=1050, warnings=31)
+- **vap/TAX_STRUCTURE_BY_INDUSTRY** — fetch+validate+process: ok (downloaded=113, processed=113, warnings=3)
+- **bns/SUBSISTENCE_MINIMUM_BY_REGION** — fetch+validate+process: ok (downloaded=9625, processed=9625, warnings=1)
+- **legal/SOCIAL_STANDARDS** — fetch+validate+process: ok (downloaded=1255, processed=1255, warnings=1)
+- **bns/ENTERPRISE_PROFIT_LOSS_QUARTERLY** — fetch+validate+process: ok (downloaded=23744, processed=23744, warnings=32)
+- **bns/ENTERPRISE_LOSS_MAKING_SHARE_QUARTERLY** — fetch+validate+process: ok (downloaded=1732, processed=1732, warnings=11)
+- **bns/INFORMAL_EMPLOYMENT_SHARE** — fetch+validate+process: ok (downloaded=678, processed=678, warnings=32)
+- **bns/UNPRODUCTIVE_SELF_EMPLOYED_SHARE** — fetch+validate+process: ok (downloaded=304, processed=304, warnings=32)
+- **bns/NET_LENDING_BY_SECTOR** — fetch+validate+process: ok (downloaded=167, processed=167, warnings=8)
+- **bns/LIVESTOCK_STOCK_MONTHLY** — fetch+validate+process: ok (downloaded=14545, processed=14545, warnings=32)
+- **bns/LIVESTOCK_PRODUCTION_MONTHLY** — fetch+validate+process: ok (downloaded=17232, processed=17232, warnings=32)
+- **bns/FUEL_PRICES_BY_CITY** — fetch+validate+process: ok (downloaded=17896, processed=17896, warnings=32)
+- **bns/SECTOR_ACCOUNTS** — fetch+validate+process: ok (downloaded=885, processed=885, warnings=31)
+- **nbk/DEPOSITS_BY_CURRENCY** — fetch+validate+process: ok (downloaded=7287, processed=7287, warnings=31)
+- **bns/SOCIAL_FOOD_PRICES_WEEKLY** — fetch+validate+process: ok (downloaded=1333, processed=1333)
+- **bns/SOCIAL_FOOD_PRICES_WEEKLY_2022_2025** — fetch+validate+process: ok (downloaded=3933, processed=3933, warnings=2)
+- **bns/WAGE_ARREARS_QUARTERLY** — fetch+validate+process: ok (downloaded=1126, processed=1126, warnings=32)
+- **derived/DOLLARIZATION** — fetch+validate+process: ok (downloaded=1549, processed=1549, warnings=6)
+- **derived/MONEY_MULTIPLIER** — fetch+validate+process: ok (downloaded=1576, processed=1576, warnings=3)
+- **derived/MONEY_VELOCITY** — fetch+validate+process: ok (downloaded=252, processed=252)
+- **derived/LABOUR_COST_INDICATORS** — fetch+validate+process: ok (downloaded=356, processed=356)
+- **derived/REAL_SOCIAL_STANDARDS** — fetch+validate+process: ok (downloaded=1512, processed=1512, warnings=1)
+- **bns/GDP_NOMINAL** — derive+validate+process: ok (downloaded=0, processed=67, warnings=5)
+- **bns/GDP_NOMINAL_ANNUAL** — derive+validate+process: ok (downloaded=0, processed=33, warnings=2)
+- **bns/GDP_NOMINAL_Q** — derive+validate+process: ok (downloaded=0, processed=66)
+- **bns/GDP_REAL_SA** — derive+validate+process: ok (downloaded=0, processed=66)
+- **bns/GDP_EX_MINING_REAL_SA** — derive+validate+process: ok (downloaded=0, processed=66)
+- **bns/CONSUMPTION_HH_REAL_SA** — derive+validate+process: ok (downloaded=0, processed=66)
+- **bns/GFCF_REAL_SA** — derive+validate+process: ok (downloaded=0, processed=66)
+- **bns/EXPORTS_GS_REAL_SA** — derive+validate+process: ok (downloaded=0, processed=66)
+- **bns/IMPORTS_GS_REAL_SA** — derive+validate+process: ok (downloaded=0, processed=66)
+- **bns/IND_PROD** — derive+validate+process: ok (downloaded=0, processed=36)
+- **bns/INVESTMENT** — derive+validate+process: ok (downloaded=0, processed=23)
+- **bns/EXPORTS** — derive+validate+process: ok (downloaded=0, processed=140, warnings=2)
+- **bns/POPULATION_BNS** — derive+validate+process: ok (downloaded=0, processed=35)
+- **bns/POPULATION_BOY_BNS** — derive+validate+process: ok (downloaded=0, processed=36)
+- **bns/EMPLOYED_TOTAL** — derive+validate+process: ok (downloaded=0, processed=25)
+- **bns/ELECTRICITY_PRODUCTION** — derive+validate+process: ok (downloaded=0, processed=36)
+- **bns/IND_PROD_MINING** — derive+validate+process: ok (downloaded=0, processed=36)
+- **bns/IND_PROD_MANUFACTURING** — derive+validate+process: ok (downloaded=0, processed=36)
+- **bns/IND_PROD_ELECTRICITY** — derive+validate+process: ok (downloaded=0, processed=36)
+- **bns/OIL_EXPORTS_VOLUME** — derive+validate+process: ok (downloaded=0, processed=139, warnings=4)
+- **bns/OIL_EXPORTS_VALUE** — derive+validate+process: ok (downloaded=0, processed=139, warnings=7)
+- **bns/GDP_REAL** — fill_gaps: ok (downloaded=0, processed=9)
+- **bns/GDP_DEFLATOR** — fill_gaps: ok (downloaded=0, processed=9)
+- **bns/GFCF** — fill_gaps: ok (downloaded=0, processed=4)
+- **bns/GFCF_VOLUME_INDEX** — fill_gaps: ok (downloaded=0, processed=4)
+- **bns/NET_EXPORTS** — fill_gaps: ok (downloaded=0, processed=4)
+- **bns/HOUSEHOLD_CONSUMPTION** — fill_gaps: ok (downloaded=0, processed=4)
+- **bns/GDP_INCOME_METHOD** — fill_gaps: ok (downloaded=0, processed=7)
+- **bns/GROSS_ACCUMULATION** — fill_gaps: ok (downloaded=0, processed=4)
+- **bns/IMPORT_VOLUME_INDEX** — fill_gaps: ok (downloaded=0, processed=4)
+- **bns/EXPORT_VOLUME_INDEX** — fill_gaps: ok (downloaded=0, processed=4)
+- **bns/TOTAL_CONSUMPTION_EXPENDITURE** — fill_gaps: ok (downloaded=0, processed=4)
+- **bns/MIGRATION_ARRIVALS** — fill_gaps: ok (downloaded=0, processed=9)
+- **bns/MIGRATION_DEPARTURES** — fill_gaps: ok (downloaded=0, processed=9)

@@ -1,0 +1,11 @@
+{
+  "downloaded_at": "2026-11-28T03:31:14.728044",
+  "source_url": "https://nationalbank.kz/ru/monetarybase/denezhnaya-baza-i-agregaty-shirokoy-denezhnoy-massy/records",
+  "params": {
+    "beginMount": 1,
+    "beginYear": 1995,
+    "endMount": 12,
+    "endYear": 2026
+  },
+  "raw_file": "nbk_nbk_monetary_page_2026-11-26.json"
+}

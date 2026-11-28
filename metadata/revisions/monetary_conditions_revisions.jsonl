@@ -519,3 +519,4 @@
 {"indicator_id": "MONETARY_CONDITIONS", "period": "2026-11-01 TONIA", "old_value": 15.28, "new_value": 15.1623, "detected_date": "2026-11-18", "source": "derived", "reason": "not stated by source"}
 {"indicator_id": "MONETARY_CONDITIONS", "period": "2026-11-01 TONIA", "old_value": 15.1623, "new_value": 15.1107, "detected_date": "2026-11-21", "source": "derived", "reason": "not stated by source"}
 {"indicator_id": "MONETARY_CONDITIONS", "period": "2026-11-01 TONIA", "old_value": 15.1107, "new_value": 15.0822, "detected_date": "2026-11-25", "source": "derived", "reason": "not stated by source"}
+{"indicator_id": "MONETARY_CONDITIONS", "period": "2026-11-01 TONIA", "old_value": 15.0822, "new_value": 15.1295, "detected_date": "2026-11-28", "source": "derived", "reason": "not stated by source"}

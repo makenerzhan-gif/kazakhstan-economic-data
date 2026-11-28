@@ -368,6 +368,7 @@ date,region,item_code,item_name,value,transformation
 2026-08-01,national,LOANS_FX_SHARE,"Доля кредитов банков экономике в иностранной валюте, %",9.9891,level
 2026-09-01,national,LOANS_FX_SHARE,"Доля кредитов банков экономике в иностранной валюте, %",10.2644,level
 2026-10-01,national,LOANS_FX_SHARE,"Доля кредитов банков экономике в иностранной валюте, %",10.0116,level
+2026-11-01,national,LOANS_FX_SHARE,"Доля кредитов банков экономике в иностранной валюте, %",10.6904,level
 2022-01-01,national,BUSINESS_LOANS_FX_SHARE,"Доля кредитов бизнесу в иностранной валюте, %",25.9428,level
 2022-04-01,national,BUSINESS_LOANS_FX_SHARE,"Доля кредитов бизнесу в иностранной валюте, %",25.3808,level
 2022-07-01,national,BUSINESS_LOANS_FX_SHARE,"Доля кредитов бизнесу в иностранной валюте, %",24.5379,level
