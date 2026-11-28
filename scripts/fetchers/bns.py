@@ -235,7 +235,7 @@ TALDAU_TREE_DATA_URL = "https://taldau.stat.gov.kz/ru/NewIndex/GetIndexTreeData"
 # 5 gives quarter-ends and 7 gives year-ends. The manifest used to report every
 # Taldau series as annual regardless, which was simply wrong for the quarterly
 # and monthly ones.
-TALDAU_PERIOD_FREQUENCY = {"4": "monthly", "5": "quarterly", "7": "annual"}
+TALDAU_PERIOD_FREQUENCY = {"4": "monthly", "5": "quarterly", "7": "annual", "8": "monthly"}   # 8: «месяц с накоплением»
 GDP_REAL_INDEX_ID = "2979005"  # "индекс физического объема ВВП методом производства"
 NATIONAL_TERM_ID = "741880"    # РЕСПУБЛИКА КАЗАХСТАН
 REGIONS_DIC_ID = "67"          # the classifier dictionary id for the region dimension
@@ -359,7 +359,7 @@ def _fetch_taldau_annual_index(index_id: str, indicator_id: str, note: str,
         # between CPI and the monthly production, trade and labour series, which
         # is a worse failure than an inconsistent-looking date because nothing
         # raises: the join just returns nothing.
-        if period_id == TALDAU_PERIOD_MONTHLY:
+        if period_id in (TALDAU_PERIOD_MONTHLY, TALDAU_PERIOD_YTD):   # January-to-month: dated by its last month
             records.append({"date": f"{year:04d}-{month:02d}-01", "value": v})
         else:
             last_day = calendar.monthrange(year, month)[1]
@@ -3966,6 +3966,7 @@ CPI_TERM_MOM = "2695730"               # отчетный период к пре
 CPI_TERM_YTD = "2695731"               # отчетный период к декабрю прошлого года
 CPI_TERM_YOY = "2695732"               # отчетный период к соответствующему периоду прошлого года
 TALDAU_PERIOD_MONTHLY = "4"
+TALDAU_PERIOD_YTD = "8"          # «месяц с накоплением»: January to the month
 
 
 # HISTORY BEFORE TALDAU (2026-09-28). Taldau starts in January 2011; BNS printed the
@@ -4213,6 +4214,21 @@ def _fetch_ind_prod_monthly(comparison_term: str, indicator_id: str, basis: str)
         "78.5, February 124.5).",
         measure_id="7", terms=f"{NATIONAL_TERM_ID},{IND_PROD_MONTHLY_TOTAL},{comparison_term}",
         dic_ids=IND_PROD_MONTHLY_DICS, period_id=TALDAU_PERIOD_MONTHLY)
+
+
+def fetch_ind_prod_ytd_yoy() -> tuple[list[dict], dict]:
+    """Industrial production, January to the month against the same months a year earlier --
+    the figure the BNS bulletin prints as the headline and the one the quarterly and annual
+    indices follow. The monthly y/y index of the same Taldau table is a first print that is
+    not brought into line with it (config/source_issues.yaml, ind_prod_mom_not_revised);
+    tests/test_ind_prod_consistency.py compares the two."""
+    return _fetch_taldau_annual_index(
+        IND_PROD_MONTHLY_INDEX, "IND_PROD_YTD_YOY",
+        "Index, January to the month against the same months of the previous year = 100 («месяц с "
+        "накоплением»): industrial production, national, from 2014-01 (Taldau index 701625, period 8). "
+        "Dated by the last month of the period.",
+        measure_id="7", terms=f"{NATIONAL_TERM_ID},{IND_PROD_MONTHLY_TOTAL},{CPI_TERM_YOY}",
+        dic_ids=IND_PROD_MONTHLY_DICS, period_id=TALDAU_PERIOD_YTD)
 
 
 def fetch_ind_prod_monthly_yoy() -> tuple[list[dict], dict]:

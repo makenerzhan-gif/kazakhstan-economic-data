@@ -690,3 +690,17 @@ issues:
       model_data builds `ip` from the y/y index (IND_PROD_MONTHLY_YOY) on a 2014 base; the cumulative index
       (January to the month on a year earlier) is the measure BNS revises, so for quarterly or annual growth
       prefer it or the official annual index.
+
+  - id: ind_prod_ytd_2017
+    kind: inconsistent
+    variable: IND_PROD_YTD_YOY
+    observations:
+      - {date: "2017-04-01", value: 112.3}
+    evidence: >
+      Taldau index 701625, period 8 («месяц с накоплением»), fetched 2026-11-27: January-March 2017 = 105.8,
+      January-April = 112.3, January-May = 107.8. The monthly y/y indices of the same table are 104.9, 104.0,
+      108.3 and 114.9 for January-April (mean 108.0) and 110.7 for May: a January-April figure of 112.3 is 4.3
+      points above the mean of its four months, and the next four cumulative values sit 0.5-0.8 below theirs.
+      In every other year but 2026 (see ind_prod_mom_not_revised) the cumulative index stays within 0.5 point of
+      that mean (tests/test_ind_prod_consistency.py). Which of the two April 2017 figures is off is not stated.
+    advice: Treat January-April 2017 of the cumulative index as doubtful; the values are exactly what Taldau serves.

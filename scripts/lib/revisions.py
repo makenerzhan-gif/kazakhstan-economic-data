@@ -7,6 +7,7 @@ metadata/revisions/ — and we never delete the old raw file that had the old va
 from __future__ import annotations
 
 import json
+import math
 from dataclasses import dataclass, asdict
 from datetime import date
 from pathlib import Path
@@ -26,6 +27,16 @@ class Revision:
     reason: str = "not stated by source"
 
 
+def changed(old_val, new_val) -> bool:
+    """Whether a stored value was replaced by a different one. Two missing values are the same
+    value: NaN != NaN in arithmetic, and until 2026-11-27 every run wrote ~3 500 "revisions"
+    NaN -> NaN for TARIFF_DECISIONS (175 970 lines, 37 MB, not one real change among them)."""
+    a, b = float(old_val), float(new_val)
+    if math.isnan(a) and math.isnan(b):
+        return False
+    return a != b
+
+
 def detect_revisions(indicator_id: str, source: str, old_records: list[dict],
                       new_records: list[dict], detected_date: date) -> list[Revision]:
     old_by_period = {r["date"]: r.get("value") for r in old_records}
@@ -33,7 +44,7 @@ def detect_revisions(indicator_id: str, source: str, old_records: list[dict],
     for r in new_records:
         period, new_val = r["date"], r.get("value")
         old_val = old_by_period.get(period)
-        if old_val is not None and new_val is not None and float(old_val) != float(new_val):
+        if old_val is not None and new_val is not None and changed(old_val, new_val):
             revisions.append(Revision(
                 indicator_id=indicator_id,
                 period=period,

@@ -30,7 +30,7 @@ from pathlib import Path
 
 import yaml
 
-from . import revisions, validation
+from . import revisions, run_report, validation
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 CONFIG_PATH = REPO_ROOT / "config" / "dims.yaml"
@@ -208,6 +208,8 @@ def validate(records: list[dict], dataset_id: str, frequency: str,
         for sub in checks:
             warnings.extend(f"[{tag}] {w}" for w in sub.warnings)
     if len(warnings) > MAX_WARNINGS:
+        # newest first, so the cap never hides a warning about a point published today
+        warnings.sort(key=run_report.latest_date, reverse=True)
         warnings = warnings[:MAX_WARNINGS] + [f"... {len(warnings) - MAX_WARNINGS} more warnings not listed"]
     result.warnings.extend(warnings)
     result.ok = result.ok and not result.errors
@@ -221,7 +223,7 @@ def detect_revisions(dataset_id: str, source: str, old_records: list[dict], new_
     out = []
     for r in new_records:
         old_val, new_val = old.get(_key(r)), r.get("value")
-        if old_val not in (None, "") and new_val is not None and float(old_val) != float(new_val):
+        if old_val not in (None, "") and new_val is not None and revisions.changed(old_val, new_val):
             region = r.get("region") or NATIONAL
             period = f"{r['date']} {r['item_code']}" + ("" if region == NATIONAL else f" @{region}")
             out.append(revisions.Revision(indicator_id=dataset_id, period=period, old_value=float(old_val),

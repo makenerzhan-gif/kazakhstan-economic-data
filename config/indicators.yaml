@@ -1566,6 +1566,8 @@ indicators:
     unit: "KZT per international dollar"
     category: international_projection
     source_status: confirmed
+    observation_type: period_ratio
+    observation_evidence: "отношение двух годовых потоков WEO: IMF_NOMINAL_GDP / IMF_GDP_PPP за тот же год (40 лет, расхождение менее 0,001 %; проверено 2026-11-27)"
 
   - id: WHOLESALE_TRADE
     name_ru: "Объем оптовой торговли в стоимостном выражении"
@@ -3548,6 +3550,8 @@ indicators:
     unit: "units"
     category: production
     source_status: confirmed
+    observation_type: point_in_time
+    observation_evidence: "паспорт Taldau 703651: «общее количество ПК, имеющих доступ к Интернет» — часть запаса COMPUTERS_IN_ORGANIZATIONS (находившиеся на балансе), та же форма 3-информ"
 
   - id: WORKERS_USING_COMPUTERS
     name_ru: "Работники, использующие компьютер (не реже раза в неделю)"
@@ -3586,6 +3590,8 @@ indicators:
     unit: "KZT"
     category: trade
     source_status: confirmed
+    observation_type: period_total
+    observation_evidence: "название Taldau 77212521: «Объем реализации услуг по собственному Интернет-ресурсу» — продажи за период, тенге"
 
   - id: DOCTORS_PER_10K
     name_ru: "Численность врачей на 10 000 населения"
@@ -4397,6 +4403,19 @@ indicators:
     observation_evidence: "Taldau 701625, термин 2695730; без сезонной корректировки"
     comparison_basis: mom
     comparison_basis_evidence: "Taldau: сравнение 2695730 = к предыдущему периоду"
+
+  - id: IND_PROD_YTD_YOY
+    name_ru: "Индекс промышленного производства, январь–месяц к январю–месяцу прошлого года"
+    name_en: "Industrial Production Index, January to month over the same period of previous year"
+    agency: bns
+    frequency: monthly
+    unit: "index (same period previous year = 100)"
+    category: production
+    source_status: confirmed
+    observation_type: comparison_index
+    observation_evidence: "Taldau 701625, период 8 «месяц с накоплением», термин 2695732"
+    comparison_basis: ytd_yoy
+    comparison_basis_evidence: "Taldau: период с накоплением против того же периода прошлого года; январь–сентябрь 2026 = 102,9 как в бюллетене БНС"
 
   - id: AVG_WAGE_1T_QUARTERLY
     name_ru: "Среднемесячная номинальная заработная плата (форма 1-Т), поквартально"

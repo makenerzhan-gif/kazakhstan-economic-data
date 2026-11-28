@@ -1,4 +1,4 @@
-# Update Log — archive (2026-08-30 .. 2026-10-19)
+# Update Log — archive (2026-08-30 .. 2026-10-29)
 
 Older entries of project_knowledge/UPDATE_LOG.md, moved here on 2026-09-26 and 2026-09-27 so the Claude Project's
 context holds only the recent log. Oldest first; nothing edited.
@@ -5782,3 +5782,52 @@ main's data. NBK's own workbook of 30.09.2026
 (nationalbank.kz/file/download/136322) has the IMF's figures (end-2025 -35 639.21, end-2026-Q1
 -39 373.94); forms 309, 320 and 321 all still end at 1 April 2026 without the revision, so
 config/source_issues.yaml registers nbk_iip_forms_stale_2024_2026 (IIP_NET, IIP_ASSETS, IIP_LIABILITIES).
+
+## 2026-10-19 — comparisons between publications no longer block the daily commit (user: «ок, 2»)
+
+Five daily runs between 2026-10-13 and 10-19 committed nothing for the same reason: a test comparing
+two publications failed because one had taken up the NBK's revision of 30.09.2026 and the other had
+not yet (the WEO against NBK form 324, form 481 against 324, the IMF's quarterly IIP against NBK form
+309). Each was a true statement about the sources, not a fault in the pipeline, yet it withheld
+every series for the day. Tests that compare two publications revising on their own schedules are now
+marked `cross_source` (tests/conftest.py registers the marker): the current account against the WEO
+and against the IMF's quarterly BOP, net IIP against the IMF, WDI GDP against the WEO, NBK ROA/ROE and
+capital adequacy against the IMF FSIs and the FSIs' coverage, the BNS CPI publication against the
+Taldau series, and loans to business by creditor against form 445's series. The STB loan test was
+split: its components-add-up-to-the-total part still blocks; the match with form 445's household
+loans is cross-source. update_all.run_tests runs the two groups apart (pytest -m "not cross_source",
+then -m cross_source): only the first decides the commit; each failure of the second is a GitHub
+Actions warning, a job-summary line and a section of the update report («Cross-source checks failed:
+N»), with pytest's message in full (COLUMNS=400). Checked on the real data with one settled IIP
+quarter set wrong: 816 blocking tests pass, the IIP comparison fails and is reported as
+`AssertionError: ['2021-04-01']`. 17 of 833 test cases are cross-source.
+
+## 2026-10-20 — the resource-use check pinned on a final print (user: «прогон опять упал»)
+
+The 2026-10-20 run committed nothing: test_resource_use_data_matches_the_publication (blocking: it
+checks the parse of one BNS publication, not a comparison of two) expected coal exports January–July
+2026 of 17 833.073 kt and found 17 771.911. BNS published the January–August 2026 edition of
+«Ресурсы и использование…» (bns_resource_use_202608_2026-10-20.xlsx); like every monthly edition it
+carries the cumulative figures for t, t-1 and t-12, and its «январь-июль 2026г.» column revises
+January–July: coal exports -61.2 kt, coal resources 63 474.693 -> 63 475.592, wheat exports
+4 947 050.527 -> 4 947 361.027 t. RESOURCE_USE_YTD keeps the latest print by design, so the data was
+right and the test's assumption was not. It now pins January–July 2025 (coal production 63 330.303,
+coal exports 16 428.615 kt, wheat exports 4 384 954.666 t), printed for the last time in the
+«январь-июль 2025г.» column of the January–July 2026 edition and absent from the August one. The old
+test fails on the refreshed dataset exactly as in CI; the new one passes on it and on main's data.
+
+## 2026-10-29 — quarterly national accounts for 2026 Q2: not yet published; BNS withdrew its production release (scheduled check from «Сделай все три пункта», point 3)
+
+The expenditure QNA (element 283161, the source of model_data's gdp, gdp_sa, gdp_nsa) was due on 28.10.2026;
+on 29.10.2026 09:30 UTC its file is still the one of 28.07.2026, ending at 2026 Q1. The production QNA (283162)
+carried 2026 Q1-Q2 from 16-17.10.2026 and was replaced on 20.10.2026 by a file ending at 2025 Q4, so the run of
+2026-10-21 dropped 2026 from the seven QNA_GVA_* datasets (1 716 -> 1 664 records each for the level tables).
+The withdrawn release had GDP Q2 2026 at 113.8 % of Q2 2025 in 2010 prices, H1 109.5 %, seasonally adjusted
+Q2/Q1 +7.6 %; BNS's cumulative table 4439/4440 has GDP Q1 103.0 %, H1 104.1 %, Q2 alone 105.2 %
+(GVA_VOLUME_INDEX_BY_SECTION_DISCRETE). Nominal Q2 growth agrees (+18.9 % QNA, +20.1 % table 4439); the
+release's implied deflator, about 104.5 %, does not fit CPI 110.4 % or industrial producer prices 111-117 % y/y,
+so the 13.8 % was most likely a deflation error, and the withdrawal is consistent with that. The income QNA
+(283160, nominal only) keeps Q2 2026 from 16.10.2026: GDP 43 553.8 bn KZT, in line with the 2025 gap between the
+QNA quarters and table 4439's. Registered as source issue qna_production_2026_withdrawn (caveat); the
+GVA_VOLUME_INDEX_BY_SECTION_DISCRETE note now states the QNA's status. No data or model_data change: the
+expenditure QNA has no Q2 to add. The check is re-armed.

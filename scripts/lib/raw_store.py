@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from datetime import date, datetime
 from pathlib import Path
 
@@ -165,8 +166,56 @@ def is_identical_to_latest(agency: str, indicator_id: str, content: bytes) -> bo
     return sha256_of(latest.read_bytes()) == sha256_of(content)
 
 
+MANIFEST_STAMPS = ("downloaded_at",)   # the keys that differ between two downloads of the same thing
+
+
+def _manifest_body(info) -> object:
+    return {k: v for k, v in info.items() if k not in MANIFEST_STAMPS} if isinstance(info, dict) else info
+
+
+def indicator_manifests(agency: str, indicator_id: str) -> list[Path]:
+    """The dated manifests of one indicator, oldest first (exactly `<agency>_<id>_<date>.manifest.json`:
+    a glob on the prefix alone would also take `bns_gdp_real_...` for the indicator `gdp`)."""
+    folder = RAW_ROOT / agency
+    name = re.compile(rf"{re.escape(agency)}_{re.escape(indicator_id.lower())}_\d{{4}}-\d{{2}}-\d{{2}}\.manifest\.json")
+    return sorted(p for p in folder.glob(f"{agency}_{indicator_id.lower()}_*.manifest.json")
+                  if name.fullmatch(p.name)) if folder.exists() else []
+
+
+def _read_manifest(path: Path):
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+
+
 def write_download_manifest(agency: str, indicator_id: str, download_date: date, info: dict) -> Path:
-    """Small JSON sidecar recording what was downloaded from where — feeds metadata generation."""
+    """Small JSON sidecar recording what was downloaded from where — feeds metadata generation.
+
+    A source that answers the same thing run after run keeps two manifests, not one per run: the
+    one of the day the answer was first seen and the one of the latest download (its date is what
+    imf_dims.last_download reads). Until 2026-11-27 every run wrote a new file for every
+    indicator -- 57 619 manifests, ~2 000 more per run, 95% of them differing from the previous
+    one in `downloaded_at` alone."""
     path = RAW_ROOT / agency / f"{agency}_{indicator_id.lower()}_{download_date.isoformat()}.manifest.json"
+    earlier = [p for p in indicator_manifests(agency, indicator_id) if p.name < path.name]
+    if len(earlier) >= 2 and not path.exists():
+        body = _manifest_body(info)
+        if all(_manifest_body(_read_manifest(p)) == body for p in earlier[-2:]):
+            earlier[-1].rename(path)     # the "latest download" manifest moves to today
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(info, indent=2, ensure_ascii=False), encoding="utf-8")
     return path
+
+
+def collapse_manifests(agency: str, indicator_id: str, dry_run: bool = False) -> list[Path]:
+    """Remove the manifests that repeat both neighbours (same content apart from the stamp): of
+    every run of identical answers the first and the last stay. Returns the removed paths."""
+    files = indicator_manifests(agency, indicator_id)
+    bodies = [_manifest_body(_read_manifest(p)) for p in files]
+    removed = [files[i] for i in range(1, len(files) - 1)
+               if bodies[i] is not None and bodies[i - 1] == bodies[i] == bodies[i + 1]]
+    if not dry_run:
+        for p in removed:
+            p.unlink()
+    return removed

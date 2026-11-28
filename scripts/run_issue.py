@@ -19,7 +19,8 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SECTIONS = {"failed": "## Failed this run", "cross": "## Cross-source checks that failed",
-            "model": "## model_data not rebuilt", "stale": "## Series with no new observations"}
+            "model": "## model_data not rebuilt",
+            "history": "## Stored history changed shape", "stale": "## Series with no new observations"}
 
 
 def section(text: str, heading: str) -> list[str]:
@@ -31,7 +32,7 @@ def section(text: str, heading: str) -> list[str]:
 def body(report_text: str | None, job_status: str, run_url: str) -> str | None:
     parts = {k: section(report_text or "", h) for k, h in SECTIONS.items()}
     job_failed = job_status != "success"
-    if not job_failed and not parts["failed"] and not parts["cross"] and not parts["model"]:
+    if not job_failed and not parts["failed"] and not parts["cross"] and not parts["model"] and not parts["history"]:
         return None
     out = [f"Прогон: {run_url}", ""]
     if job_failed:
@@ -41,6 +42,7 @@ def body(report_text: str | None, job_status: str, run_url: str) -> str | None:
     for key, title in (("failed", "Не загрузились (сохранены прежние данные)"),
                        ("cross", "Не сошлись сверки двух публикаций (данные закоммичены)"),
                        ("model", "Модельный набор model_data не пересобран (оставлен прежний)"),
+                       ("history", "Изменилась уже сохранённая история рядов (проверить: публикация источника или ошибка загрузчика)"),
                        ("stale", "Для справки: ряды без новых наблюдений")):
         if parts[key]:
             shown = parts[key][:40]

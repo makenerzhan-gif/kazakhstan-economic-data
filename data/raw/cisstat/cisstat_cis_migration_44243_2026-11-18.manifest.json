@@ -1,7 +1,0 @@
-{
-  "downloaded_at": "2026-11-18T16:29:02.038965",
-  "raw_file": "cisstat_cis_migration_44243_2026-09-28.json.gz",
-  "source_url": "https://new.cisstat.org/consstat/service/fact/data/44243/freq/44?locale=ru",
-  "fact": 44243,
-  "role": "arrivals_partner"
-}

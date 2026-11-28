@@ -2,13 +2,16 @@ name: Update Kazakhstan Economic Data
 
 on:
   schedule:
-    # Twice a week, Wednesday and Saturday, 06:00 UTC (11:00 Astana) -- the owner's decision of
+    # Twice a week, Wednesday and Saturday, 05:37 UTC (10:37 Astana) -- the owner's decision of
     # 2026-11-13; the run was daily before. A full run takes well over an hour and most sources
     # are monthly or quarterly. Daily series (exchange rate, TONIA, KASE) lose nothing: every run
     # downloads their history, so the days between runs are filled in at the next one. A release
     # reaches the repository up to four days late; run the workflow by hand (workflow_dispatch)
     # when a figure is needed the same day.
-    - cron: "0 6 * * 3,6"
+    # 05:37, not 06:00 (2026-11-27): GitHub queues the schedules of a round hour together and
+    # the runs of November 2026 started 8-10 hours after 06:00; an off-peak minute starts closer
+    # to its time.
+    - cron: "37 5 * * 3,6"
   workflow_dispatch: {}
 
 # One run at a time. Two overlapping runs (the daily one and a manual re-run on
@@ -26,9 +29,9 @@ jobs:
       contents: write
       issues: write      # the "Report problems" step opens an issue when datasets fail
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           # restore pip's download cache keyed on requirements.txt (about a minute a run)
@@ -62,7 +65,7 @@ jobs:
         # pipeline's exit code or the repository -- it only copies logs/ and reports/
         # (if present) into a downloadable build artifact.
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: kz-economic-data-diagnostics-${{ github.run_id }}
           path: |

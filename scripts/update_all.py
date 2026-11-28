@@ -34,7 +34,7 @@ from datetime import datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from lib import pipeline_logging, staleness, unified  # noqa: E402
+from lib import history_guard, pipeline_logging, run_report, staleness, unified  # noqa: E402
 import update_bns, update_nbk, update_minfin, update_imf, update_ardfm, update_wb, update_kase, update_foreign  # noqa: E402
 import update_dims, update_derived  # noqa: E402
 import build_project_knowledge, build_calendar, build_dashboard  # noqa: E402
@@ -300,12 +300,25 @@ def _write_report(run_ts: str, logger: pipeline_logging.RunLogger, unified_updat
     if model_problem:
         lines += ["## model_data not rebuilt — previous panel kept", "", f"- {model_problem}", ""]
     lines += staleness.report_lines(stale or [])
+    # What the run did to the history already stored, the revisions it recorded, and the
+    # warnings not raised by the run before it (lib/history_guard, lib/run_report).
+    history = history_guard.findings()
+    if history:
+        print(f"::warning title=Stored history changed shape::{len(history)} finding(s), e.g. "
+              f"{history[0]['file']}: {history[0]['finding']}; see the update report.")
+    lines += history_guard.report_lines(history)
+    lines += run_report.revision_lines(run_report.revisions_of(today, REPO_ROOT / "metadata" / "revisions"))
+    known_path = REPO_ROOT / "metadata" / "known_warnings.txt"
+    known = run_report.load_known(known_path)
+    new_warnings, seen, kinds = run_report.split_warnings(logger.entries, known)
+    lines += run_report.warning_lines(logger.entries, new_warnings, kinds, baseline=known is None)
+    if unified_updated and tests_passed:
+        run_report.save_known(seen, known_path)      # a run that is not committed must not move the baseline
     lines += ["## Per-dataset results", ""]
     for e in logger.entries:
         lines.append(f"- **{e.source}/{e.dataset}** — {e.action}: {e.status} "
-                      f"(downloaded={e.records_downloaded}, processed={e.records_processed})")
-        for w in e.warnings:
-            lines.append(f"  - warning: {w}")
+                      f"(downloaded={e.records_downloaded}, processed={e.records_processed}"
+                      + (f", warnings={len(e.warnings)}" if e.warnings else "") + ")")
         for err in e.errors:
             lines.append(f"  - ERROR: {err}")
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
