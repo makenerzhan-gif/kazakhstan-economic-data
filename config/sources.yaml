@@ -7622,10 +7622,10 @@ agencies:
           2026-09-25. 2022-10 10.6, 2024-12 2.4. fetch_ea_hicp_yoy.
       EA_GDP_REAL:
         status: confirmed
-        download_url: "https://data-api.ecb.europa.eu/service/data/MNA/Q.Y.I9.W2.S1.S1.B.B1GQ._Z._Z._Z.EUR.LR.N?format=csvdata"
+        download_url: "https://data-api.ecb.europa.eu/service/data/MNA/Q.Y.I10.W2.S1.S1.B.B1GQ._Z._Z._Z.EUR.LR.N?format=csvdata"
         format: csv
         notes: >
-          2026-09-25. EA20, chain-linked 2015, SCA, from 1995-Q1. fetch_ea_gdp_real.
+          2026-11-28: EA21 (I10), chain-linked 2020, SCA, from 1995-Q1; before that EA20 (I9, ended by the ECB at 2026-Q1). fetch_ea_gdp_real.
       EA_DEPOSIT_RATE:
         status: confirmed
         download_url: "https://data-api.ecb.europa.eu/service/data/FM/B.U2.EUR.4F.KR.DFR.LEV?format=csvdata"

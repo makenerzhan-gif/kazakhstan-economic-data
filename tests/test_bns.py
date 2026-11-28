@@ -3,6 +3,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import update_bns
+from fetchers import bns as bns_fetchers
 
 
 def test_fetchers_registered_for_every_indicator():
@@ -75,3 +76,30 @@ def test_sheet_dump_row_final_energy_new_format():
     got = _bns.parse_sheet_dump_row(data, "Показатель", "Общее конечное потребление энергии")
     assert got[0] == {"date": "1991-12-31", "value": 62556.9} and got[-1] == {"date": "2025-12-31", "value": 48482.8}
     assert len(got) == 5
+
+
+# ---------------------------------------------------------------- wages «с учетом малых предприятий»: Taldau history
+
+def test_taldau_quarter_keys_become_quarter_starts():
+    node = {"id": "741885", "text": "Всего", "y032016": "128430,23", "y062016": "138655.9", "y122025": "457270",
+            "y012026": "1", "y032026": None}
+    assert bns_fetchers._taldau_quarters(node) == {"2016-01-01": 128430.23, "2016-04-01": 138655.9, "2025-10-01": 457270.0}
+
+
+def test_taldau_wage_history_goes_under_the_publication(monkeypatch):
+    """One edition gives one quarter; the series was a single point until 2026-11-28."""
+    monkeypatch.setattr(bns_fetchers, "_taldau_wage_tables",
+                        lambda value_index: {"Всего": {"2025-10-01": 457270.0, "2026-01-01": 445000.0}})
+    records, manifest = bns_fetchers._with_taldau_wage_history(
+        ([{"date": "2026-01-01", "value": 445068.0}, {"date": "2026-04-01", "value": 470000.0}], {"note": "n."}), "Всего", 3)
+    assert records == [{"date": "2025-10-01", "value": 457270.0}, {"date": "2026-01-01", "value": 445068.0},
+                       {"date": "2026-04-01", "value": 470000.0}]          # the printed quarter is kept
+    assert "18935547" in manifest["taldau_history"] and manifest["note"].startswith("n.")
+
+
+def test_a_taldau_outage_leaves_the_publication_records(monkeypatch):
+    def down(value_index):
+        raise ConnectionError("taldau")
+    monkeypatch.setattr(bns_fetchers, "_taldau_wage_tables", down)
+    records, manifest = bns_fetchers._with_taldau_wage_history(([{"date": "2026-01-01", "value": 99.8}], {}), "Образование", 7)
+    assert records == [{"date": "2026-01-01", "value": 99.8}] and manifest["taldau_history"] == "not read: ConnectionError"

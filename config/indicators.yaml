@@ -5521,6 +5521,7 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "среднемесячная за квартал"
+    stale_ok: "BNS has not published a quarter after 2026 Q1 for wages «с учетом малых предприятий»: the Q1 edition (stat.gov.kz element 346883, 15.07.2026) announced the next for 28.09.2026, and on 2026-11-28 neither the wages page nor Taldau (18935547, 19786379) carries 2026 Q2. AVG_WAGE_1T_QUARTERLY (form 1-Т, without small enterprises) runs further."
 
   - id: REAL_WAGE_INDEX_QUARTERLY
     name_ru: "Индекс реальной заработной платы, поквартально"
@@ -5534,6 +5535,7 @@ indicators:
     observation_evidence: "к соответствующему кварталу прошлого года"
     comparison_basis: yoy
     comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
+    stale_ok: "BNS has not published a quarter after 2026 Q1 for wages «с учетом малых предприятий»: the Q1 edition (stat.gov.kz element 346883, 15.07.2026) announced the next for 28.09.2026, and on 2026-11-28 neither the wages page nor Taldau (18935547, 19786379) carries 2026 Q2. AVG_WAGE_1T_QUARTERLY (form 1-Т, without small enterprises) runs further."
 
   - id: FREIGHT_TURNOVER_MONTHLY
     name_ru: "Грузооборот, помесячно"
@@ -6423,6 +6425,7 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "среднемесячная за квартал"
+    stale_ok: "BNS has not published a quarter after 2026 Q1 for wages «с учетом малых предприятий»: the Q1 edition (stat.gov.kz element 346883, 15.07.2026) announced the next for 28.09.2026, and on 2026-11-28 neither the wages page nor Taldau (18935547, 19786379) carries 2026 Q2. AVG_WAGE_1T_QUARTERLY (form 1-Т, without small enterprises) runs further."
 
   - id: REAL_WAGE_INDEX_MINING
     name_ru: "Индекс реальной заработной платы: горнодобывающая промышленность"
@@ -6436,6 +6439,7 @@ indicators:
     observation_evidence: "к соответствующему кварталу прошлого года"
     comparison_basis: yoy
     comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
+    stale_ok: "BNS has not published a quarter after 2026 Q1 for wages «с учетом малых предприятий»: the Q1 edition (stat.gov.kz element 346883, 15.07.2026) announced the next for 28.09.2026, and on 2026-11-28 neither the wages page nor Taldau (18935547, 19786379) carries 2026 Q2. AVG_WAGE_1T_QUARTERLY (form 1-Т, without small enterprises) runs further."
 
   - id: AVG_WAGE_MANUFACTURING
     name_ru: "Среднемесячная заработная плата: обрабатывающая промышленность"
@@ -6447,6 +6451,7 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "среднемесячная за квартал"
+    stale_ok: "BNS has not published a quarter after 2026 Q1 for wages «с учетом малых предприятий»: the Q1 edition (stat.gov.kz element 346883, 15.07.2026) announced the next for 28.09.2026, and on 2026-11-28 neither the wages page nor Taldau (18935547, 19786379) carries 2026 Q2. AVG_WAGE_1T_QUARTERLY (form 1-Т, without small enterprises) runs further."
 
   - id: REAL_WAGE_INDEX_MANUFACTURING
     name_ru: "Индекс реальной заработной платы: обрабатывающая промышленность"
@@ -6460,6 +6465,7 @@ indicators:
     observation_evidence: "к соответствующему кварталу прошлого года"
     comparison_basis: yoy
     comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
+    stale_ok: "BNS has not published a quarter after 2026 Q1 for wages «с учетом малых предприятий»: the Q1 edition (stat.gov.kz element 346883, 15.07.2026) announced the next for 28.09.2026, and on 2026-11-28 neither the wages page nor Taldau (18935547, 19786379) carries 2026 Q2. AVG_WAGE_1T_QUARTERLY (form 1-Т, without small enterprises) runs further."
 
   - id: AVG_WAGE_AGRICULTURE
     name_ru: "Среднемесячная заработная плата: сельское хозяйство"
@@ -6471,6 +6477,7 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "среднемесячная за квартал"
+    stale_ok: "BNS has not published a quarter after 2026 Q1 for wages «с учетом малых предприятий»: the Q1 edition (stat.gov.kz element 346883, 15.07.2026) announced the next for 28.09.2026, and on 2026-11-28 neither the wages page nor Taldau (18935547, 19786379) carries 2026 Q2. AVG_WAGE_1T_QUARTERLY (form 1-Т, without small enterprises) runs further."
 
   - id: REAL_WAGE_INDEX_AGRICULTURE
     name_ru: "Индекс реальной заработной платы: сельское хозяйство"
@@ -6484,6 +6491,7 @@ indicators:
     observation_evidence: "к соответствующему кварталу прошлого года"
     comparison_basis: yoy
     comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
+    stale_ok: "BNS has not published a quarter after 2026 Q1 for wages «с учетом малых предприятий»: the Q1 edition (stat.gov.kz element 346883, 15.07.2026) announced the next for 28.09.2026, and on 2026-11-28 neither the wages page nor Taldau (18935547, 19786379) carries 2026 Q2. AVG_WAGE_1T_QUARTERLY (form 1-Т, without small enterprises) runs further."
 
   - id: AVG_WAGE_CONSTRUCTION
     name_ru: "Среднемесячная заработная плата: строительство"
@@ -6495,6 +6503,7 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "среднемесячная за квартал"
+    stale_ok: "BNS has not published a quarter after 2026 Q1 for wages «с учетом малых предприятий»: the Q1 edition (stat.gov.kz element 346883, 15.07.2026) announced the next for 28.09.2026, and on 2026-11-28 neither the wages page nor Taldau (18935547, 19786379) carries 2026 Q2. AVG_WAGE_1T_QUARTERLY (form 1-Т, without small enterprises) runs further."
 
   - id: REAL_WAGE_INDEX_CONSTRUCTION
     name_ru: "Индекс реальной заработной платы: строительство"
@@ -6508,6 +6517,7 @@ indicators:
     observation_evidence: "к соответствующему кварталу прошлого года"
     comparison_basis: yoy
     comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
+    stale_ok: "BNS has not published a quarter after 2026 Q1 for wages «с учетом малых предприятий»: the Q1 edition (stat.gov.kz element 346883, 15.07.2026) announced the next for 28.09.2026, and on 2026-11-28 neither the wages page nor Taldau (18935547, 19786379) carries 2026 Q2. AVG_WAGE_1T_QUARTERLY (form 1-Т, without small enterprises) runs further."
 
   - id: AVG_WAGE_FINANCE
     name_ru: "Среднемесячная заработная плата: финансовая и страховая деятельность"
@@ -6519,6 +6529,7 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "среднемесячная за квартал"
+    stale_ok: "BNS has not published a quarter after 2026 Q1 for wages «с учетом малых предприятий»: the Q1 edition (stat.gov.kz element 346883, 15.07.2026) announced the next for 28.09.2026, and on 2026-11-28 neither the wages page nor Taldau (18935547, 19786379) carries 2026 Q2. AVG_WAGE_1T_QUARTERLY (form 1-Т, without small enterprises) runs further."
 
   - id: REAL_WAGE_INDEX_FINANCE
     name_ru: "Индекс реальной заработной платы: финансовая и страховая деятельность"
@@ -6532,6 +6543,7 @@ indicators:
     observation_evidence: "к соответствующему кварталу прошлого года"
     comparison_basis: yoy
     comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
+    stale_ok: "BNS has not published a quarter after 2026 Q1 for wages «с учетом малых предприятий»: the Q1 edition (stat.gov.kz element 346883, 15.07.2026) announced the next for 28.09.2026, and on 2026-11-28 neither the wages page nor Taldau (18935547, 19786379) carries 2026 Q2. AVG_WAGE_1T_QUARTERLY (form 1-Т, without small enterprises) runs further."
 
   - id: AVG_WAGE_EDUCATION
     name_ru: "Среднемесячная заработная плата: образование"
@@ -6543,6 +6555,7 @@ indicators:
     source_status: confirmed
     observation_type: period_average
     observation_evidence: "среднемесячная за квартал"
+    stale_ok: "BNS has not published a quarter after 2026 Q1 for wages «с учетом малых предприятий»: the Q1 edition (stat.gov.kz element 346883, 15.07.2026) announced the next for 28.09.2026, and on 2026-11-28 neither the wages page nor Taldau (18935547, 19786379) carries 2026 Q2. AVG_WAGE_1T_QUARTERLY (form 1-Т, without small enterprises) runs further."
 
   - id: REAL_WAGE_INDEX_EDUCATION
     name_ru: "Индекс реальной заработной платы: образование"
@@ -6556,6 +6569,7 @@ indicators:
     observation_evidence: "к соответствующему кварталу прошлого года"
     comparison_basis: yoy
     comparison_basis_evidence: "единица уже задаёт базу: 'same period previous year=100' / для годовых — 'previous period' есть 'previous year' по определению частоты"
+    stale_ok: "BNS has not published a quarter after 2026 Q1 for wages «с учетом малых предприятий»: the Q1 edition (stat.gov.kz element 346883, 15.07.2026) announced the next for 28.09.2026, and on 2026-11-28 neither the wages page nor Taldau (18935547, 19786379) carries 2026 Q2. AVG_WAGE_1T_QUARTERLY (form 1-Т, without small enterprises) runs further."
 
   # ---------------------------------------------------------------- external block (added 2026-09-25)
   # Russia and the United States for the QPM/BVAR models; sources in scripts/fetchers/foreign.py.
@@ -6842,11 +6856,11 @@ indicators:
     comparison_basis_evidence: "annual rate of change"
 
   - id: EA_GDP_REAL
-    name_ru: "Реальный ВВП еврозоны (цепные объёмы 2015 г., SA)"
-    name_en: "Euro Area Real GDP (chain-linked 2015, SA)"
+    name_ru: "Реальный ВВП еврозоны-21 (цепные объёмы 2020 г., SA)"
+    name_en: "Euro Area 21 Real GDP (chain-linked 2020, SA)"
     agency: ecb
     frequency: quarterly
-    unit: "million EUR, chain-linked 2015"
+    unit: "million EUR, chain-linked 2020"
     category: international
     country: EA
     source_status: confirmed

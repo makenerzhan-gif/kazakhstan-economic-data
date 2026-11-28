@@ -1,25 +1,7 @@
 # Update Log
 
-Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-10-29 — quarterly national accounts for 2026 Q2: not yet published; BNS withdrew its production release (scheduled check from «Сделай все три пункта», point 3)» are in docs/UPDATE_LOG_ARCHIVE.md in the
+Recent entries, oldest first; append new ones at the end. Entries from 2026-08-30 to «2026-11-06 — quarterly national accounts for 2026 Q2 (expenditure, published 04.11.2026); «2025*» parse fix (scheduled check from «Сделай все три пункта», point 3)» are in docs/UPDATE_LOG_ARCHIVE.md in the
 repository (not synced into the Claude Project). When this file grows past ~60 KB, move the oldest entries there.
-
-## 2026-11-06 — quarterly national accounts for 2026 Q2 (expenditure, published 04.11.2026); «2025*» parse fix (scheduled check from «Сделай все три пункта», point 3)
-
-BNS published element 283161 (GDP by expenditure, SA) with 2026 Q2 on 04.11.2026, a week after the 28.10 date.
-The new file heads 2025 «2025*» (preliminary); YEAR_CELL did not read the asterisk, so the daily run of
-2026-11-04 silently dropped all four 2025 quarters from the five non-SA QNA_GDP_EXPENDITURE* tables (2024 Q4 ->
-2026 Q1, logged only as 457-day gap warnings). YEAR_CELL now accepts trailing asterisks, and
-bns_dims.year_period_columns raises when the year cells are not consecutive, so an unreadable year can no longer
-vanish (tests/test_qna.py, both fail without the fix). Reloaded: 66 quarters 2010 Q1 - 2026 Q2 again.
-
-GDP, % of the same quarter a year earlier (QNA vs table 4439/4440 basis, GVA_VOLUME_INDEX_BY_SECTION_DISCRETE):
-Q1 2026 101.4 (revised from 104.1) vs 103.0; Q2 108.2 vs 105.2; H1 105.1 vs 104.1. Seasonally adjusted, 2010
-prices: Q1 -1.2 % q/q, Q2 +6.5 %. Nominal Q2 +17.0 %, implied Q2 deflator 108.2 % (CPI 110.4 %). The QNA moves
-growth from Q1 into Q2 against the operational tables; over the half-year they differ by 1 pp. Q2 by component:
-final consumption 99.9 (households 100.1), gross fixed capital formation 103.9, exports 106.0, imports 95.4 --
-the quarter's growth is net exports. The production QNA (283162) still ends at 2025 Q4
-(qna_production_2026_withdrawn stays). model_data rebuilt (first time since 2026-09-28): gdp/gdp_sa through
-2026 Q2.
 
 ## 2026-11-07 — four datasets failing since mid-October fixed; natural-capital workflow limited to main
 
@@ -638,3 +620,31 @@ seasonally adjusted tax receipts (below).
 
 Not done here: rewriting the repository history (needs the owner's decision) and branch protection for `main`
 (a repository setting). Tests: 989.
+## 2026-11-28 — Seventeen quarterly series reported stale: wage history from Taldau, euro area GDP moved to EA21
+
+Run 112 listed 17 quarterly series whose last observation was 2026 Q1 (331 days, limit 330).
+
+**Fourteen wage series** (AVG_WAGE_QUARTERLY, REAL_WAGE_INDEX_QUARTERLY and the six activities: mining,
+manufacturing, agriculture, construction, finance, education). They are read from the BNS publication «Заработная
+плата наемных работников (с учетом малых предприятий)», which carries one quarter per edition. The 2026 Q1
+edition (element 346883, published 15.07.2026) announced the next for 28.09.2026; on 2026-11-28 it is no longer on
+the wages page, no Q2 edition is there, and Taldau (indices 18935547, 19786379) also ends at 2026 Q1. So the
+source is late, not the fetcher -- recorded as `stale_ok`. But each of the fourteen series was a single point:
+the fetcher only ever saw one edition. Taldau holds them as series, and all fourteen 2026 Q1 values there equal
+the publication (445 068; mining 1 020 632; manufacturing 508 854; the real index 99.8). The fetchers now lay
+that history under the publication's quarters (`bns._with_taldau_wage_history`; a printed quarter is never
+replaced, a Taldau outage changes nothing): the wage series have 41 quarters (2016 Q1-2026 Q1), the real wage
+indices 33 (2018 Q1-2026 Q1). Values are as Taldau serves them (unrounded before 2021 for the national total).
+
+**EA_GDP_REAL** (and FOREIGN_DEMAND_YOY built from it). The ECB stopped updating the euro area 20 series
+(`MNA/Q.Y.I9...`, reference year 2015) at 2026 Q1 after Bulgaria joined; the current aggregate is euro area 21,
+`I10` («Euro area 21 (fixed composition) as of 1 January 2026», reference year 2020), 1995 Q1-2026 Q3. The
+fetcher reads I10 now. The whole history is replaced by the 21-country series: levels are 0.2-1.1 % higher in
+every quarter, year-on-year growth differs by under 0.1 pt (2026 Q1: 0.58 % against 0.49 %). FOREIGN_DEMAND_YOY
+now reaches 2026 Q2 (102.0); `ea_gdp` in model_data follows.
+
+**QNA_GVA_BY_REGION_SECTION**: the BNS file (element 471384) itself ends at 2026 Q1 -- `stale_ok`.
+
+Run 112 itself: 166 NBK series were not loaded (data.nationalbank.kz timed out for the whole run; previous
+data kept, issue #44). The new report was 219 KB against 1.6 MB, the history guard found nothing, 119 new
+manifests instead of about 2 000.
